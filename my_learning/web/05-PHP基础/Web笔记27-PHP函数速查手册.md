@@ -1,0 +1,9297 @@
+# 🗂 PHP 函数速查手册（官方索引·离线可搜索版）
+
+> 来源：PHP 官方中文手册 · 函数索引页
+> https://www.php.net/manual/zh/indexes.functions.php
+> 下载日期：2026-08-18 ｜ 收录函数：9144 个
+> 用法：直接 Ctrl+F 搜函数名（如 system、eval、file_get_contents、str_replace）
+
+---
+
+[A](#a) [B](#b) [C](#c) [D](#d) [E](#e) [F](#f) [G](#g) [H](#h) [I](#i) [J](#j) [K](#k) [L](#l) [M](#m) [N](#n) [O](#o) [P](#p) [Q](#q) [R](#r) [S](#s) [T](#t) [U](#u) [V](#v) [W](#w) [X](#x) [Y](#y) [Z](#z) [_](#_)
+
+## A
+
+- **abs** - 绝对值
+- **acos** - 反余弦
+- **acosh** - 反双曲余弦
+- **addcslashes** - 以 C 语言风格使用反斜线转义字符串中的字符
+- **addslashes** - 使用反斜线引用字符串
+- **AllowDynamicProperties::__construct** - 构造新的 AllowDynamicProperties 注解实例
+- **apache_child_terminate** - 在本次请求结束后终止 apache 子进程
+- **apache_getenv** - 获取 Apache subprocess_env 变量
+- **apache_get_modules** - 获得已加载的Apache模块列表
+- **apache_get_version** - 获得Apache版本信息
+- **apache_lookup_uri** - 对指定的 URI 执行部分请求并返回所有有关信息
+- **apache_note** - 取得或设置 apache 请求记录
+- **apache_request_headers** - 获取全部 HTTP 请求 header
+- **apache_response_headers** - 获得全部 HTTP 响应 header
+- **apache_setenv** - 设置 Apache 子进程环境变量
+- **APCUIterator::current** - Get current item
+- **APCUIterator::getTotalCount** - Get total count
+- **APCUIterator::getTotalHits** - Get total cache hits
+- **APCUIterator::getTotalSize** - Get total cache size
+- **APCUIterator::key** - Get iterator key
+- **APCUIterator::next** - Move pointer to next item
+- **APCUIterator::rewind** - Rewinds iterator
+- **APCUIterator::valid** - Checks if current position is valid
+- **APCUIterator::__construct** - Constructs an APCUIterator iterator object
+- **apcu_add** - 缓存一个新变量到存储中
+- **apcu_cache_info** - 从 APCu 存储中获取缓存信息
+- **apcu_cas** - Updates an old value with a new value
+- **apcu_clear_cache** - Clears the APCu cache
+- **apcu_dec** - Decrease a stored number
+- **apcu_delete** - Removes a stored variable from the cache
+- **apcu_enabled** - Whether APCu is usable in the current environment
+- **apcu_entry** - Atomically fetch or generate a cache entry
+- **apcu_exists** - Checks if entry exists
+- **apcu_fetch** - Fetch a stored variable from the cache
+- **apcu_inc** - Increase a stored number
+- **apcu_key_info** - Get detailed information about the cache key
+- **apcu_sma_info** - Retrieves APCu Shared Memory Allocation information
+- **apcu_store** - 缓存一个变量到存储中
+- **AppendIterator::append** - Appends an iterator
+- **AppendIterator::current** - Gets the current value
+- **AppendIterator::getArrayIterator** - Gets the ArrayIterator
+- **AppendIterator::getIteratorIndex** - Gets an index of iterators
+- **AppendIterator::key** - Gets the current key
+- **AppendIterator::next** - Moves to the next element
+- **AppendIterator::rewind** - Rewinds the Iterator
+- **AppendIterator::valid** - Checks validity of the current element
+- **AppendIterator::__construct** - Constructs an AppendIterator
+- **array** - 新建一个数组
+- **ArrayAccess::offsetExists** - 检查一个偏移位置是否存在
+- **ArrayAccess::offsetGet** - 获取一个偏移位置的值
+- **ArrayAccess::offsetSet** - 设置一个偏移位置的值
+- **ArrayAccess::offsetUnset** - 复位一个偏移位置的值
+- **ArrayIterator::append** - Append an element
+- **ArrayIterator::asort** - Sort entries by values
+- **ArrayIterator::count** - Count elements
+- **ArrayIterator::current** - Return current array entry
+- **ArrayIterator::getArrayCopy** - Get array copy
+- **ArrayIterator::getFlags** - Get behavior flags
+- **ArrayIterator::key** - Return current array key
+- **ArrayIterator::ksort** - Sort entries by keys
+- **ArrayIterator::natcasesort** - Sort entries naturally, case insensitive
+- **ArrayIterator::natsort** - Sort entries naturally
+- **ArrayIterator::next** - Move to next entry
+- **ArrayIterator::offsetExists** - Check if offset exists
+- **ArrayIterator::offsetGet** - Get value for an offset
+- **ArrayIterator::offsetSet** - Set value for an offset
+- **ArrayIterator::offsetUnset** - Unset value for an offset
+- **ArrayIterator::rewind** - Rewind array back to the start
+- **ArrayIterator::seek** - Seeks to a position
+- **ArrayIterator::serialize** - Serialize
+- **ArrayIterator::setFlags** - Set behaviour flags
+- **ArrayIterator::uasort** - Sort with a user-defined comparison function and maintain index association
+- **ArrayIterator::uksort** - Sort by keys using a user-defined comparison function
+- **ArrayIterator::unserialize** - Unserialize
+- **ArrayIterator::valid** - Check whether array contains more entries
+- **ArrayIterator::__construct** - Construct an ArrayIterator
+- **ArrayObject::append** - 追加新的值作为最后一个元素。
+- **ArrayObject::asort** - Sort the entries by value
+- **ArrayObject::count** - 统计 ArrayObject 内 public 属性的数量
+- **ArrayObject::exchangeArray** - Exchange the array for another one
+- **ArrayObject::getArrayCopy** - Creates a copy of the ArrayObject
+- **ArrayObject::getFlags** - Gets the behavior flags
+- **ArrayObject::getIterator** - Create a new iterator from an ArrayObject instance
+- **ArrayObject::getIteratorClass** - Gets the iterator classname for the ArrayObject
+- **ArrayObject::ksort** - Sort the entries by key
+- **ArrayObject::natcasesort** - Sort an array using a case insensitive "natural order" algorithm
+- **ArrayObject::natsort** - Sort entries using a "natural order" algorithm
+- **ArrayObject::offsetExists** - Returns whether the requested index exists
+- **ArrayObject::offsetGet** - Returns the value at the specified index
+- **ArrayObject::offsetSet** - 为指定索引设定新值
+- **ArrayObject::offsetUnset** - Unsets the value at the specified index
+- **ArrayObject::serialize** - Serialize an ArrayObject
+- **ArrayObject::setFlags** - Sets the behavior flags
+- **ArrayObject::setIteratorClass** - Sets the iterator classname for the ArrayObject
+- **ArrayObject::uasort** - Sort the entries with a user-defined comparison function and maintain key association
+- **ArrayObject::uksort** - Sort the entries by keys using a user-defined comparison function
+- **ArrayObject::unserialize** - Unserialize an ArrayObject
+- **ArrayObject::__construct** - Construct a new array object
+- **array_all** - 检查数组所有元素是否都满足回调函数的条件
+- **array_any** - 检查数组中是否至少有一个元素满足回调函数的条件
+- **array_change_key_case** - 将数组中的所有键名修改为全大写或小写
+- **array_chunk** - 将一个数组分割成多个
+- **array_column** - 返回输入数组中指定列的值
+- **array_combine** - 创建一个数组，用一个数组的值作为其键名，另一个数组的值作为其值
+- **array_count_values** - 统计数组中每个不同值的出现次数
+- **array_diff** - 计算数组的差集
+- **array_diff_assoc** - 带索引检查计算数组的差集
+- **array_diff_key** - 使用键名比较计算数组的差集
+- **array_diff_uassoc** - 用用户提供的回调函数做索引检查来计算数组的差集
+- **array_diff_ukey** - 用回调函数对键名比较计算数组的差集
+- **array_fill** - 用给定的值填充数组
+- **array_fill_keys** - 使用指定的键和值填充数组
+- **array_filter** - 使用回调函数过滤数组的元素
+- **array_find** - 返回满足回调函数条件的第一个元素
+- **array_find_key** - 返回满足回调函数条件的第一个元素的键
+- **array_first** - 获取数组的第一个值
+- **array_flip** - 交换数组中的键和值
+- **array_intersect** - 计算数组的交集
+- **array_intersect_assoc** - 带索引检查计算数组的交集
+- **array_intersect_key** - 使用键名比较计算数组的交集
+- **array_intersect_uassoc** - 带索引检查计算数组的交集，用回调函数比较索引
+- **array_intersect_ukey** - 在键名上使用回调函数来比较计算数组的交集
+- **array_is_list** - 判断指定 array 是否为 list
+- **array_keys** - 返回数组中部分的或所有的键名
+- **array_key_exists** - 检查数组里是否有指定的键名或索引
+- **array_key_first** - 获取指定数组的第一个键
+- **array_key_last** - 获取一个数组的最后一个键值
+- **array_last** - 获取数组的最后一个值
+- **array_map** - 为数组的每个元素应用回调函数
+- **array_merge** - 合并一个或多个数组
+- **array_merge_recursive** - 递归地合并一个或多个数组
+- **array_multisort** - 对多个数组或多维数组进行排序
+- **array_pad** - 以指定长度将一个值填充进数组
+- **array_pop** - 弹出数组最后一个单元（出栈）
+- **array_product** - 计算数组中所有值的乘积
+- **array_push** - 将一个或多个单元压入数组的末尾（入栈）
+- **array_rand** - 从数组中随机取出一个或多个随机键
+- **array_reduce** - 用回调函数迭代地将数组简化为单一的值
+- **array_replace** - 使用传递的数组替换第一个数组的元素
+- **array_replace_recursive** - 使用传递的数组递归替换第一个数组的元素
+- **array_reverse** - 返回单元顺序相反的数组
+- **array_search** - 在数组中搜索给定的值，如果成功则返回首个相应的键名
+- **array_shift** - 将数组开头的单元移出数组
+- **array_slice** - 从数组中取出一段
+- **array_splice** - 去掉数组中的某一部分并用其它值取代
+- **array_sum** - 对数组中所有值求和
+- **array_udiff** - 用回调函数比较数据来计算数组的差集
+- **array_udiff_assoc** - 带索引检查计算数组的差集，用回调函数比较数据
+- **array_udiff_uassoc** - 带索引检查计算数组的差集，用回调函数比较数据和索引
+- **array_uintersect** - 计算数组的交集，用回调函数比较数据
+- **array_uintersect_assoc** - 带索引检查计算数组的交集，用回调函数比较数据
+- **array_uintersect_uassoc** - 带索引检查计算数组的交集，用单独的回调函数比较数据和索引
+- **array_unique** - 移除数组中重复的值
+- **array_unshift** - 在数组开头插入一个或多个单元
+- **array_values** - 返回数组中所有的值
+- **array_walk** - 使用用户自定义函数对数组中的每个元素做回调处理
+- **array_walk_recursive** - 对数组中的每个成员递归地应用用户函数
+- **arsort** - 对数组进行降向排序并保持索引关系
+- **asin** - 反正弦
+- **asinh** - 反双曲正弦
+- **asort** - 对数组进行升序排序并保持索引关系
+- **assert** - 断言检测
+- **assert_options** - 设置/获取各种断言 flag
+- **atan** - 反正切
+- **atan2** - 两个参数的反正切
+- **atanh** - 反双曲正切
+- **Attribute::__construct** - 构造新的 Attribute 实例
+
+## B
+
+- **BackedEnum::from** - 映射标量为 enum 实例
+- **BackedEnum::tryFrom** - 映射标量为 enum 实例或 null
+- **base64_decode** - 对使用 MIME base64 编码的数据进行解码
+- **base64_encode** - 使用 MIME base64 对数据进行编码
+- **basename** - 返回路径中的文件名部分
+- **BaseResult::getWarnings** - Fetch warnings from last operation
+- **BaseResult::getWarningsCount** - Fetch warning count from last operation
+- **base_convert** - 在任意进制之间转换数字
+- **bcadd** - 两个任意精度数字的加法计算
+- **bcceil** - Round up arbitrary precision number
+- **bccomp** - 比较两个任意精度的数字
+- **bcdiv** - 两个任意精度的数字除法计算
+- **bcdivmod** - Get the quotient and modulus of an arbitrary precision number
+- **bcfloor** - Round down arbitrary precision number
+- **BcMath\Number::add** - Adds an arbitrary precision number
+- **BcMath\Number::ceil** - Rounds up an arbitrary precision number
+- **BcMath\Number::compare** - Compares two arbitrary precision numbers
+- **BcMath\Number::div** - Divides by an arbitrary precision number
+- **BcMath\Number::divmod** - Gets the quotient and modulus of an arbitrary precision number
+- **BcMath\Number::floor** - Rounds down an arbitrary precision number
+- **BcMath\Number::mod** - Gets the modulus of an arbitrary precision number
+- **BcMath\Number::mul** - Multiplies an arbitrary precision number
+- **BcMath\Number::pow** - Raises an arbitrary precision number
+- **BcMath\Number::powmod** - Raises an arbitrary precision number, reduced by a specified modulus
+- **BcMath\Number::round** - Rounds an arbitrary precision number
+- **BcMath\Number::sqrt** - Gets the square root of an arbitrary precision number
+- **BcMath\Number::sub** - Subtracts an arbitrary precision number
+- **BcMath\Number::__construct** - Creates a BcMath\Number object
+- **BcMath\Number::__serialize** - Serializes a BcMath\Number object
+- **BcMath\Number::__toString** - Converts BcMath\Number to string
+- **BcMath\Number::__unserialize** - Deserializes a data parameter into a BcMath\Number object
+- **bcmod** - 任意精度数字取模
+- **bcmul** - 两个任意精度数字乘法计算
+- **bcpow** - 任意精度数字的乘方
+- **bcpowmod** - Raise an arbitrary precision number to another, reduced by a specified modulus
+- **bcround** - Round arbitrary precision number
+- **bcscale** - 设置/获取所有 bc math 函数的默认小数点保留位数
+- **bcsqrt** - 任意精度数字的二次方根
+- **bcsub** - 两个任意精度数字的减法
+- **bin2hex** - 将二进制数据转换为十六进制表示
+- **bindec** - 二进制转换为十进制
+- **bindtextdomain** - Sets or gets the path for a domain
+- **bind_textdomain_codeset** - Specify or get the character encoding in which the messages from the DOMAIN message catalog will be returned
+- **boolval** - 获取变量的布尔值
+- **bzclose** - 关闭一个 bzip2 文件
+- **bzcompress** - 把一个字符串压缩成 bzip2 编码数据
+- **bzdecompress** - 解压经 bzip2 编码过的数据
+- **bzerrno** - 返回一个 bzip2 错误码
+- **bzerror** - 返回包含 bzip2 错误号和错误字符串的一个 array
+- **bzerrstr** - 返回一个 bzip2 的错误字符串
+- **bzflush** - 什么都不做
+- **bzopen** - 打开 bzip2 压缩文件
+- **bzread** - bzip2 文件二进制安全地读取
+- **bzwrite** - 二进制安全地写入 bzip2 文件
+
+## C
+
+- **CachingIterator::count** - The number of elements in the iterator
+- **CachingIterator::current** - Return the current element
+- **CachingIterator::getCache** - Retrieve the contents of the cache
+- **CachingIterator::getFlags** - Get flags used
+- **CachingIterator::hasNext** - Check whether the inner iterator has a valid next element
+- **CachingIterator::key** - Return the key for the current element
+- **CachingIterator::next** - Move the iterator forward
+- **CachingIterator::offsetExists** - The offsetExists purpose
+- **CachingIterator::offsetGet** - The offsetGet purpose
+- **CachingIterator::offsetSet** - The offsetSet purpose
+- **CachingIterator::offsetUnset** - The offsetUnset purpose
+- **CachingIterator::rewind** - Rewind the iterator
+- **CachingIterator::setFlags** - The setFlags purpose
+- **CachingIterator::valid** - Check whether the current element is valid
+- **CachingIterator::__construct** - Construct a new CachingIterator object for the iterator
+- **CachingIterator::__toString** - Return the string representation of the current element
+- **CallbackFilterIterator::accept** - Calls the callback with the current value, the current key and the inner iterator as arguments
+- **CallbackFilterIterator::__construct** - Create a filtered iterator from another iterator
+- **call_user_func** - 把第一个参数作为回调函数调用
+- **call_user_func_array** - 调用回调函数，并把一个数组参数作为回调函数的参数
+- **cal_days_in_month** - 返回指定历法中某年某月的天数
+- **cal_from_jd** - 从儒略日数转换为支持的历法
+- **cal_info** - 返回选定历法的信息
+- **cal_to_jd** - 从支持的历法转换为儒略日数
+- **ceil** - 进一法取整
+- **chdir** - 改变目录
+- **checkdate** - 验证一个格里高里日期
+- **checkdnsrr** - 给指定的主机（域名）或者IP地址做DNS通信检查
+- **chgrp** - 改变文件所属的组
+- **chmod** - 改变文件模式
+- **chop** - rtrim 的别名
+- **chown** - 改变文件的所有者
+- **chr** - 从数字生成单字节字符串
+- **chroot** - 改变根目录
+- **chunk_split** - 将字符串分割成小块
+- **class_alias** - 为类创建别名
+- **class_exists** - 查类是否已经定义
+- **class_implements** - 返回指定的类或接口实现的所有接口
+- **class_parents** - 返回指定类的父类
+- **class_uses** - Return the traits used by the given class
+- **clearstatcache** - 清除文件状态缓存
+- **Client::getClient** - Get client session
+- **Client::__construct** - Client constructor
+- **cli_get_process_title** - Returns the current process title
+- **cli_set_process_title** - Sets the process title
+- **closedir** - 关闭目录句柄
+- **closelog** - 关闭系统日志链接
+- **Closure::bind** - 用特定的绑定对象和类作用域复制闭包。
+- **Closure::bindTo** - 用特定的绑定对象和类作用域复制闭包。
+- **Closure::call** - 绑定并调用闭包
+- **Closure::fromCallable** - 将 callable 转换为闭包
+- **Closure::__construct** - 用于禁止实例化的构造函数
+- **Collator::asort** - Sort array maintaining index association
+- **Collator::compare** - Compare two Unicode strings
+- **Collator::create** - Create a collator
+- **Collator::getAttribute** - Get collation attribute value
+- **Collator::getErrorCode** - Get collator's last error code
+- **Collator::getErrorMessage** - Get text for collator's last error code
+- **Collator::getLocale** - Get the locale name of the collator
+- **Collator::getSortKey** - Get sorting key for a string
+- **Collator::getStrength** - Get current collation strength
+- **Collator::setAttribute** - Set collation attribute
+- **Collator::setStrength** - Set collation strength
+- **Collator::sort** - Sort array using specified collator
+- **Collator::sortWithSortKeys** - Sort array using specified collator and sort keys
+- **Collator::__construct** - Create a collator
+- **Collectable::isGarbage** - Determine whether an object has been marked as garbage
+- **Collection::add** - Add collection document
+- **Collection::addOrReplaceOne** - Add or replace collection document
+- **Collection::count** - Get document count
+- **Collection::createIndex** - Create collection index
+- **Collection::dropIndex** - Drop collection index
+- **Collection::existsInDatabase** - Check if collection exists in database
+- **Collection::find** - Search for document
+- **Collection::getName** - Get collection name
+- **Collection::getOne** - Get one document
+- **Collection::getSchema** - Get schema object
+- **Collection::getSession** - Get session object
+- **Collection::modify** - Modify collection documents
+- **Collection::remove** - Remove collection documents
+- **Collection::removeOne** - Remove one collection document
+- **Collection::replaceOne** - Replace one collection document
+- **Collection::__construct** - Collection constructor
+- **CollectionAdd::execute** - Execute the statement
+- **CollectionAdd::__construct** - CollectionAdd constructor
+- **CollectionFind::bind** - Bind value to query placeholder
+- **CollectionFind::execute** - Execute the statement
+- **CollectionFind::fields** - Set document field filter
+- **CollectionFind::groupBy** - Set grouping criteria
+- **CollectionFind::having** - Set condition for aggregate functions
+- **CollectionFind::limit** - Limit number of returned documents
+- **CollectionFind::lockExclusive** - Execute operation with EXCLUSIVE LOCK
+- **CollectionFind::lockShared** - Execute operation with SHARED LOCK
+- **CollectionFind::offset** - Skip given number of elements to be returned
+- **CollectionFind::sort** - Set the sorting criteria
+- **CollectionFind::__construct** - CollectionFind constructor
+- **CollectionModify::arrayAppend** - Append element to an array field
+- **CollectionModify::arrayInsert** - Insert element into an array field
+- **CollectionModify::bind** - Bind value to query placeholder
+- **CollectionModify::execute** - Execute modify operation
+- **CollectionModify::limit** - Limit number of modified documents
+- **CollectionModify::patch** - Patch document
+- **CollectionModify::replace** - Replace document field
+- **CollectionModify::set** - Set document attribute
+- **CollectionModify::skip** - Skip elements
+- **CollectionModify::sort** - Set the sorting criteria
+- **CollectionModify::unset** - Unset the value of document fields
+- **CollectionModify::__construct** - CollectionModify constructor
+- **CollectionRemove::bind** - Bind value to placeholder
+- **CollectionRemove::execute** - Execute remove operation
+- **CollectionRemove::limit** - Limit number of documents to remove
+- **CollectionRemove::sort** - Set the sorting criteria
+- **CollectionRemove::__construct** - CollectionRemove constructor
+- **ColumnResult::getCharacterSetName** - Get character set
+- **ColumnResult::getCollationName** - Get collation name
+- **ColumnResult::getColumnLabel** - Get column label
+- **ColumnResult::getColumnName** - Get column name
+- **ColumnResult::getFractionalDigits** - Get fractional digit length
+- **ColumnResult::getLength** - Get column field length
+- **ColumnResult::getSchemaName** - Get schema name
+- **ColumnResult::getTableLabel** - Get table label
+- **ColumnResult::getTableName** - Get table name
+- **ColumnResult::getType** - Get column type
+- **ColumnResult::isNumberSigned** - Check if signed type
+- **ColumnResult::isPadded** - Check if padded
+- **ColumnResult::__construct** - ColumnResult constructor
+- **com::__construct** - com class constructor
+- **CommonMark\CQL::__construct** - CQL Construction
+- **CommonMark\CQL::__invoke** - CQL Execution
+- **CommonMark\Interfaces\IVisitable::accept** - Visitation
+- **CommonMark\Interfaces\IVisitor::enter** - Visitation
+- **CommonMark\Interfaces\IVisitor::leave** - Visitation
+- **CommonMark\Node::accept** - Visitation
+- **CommonMark\Node::appendChild** - AST Manipulation
+- **CommonMark\Node::insertAfter** - AST Manipulation
+- **CommonMark\Node::insertBefore** - AST Manipulation
+- **CommonMark\Node::prependChild** - AST Manipulation
+- **CommonMark\Node::replace** - AST Manipulation
+- **CommonMark\Node::unlink** - AST Manipulation
+- **CommonMark\Node\BulletList::__construct** - BulletList Construction
+- **CommonMark\Node\CodeBlock::__construct** - CodeBlock Construction
+- **CommonMark\Node\Heading::__construct** - Heading Construction
+- **CommonMark\Node\Image::__construct** - Image Construction
+- **CommonMark\Node\Link::__construct** - Link Construction
+- **CommonMark\Node\OrderedList::__construct** - OrderedList Construction
+- **CommonMark\Node\Text::__construct** - Text Construction
+- **CommonMark\Parse** - Parsing
+- **CommonMark\Parser::finish** - Parsing
+- **CommonMark\Parser::parse** - Parsing
+- **CommonMark\Parser::__construct** - Parsing
+- **CommonMark\Render** - Rendering
+- **CommonMark\Render\HTML** - Rendering
+- **CommonMark\Render\Latex** - Rendering
+- **CommonMark\Render\Man** - Rendering
+- **CommonMark\Render\XML** - Rendering
+- **compact** - 建立一个数组，包括变量名和它们的值
+- **COMPersistHelper::GetCurFileName** - Get current filename
+- **COMPersistHelper::GetMaxStreamSize** - Get maximum stream size
+- **COMPersistHelper::InitNew** - Initialize object to default state
+- **COMPersistHelper::LoadFromFile** - Load object from file
+- **COMPersistHelper::LoadFromStream** - Load object from stream
+- **COMPersistHelper::SaveToFile** - Save object to file
+- **COMPersistHelper::SaveToStream** - Save object to stream
+- **COMPersistHelper::__construct** - Construct a COMPersistHelper object
+- **Componere\Abstract\Definition::addInterface** - Add Interface
+- **Componere\Abstract\Definition::addMethod** - Add Method
+- **Componere\Abstract\Definition::addTrait** - Add Trait
+- **Componere\Abstract\Definition::getReflector** - Reflection
+- **Componere\cast** - Casting
+- **Componere\cast_by_ref** - Casting
+- **Componere\Definition::addConstant** - Add Constant
+- **Componere\Definition::addProperty** - Add Property
+- **Componere\Definition::getClosure** - Get Closure
+- **Componere\Definition::getClosures** - Get Closures
+- **Componere\Definition::isRegistered** - State Detection
+- **Componere\Definition::register** - Registration
+- **Componere\Definition::__construct** - Definition Construction
+- **Componere\Method::getReflector** - Reflection
+- **Componere\Method::setPrivate** - Accessibility Modification
+- **Componere\Method::setProtected** - Accessibility Modification
+- **Componere\Method::setStatic** - Accessibility Modification
+- **Componere\Method::__construct** - Method Construction
+- **Componere\Patch::apply** - Application
+- **Componere\Patch::derive** - Patch Derivation
+- **Componere\Patch::getClosure** - Get Closure
+- **Componere\Patch::getClosures** - Get Closures
+- **Componere\Patch::isApplied** - State Detection
+- **Componere\Patch::revert** - Reversal
+- **Componere\Patch::__construct** - Patch Construction
+- **Componere\Value::hasDefault** - Value Interaction
+- **Componere\Value::isPrivate** - Accessibility Detection
+- **Componere\Value::isProtected** - Accessibility Detection
+- **Componere\Value::isStatic** - Accessibility Detection
+- **Componere\Value::setPrivate** - Accessibility Modification
+- **Componere\Value::setProtected** - Accessibility Modification
+- **Componere\Value::setStatic** - Accessibility Modification
+- **Componere\Value::__construct** - Value Construction
+- **com_create_guid** - Generate a globally unique identifier (GUID)
+- **com_event_sink** - Connect events from a COM object to a PHP object
+- **com_get_active_object** - Returns a handle to an already running instance of a COM object
+- **com_load_typelib** - 载入 Typelib
+- **com_message_pump** - Process COM messages, sleeping for up to timeoutms milliseconds
+- **com_print_typeinfo** - Print out a PHP class definition for a dispatchable interface
+- **connection_aborted** - 检查客户端是否已经断开
+- **connection_status** - 返回连接的状态位
+- **constant** - 返回一个常量的值
+- **convert_cyr_string** - 将字符由一种 Cyrillic 字符转换成另一种
+- **convert_uudecode** - 解码一个 uuencode 编码的字符串
+- **convert_uuencode** - 使用 uuencode 编码一个字符串
+- **copy** - 拷贝文件
+- **cos** - 余弦
+- **cosh** - 双曲余弦
+- **count** - 统计数组、Countable 对象中所有元素的数量
+- **Countable::count** - 统计对象的元素个数
+- **count_chars** - 返回字符串所用字符的信息
+- **crc32** - 计算一个字符串的 crc32 多项式
+- **create_function** - 通过执行代码字符串创建动态函数
+- **CrudOperationBindable::bind** - Bind value to placeholder
+- **CrudOperationLimitable::limit** - Set result limit
+- **CrudOperationSkippable::skip** - Number of operations to skip
+- **CrudOperationSortable::sort** - Sort results
+- **crypt** - 单向字符串散列
+- **crypt_checksalt** - Validate a crypt setting string
+- **crypt_gensalt** - Compile a string for use as the salt argument to crypt
+- **crypt_preferred_method** - Get the prefix of the preferred hash method
+- **ctype_alnum** - 检测字母数字式字符
+- **ctype_alpha** - 检测字母字符
+- **ctype_cntrl** - 检测控制字符
+- **ctype_digit** - 检测数字字符
+- **ctype_graph** - 检测除空格外的任何打印字符
+- **ctype_lower** - 检测小写字符
+- **ctype_print** - 检测可打印字符
+- **ctype_punct** - 检测可打印的字符是不是不包含空白、数字和字母
+- **ctype_space** - 检测空白字符
+- **ctype_upper** - 检测大写字符
+- **ctype_xdigit** - 检测字符是否只包含十六进制字符
+- **cubrid_affected_rows** - Return the number of rows affected by the last SQL statement
+- **cubrid_bind** - Bind variables to a prepared statement as parameters
+- **cubrid_client_encoding** - Return the current CUBRID connection charset
+- **cubrid_close** - Close CUBRID connection
+- **cubrid_close_prepare** - Close the request handle
+- **cubrid_close_request** - Close the request handle
+- **cubrid_column_names** - Get the column names in result
+- **cubrid_column_types** - Get column types in result
+- **cubrid_col_get** - Get contents of collection type column using OID
+- **cubrid_col_size** - Get the number of elements in collection type column using OID
+- **cubrid_commit** - Commit a transaction
+- **cubrid_connect** - Open a connection to a CUBRID Server
+- **cubrid_connect_with_url** - Establish the environment for connecting to CUBRID server
+- **cubrid_current_oid** - Get OID of the current cursor location
+- **cubrid_data_seek** - Move the internal row pointer of the CUBRID result
+- **cubrid_db_name** - Get db name from results of cubrid_list_dbs
+- **cubrid_disconnect** - Close a database connection
+- **cubrid_drop** - Delete an instance using OID
+- **cubrid_errno** - Return the numerical value of the error message from previous CUBRID operation
+- **cubrid_error** - Get the error message
+- **cubrid_error_code** - Get error code for the most recent function call
+- **cubrid_error_code_facility** - Get the facility code of error
+- **cubrid_error_msg** - Get last error message for the most recent function call
+- **cubrid_execute** - Execute a prepared SQL statement
+- **cubrid_fetch** - Fetch the next row from a result set
+- **cubrid_fetch_array** - Fetch a result row as an associative array, a numeric array, or both
+- **cubrid_fetch_assoc** - Return the associative array that corresponds to the fetched row
+- **cubrid_fetch_field** - Get column information from a result and return as an object
+- **cubrid_fetch_lengths** - Return an array with the lengths of the values of each field from the current row
+- **cubrid_fetch_object** - Fetch the next row and return it as an object
+- **cubrid_fetch_row** - Return a numerical array with the values of the current row
+- **cubrid_field_flags** - Return a string with the flags of the given field offset
+- **cubrid_field_len** - Get the maximum length of the specified field
+- **cubrid_field_name** - Return the name of the specified field index
+- **cubrid_field_seek** - Move the result set cursor to the specified field offset
+- **cubrid_field_table** - Return the name of the table of the specified field
+- **cubrid_field_type** - Return the type of the column corresponding to the given field offset
+- **cubrid_free_result** - Free the memory occupied by the result data
+- **cubrid_get** - Get a column using OID
+- **cubrid_get_autocommit** - Get auto-commit mode of the connection
+- **cubrid_get_charset** - Return the current CUBRID connection charset
+- **cubrid_get_class_name** - Get the class name using OID
+- **cubrid_get_client_info** - Return the client library version
+- **cubrid_get_db_parameter** - Returns the CUBRID database parameters
+- **cubrid_get_query_timeout** - Get the query timeout value of the request
+- **cubrid_get_server_info** - Return the CUBRID server version
+- **cubrid_insert_id** - Return the ID generated for the last updated AUTO_INCREMENT column
+- **cubrid_is_instance** - Check whether the instance pointed by OID exists
+- **cubrid_list_dbs** - Return an array with the list of all existing CUBRID databases
+- **cubrid_load_from_glo** - Read data from a GLO instance and save it in a file
+- **cubrid_lob2_bind** - Bind a lob object or a string as a lob object to a prepared statement as parameters
+- **cubrid_lob2_close** - Close LOB object
+- **cubrid_lob2_export** - Export the lob object to a file
+- **cubrid_lob2_import** - Import BLOB/CLOB data from a file
+- **cubrid_lob2_new** - Create a lob object
+- **cubrid_lob2_read** - Read from BLOB/CLOB data
+- **cubrid_lob2_seek** - Move the cursor of a lob object
+- **cubrid_lob2_seek64** - Move the cursor of a lob object
+- **cubrid_lob2_size** - Get a lob object's size
+- **cubrid_lob2_size64** - Get a lob object's size
+- **cubrid_lob2_tell** - Tell the cursor position of the LOB object
+- **cubrid_lob2_tell64** - Tell the cursor position of the LOB object
+- **cubrid_lob2_write** - Write to a lob object
+- **cubrid_lob_close** - Close BLOB/CLOB data
+- **cubrid_lob_export** - Export BLOB/CLOB data to file
+- **cubrid_lob_get** - Get BLOB/CLOB data
+- **cubrid_lob_send** - Read BLOB/CLOB data and send straight to browser
+- **cubrid_lob_size** - Get BLOB/CLOB data size
+- **cubrid_lock_read** - Set a read lock on the given OID
+- **cubrid_lock_write** - Set a write lock on the given OID
+- **cubrid_move_cursor** - Move the cursor in the result
+- **cubrid_new_glo** - Create a glo instance
+- **cubrid_next_result** - Get result of next query when executing multiple SQL statements
+- **cubrid_num_cols** - Return the number of columns in the result set
+- **cubrid_num_fields** - Return the number of columns in the result set
+- **cubrid_num_rows** - Get the number of rows in the result set
+- **cubrid_pconnect** - Open a persistent connection to a CUBRID server
+- **cubrid_pconnect_with_url** - Open a persistent connection to CUBRID server
+- **cubrid_ping** - Ping a server connection or reconnect if there is no connection
+- **cubrid_prepare** - Prepare a SQL statement for execution
+- **cubrid_put** - Update a column using OID
+- **cubrid_query** - Send a CUBRID query
+- **cubrid_real_escape_string** - Escape special characters in a string for use in an SQL statement
+- **cubrid_result** - Return the value of a specific field in a specific row
+- **cubrid_rollback** - Roll back a transaction
+- **cubrid_save_to_glo** - Save requested file in a GLO instance
+- **cubrid_schema** - Get the requested schema information
+- **cubrid_send_glo** - Read data from glo and send it to std output
+- **cubrid_seq_drop** - Delete an element from sequence type column using OID
+- **cubrid_seq_insert** - Insert an element to a sequence type column using OID
+- **cubrid_seq_put** - Update the element value of sequence type column using OID
+- **cubrid_set_add** - Insert a single element to set type column using OID
+- **cubrid_set_autocommit** - Set autocommit mode of the connection
+- **cubrid_set_db_parameter** - Sets the CUBRID database parameters
+- **cubrid_set_drop** - Delete an element from set type column using OID
+- **cubrid_set_query_timeout** - Set the timeout time of query execution
+- **cubrid_unbuffered_query** - Perform a query without fetching the results into memory
+- **cubrid_version** - Get the CUBRID PHP module's version
+- **CURLFile::getFilename** - 获取文件名
+- **CURLFile::getMimeType** - 获取 MIME 类型
+- **CURLFile::getPostFilename** - 获取 POST 请求时的文件名
+- **CURLFile::setMimeType** - 设置 MIME 类型
+- **CURLFile::setPostFilename** - 设置 POST 请求时的文件名
+- **CURLFile::__construct** - 创建 CURLFile 对象
+- **CURLStringFile::__construct** - 创建 CURLStringFile 对象
+- **curl_close** - 关闭 cURL 会话
+- **curl_copy_handle** - 复制 cURL 句柄及其所有选项
+- **curl_errno** - 返回最后一次的错误代码
+- **curl_error** - 返回当前会话最后一次错误的字符串
+- **curl_escape** - 使用 URL 编码指定字符串
+- **curl_exec** - 执行 cURL 会话
+- **curl_getinfo** - 获取 cURL 连接资源句柄的信息
+- **curl_init** - 初始化 cURL 会话
+- **curl_multi_add_handle** - 添加普通 cURL 句柄到 cURL 多句柄
+- **curl_multi_close** - 从多句柄中移除所有 cURL 句柄
+- **curl_multi_errno** - 返回上一次 curl 批处理的错误码
+- **curl_multi_exec** - 运行当前 cURL 句柄的子连接
+- **curl_multi_getcontent** - 如果设置了 CURLOPT_RETURNTRANSFER，则返回 cURL 句柄的内容
+- **curl_multi_info_read** - 获取当前传输的有关信息
+- **curl_multi_init** - 返回新 cURL 批处理句柄
+- **curl_multi_remove_handle** - 从一组 cURL 句柄中移除一个句柄
+- **curl_multi_select** - 等待，直到任何 cURL 多句柄连接可以进行读取或写入
+- **curl_multi_setopt** - 设置 cURL 并行选项
+- **curl_multi_strerror** - 返回字符串描述的错误代码
+- **curl_pause** - 暂停和取消暂停连接
+- **curl_reset** - 重置一个 libcurl 会话句柄的所有的选项
+- **curl_setopt** - 设置 cURL 传输选项
+- **curl_setopt_array** - 为 cURL 传输会话批量设置选项
+- **curl_share_close** - 关闭 cURL 共享句柄
+- **curl_share_errno** - 返回共享 curl 句柄的最后一次错误编号
+- **curl_share_init** - 初始化 cURL 共享句柄
+- **curl_share_init_persistent** - 初始化 持久 cURL 共享句柄
+- **curl_share_setopt** - 为 cURL 共享句柄设置选项
+- **curl_share_strerror** - 返回错误编号对应的错误消息
+- **curl_strerror** - 返回错误代码的字符串描述
+- **curl_unescape** - 解码指定 URL 编码的字符串
+- **curl_upkeep** - 执行连接保活检查
+- **curl_version** - 获取 cURL 版本信息
+- **current** - 返回数组中的当前值
+
+## D
+
+- **DatabaseObject::existsInDatabase** - Check if object exists in database
+- **DatabaseObject::getName** - Get object name
+- **DatabaseObject::getSession** - Get session name
+- **date** - 格式化 Unix 时间戳
+- **DateInterval::createFromDateString** - Sets up a DateInterval from the relative parts of the string
+- **DateInterval::format** - Formats the interval
+- **DateInterval::__construct** - Creates a new DateInterval object
+- **DatePeriod::createFromISO8601String** - Creates a new DatePeriod object from an ISO8601 string
+- **DatePeriod::getDateInterval** - Gets the interval
+- **DatePeriod::getEndDate** - Gets the end date
+- **DatePeriod::getRecurrences** - Gets the number of recurrences
+- **DatePeriod::getStartDate** - Gets the start date
+- **DatePeriod::__construct** - Creates a new DatePeriod object
+- **DateTime::add** - 修改 DateTime 对象，增加天、月、年、小时、分钟以及秒的数量。
+- **DateTime::createFromFormat** - 根据指定格式解析时间字符串
+- **DateTime::createFromImmutable** - Returns new DateTime instance encapsulating the given DateTimeImmutable object
+- **DateTime::createFromInterface** - Returns new DateTime object encapsulating the given DateTimeInterface object
+- **DateTime::createFromTimestamp** - Creates an instance from a Unix timestamp
+- **DateTime::getLastErrors** - 别名 DateTimeImmutable::getLastErrors
+- **DateTime::modify** - 修改日期时间对象的值
+- **DateTime::setDate** - 设置日期
+- **DateTime::setISODate** - 设置 ISO 日期
+- **DateTime::setMicrosecond** - Sets microsecond part of the time
+- **DateTime::setTime** - 设置时间
+- **DateTime::setTimestamp** - 以 Unix 时间戳的方式设置日期和时间
+- **DateTime::setTimezone** - 设置 DateTime 对象的时区
+- **DateTime::sub** - 对 DateTime 对象减去一定量的日、月、年、小时、分钟和秒。
+- **DateTime::__construct** - 返回新的 DateTime 对象
+- **DateTime::__serialize** - Serialize a DateTime
+- **DateTime::__set_state** - __set_state 处理程序
+- **DateTime::__unserialize** - Unserialize an Datetime
+- **DateTime::__wakeup** - The __wakeup handler
+- **DateTimeImmutable::add** - Returns a new object, with added amount of days, months, years, hours, minutes and seconds
+- **DateTimeImmutable::createFromFormat** - Parses a time string according to a specified format
+- **DateTimeImmutable::createFromInterface** - Returns new DateTimeImmutable object encapsulating the given DateTimeInterface object
+- **DateTimeImmutable::createFromMutable** - Returns new DateTimeImmutable instance encapsulating the given DateTime object
+- **DateTimeImmutable::createFromTimestamp** - Creates an instance from a Unix timestamp
+- **DateTimeImmutable::getLastErrors** - Returns the warnings and errors
+- **DateTimeImmutable::modify** - Creates a new object with modified timestamp
+- **DateTimeImmutable::setDate** - Sets the date
+- **DateTimeImmutable::setISODate** - Sets the ISO date
+- **DateTimeImmutable::setMicrosecond** - Sets microsecond part of the time
+- **DateTimeImmutable::setTime** - Sets the time
+- **DateTimeImmutable::setTimestamp** - Sets the date and time based on a Unix timestamp
+- **DateTimeImmutable::setTimezone** - Sets the time zone
+- **DateTimeImmutable::sub** - Subtracts an amount of days, months, years, hours, minutes and seconds
+- **DateTimeImmutable::__construct** - Returns new DateTimeImmutable object
+- **DateTimeImmutable::__set_state** - The __set_state handler
+- **DateTimeInterface::diff** - 返回两个 DateTime 之间的差值
+- **DateTimeInterface::format** - 按照指定格式返回格式化后的日期
+- **DateTimeInterface::getMicrosecond** - Gets the microsecond part of the Unix timestamp
+- **DateTimeInterface::getOffset** - 返回时差
+- **DateTimeInterface::getTimestamp** - 获取 Unix 时间戳
+- **DateTimeInterface::getTimezone** - 返回相对于指定 DateTime 的时区
+- **DateTimeZone::getLocation** - 返回与时区相关的定位信息
+- **DateTimeZone::getName** - 返回时区名称
+- **DateTimeZone::getOffset** - 返回相对于 GMT 的时差
+- **DateTimeZone::getTransitions** - Returns all transitions for the timezone
+- **DateTimeZone::listAbbreviations** - 返回一个包含 dst (夏令时)，时差和时区信息的关联数组。
+- **DateTimeZone::listIdentifiers** - 返回包含了所有时区标识符的数字索引数组
+- **DateTimeZone::__construct** - 创建新的DateTimeZone对象
+- **date_add** - 别名 DateTime::add
+- **date_create** - create a new DateTime object
+- **date_create_from_format** - 别名 DateTime::createFromFormat
+- **date_create_immutable** - create a new DateTimeImmutable object
+- **date_create_immutable_from_format** - 别名 DateTimeImmutable::createFromFormat
+- **date_date_set** - 别名 DateTime::setDate
+- **date_default_timezone_get** - 取得脚本中所有日期/时间函数所使用的默认时区
+- **date_default_timezone_set** - 设置脚本中所有日期/时间函数使用的默认时区
+- **date_diff** - 别名 DateTime::diff
+- **date_format** - 别名 DateTime::format
+- **date_get_last_errors** - 别名 DateTimeImmutable::getLastErrors
+- **date_interval_create_from_date_string** - 别名 DateInterval::createFromDateString
+- **date_interval_format** - 别名 DateInterval::format
+- **date_isodate_set** - 别名 DateTime::setISODate
+- **date_modify** - 别名 DateTime::modify
+- **date_offset_get** - 别名 DateTime::getOffset
+- **date_parse** - 返回指定日期/时间的详细信息的关联数组
+- **date_parse_from_format** - Get info about given date formatted according to the specified format
+- **date_sub** - 别名 DateTime::sub
+- **date_sunrise** - 返回给定的日期与地点的日出时间
+- **date_sunset** - 返回给定的日期与地点的日落时间
+- **date_sun_info** - Returns an array with information about sunset/sunrise and twilight begin/end
+- **date_timestamp_get** - 别名 DateTime::getTimestamp
+- **date_timestamp_set** - 别名 DateTime::setTimestamp
+- **date_timezone_get** - 别名 DateTime::getTimezone
+- **date_timezone_set** - 别名 DateTime::setTimezone
+- **date_time_set** - 别名 DateTime::setTime
+- **db2_autocommit** - Returns or sets the AUTOCOMMIT state for a database connection
+- **db2_bind_param** - Binds a PHP variable to an SQL statement parameter
+- **db2_client_info** - Returns an object with properties that describe the DB2 database client
+- **db2_close** - Closes a database connection
+- **db2_columns** - Returns a result set listing the columns and associated metadata for a table
+- **db2_column_privileges** - Returns a result set listing the columns and associated privileges for a table
+- **db2_commit** - Commits a transaction
+- **db2_connect** - Returns a connection to a database
+- **db2_conn_error** - Returns a string containing the SQLSTATE returned by the last connection attempt
+- **db2_conn_errormsg** - Returns the last connection error message and SQLCODE value
+- **db2_cursor_type** - Returns the cursor type used by a statement resource
+- **db2_escape_string** - Used to escape certain characters
+- **db2_exec** - Executes an SQL statement directly
+- **db2_execute** - Executes a prepared SQL statement
+- **db2_fetch_array** - Returns an array, indexed by column position, representing a row in a result set
+- **db2_fetch_assoc** - Returns an array, indexed by column name, representing a row in a result set
+- **db2_fetch_both** - Returns an array, indexed by both column name and position, representing a row in a result set
+- **db2_fetch_object** - Returns an object with properties representing columns in the fetched row
+- **db2_fetch_row** - Sets the result set pointer to the next row or requested row
+- **db2_field_display_size** - Returns the maximum number of bytes required to display a column
+- **db2_field_name** - Returns the name of the column in the result set
+- **db2_field_num** - Returns the position of the named column in a result set
+- **db2_field_precision** - Returns the precision of the indicated column in a result set
+- **db2_field_scale** - Returns the scale of the indicated column in a result set
+- **db2_field_type** - Returns the data type of the indicated column in a result set
+- **db2_field_width** - Returns the width of the current value of the indicated column in a result set
+- **db2_foreign_keys** - Returns a result set listing the foreign keys for a table
+- **db2_free_result** - Frees resources associated with a result set
+- **db2_free_stmt** - Frees resources associated with the indicated statement resource
+- **db2_get_option** - Retrieves an option value for a statement resource or a connection resource
+- **db2_last_insert_id** - Returns the auto generated ID of the last insert query that successfully
+  executed on this connection
+- **db2_lob_read** - Gets a user defined size of LOB files with each invocation
+- **db2_next_result** - Requests the next result set from a stored procedure
+- **db2_num_fields** - Returns the number of fields contained in a result set
+- **db2_num_rows** - Returns the number of rows affected by an SQL statement
+- **db2_pclose** - Closes a persistent database connection
+- **db2_pconnect** - Returns a persistent connection to a database
+- **db2_prepare** - Prepares an SQL statement to be executed
+- **db2_primary_keys** - Returns a result set listing primary keys for a table
+- **db2_procedures** - Returns a result set listing the stored procedures registered in a database
+- **db2_procedure_columns** - Returns a result set listing stored procedure parameters
+- **db2_result** - Returns a single column from a row in the result set
+- **db2_rollback** - Rolls back a transaction
+- **db2_server_info** - Returns an object with properties that describe the DB2 database server
+- **db2_set_option** - Set options for connection or statement resources
+- **db2_special_columns** - Returns a result set listing the unique row identifier columns for a table
+- **db2_statistics** - Returns a result set listing the index and statistics for a table
+- **db2_stmt_error** - Returns a string containing the SQLSTATE returned by an SQL statement
+- **db2_stmt_errormsg** - Returns a string containing the last SQL statement error message
+- **db2_tables** - Returns a result set listing the tables and associated metadata in a database
+- **db2_table_privileges** - Returns a result set listing the tables and associated privileges in a database
+- **dbase_add_record** - Adds a record to a database
+- **dbase_close** - Closes a database
+- **dbase_create** - Creates a database
+- **dbase_delete_record** - Deletes a record from a database
+- **dbase_get_header_info** - Gets the header info of a database
+- **dbase_get_record** - Gets a record from a database as an indexed array
+- **dbase_get_record_with_names** - Gets a record from a database as an associative array
+- **dbase_numfields** - Gets the number of fields of a database
+- **dbase_numrecords** - Gets the number of records in a database
+- **dbase_open** - Opens a database
+- **dbase_pack** - Packs a database
+- **dbase_replace_record** - Replaces a record in a database
+- **dba_close** - 关闭 DBA 数据库
+- **dba_delete** - 删除由键指定的 DBA 条目
+- **dba_exists** - 检查键是否存在
+- **dba_fetch** - 获取由键指定的数据
+- **dba_firstkey** - 获取第一个键
+- **dba_handlers** - 列出所有可用的处理器
+- **dba_insert** - 插入条目
+- **dba_key_split** - 将键的字符串表示分割为数组表示
+- **dba_list** - 列出所有打开的数据库文件
+- **dba_nextkey** - 获取下一个键
+- **dba_open** - 打开数据库
+- **dba_optimize** - 优化数据库
+- **dba_popen** - 打开数据库持久化
+- **dba_replace** - 替换或插入条目
+- **dba_sync** - 同步数据库
+- **dcgettext** - Overrides the domain for a single lookup
+- **dcngettext** - Plural version of dcgettext
+- **debug_backtrace** - 产生一条回溯跟踪(backtrace)
+- **debug_print_backtrace** - 打印一条回溯。
+- **debug_zval_dump** - 将表示内部 zval 结构的字符串转储到输出
+- **decbin** - 十进制转换为二进制
+- **dechex** - 十进制转换为十六进制
+- **decoct** - 十进制转换为八进制
+- **define** - 定义一个常量
+- **defined** - 检查给定名称的常量是否存在
+- **deflate_add** - Incrementally deflate data
+- **deflate_init** - Initialize an incremental deflate context
+- **deg2rad** - 将角度转换为弧度
+- **delete** - 参见 unlink 或 unset
+- **Deprecated::__construct** - 构造新的 Deprecated 属性实例
+- **dgettext** - Override the current domain
+- **die** - 别名 exit
+- **dio_close** - 通过 fd 关闭文件描述符
+- **dio_fcntl** - 在 fd 上执行 C 标准库的 fcntl
+- **dio_open** - 在 C 库输入/输出流函数允许的更低级别打开（必要时创建）文件
+- **dio_read** - 从文件描述符读取字节
+- **dio_seek** - 在 fd 指定 pos 位置
+- **dio_stat** - 获取有关文件描述符 fd 的统计信息
+- **dio_tcsetattr** - 设置串行端口的终端属性和波特率
+- **dio_truncate** - 截断文件描述符 fd 为 offset 字节
+- **dio_write** - 截取可选长度的数据写入文件
+- **dir** - 返回一个 Directory 类实例
+- **Directory::close** - 关闭目录句柄
+- **Directory::read** - 从目录句柄中读取条目
+- **Directory::rewind** - 倒回目录句柄
+- **DirectoryIterator::current** - Return the current DirectoryIterator item
+- **DirectoryIterator::getBasename** - Get base name of current DirectoryIterator item
+- **DirectoryIterator::getExtension** - Gets the file extension
+- **DirectoryIterator::getFilename** - Return file name of current DirectoryIterator item
+- **DirectoryIterator::isDot** - Determine if current DirectoryIterator item is '.' or '..'
+- **DirectoryIterator::key** - Return the key for the current DirectoryIterator item
+- **DirectoryIterator::next** - Move forward to next DirectoryIterator item
+- **DirectoryIterator::rewind** - Rewind the DirectoryIterator back to the start
+- **DirectoryIterator::seek** - Seek to a DirectoryIterator item
+- **DirectoryIterator::valid** - Check whether current DirectoryIterator position is a valid file
+- **DirectoryIterator::__construct** - Constructs a new directory iterator from a path
+- **DirectoryIterator::__toString** - Get file name as a string
+- **dirname** - 返回路径中的目录部分
+- **diskfreespace** - disk_free_space 的别名
+- **disk_free_space** - 返回目录中的可用空间
+- **disk_total_space** - 返回一个目录的磁盘总大小
+- **dl** - 运行时载入一个 PHP 扩展
+- **dngettext** - Plural version of dgettext
+- **dns_check_record** - 别名 checkdnsrr
+- **dns_get_mx** - 别名 getmxrr
+- **dns_get_record** - 获取指定主机名的 DNS 纪录
+- **DocResult::fetchAll** - Get all rows
+- **DocResult::fetchOne** - Get one row
+- **DocResult::getWarnings** - Get warnings from last operation
+- **DocResult::getWarningsCount** - Get warning count from last operation
+- **DocResult::__construct** - DocResult constructor
+- **DOMAttr::isId** - Checks if attribute is a defined ID
+- **DOMAttr::__construct** - Creates a new DOMAttr object
+- **DOMCdataSection::__construct** - Constructs a new DOMCdataSection object
+- **DOMCharacterData::after** - Adds nodes after the character data
+- **DOMCharacterData::appendData** - Append the string to the end of the character data of the node
+- **DOMCharacterData::before** - Adds nodes before the character data
+- **DOMCharacterData::deleteData** - Remove a range of characters from the character data
+- **DOMCharacterData::insertData** - Insert a string at the specified UTF-8 codepoint offset
+- **DOMCharacterData::remove** - Removes the character data node
+- **DOMCharacterData::replaceData** - Replace a substring within the character data
+- **DOMCharacterData::replaceWith** - Replaces the character data with new nodes
+- **DOMCharacterData::substringData** - Extracts a range of data from the character data
+- **DOMChildNode::after** - Adds nodes after the node
+- **DOMChildNode::before** - Adds nodes before the node
+- **DOMChildNode::remove** - Removes the node
+- **DOMChildNode::replaceWith** - Replaces the node with new nodes
+- **DOMComment::__construct** - Creates a new DOMComment object
+- **DOMDocument::adoptNode** - Transfer a node from another document
+- **DOMDocument::append** - Appends nodes after the last child node
+- **DOMDocument::createAttribute** - Create new attribute
+- **DOMDocument::createAttributeNS** - Create new attribute node with an associated namespace
+- **DOMDocument::createCDATASection** - Create new cdata node
+- **DOMDocument::createComment** - Create new comment node
+- **DOMDocument::createDocumentFragment** - Create new document fragment
+- **DOMDocument::createElement** - Create new element node
+- **DOMDocument::createElementNS** - Create new element node with an associated namespace
+- **DOMDocument::createEntityReference** - Create new entity reference node
+- **DOMDocument::createProcessingInstruction** - Creates new PI node
+- **DOMDocument::createTextNode** - Create new text node
+- **DOMDocument::getElementById** - Searches for an element with a certain id
+- **DOMDocument::getElementsByTagName** - Searches for all elements with given local tag name
+- **DOMDocument::getElementsByTagNameNS** - Searches for all elements with given tag name in specified namespace
+- **DOMDocument::importNode** - Import node into current document
+- **DOMDocument::load** - Load XML from a file
+- **DOMDocument::loadHTML** - Load HTML from a string
+- **DOMDocument::loadHTMLFile** - Load HTML from a file
+- **DOMDocument::loadXML** - Load XML from a string
+- **DOMDocument::normalizeDocument** - Normalizes the document
+- **DOMDocument::prepend** - Prepends nodes before the first child node
+- **DOMDocument::registerNodeClass** - Register extended class used to create base node type
+- **DOMDocument::relaxNGValidate** - Performs relaxNG validation on the document
+- **DOMDocument::relaxNGValidateSource** - Performs relaxNG validation on the document
+- **DOMDocument::replaceChildren** - Replace children in document
+- **DOMDocument::save** - Dumps the internal XML tree back into a file
+- **DOMDocument::saveHTML** - Dumps the internal document into a string using HTML formatting
+- **DOMDocument::saveHTMLFile** - Dumps the internal document into a file using HTML formatting
+- **DOMDocument::saveXML** - Dumps the internal XML tree back into a string
+- **DOMDocument::schemaValidate** - Validates a document based on a schema. Only XML Schema 1.0 is supported.
+- **DOMDocument::schemaValidateSource** - Validates a document based on a schema
+- **DOMDocument::validate** - Validates the document based on its DTD
+- **DOMDocument::xinclude** - Substitutes XIncludes in a DOMDocument Object
+- **DOMDocument::__construct** - Creates a new DOMDocument object
+- **DOMDocumentFragment::append** - Appends nodes after the last child node
+- **DOMDocumentFragment::appendXML** - Append raw XML data
+- **DOMDocumentFragment::prepend** - Prepends nodes before the first child node
+- **DOMDocumentFragment::replaceChildren** - Replace children in fragment
+- **DOMDocumentFragment::__construct** - Constructs a DOMDocumentFragment object
+- **DOMElement::after** - Adds nodes after the element
+- **DOMElement::append** - Appends nodes after the last child node
+- **DOMElement::before** - Adds nodes before the element
+- **DOMElement::getAttribute** - Returns value of attribute
+- **DOMElement::getAttributeNames** - Get attribute names
+- **DOMElement::getAttributeNode** - Returns attribute node
+- **DOMElement::getAttributeNodeNS** - Returns attribute node
+- **DOMElement::getAttributeNS** - Returns value of attribute
+- **DOMElement::getElementsByTagName** - Gets elements by tagname
+- **DOMElement::getElementsByTagNameNS** - Get elements by namespaceURI and localName
+- **DOMElement::hasAttribute** - Checks to see if attribute exists
+- **DOMElement::hasAttributeNS** - Checks to see if attribute exists
+- **DOMElement::insertAdjacentElement** - Insert adjacent element
+- **DOMElement::insertAdjacentText** - Insert adjacent text
+- **DOMElement::prepend** - Prepends nodes before the first child node
+- **DOMElement::remove** - Removes the element
+- **DOMElement::removeAttribute** - Removes attribute
+- **DOMElement::removeAttributeNode** - Removes attribute
+- **DOMElement::removeAttributeNS** - Removes attribute
+- **DOMElement::replaceChildren** - Replace children in element
+- **DOMElement::replaceWith** - Replaces the element with new nodes
+- **DOMElement::setAttribute** - Adds new or modifies existing attribute
+- **DOMElement::setAttributeNode** - Adds new attribute node to element
+- **DOMElement::setAttributeNodeNS** - Adds new attribute node to element
+- **DOMElement::setAttributeNS** - Adds new attribute
+- **DOMElement::setIdAttribute** - Declares the attribute specified by name to be of type ID
+- **DOMElement::setIdAttributeNode** - Declares the attribute specified by node to be of type ID
+- **DOMElement::setIdAttributeNS** - Declares the attribute specified by local name and namespace URI to be of type ID
+- **DOMElement::toggleAttribute** - Toggle attribute
+- **DOMElement::__construct** - Creates a new DOMElement object
+- **DOMEntityReference::__construct** - Creates a new DOMEntityReference object
+- **DOMImplementation::createDocument** - Creates a DOMDocument object of the specified type with its document element
+- **DOMImplementation::createDocumentType** - Creates an empty DOMDocumentType object
+- **DOMImplementation::hasFeature** - Test if the DOM implementation implements a specific feature
+- **DOMImplementation::__construct** - Creates a new DOMImplementation object
+- **DOMNamedNodeMap::count** - Get number of nodes in the map
+- **DOMNamedNodeMap::getIterator** - Retrieve an external iterator
+- **DOMNamedNodeMap::getNamedItem** - Retrieves a node specified by name
+- **DOMNamedNodeMap::getNamedItemNS** - Retrieves a node specified by local name and namespace URI
+- **DOMNamedNodeMap::item** - Retrieves a node specified by index
+- **DOMNameSpaceNode::__sleep** - Forbids serialization unless serialization methods are implemented in a subclass
+- **DOMNameSpaceNode::__wakeup** - Forbids unserialization unless unserialization methods are implemented in a subclass
+- **DOMNode::appendChild** - Adds new child at the end of the children
+- **DOMNode::C14N** - Canonicalize nodes to a string
+- **DOMNode::C14NFile** - Canonicalize nodes to a file
+- **DOMNode::cloneNode** - Clones a node
+- **DOMNode::compareDocumentPosition** - Compares the position of two nodes
+- **DOMNode::contains** - Checks if node contains other node
+- **DOMNode::getLineNo** - Get line number for a node
+- **DOMNode::getNodePath** - Get an XPath for a node
+- **DOMNode::getRootNode** - Get root node
+- **DOMNode::hasAttributes** - Checks if node has attributes
+- **DOMNode::hasChildNodes** - Checks if node has children
+- **DOMNode::insertBefore** - Adds a new child before a reference node
+- **DOMNode::isDefaultNamespace** - Checks if the specified namespaceURI is the default namespace or not
+- **DOMNode::isEqualNode** - Checks that both nodes are equal
+- **DOMNode::isSameNode** - Indicates if two nodes are the same node
+- **DOMNode::isSupported** - Checks if feature is supported for specified version
+- **DOMNode::lookupNamespaceURI** - Gets the namespace URI of the node based on the prefix
+- **DOMNode::lookupPrefix** - Gets the namespace prefix of the node based on the namespace URI
+- **DOMNode::normalize** - Normalizes the node
+- **DOMNode::removeChild** - Removes child from list of children
+- **DOMNode::replaceChild** - Replaces a child
+- **DOMNode::__sleep** - Forbids serialization unless serialization methods are implemented in a subclass
+- **DOMNode::__wakeup** - Forbids unserialization unless unserialization methods are implemented in a subclass
+- **DOMNodeList::count** - Get number of nodes in the list
+- **DOMNodeList::getIterator** - Retrieve an external iterator
+- **DOMNodeList::item** - Retrieves a node specified by index
+- **DOMParentNode::append** - Appends nodes after the last child node
+- **DOMParentNode::prepend** - Prepends nodes before the first child node
+- **DOMParentNode::replaceChildren** - Replace children in node
+- **DOMProcessingInstruction::__construct** - Creates a new DOMProcessingInstruction object
+- **DOMText::isElementContentWhitespace** - Returns whether this text node contains whitespace in element content
+- **DOMText::isWhitespaceInElementContent** - Indicates whether this text node contains whitespace
+- **DOMText::splitText** - Breaks this node into two nodes at the specified offset
+- **DOMText::__construct** - Creates a new DOMText object
+- **DOMXPath::evaluate** - Evaluates the given XPath expression and returns a typed result if possible
+- **DOMXPath::query** - Evaluates the given XPath expression
+- **DOMXPath::quote** - Quotes a string for use in an XPath expression
+- **DOMXPath::registerNamespace** - Registers the namespace with the DOMXPath object
+- **DOMXPath::registerPhpFunctionNS** - Register a PHP functions as namespaced XPath function
+- **DOMXPath::registerPhpFunctions** - Register PHP functions as XPath functions
+- **DOMXPath::__construct** - Creates a new DOMXPath object
+- **Dom\Attr::isId** - Checks if attribute is a defined ID
+- **Dom\Attr::rename** - Changes the qualified name or namespace of an attribute
+- **Dom\CharacterData::after** - Adds nodes after the character data
+- **Dom\CharacterData::appendData** - Append the string to the end of the character data of the node
+- **Dom\CharacterData::before** - Adds nodes before the character data
+- **Dom\CharacterData::deleteData** - Remove a range of characters from the character data
+- **Dom\CharacterData::insertData** - Insert a string at the specified UTF-8 codepoint offset
+- **Dom\CharacterData::remove** - Removes the character data node
+- **Dom\CharacterData::replaceData** - Replace a substring within the character data
+- **Dom\CharacterData::replaceWith** - Replaces the character data with new nodes
+- **Dom\CharacterData::substringData** - Extracts a range of data from the character data
+- **Dom\ChildNode::after** - Adds nodes after the node
+- **Dom\ChildNode::before** - Adds nodes before the node
+- **Dom\ChildNode::remove** - Removes the node
+- **Dom\ChildNode::replaceWith** - Replaces the node with new nodes
+- **Dom\HTMLDocument::createEmpty** - Creates an empty HTML document
+- **Dom\HTMLDocument::createFromFile** - Parses an HTML document from a file
+- **Dom\HTMLDocument::createFromString** - Parses an HTML document from a string
+- **Dom\HTMLDocument::saveHtml** - Serializes the document as an HTML string
+- **Dom\HTMLDocument::saveHtmlFile** - Serializes the document as an HTML file
+- **Dom\HTMLDocument::saveXml** - Serializes the document as an XML string
+- **Dom\HTMLDocument::saveXmlFile** - Serializes the document as an XML file
+- **Dom\import_simplexml** - Gets a Dom\Attr or Dom\Element object from a
+   SimpleXMLElement object
+- **Dom\ParentNode::append** - Appends nodes after the last child node
+- **Dom\ParentNode::prepend** - Prepends nodes before the first child node
+- **Dom\ParentNode::querySelector** - Returns the first element that matches the CSS selectors
+- **Dom\ParentNode::querySelectorAll** - Returns a collection of elements that match the CSS selectors
+- **Dom\ParentNode::replaceChildren** - Replace children in node
+- **Dom\Text::splitText** - Breaks this node into two nodes at the specified offset
+- **Dom\TokenList::add** - Adds the given tokens to the list
+- **Dom\TokenList::contains** - Returns whether the list contains a given token
+- **Dom\TokenList::count** - Returns the number of tokens in the list
+- **Dom\TokenList::getIterator** - Returns an iterator over the token list
+- **Dom\TokenList::item** - Returns a token from the list
+- **Dom\TokenList::remove** - Removes the given tokens from the list
+- **Dom\TokenList::replace** - Replaces a token in the list with another one
+- **Dom\TokenList::supports** - Returns whether the given token is supported
+- **Dom\TokenList::toggle** - Toggles the presence of a token in the list
+- **dom_import_simplexml** - Gets a DOMAttr or DOMElement object from a
+   SimpleXMLElement object
+- **dotnet::__construct** - dotnet class constructor
+- **doubleval** - 别名 floatval
+- **Ds\Collection::clear** - Removes all values
+- **Ds\Collection::copy** - Returns a shallow copy of the collection
+- **Ds\Collection::isEmpty** - Returns whether the collection is empty
+- **Ds\Collection::toArray** - Converts the collection to an array
+- **Ds\Deque::allocate** - Allocates enough memory for a required capacity
+- **Ds\Deque::apply** - Updates all values by applying a callback function to each value
+- **Ds\Deque::capacity** - Returns the current capacity
+- **Ds\Deque::clear** - Removes all values from the deque
+- **Ds\Deque::contains** - Determines if the deque contains given values
+- **Ds\Deque::copy** - Returns a shallow copy of the deque
+- **Ds\Deque::count** - Returns the number of values in the collection
+- **Ds\Deque::filter** - Creates a new deque using a callable to
+    determine which values to include
+- **Ds\Deque::find** - Attempts to find a value's index
+- **Ds\Deque::first** - Returns the first value in the deque
+- **Ds\Deque::get** - Returns the value at a given index
+- **Ds\Deque::insert** - Inserts values at a given index
+- **Ds\Deque::isEmpty** - Returns whether the deque is empty
+- **Ds\Deque::join** - Joins all values together as a string
+- **Ds\Deque::jsonSerialize** - Returns a representation that can be converted to JSON
+- **Ds\Deque::last** - Returns the last value
+- **Ds\Deque::map** - Returns the result of applying a callback to each value
+- **Ds\Deque::merge** - Returns the result of adding all given values to the deque
+- **Ds\Deque::pop** - Removes and returns the last value
+- **Ds\Deque::push** - Adds values to the end of the deque
+- **Ds\Deque::reduce** - Reduces the deque to a single value using a callback function
+- **Ds\Deque::remove** - Removes and returns a value by index
+- **Ds\Deque::reverse** - Reverses the deque in-place
+- **Ds\Deque::reversed** - Returns a reversed copy
+- **Ds\Deque::rotate** - Rotates the deque by a given number of rotations
+- **Ds\Deque::set** - Updates a value at a given index
+- **Ds\Deque::shift** - Removes and returns the first value
+- **Ds\Deque::slice** - Returns a sub-deque of a given range
+- **Ds\Deque::sort** - Sorts the deque in-place
+- **Ds\Deque::sorted** - Returns a sorted copy
+- **Ds\Deque::sum** - Returns the sum of all values in the deque
+- **Ds\Deque::toArray** - Converts the deque to an array
+- **Ds\Deque::unshift** - Adds values to the front of the deque
+- **Ds\Deque::__construct** - Creates a new instance
+- **Ds\Hashable::equals** - Determines whether an object is equal to the current instance
+- **Ds\Hashable::hash** - Returns a scalar value to be used as a hash value
+- **Ds\Map::allocate** - Allocates enough memory for a required capacity
+- **Ds\Map::apply** - Updates all values by applying a callback function to each value
+- **Ds\Map::capacity** - Returns the current capacity
+- **Ds\Map::clear** - Removes all values
+- **Ds\Map::copy** - Returns a shallow copy of the map
+- **Ds\Map::count** - Returns the number of values in the map
+- **Ds\Map::diff** - Creates a new map using keys that aren't in another map
+- **Ds\Map::filter** - Creates a new map using a callable to determine which pairs to include
+- **Ds\Map::first** - Returns the first pair in the map
+- **Ds\Map::get** - Returns the value for a given key
+- **Ds\Map::hasKey** - Determines whether the map contains a given key
+- **Ds\Map::hasValue** - Determines whether the map contains a given value
+- **Ds\Map::intersect** - Creates a new map by intersecting keys with another map
+- **Ds\Map::isEmpty** - Returns whether the map is empty
+- **Ds\Map::jsonSerialize** - Returns a representation that can be converted to JSON
+- **Ds\Map::keys** - Returns a set of the map's keys
+- **Ds\Map::ksort** - Sorts the map in-place by key
+- **Ds\Map::ksorted** - Returns a copy, sorted by key
+- **Ds\Map::last** - Returns the last pair of the map
+- **Ds\Map::map** - Returns the result of applying a callback to each value
+- **Ds\Map::merge** - Returns the result of adding all given associations
+- **Ds\Map::pairs** - Returns a sequence containing all the pairs of the map
+- **Ds\Map::put** - Associates a key with a value
+- **Ds\Map::putAll** - Associates all key-value pairs of a traversable object or array
+- **Ds\Map::reduce** - Reduces the map to a single value using a callback function
+- **Ds\Map::remove** - Removes and returns a value by key
+- **Ds\Map::reverse** - Reverses the map in-place
+- **Ds\Map::reversed** - Returns a reversed copy
+- **Ds\Map::skip** - Returns the pair at a given positional index
+- **Ds\Map::slice** - Returns a subset of the map defined by a starting index and length
+- **Ds\Map::sort** - Sorts the map in-place by value
+- **Ds\Map::sorted** - Returns a copy, sorted by value
+- **Ds\Map::sum** - Returns the sum of all values in the map
+- **Ds\Map::toArray** - Converts the map to an array
+- **Ds\Map::union** - Creates a new map using values from the current instance and another map
+- **Ds\Map::values** - Returns a sequence of the map's values
+- **Ds\Map::xor** - Creates a new map using keys of either the current instance or of another map, but not of both
+- **Ds\Map::__construct** - Creates a new instance
+- **Ds\Pair::clear** - Removes all values
+- **Ds\Pair::copy** - Returns a shallow copy of the pair
+- **Ds\Pair::isEmpty** - Returns whether the pair is empty
+- **Ds\Pair::jsonSerialize** - Returns a representation that can be converted to JSON
+- **Ds\Pair::toArray** - Converts the pair to an array
+- **Ds\Pair::__construct** - Creates a new instance
+- **Ds\PriorityQueue::allocate** - Allocates enough memory for a required capacity
+- **Ds\PriorityQueue::capacity** - Returns the current capacity
+- **Ds\PriorityQueue::clear** - Removes all values
+- **Ds\PriorityQueue::copy** - Returns a shallow copy of the queue
+- **Ds\PriorityQueue::count** - Returns the number of values in the queue
+- **Ds\PriorityQueue::isEmpty** - Returns whether the queue is empty
+- **Ds\PriorityQueue::jsonSerialize** - Returns a representation that can be converted to JSON
+- **Ds\PriorityQueue::peek** - Returns the value at the front of the queue
+- **Ds\PriorityQueue::pop** - Removes and returns the value with the highest priority
+- **Ds\PriorityQueue::push** - Pushes values into the queue
+- **Ds\PriorityQueue::toArray** - Converts the queue to an array
+- **Ds\PriorityQueue::__construct** - Creates a new instance
+- **Ds\Queue::allocate** - Allocates enough memory for a required capacity
+- **Ds\Queue::capacity** - Returns the current capacity
+- **Ds\Queue::clear** - Removes all values
+- **Ds\Queue::copy** - Returns a shallow copy of the queue
+- **Ds\Queue::count** - Returns the number of values in the queue
+- **Ds\Queue::isEmpty** - Returns whether the queue is empty
+- **Ds\Queue::jsonSerialize** - Returns a representation that can be converted to JSON
+- **Ds\Queue::peek** - Returns the value at the front of the queue
+- **Ds\Queue::pop** - Removes and returns the value at the front of the queue
+- **Ds\Queue::push** - Pushes values into the queue
+- **Ds\Queue::toArray** - Converts the queue to an array
+- **Ds\Queue::__construct** - Creates a new instance
+- **Ds\Sequence::allocate** - Allocates enough memory for a required capacity
+- **Ds\Sequence::apply** - Updates all values by applying a callback function to each value
+- **Ds\Sequence::capacity** - Returns the current capacity
+- **Ds\Sequence::contains** - Determines if the sequence contains given values
+- **Ds\Sequence::filter** - Creates a new sequence using a callable to
+    determine which values to include
+- **Ds\Sequence::find** - Attempts to find a value's index
+- **Ds\Sequence::first** - Returns the first value in the sequence
+- **Ds\Sequence::get** - Returns the value at a given index
+- **Ds\Sequence::insert** - Inserts values at a given index
+- **Ds\Sequence::join** - Joins all values together as a string
+- **Ds\Sequence::last** - Returns the last value
+- **Ds\Sequence::map** - Returns the result of applying a callback to each value
+- **Ds\Sequence::merge** - Returns the result of adding all given values to the sequence
+- **Ds\Sequence::pop** - Removes and returns the last value
+- **Ds\Sequence::push** - Adds values to the end of the sequence
+- **Ds\Sequence::reduce** - Reduces the sequence to a single value using a callback function
+- **Ds\Sequence::remove** - Removes and returns a value by index
+- **Ds\Sequence::reverse** - Reverses the sequence in-place
+- **Ds\Sequence::reversed** - Returns a reversed copy
+- **Ds\Sequence::rotate** - Rotates the sequence by a given number of rotations
+- **Ds\Sequence::set** - Updates a value at a given index
+- **Ds\Sequence::shift** - Removes and returns the first value
+- **Ds\Sequence::slice** - Returns a sub-sequence of a given range
+- **Ds\Sequence::sort** - Sorts the sequence in-place
+- **Ds\Sequence::sorted** - Returns a sorted copy
+- **Ds\Sequence::sum** - Returns the sum of all values in the sequence
+- **Ds\Sequence::unshift** - Adds values to the front of the sequence
+- **Ds\Set::add** - Adds values to the set
+- **Ds\Set::allocate** - Allocates enough memory for a required capacity
+- **Ds\Set::capacity** - Returns the current capacity
+- **Ds\Set::clear** - Removes all values
+- **Ds\Set::contains** - Determines if the set contains all values
+- **Ds\Set::copy** - Returns a shallow copy of the set
+- **Ds\Set::count** - Returns the number of values in the set
+- **Ds\Set::diff** - Creates a new set using values that aren't in another set
+- **Ds\Set::filter** - Creates a new set using a callable to
+    determine which values to include
+- **Ds\Set::first** - Returns the first value in the set
+- **Ds\Set::get** - Returns the value at a given index
+- **Ds\Set::intersect** - Creates a new set by intersecting values with another set
+- **Ds\Set::isEmpty** - Returns whether the set is empty
+- **Ds\Set::join** - Joins all values together as a string
+- **Ds\Set::jsonSerialize** - Returns a representation that can be converted to JSON
+- **Ds\Set::last** - Returns the last value in the set
+- **Ds\Set::map** - Returns the result of applying a callback to each value
+- **Ds\Set::merge** - Returns the result of adding all given values to the set
+- **Ds\Set::reduce** - Reduces the set to a single value using a callback function
+- **Ds\Set::remove** - Removes all given values from the set
+- **Ds\Set::reverse** - Reverses the set in-place
+- **Ds\Set::reversed** - Returns a reversed copy
+- **Ds\Set::slice** - Returns a sub-set of a given range
+- **Ds\Set::sort** - Sorts the set in-place
+- **Ds\Set::sorted** - Returns a sorted copy
+- **Ds\Set::sum** - Returns the sum of all values in the set
+- **Ds\Set::toArray** - Converts the set to an array
+- **Ds\Set::union** - Creates a new set using values from the current instance and another set
+- **Ds\Set::xor** - Creates a new set using values in either the current instance or in another set, but not in both
+- **Ds\Set::__construct** - Creates a new instance
+- **Ds\Stack::allocate** - Allocates enough memory for a required capacity
+- **Ds\Stack::capacity** - Returns the current capacity
+- **Ds\Stack::clear** - Removes all values
+- **Ds\Stack::copy** - Returns a shallow copy of the stack
+- **Ds\Stack::count** - Returns the number of values in the stack
+- **Ds\Stack::isEmpty** - Returns whether the stack is empty
+- **Ds\Stack::jsonSerialize** - Returns a representation that can be converted to JSON
+- **Ds\Stack::peek** - Returns the value at the top of the stack
+- **Ds\Stack::pop** - Removes and returns the value at the top of the stack
+- **Ds\Stack::push** - Pushes values onto the stack
+- **Ds\Stack::toArray** - Converts the stack to an array
+- **Ds\Stack::__construct** - Creates a new instance
+- **Ds\Vector::allocate** - Allocates enough memory for a required capacity
+- **Ds\Vector::apply** - Updates all values by applying a callback function to each value
+- **Ds\Vector::capacity** - Returns the current capacity
+- **Ds\Vector::clear** - Removes all values
+- **Ds\Vector::contains** - Determines if the vector contains given values
+- **Ds\Vector::copy** - Returns a shallow copy of the vector
+- **Ds\Vector::count** - Returns the number of values in the collection
+- **Ds\Vector::filter** - Creates a new vector using a callable to
+    determine which values to include
+- **Ds\Vector::find** - Attempts to find a value's index
+- **Ds\Vector::first** - Returns the first value in the vector
+- **Ds\Vector::get** - Returns the value at a given index
+- **Ds\Vector::insert** - Inserts values at a given index
+- **Ds\Vector::isEmpty** - Returns whether the vector is empty
+- **Ds\Vector::join** - Joins all values together as a string
+- **Ds\Vector::jsonSerialize** - Returns a representation that can be converted to JSON
+- **Ds\Vector::last** - Returns the last value
+- **Ds\Vector::map** - Returns the result of applying a callback to each value
+- **Ds\Vector::merge** - Returns the result of adding all given values to the vector
+- **Ds\Vector::pop** - Removes and returns the last value
+- **Ds\Vector::push** - Adds values to the end of the vector
+- **Ds\Vector::reduce** - Reduces the vector to a single value using a callback function
+- **Ds\Vector::remove** - Removes and returns a value by index
+- **Ds\Vector::reverse** - Reverses the vector in-place
+- **Ds\Vector::reversed** - Returns a reversed copy
+- **Ds\Vector::rotate** - Rotates the vector by a given number of rotations
+- **Ds\Vector::set** - Updates a value at a given index
+- **Ds\Vector::shift** - Removes and returns the first value
+- **Ds\Vector::slice** - Returns a sub-vector of a given range
+- **Ds\Vector::sort** - Sorts the vector in-place
+- **Ds\Vector::sorted** - Returns a sorted copy
+- **Ds\Vector::sum** - Returns the sum of all values in the vector
+- **Ds\Vector::toArray** - Converts the vector to an array
+- **Ds\Vector::unshift** - Adds values to the front of the vector
+- **Ds\Vector::__construct** - Creates a new instance
+
+## E
+
+- **each** - 返回数组中当前的键／值对并将数组指针向前移动一步
+- **easter_date** - 得到指定年份的复活节当地午夜时的 Unix 时间戳
+- **easter_days** - 得到指定年份的 3 月 21 日到复活节之间的天数
+- **echo** - 输出一个或多个字符串
+- **eio_busy** - Artificially increase load. Could be useful in tests,
+  benchmarking
+- **eio_cancel** - Cancels a request
+- **eio_chmod** - Change file/directory permissions
+- **eio_chown** - Change file/directory ownership
+- **eio_close** - Close file
+- **eio_custom** - Execute custom request like any other eio_* call
+- **eio_dup2** - Duplicate a file descriptor
+- **eio_event_loop** - Polls libeio until all requests proceeded
+- **eio_fallocate** - Allows the caller to directly manipulate the allocated disk
+  space for a file
+- **eio_fchmod** - Change file permissions
+- **eio_fchown** - Change file ownership
+- **eio_fdatasync** - Synchronize a file's in-core state with storage device
+- **eio_fstat** - Get file status
+- **eio_fstatvfs** - Get file system statistics
+- **eio_fsync** - Synchronize a file's in-core state with storage device
+- **eio_ftruncate** - Truncate a file
+- **eio_futime** - Change file last access and modification times
+- **eio_get_event_stream** - Get stream representing a variable used in internal communications with libeio
+- **eio_get_last_error** - Returns string describing the last error associated with a request resource
+- **eio_grp** - Creates a request group
+- **eio_grp_add** - Adds a request to the request group
+- **eio_grp_cancel** - Cancels a request group
+- **eio_grp_limit** - Set group limit
+- **eio_init** - (Re-)initialize Eio
+- **eio_link** - Create a hardlink for file
+- **eio_lstat** - Get file status
+- **eio_mkdir** - Create directory
+- **eio_mknod** - Create a special or ordinary file
+- **eio_nop** - Does nothing, except go through the whole request cycle
+- **eio_npending** - Returns number of finished, but unhandled requests
+- **eio_nready** - Returns number of not-yet handled requests
+- **eio_nreqs** - Returns number of requests to be processed
+- **eio_nthreads** - Returns number of threads currently in use
+- **eio_open** - Opens a file
+- **eio_poll** - Can be called whenever there are pending requests that need finishing
+- **eio_read** - Read from a file descriptor at given offset
+- **eio_readahead** - Perform file readahead into page cache
+- **eio_readdir** - Reads through a whole directory
+- **eio_readlink** - Read value of a symbolic link
+- **eio_realpath** - Get the canonicalized absolute pathname
+- **eio_rename** - Change the name or location of a file
+- **eio_rmdir** - Remove a directory
+- **eio_seek** - Seek to a position
+- **eio_sendfile** - Transfer data between file descriptors
+- **eio_set_max_idle** - Set maximum number of idle threads
+- **eio_set_max_parallel** - Set maximum parallel threads
+- **eio_set_max_poll_reqs** - Set maximum number of requests processed in a poll
+- **eio_set_max_poll_time** - Set maximum poll time
+- **eio_set_min_parallel** - Set minimum parallel thread number
+- **eio_stat** - Get file status
+- **eio_statvfs** - Get file system statistics
+- **eio_symlink** - Create a symbolic link
+- **eio_sync** - Commit buffer cache to disk
+- **eio_syncfs** - Calls Linux' syncfs syscall, if available
+- **eio_sync_file_range** - Sync a file segment with disk
+- **eio_truncate** - Truncate a file
+- **eio_unlink** - Delete a name and possibly the file it refers to
+- **eio_utime** - Change file last access and modification times
+- **eio_write** - Write to file
+- **empty** - 检查变量是否为空
+- **EmptyIterator::current** - The current() method
+- **EmptyIterator::key** - The key() method
+- **EmptyIterator::next** - The next() method
+- **EmptyIterator::rewind** - The rewind() method
+- **EmptyIterator::valid** - Checks whether the current element is valid
+- **enchant_broker_describe** - Enumerates the Enchant providers
+- **enchant_broker_dict_exists** - Whether a dictionary exists or not
+- **enchant_broker_free** - Free the broker resource and its dictionaries
+- **enchant_broker_free_dict** - Free a dictionary resource
+- **enchant_broker_get_dict_path** - Get the directory path for a given backend
+- **enchant_broker_get_error** - Returns the last error of the broker
+- **enchant_broker_init** - Create a new broker object
+- **enchant_broker_list_dicts** - Returns a list of available dictionaries
+- **enchant_broker_request_dict** - Create a new dictionary using a tag
+- **enchant_broker_request_pwl_dict** - Creates a dictionary using a PWL file
+- **enchant_broker_set_dict_path** - Set the directory path for a given backend
+- **enchant_broker_set_ordering** - Declares a preference of dictionaries to use for the language
+- **enchant_dict_add** - Add a word to personal word list
+- **enchant_dict_add_to_personal** - 别名 enchant_dict_add
+- **enchant_dict_add_to_session** - Add 'word' to this spell-checking session
+- **enchant_dict_check** - Check whether a word is correctly spelled or not
+- **enchant_dict_describe** - Describes an individual dictionary
+- **enchant_dict_get_error** - Returns the last error of the current spelling-session
+- **enchant_dict_is_added** - Whether or not 'word' exists in this spelling-session
+- **enchant_dict_is_in_session** - 别名 enchant_dict_is_added
+- **enchant_dict_quick_check** - Check the word is correctly spelled and provide suggestions
+- **enchant_dict_store_replacement** - Add a correction for a word
+- **enchant_dict_suggest** - Suggest spellings for a word
+- **end** - 将数组的内部指针指向最后一个单元
+- **enum_exists** - 检测是否定义对应的枚举
+- **Error::getCode** - 获取错误代码
+- **Error::getFile** - 获取错误发生时的文件
+- **Error::getLine** - 获取错误发生时的行号
+- **Error::getMessage** - 获取错误信息
+- **Error::getPrevious** - 返回先前的 Throwable
+- **Error::getTrace** - 获取调用栈（stack trace）
+- **Error::getTraceAsString** - 获取字符串形式的调用栈（stack trace）
+- **Error::__clone** - 克隆 error
+- **Error::__construct** - 初始化 error 对象
+- **Error::__toString** - error 的字符串表达
+- **ErrorException::getSeverity** - 获取异常的严重程度
+- **ErrorException::__construct** - 构造一个异常（Exception）
+- **error_clear_last** - 清除最近一次错误
+- **error_get_last** - 获取最后发生的错误
+- **error_log** - 发送错误信息到某个地方
+- **error_reporting** - 设置应该报告何种 PHP 错误
+- **escapeshellarg** - 把字符串转义为可以在 shell 命令里使用的参数
+- **escapeshellcmd** - shell 元字符转义
+- **Ev::backend** - Returns an integer describing the backend used by libev
+- **Ev::depth** - Returns recursion depth
+- **Ev::embeddableBackends** - Returns the set of backends that are embeddable in other event loops
+- **Ev::feedSignal** - Feed a signal event into Ev
+- **Ev::feedSignalEvent** - Feed signal event into the default loop
+- **Ev::iteration** - Return the number of times the default event loop has polled for new
+  events
+- **Ev::now** - Returns the time when the last iteration of the default event
+  loop has started
+- **Ev::nowUpdate** - Establishes the current time by querying the kernel, updating the time
+    returned by Ev::now in the progress
+- **Ev::recommendedBackends** - Returns a bit mask of recommended backends for current
+  platform
+- **Ev::resume** - Resume previously suspended default event loop
+- **Ev::run** - Begin checking for events and calling callbacks for the default
+  loop
+- **Ev::sleep** - Block the process for the given number of seconds
+- **Ev::stop** - Stops the default event loop
+- **Ev::supportedBackends** - Returns the set of backends supported by current libev
+  configuration
+- **Ev::suspend** - Suspend the default event loop
+- **Ev::time** - Returns the current time in fractional seconds since the epoch
+- **Ev::verify** - Performs internal consistency checks(for debugging)
+- **eval** - 把字符串作为PHP代码执行
+- **EvCheck::createStopped** - Create instance of a stopped EvCheck watcher
+- **EvCheck::__construct** - Constructs the EvCheck watcher object
+- **EvChild::createStopped** - Create instance of a stopped EvChild watcher
+- **EvChild::set** - Configures the watcher
+- **EvChild::__construct** - Constructs the EvChild watcher object
+- **EvEmbed::createStopped** - Create stopped EvEmbed watcher object
+- **EvEmbed::set** - Configures the watcher
+- **EvEmbed::sweep** - Make a single, non-blocking sweep over the embedded loop
+- **EvEmbed::__construct** - Constructs the EvEmbed object
+- **Event::add** - Makes event pending
+- **Event::addSignal** - 别名 Event::add
+- **Event::addTimer** - 别名 Event::add
+- **Event::del** - Makes event non-pending
+- **Event::delSignal** - 别名 Event::del
+- **Event::delTimer** - 别名 Event::del
+- **Event::free** - Make event non-pending and free resources allocated for this
+  event
+- **Event::getSupportedMethods** - Returns array of the names of the methods supported in this version of Libevent
+- **Event::pending** - Detects whether event is pending or scheduled
+- **Event::set** - Re-configures event
+- **Event::setPriority** - Set event priority
+- **Event::setTimer** - Re-configures timer event
+- **Event::signal** - Constructs signal event object
+- **Event::timer** - Constructs timer event object
+- **Event::__construct** - Constructs Event object
+- **EventBase::dispatch** - Dispatch pending events
+- **EventBase::exit** - Stop dispatching events
+- **EventBase::free** - Free resources allocated for this event base
+- **EventBase::getFeatures** - Returns bitmask of features supported
+- **EventBase::getMethod** - Returns event method in use
+- **EventBase::getTimeOfDayCached** - Returns the current event base time
+- **EventBase::gotExit** - Checks if the event loop was told to exit
+- **EventBase::gotStop** - Checks if the event loop was told to exit
+- **EventBase::loop** - Dispatch pending events
+- **EventBase::priorityInit** - Sets number of priorities per event base
+- **EventBase::reInit** - Re-initialize event base(after a fork)
+- **EventBase::stop** - Tells event_base to stop dispatching events
+- **EventBase::__construct** - 构造 EventBase 对象
+- **EventBuffer::add** - Append data to the end of an event buffer
+- **EventBuffer::addBuffer** - Move all data from a buffer provided to the current instance of EventBuffer
+- **EventBuffer::appendFrom** - Moves the specified number of bytes from a source buffer to the
+  end of the current buffer
+- **EventBuffer::copyout** - Copies out specified number of bytes from the front of the buffer
+- **EventBuffer::drain** - Removes specified number of bytes from the front of the buffer
+  without copying it anywhere
+- **EventBuffer::enableLocking** - 说明
+- **EventBuffer::expand** - Reserves space in buffer
+- **EventBuffer::freeze** - Prevent calls that modify an event buffer from succeeding
+- **EventBuffer::lock** - Acquires a lock on buffer
+- **EventBuffer::prepend** - Prepend data to the front of the buffer
+- **EventBuffer::prependBuffer** - Moves all data from source buffer to the front of current buffer
+- **EventBuffer::pullup** - Linearizes data within buffer
+  and returns its contents as a string
+- **EventBuffer::read** - Read data from an evbuffer and drain the bytes read
+- **EventBuffer::readFrom** - Read data from a file onto the end of the buffer
+- **EventBuffer::readLine** - Extracts a line from the front of the buffer
+- **EventBuffer::search** - Scans the buffer for an occurrence of a string
+- **EventBuffer::searchEol** - Scans the buffer for an occurrence of an end of line
+- **EventBuffer::substr** - Subtracts a portion of the buffer data
+- **EventBuffer::unfreeze** - Re-enable calls that modify an event buffer
+- **EventBuffer::unlock** - Releases lock acquired by EventBuffer::lock
+- **EventBuffer::write** - Write contents of the buffer to a file or socket
+- **EventBuffer::__construct** - Constructs EventBuffer object
+- **EventBufferEvent::close** - Closes file descriptor associated with the current buffer event
+- **EventBufferEvent::connect** - Connect buffer event's file descriptor to given address or
+  UNIX socket
+- **EventBufferEvent::connectHost** - Connects to a hostname with optionally asynchronous DNS resolving
+- **EventBufferEvent::createPair** - Creates two buffer events connected to each other
+- **EventBufferEvent::disable** - Disable events read, write, or both on a buffer event
+- **EventBufferEvent::enable** - Enable events read, write, or both on a buffer event
+- **EventBufferEvent::free** - Free a buffer event
+- **EventBufferEvent::getDnsErrorString** - Returns string describing the last failed DNS lookup attempt
+- **EventBufferEvent::getEnabled** - Returns bitmask of events currently enabled on the buffer event
+- **EventBufferEvent::getInput** - Returns underlying input buffer associated with current buffer
+  event
+- **EventBufferEvent::getOutput** - Returns underlying output buffer associated with current buffer
+  event
+- **EventBufferEvent::read** - Read buffer's data
+- **EventBufferEvent::readBuffer** - Drains the entire contents of the input buffer and places them into buf
+- **EventBufferEvent::setCallbacks** - Assigns read, write and event(status) callbacks
+- **EventBufferEvent::setPriority** - Assign a priority to a bufferevent
+- **EventBufferEvent::setTimeouts** - Set the read and write timeout for a buffer event
+- **EventBufferEvent::setWatermark** - Adjusts read and/or write watermarks
+- **EventBufferEvent::sslError** - Returns most recent OpenSSL error reported on the buffer event
+- **EventBufferEvent::sslFilter** - Create a new SSL buffer event to send its data over another buffer event
+- **EventBufferEvent::sslGetCipherInfo** - Returns a textual description of the cipher
+- **EventBufferEvent::sslGetCipherName** - Returns the current cipher name of the SSL connection
+- **EventBufferEvent::sslGetCipherVersion** - Returns version of cipher used by current SSL connection
+- **EventBufferEvent::sslGetProtocol** - Returns the name of the protocol used for current SSL connection
+- **EventBufferEvent::sslRenegotiate** - Tells a bufferevent to begin SSL renegotiation
+- **EventBufferEvent::sslSocket** - Creates a new SSL buffer event to send its data over an SSL on a socket
+- **EventBufferEvent::write** - Adds data to a buffer event's output buffer
+- **EventBufferEvent::writeBuffer** - Adds contents of the entire buffer to a buffer event's output
+  buffer
+- **EventBufferEvent::__construct** - Constructs EventBufferEvent object
+- **EventConfig::avoidMethod** - 告诉 libevent 避免使用指定 event 方法
+- **EventConfig::requireFeatures** - 输入应用程序要求的必需 event 方法功能
+- **EventConfig::setFlags** - EventBase 初始化需设置的一个或者多个 flag
+- **EventConfig::setMaxDispatchInterval** - 防止优先级反转
+- **EventConfig::__construct** - EventConfig 构造函数
+- **EventDnsBase::addNameserverIp** - Adds a nameserver to the DNS base
+- **EventDnsBase::addSearch** - Adds a domain to the list of search domains
+- **EventDnsBase::clearSearch** - Removes all current search suffixes
+- **EventDnsBase::countNameservers** - Gets the number of configured nameservers
+- **EventDnsBase::loadHosts** - Loads a hosts file (in the same format as /etc/hosts) from hosts file
+- **EventDnsBase::parseResolvConf** - Scans the resolv.conf-formatted file
+- **EventDnsBase::setOption** - Set the value of a configuration option
+- **EventDnsBase::setSearchNdots** - Set the 'ndots' parameter for searches
+- **EventDnsBase::__construct** - Constructs EventDnsBase object
+- **EventHttp::accept** - Makes an HTTP server accept connections on the specified socket stream or resource
+- **EventHttp::addServerAlias** - Adds a server alias to the HTTP server object
+- **EventHttp::bind** - Binds an HTTP server on the specified address and port
+- **EventHttp::removeServerAlias** - Removes server alias
+- **EventHttp::setAllowedMethods** - Sets which HTTP methods are supported in requests accepted by this server, and passed to user callbacks
+- **EventHttp::setCallback** - Sets a callback for specified URI
+- **EventHttp::setDefaultCallback** - Sets default callback to handle requests that are not caught by specific callbacks
+- **EventHttp::setMaxBodySize** - Sets maximum request body size
+- **EventHttp::setMaxHeadersSize** - Sets maximum HTTP header size
+- **EventHttp::setTimeout** - Sets the timeout for an HTTP request
+- **EventHttp::__construct** - Constructs EventHttp object (the HTTP server)
+- **EventHttpConnection::getBase** - Returns event base associated with the connection
+- **EventHttpConnection::getPeer** - Gets the remote address and port associated with the connection
+- **EventHttpConnection::makeRequest** - Makes an HTTP request over the specified connection
+- **EventHttpConnection::setCloseCallback** - Set callback for connection close
+- **EventHttpConnection::setLocalAddress** - Sets the IP address from which HTTP connections are made
+- **EventHttpConnection::setLocalPort** - Sets the local port from which connections are made
+- **EventHttpConnection::setMaxBodySize** - Sets maximum body size for the connection
+- **EventHttpConnection::setMaxHeadersSize** - Sets maximum header size
+- **EventHttpConnection::setRetries** - Sets the retry limit for the connection
+- **EventHttpConnection::setTimeout** - Sets the timeout for the connection
+- **EventHttpConnection::__construct** - Constructs EventHttpConnection object
+- **EventHttpRequest::addHeader** - Adds an HTTP header to the headers of the request
+- **EventHttpRequest::cancel** - Cancels a pending HTTP request
+- **EventHttpRequest::clearHeaders** - Removes all output headers from the header list of the request
+- **EventHttpRequest::closeConnection** - Closes associated HTTP connection
+- **EventHttpRequest::findHeader** - Finds the value belonging to a header
+- **EventHttpRequest::free** - Frees the object and removes associated events
+- **EventHttpRequest::getBufferEvent** - Returns EventBufferEvent object
+- **EventHttpRequest::getCommand** - Returns the request command(method)
+- **EventHttpRequest::getConnection** - Returns EventHttpConnection object
+- **EventHttpRequest::getHost** - Returns the request host
+- **EventHttpRequest::getInputBuffer** - Returns the input buffer
+- **EventHttpRequest::getInputHeaders** - Returns associative array of the input headers
+- **EventHttpRequest::getOutputBuffer** - Returns the output buffer of the request
+- **EventHttpRequest::getOutputHeaders** - Returns associative array of the output headers
+- **EventHttpRequest::getResponseCode** - Returns the response code
+- **EventHttpRequest::getUri** - Returns the request URI
+- **EventHttpRequest::removeHeader** - Removes an HTTP header from the headers of the request
+- **EventHttpRequest::sendError** - Send an HTML error message to the client
+- **EventHttpRequest::sendReply** - Send an HTML reply to the client
+- **EventHttpRequest::sendReplyChunk** - Send another data chunk as part of an ongoing chunked reply
+- **EventHttpRequest::sendReplyEnd** - Complete a chunked reply, freeing the request as appropriate
+- **EventHttpRequest::sendReplyStart** - Initiate a chunked reply
+- **EventHttpRequest::__construct** - Constructs EventHttpRequest object
+- **EventListener::disable** - Disables an event connect listener object
+- **EventListener::enable** - Enables an event connect listener object
+- **EventListener::getBase** - Returns event base associated with the event listener
+- **EventListener::getSocketName** - Retrieves the current address to which the
+  listener's socket is bound
+- **EventListener::setCallback** - The setCallback purpose
+- **EventListener::setErrorCallback** - Set event listener's error callback
+- **EventListener::__construct** - Creates new connection listener associated with an event base
+- **EventSslContext::__construct** - Constructs an OpenSSL context for use with Event classes
+- **EventUtil::getLastSocketErrno** - Returns the most recent socket error number
+- **EventUtil::getLastSocketError** - Returns the most recent socket error
+- **EventUtil::getSocketFd** - Returns numeric file descriptor of a socket, or stream
+- **EventUtil::getSocketName** - Retrieves the current address to which the
+  socket is bound
+- **EventUtil::setSocketOption** - Sets socket options
+- **EventUtil::sslRandPoll** - Generates entropy by means of OpenSSL's RAND_poll()
+- **EventUtil::__construct** - The abstract constructor
+- **EvFork::createStopped** - Creates a stopped instance of EvFork watcher class
+- **EvFork::__construct** - Constructs the EvFork watcher object
+- **EvIdle::createStopped** - Creates instance of a stopped EvIdle watcher object
+- **EvIdle::__construct** - Constructs the EvIdle watcher object
+- **EvIo::createStopped** - Create stopped EvIo watcher object
+- **EvIo::set** - Configures the watcher
+- **EvIo::__construct** - Constructs EvIo watcher object
+- **EvLoop::backend** - Returns an integer describing the backend used by libev
+- **EvLoop::check** - Creates EvCheck object associated with the current event loop
+  instance
+- **EvLoop::child** - Creates EvChild object associated with the current event loop
+- **EvLoop::defaultLoop** - Returns or creates the default event loop
+- **EvLoop::embed** - Creates an instance of EvEmbed watcher associated
+  with the current EvLoop object
+- **EvLoop::fork** - Creates EvFork watcher object associated with the current event
+  loop instance
+- **EvLoop::idle** - Creates EvIdle watcher object associated with the current event
+  loop instance
+- **EvLoop::invokePending** - Invoke all pending watchers while resetting their pending state
+- **EvLoop::io** - Create EvIo watcher object associated with the current event
+  loop instance
+- **EvLoop::loopFork** - Must be called after a fork
+- **EvLoop::now** - Returns the current "event loop time"
+- **EvLoop::nowUpdate** - Establishes the current time by querying the kernel, updating the time
+    returned by EvLoop::now in the progress
+- **EvLoop::periodic** - Creates EvPeriodic watcher object associated with the current
+  event loop instance
+- **EvLoop::prepare** - Creates EvPrepare watcher object associated with the current
+  event loop instance
+- **EvLoop::resume** - Resume previously suspended default event loop
+- **EvLoop::run** - Begin checking for events and calling callbacks for the loop
+- **EvLoop::signal** - Creates EvSignal watcher object associated with the current
+  event loop instance
+- **EvLoop::stat** - Creates EvStat watcher object associated with the current event
+  loop instance
+- **EvLoop::stop** - Stops the event loop
+- **EvLoop::suspend** - Suspend the loop
+- **EvLoop::timer** - Creates EvTimer watcher object associated with the current event
+  loop instance
+- **EvLoop::verify** - Performs internal consistency checks(for debugging)
+- **EvLoop::__construct** - Constructs the event loop object
+- **EvPeriodic::again** - Simply stops and restarts the periodic watcher again
+- **EvPeriodic::at** - Returns the absolute time that this
+  watcher is supposed to trigger next
+- **EvPeriodic::createStopped** - Create a stopped EvPeriodic watcher
+- **EvPeriodic::set** - Configures the watcher
+- **EvPeriodic::__construct** - Constructs EvPeriodic watcher object
+- **EvPrepare::createStopped** - Creates a stopped instance of EvPrepare watcher
+- **EvPrepare::__construct** - Constructs EvPrepare watcher object
+- **EvSignal::createStopped** - Create stopped EvSignal watcher object
+- **EvSignal::set** - Configures the watcher
+- **EvSignal::__construct** - Constructs EvSignal watcher object
+- **EvStat::attr** - Returns the values most recently detected by Ev
+- **EvStat::createStopped** - Create a stopped EvStat watcher object
+- **EvStat::prev** - Returns the previous set of values returned by EvStat::attr
+- **EvStat::set** - Configures the watcher
+- **EvStat::stat** - Initiates the stat call
+- **EvStat::__construct** - Constructs EvStat watcher object
+- **EvTimer::again** - Restarts the timer watcher
+- **EvTimer::createStopped** - Creates EvTimer stopped watcher object
+- **EvTimer::set** - Configures the watcher
+- **EvTimer::__construct** - Constructs an EvTimer watcher object
+- **EvWatcher::clear** - Clear watcher pending status
+- **EvWatcher::feed** - Feeds the given revents set into the event loop
+- **EvWatcher::getLoop** - Returns the loop responsible for the watcher
+- **EvWatcher::invoke** - Invokes the watcher callback with the given received events bit
+  mask
+- **EvWatcher::keepalive** - Configures whether to keep the loop from returning
+- **EvWatcher::setCallback** - Sets new callback for the watcher
+- **EvWatcher::start** - Starts the watcher
+- **EvWatcher::stop** - Stops the watcher
+- **EvWatcher::__construct** - Abstract constructor of a watcher object
+- **Exception::getCode** - 获取异常代码
+- **Exception::getFile** - 创建异常时的程序文件名称
+- **Exception::getLine** - 获取创建的异常所在文件中的行号
+- **Exception::getMessage** - 获取异常消息内容
+- **Exception::getPrevious** - 返回前一个 Throwable
+- **Exception::getTrace** - 获取异常追踪信息
+- **Exception::getTraceAsString** - 获取字符串类型的异常追踪信息
+- **Exception::__clone** - 异常克隆
+- **Exception::__construct** - 异常构造函数
+- **Exception::__toString** - 将异常对象转换为字符串
+- **exec** - 执行一个外部程序
+- **Executable::execute** - Execute statement
+- **ExecutionStatus::__construct** - ExecutionStatus constructor
+- **exif_imagetype** - 判断一个图像的类型
+- **exif_read_data** - 从一个图片文件中读取 EXIF 头信息
+- **exif_tagname** - 获取指定索引的头名称
+- **exif_thumbnail** - 检索图像的嵌入式缩略图
+- **exit** - 使用状态 code 或消息终止当前脚本
+- **exp** - 计算 e 的指数
+- **expect_expectl** - Waits until the output from a process matches one
+  of the patterns, a specified time period has passed, or an EOF is seen
+- **expect_popen** - Execute command via Bourne shell, and open the PTY stream to
+  the process
+- **explode** - 使用一个字符串分割另一个字符串
+- **expm1** - 返回 exp($num) - 1，甚至当 number 的值接近零也能计算出准确结果
+- **expression** - Bind prepared statement variables as parameters
+- **Expression::__construct** - Expression constructor
+- **extension_loaded** - 检查一个扩展是否已经加载
+- **extract** - 从数组中将变量导入到当前的符号表
+- **ezmlm_hash** - 计算 EZMLM 所需的散列值
+
+## F
+
+- **FANNConnection::getFromNeuron** - 返回开始连接的神经元
+- **FANNConnection::getToNeuron** - 返回终止神经元的位置
+- **FANNConnection::getWeight** - 返回连接权重。
+- **FANNConnection::setWeight** - 设置连接权重。
+- **FANNConnection::__construct** - 连接构造器
+- **fann_cascadetrain_on_data** - 在整个数据集上训练，使用一段时间的 Cascade2 训练算法。
+- **fann_cascadetrain_on_file** - 读取文件并在整个数据集上训练，使用 Cascade2 训练算法训练一段时间
+- **fann_clear_scaling_params** - 清除缩放参数
+- **fann_copy** - 创建一个 fann 结构体的副本。
+- **fann_create_from_file** - 从配置文件中构建一个反向传播神经网络。
+- **fann_create_shortcut** - 创建一个含快捷连接而非全连接的标准反向传播神经网络。
+- **fann_create_shortcut_array** - 创建一个含快捷连接而非全连接的标准反向传播神经网络。
+- **fann_create_sparse** - 创建一个标准的反向传播神经网络，该网络不是全连接。
+- **fann_create_sparse_array** - 创建一个标准的反向传播神经网络，该网络使用一个表示每层大小的数组来构造，但是并不是全连接的。
+- **fann_create_standard** - 创建标准的全连接反向传播神经网络。
+- **fann_create_standard_array** - 创建一个全连接的反向传播神经网络，该网络使用一个表示每层大小的数组来构造。
+- **fann_create_train** - 创建一个空的训练数据结构。
+- **fann_create_train_from_callback** - 从用户提供的函数创建训练数据结构。
+- **fann_descale_input** - 在获取基于先前计算的参数之后，在输入向量中缩小数据
+- **fann_descale_output** - 在获取基于先前计算的参数之后，在输出向量中缩小数据
+- **fann_descale_train** - 基于先前计算的参数来缩小输入和输出数据
+- **fann_destroy** - 销毁整个网络并且适当地释放所有的关联内存。
+- **fann_destroy_train** - 销毁训练数据。
+- **fann_duplicate_train_data** - 返回 fann 训练数据精确的副本。
+- **fann_get_activation_function** - 返回激励函数
+- **fann_get_activation_steepness** - 为提供的神经和网络层数返回激活陡度
+- **fann_get_bias_array** - 获取网络中每一层的偏差数
+- **fann_get_bit_fail** - 失败位的数量
+- **fann_get_bit_fail_limit** - 返回训练期间使用的误差限制
+- **fann_get_cascade_activation_functions** - 返回级联激活函数
+- **fann_get_cascade_activation_functions_count** - 返回级联激活函数的数量
+- **fann_get_cascade_activation_steepnesses** - 返回级联激活陡度
+- **fann_get_cascade_activation_steepnesses_count** - 激活陡度的数量
+- **fann_get_cascade_candidate_change_fraction** - 返回级联候选变化分数
+- **fann_get_cascade_candidate_limit** - 返回候选限度
+- **fann_get_cascade_candidate_stagnation_epochs** - 返回层叠候选停滞周期的数量
+- **fann_get_cascade_max_cand_epochs** - 返回候选周期的最大值
+- **fann_get_cascade_max_out_epochs** - 返回输出周期的最大值
+- **fann_get_cascade_min_cand_epochs** - 返回最小的候选周期
+- **fann_get_cascade_min_out_epochs** - 返回最小输出周期
+- **fann_get_cascade_num_candidates** - 返回训练期间使用的候选数量
+- **fann_get_cascade_num_candidate_groups** - 返回候选组的数量
+- **fann_get_cascade_output_change_fraction** - 返回级联输出变化分数
+- **fann_get_cascade_output_stagnation_epochs** - 返回级联输出停滞周期的数量
+- **fann_get_cascade_weight_multiplier** - 返回权重因子
+- **fann_get_connection_array** - 获取网络中的连接。
+- **fann_get_connection_rate** - 获取当网络创建时连接的使用率。
+- **fann_get_errno** - 返回最后一个错误数字。
+- **fann_get_errstr** - 返回最后的错误字符串。
+- **fann_get_layer_array** - 获取网络中每层的神经元数量。
+- **fann_get_learning_momentum** - 返回学习动量
+- **fann_get_learning_rate** - 返回学习速率
+- **fann_get_MSE** - 从网络中读取均方误差。
+- **fann_get_network_type** - 获取所创建的神经网络类型。
+- **fann_get_num_input** - 获取输入神经元的数量。
+- **fann_get_num_layers** - 获取神经网络的层数。
+- **fann_get_num_output** - 获取输出神经元的数量。
+- **fann_get_quickprop_decay** - 返回衰退值，用于在 quickprop 训练迭代时衰减权重
+- **fann_get_quickprop_mu** - 返回放大系数
+- **fann_get_rprop_decrease_factor** - 返回 RPROP 训练期间的衰减系数
+- **fann_get_rprop_delta_max** - 返回最大步长
+- **fann_get_rprop_delta_min** - 返回最小步长
+- **fann_get_rprop_delta_zero** - 返回初始步长
+- **fann_get_rprop_increase_factor** - 返回 RPROP 训练的递增系数
+- **fann_get_sarprop_step_error_shift** - 返回 sarprop 步值的误差偏移
+- **fann_get_sarprop_step_error_threshold_factor** - 返回 sarprop 算法步值的误差阈值系数
+- **fann_get_sarprop_temperature** - 返回 sarprop 算法温度
+- **fann_get_sarprop_weight_decay_shift** - 返回 sarprop 算法权重衰减变化值
+- **fann_get_total_connections** - 获取整个网络中所有的连接数。
+- **fann_get_total_neurons** - 获取整个网络中神经元的数量。
+- **fann_get_training_algorithm** - 返回训练算法。
+- **fann_get_train_error_function** - 返回训练中使用的错误函数。
+- **fann_get_train_stop_function** - 返回训练中使用的停止函数。
+- **fann_init_weights** - 使用 Widrow 和 Nguyen 算法初始化权重。
+- **fann_length_train_data** - 返回训练数据中训练模式的数量。
+- **fann_merge_train_data** - 合并训练数据。
+- **fann_num_input_train_data** - 返回训练数据中每个训练模式输入的数量。
+- **fann_num_output_train_data** - 返回训练数据中每个训练模式输出的数量。
+- **fann_print_error** - 打印错误字符串
+- **fann_randomize_weights** - 给每个连接赋一个介于 min_weight 和 max_weight 之间的随机权重。
+- **fann_read_train_from_file** - 读取存储训练数据的文件。
+- **fann_reset_errno** - 重置最后的错误代码。
+- **fann_reset_errstr** - 重置最后的错误字符串。
+- **fann_reset_MSE** - 重置网络中的均方误差。
+- **fann_run** - 将通过神经网络运行输入。
+- **fann_save** - 将整个网络保存至配置文件。
+- **fann_save_train** - 将训练结构体保存至文件。
+- **fann_scale_input** - 在以前计算参数的基础上，在训练之前放大输入向量中的数据
+- **fann_scale_input_train_data** - 在训练数据中缩放输入至指定范围
+- **fann_scale_output** - 在以前计算参数的基础上，在训练之前放大输出向量中的数据
+- **fann_scale_output_train_data** - 在训练数据中缩放输出至指定范围
+- **fann_scale_train** - 在以前计算参数的基础上，缩放输入和输出数据
+- **fann_scale_train_data** - 在训练数据中缩放输入和输出到指定的范围
+- **fann_set_activation_function** - 为已应用的神经元和层设置激活函数
+- **fann_set_activation_function_hidden** - 为所有隐藏层设置激活函数
+- **fann_set_activation_function_layer** - 为已应用的层中所有的神经元设置激活函数
+- **fann_set_activation_function_output** - 为输出层设置激活函数
+- **fann_set_activation_steepness** - 为提供的神经元和层设置激活陡度
+- **fann_set_activation_steepness_hidden** - 为所有隐藏层中所有的神经元设置激活函数陡度
+- **fann_set_activation_steepness_layer** - 为提供的层中所有的神经元设置激活陡度
+- **fann_set_activation_steepness_output** - 在输出层中设置激活陡度
+- **fann_set_bit_fail_limit** - 设置训练期间使用的误差
+- **fann_set_callback** - 设置训练期间使用的回调函数。
+- **fann_set_cascade_activation_functions** - 设置级联候选激活函数的数组
+- **fann_set_cascade_activation_steepnesses** - 设置级联候选激活陡度的数组。
+- **fann_set_cascade_candidate_change_fraction** - 设置级联候选更改分数
+- **fann_set_cascade_candidate_limit** - 设置候选限度
+- **fann_set_cascade_candidate_stagnation_epochs** - 设置级联候选停止周期数
+- **fann_set_cascade_max_cand_epochs** - 设置最大候选周期数
+- **fann_set_cascade_max_out_epochs** - 设置最大输出周期
+- **fann_set_cascade_min_cand_epochs** - 设置最小候选周期
+- **fann_set_cascade_min_out_epochs** - 设置最小输出周期
+- **fann_set_cascade_num_candidate_groups** - 设置候选组数量
+- **fann_set_cascade_output_change_fraction** - 设置级联输出改变分数
+- **fann_set_cascade_output_stagnation_epochs** - 设置级联输出停滞周期的值
+- **fann_set_cascade_weight_multiplier** - 设置权重因子
+- **fann_set_error_log** - 设置错误记录保存的位置。
+- **fann_set_input_scaling_params** - 根据训练数据计算将来使用的输入比例参数
+- **fann_set_learning_momentum** - 设置学习动量。
+- **fann_set_learning_rate** - 设置学习速率。
+- **fann_set_output_scaling_params** - 根据训练数据计算将来使用的输出缩放参数
+- **fann_set_quickprop_decay** - 设置quickprop算法衰减因子
+- **fann_set_quickprop_mu** - 设置 quickprop 算法放大因子
+- **fann_set_rprop_decrease_factor** - 使用 RPROP 算法训练时，设置下降因子
+- **fann_set_rprop_delta_max** - 设置最大步长
+- **fann_set_rprop_delta_min** - 设置最小步长
+- **fann_set_rprop_delta_zero** - 设置初始步长
+- **fann_set_rprop_increase_factor** - 使用 RPROP 算法训练时，设置增长因子
+- **fann_set_sarprop_step_error_shift** - 设置 sarprop 算法的步误差偏移量
+- **fann_set_sarprop_step_error_threshold_factor** - 设置 sarprop 算法的步误差阈值因子
+- **fann_set_sarprop_temperature** - 设置 sarprop 算法的温度
+- **fann_set_sarprop_weight_decay_shift** - 设置 sarprop 算法的权重衰减偏移值
+- **fann_set_scaling_params** - 根据训练数据计算输入和输出缩放参数以供将来使用
+- **fann_set_training_algorithm** - 设置训练算法。
+- **fann_set_train_error_function** - 设置训练期间使用的错误函数。
+- **fann_set_train_stop_function** - 设置训练期间使用的停止函数。
+- **fann_set_weight** - 在网络中设置一个连接。
+- **fann_set_weight_array** - 在网络中设置一个连接。
+- **fann_shuffle_train_data** - 打算训练数据，使顺序随机。
+- **fann_subset_train_data** - 返回一个训练数据子集的副本。
+- **fann_test** - 使用一组输入和一组期望的输出来测试。
+- **fann_test_data** - 使用训练数据来测试并且计算出 MSE
+- **fann_train** - 使用一个输入集和一个期望的输出集来迭代训练一次。
+- **fann_train_epoch** - 使用一组训练数据训练一个周期。
+- **fann_train_on_data** - 在整个数据集上训练一段时间。
+- **fann_train_on_file** - 在从某个文件读取的整个数据集上训练一段时间。
+- **fastcgi_finish_request** - 冲刷(flush)所有响应的数据给客户端
+- **fbird_add_user** - 别名 ibase_add_user
+- **fbird_affected_rows** - 别名 ibase_affected_rows
+- **fbird_backup** - 别名 ibase_backup
+- **fbird_blob_add** - 别名 ibase_blob_add
+- **fbird_blob_cancel** - Cancel creating blob
+- **fbird_blob_close** - 别名 ibase_blob_close
+- **fbird_blob_create** - 别名 ibase_blob_create
+- **fbird_blob_echo** - 别名 ibase_blob_echo
+- **fbird_blob_get** - 别名 ibase_blob_get
+- **fbird_blob_import** - 别名 ibase_blob_import
+- **fbird_blob_info** - 别名 ibase_blob_info
+- **fbird_blob_open** - 别名 ibase_blob_open
+- **fbird_close** - 别名 ibase_close
+- **fbird_commit** - 别名 ibase_commit
+- **fbird_commit_ret** - 别名 ibase_commit_ret
+- **fbird_connect** - 别名 ibase_connect
+- **fbird_db_info** - 别名 ibase_db_info
+- **fbird_delete_user** - 别名 ibase_delete_user
+- **fbird_drop_db** - 别名 ibase_drop_db
+- **fbird_errcode** - 别名 ibase_errcode
+- **fbird_errmsg** - 别名 ibase_errmsg
+- **fbird_execute** - 别名 ibase_execute
+- **fbird_fetch_assoc** - 别名 ibase_fetch_assoc
+- **fbird_fetch_object** - 别名 ibase_fetch_object
+- **fbird_fetch_row** - 别名 ibase_fetch_row
+- **fbird_field_info** - 别名 ibase_field_info
+- **fbird_free_event_handler** - 别名 ibase_free_event_handler
+- **fbird_free_query** - 别名 ibase_free_query
+- **fbird_free_result** - 别名 ibase_free_result
+- **fbird_gen_id** - 别名 ibase_gen_id
+- **fbird_maintain_db** - 别名 ibase_maintain_db
+- **fbird_modify_user** - 别名 ibase_modify_user
+- **fbird_name_result** - 别名 ibase_name_result
+- **fbird_num_fields** - 别名 ibase_num_fields
+- **fbird_num_params** - 别名 ibase_num_params
+- **fbird_param_info** - 别名 ibase_param_info
+- **fbird_pconnect** - 别名 ibase_pconnect
+- **fbird_prepare** - 别名 ibase_prepare
+- **fbird_query** - 别名 ibase_query
+- **fbird_restore** - 别名 ibase_restore
+- **fbird_rollback** - 别名 ibase_rollback
+- **fbird_rollback_ret** - 别名 ibase_rollback_ret
+- **fbird_server_info** - 别名 ibase_server_info
+- **fbird_service_attach** - 别名 ibase_service_attach
+- **fbird_service_detach** - 别名 ibase_service_detach
+- **fbird_set_event_handler** - 别名 ibase_set_event_handler
+- **fbird_trans** - 别名 ibase_trans
+- **fbird_wait_event** - 别名 ibase_wait_event
+- **fclose** - 关闭一个已打开的文件指针
+- **fdatasync** - 同步文件数据（不包含元数据）
+- **fdf_add_doc_javascript** - Adds javascript code to the FDF document
+- **fdf_add_template** - Adds a template into the FDF document
+- **fdf_close** - Close an FDF document
+- **fdf_create** - Create a new FDF document
+- **fdf_enum_values** - Call a user defined function for each document value
+- **fdf_errno** - Return error code for last fdf operation
+- **fdf_error** - Return error description for FDF error code
+- **fdf_get_ap** - Get the appearance of a field
+- **fdf_get_attachment** - Extracts uploaded file embedded in the FDF
+- **fdf_get_encoding** - Get the value of the /Encoding key
+- **fdf_get_file** - Get the value of the /F key
+- **fdf_get_flags** - Gets the flags of a field
+- **fdf_get_opt** - Gets a value from the opt array of a field
+- **fdf_get_status** - Get the value of the /STATUS key
+- **fdf_get_value** - Get the value of a field
+- **fdf_get_version** - Gets version number for FDF API or file
+- **fdf_header** - Sets FDF-specific output headers
+- **fdf_next_field_name** - Get the next field name
+- **fdf_open** - Open a FDF document
+- **fdf_open_string** - Read a FDF document from a string
+- **fdf_remove_item** - Sets target frame for form
+- **fdf_save** - Save a FDF document
+- **fdf_save_string** - Returns the FDF document as a string
+- **fdf_set_ap** - Set the appearance of a field
+- **fdf_set_encoding** - Sets FDF character encoding
+- **fdf_set_file** - Set PDF document to display FDF data in
+- **fdf_set_flags** - Sets a flag of a field
+- **fdf_set_javascript_action** - Sets an javascript action of a field
+- **fdf_set_on_import_javascript** - Adds javascript code to be executed when Acrobat opens the FDF
+- **fdf_set_opt** - Sets an option of a field
+- **fdf_set_status** - Set the value of the /STATUS key
+- **fdf_set_submit_form_action** - Sets a submit form action of a field
+- **fdf_set_target_frame** - Set target frame for form display
+- **fdf_set_value** - Set the value of a field
+- **fdf_set_version** - Sets version number for a FDF file
+- **fdiv** - Divides two numbers, according to IEEE 754
+- **feof** - 测试文件指针是否到了文件结束的位置
+- **FFI::addr** - Creates an unmanaged pointer to C data
+- **FFI::alignof** - Gets the alignment
+- **FFI::arrayType** - Dynamically constructs a new C array type
+- **FFI::cast** - Performs a C type cast
+- **FFI::cdef** - Creates a new FFI object
+- **FFI::free** - Releases an unmanaged data structure
+- **FFI::isNull** - Checks whether a FFI\CData is a null pointer
+- **FFI::load** - Loads C declarations from a C header file
+- **FFI::memcmp** - Compares memory areas
+- **FFI::memcpy** - Copies one memory area to another
+- **FFI::memset** - Fills a memory area
+- **FFI::new** - Creates a C data structure
+- **FFI::scope** - Instantiates an FFI object with C declarations parsed during preloading
+- **FFI::sizeof** - Gets the size of C data or types
+- **FFI::string** - Creates a PHP string from a memory area
+- **FFI::type** - Creates an FFI\CType object from a C declaration
+- **FFI::typeof** - Gets the FFI\CType of FFI\CData
+- **FFI\CType::getAlignment** - Description
+- **FFI\CType::getArrayElementType** - Description
+- **FFI\CType::getArrayLength** - Description
+- **FFI\CType::getAttributes** - Description
+- **FFI\CType::getEnumKind** - Description
+- **FFI\CType::getFuncABI** - Description
+- **FFI\CType::getFuncParameterCount** - Retrieve the count of parameters of a function type
+- **FFI\CType::getFuncParameterType** - Retrieve the type of a function parameter
+- **FFI\CType::getFuncReturnType** - Description
+- **FFI\CType::getKind** - Description
+- **FFI\CType::getName** - Description
+- **FFI\CType::getPointerType** - Description
+- **FFI\CType::getSize** - Description
+- **FFI\CType::getStructFieldNames** - Description
+- **FFI\CType::getStructFieldOffset** - Description
+- **FFI\CType::getStructFieldType** - Description
+- **fflush** - 将缓冲内容输出到文件
+- **fgetc** - 从文件指针中读取字符
+- **fgetcsv** - 从文件指针中读入一行并解析 CSV 字段
+- **fgets** - 从文件指针中读取一行
+- **fgetss** - 从文件指针中读取一行并过滤掉 HTML 标记
+- **Fiber::getCurrent** - 获取当前正在执行的 Fiber 实例
+- **Fiber::getReturn** - 获取 Fiber 的返回值
+- **Fiber::isRunning** - 确认 fiber 是否正在运行
+- **Fiber::isStarted** - 确定 fiber 是否启动
+- **Fiber::isSuspended** - 确认 fiber 是否挂起
+- **Fiber::isTerminated** - 确认 fiber 是否终止
+- **Fiber::resume** - 使用值恢复 fiber 的执行
+- **Fiber::start** - 启动 fiber 的执行
+- **Fiber::suspend** - 暂停当前 fiber 的执行
+- **Fiber::throw** - 用一个异常来恢复 fiber 的执行
+- **Fiber::__construct** - 创建新的 Fiber 实例
+- **FiberError::__construct** - 不允许直接实例化的构造函数
+- **file** - 把整个文件读入一个数组中
+- **fileatime** - 取得文件的上次访问时间
+- **filectime** - 取得文件的 inode 修改时间
+- **filegroup** - 取得文件的组
+- **fileinode** - 取得文件的 inode
+- **filemtime** - 取得文件修改时间
+- **fileowner** - 取得文件的所有者
+- **fileperms** - 获取文件权限
+- **filesize** - 取得文件大小
+- **FilesystemIterator::current** - The current file
+- **FilesystemIterator::getFlags** - Get the handling flags
+- **FilesystemIterator::key** - Retrieve the key for the current file
+- **FilesystemIterator::next** - Move to the next file
+- **FilesystemIterator::rewind** - Rewinds back to the beginning
+- **FilesystemIterator::setFlags** - Sets handling flags
+- **FilesystemIterator::__construct** - Constructs a new filesystem iterator
+- **filetype** - 取得文件类型
+- **file_exists** - 检查文件或目录是否存在
+- **file_get_contents** - 将整个文件读入一个字符串
+- **file_put_contents** - 将数据写入文件
+- **FilterIterator::accept** - Check whether the current element of the iterator is acceptable
+- **FilterIterator::current** - Get the current element value
+- **FilterIterator::key** - Get the current key
+- **FilterIterator::next** - Move the iterator forward
+- **FilterIterator::rewind** - Rewind the iterator
+- **FilterIterator::valid** - Check whether the current element is valid
+- **FilterIterator::__construct** - Construct a filterIterator
+- **filter_has_var** - 检测是否存在指定类型的变量
+- **filter_id** - 返回与某个特定名称的过滤器相关联的id
+- **filter_input** - 通过名称获取特定的外部变量，并且可以通过过滤器处理它
+- **filter_input_array** - 获取一系列外部变量，并且可以通过过滤器处理它们
+- **filter_list** - 返回所支持的过滤器列表
+- **filter_var** - 使用特定的过滤器过滤一个变量
+- **filter_var_array** - 获取多个变量并且过滤它们
+- **finfo::buffer** - 别名 finfo_buffer()
+- **finfo::file** - 别名 finfo_file()
+- **finfo::set_flags** - 别名 finfo_set_flags()
+- **finfo::__construct** - 别名 finfo_open
+- **finfo_buffer** - 返回一个字符串缓冲区的信息
+- **finfo_close** - 关闭 finfo 实例
+- **finfo_file** - 返回一个文件的信息
+- **finfo_open** - 创建新 finfo 实例
+- **finfo_set_flags** - 设置 libmagic 配置选项
+- **floatval** - 获取变量的浮点值
+- **flock** - 可移植的协同文件锁定
+- **floor** - 舍去法取整
+- **flush** - 冲刷系统输出缓冲区
+- **fmod** - 返回除法的浮点数余数
+- **fnmatch** - 用模式匹配文件名
+- **fopen** - 打开文件或者 URL
+- **forward_static_call** - 调用静态方法
+- **forward_static_call_array** - 调用静态方法且参数作为数组传递
+- **fpassthru** - 输出文件指针处的所有剩余数据
+- **fpm_get_status** - 返回当前 FPM 池状态
+- **fpow** - Raise one number to the power of another, according to IEEE 754
+- **fprintf** - 将格式化后的字符串写入到流
+- **fputcsv** - 将行格式化为 CSV 并写入文件指针
+- **fputs** - fwrite 的别名
+- **fread** - 读取文件（可安全用于二进制文件）
+- **frenchtojd** - 从法国共和历日期转换为儒略日数
+- **fscanf** - 从文件中格式化输入
+- **fseek** - 在文件指针中定位
+- **fsockopen** - 打开 Internet 或者 Unix 套接字连接
+- **fstat** - 通过已打开的文件指针取得文件信息
+- **fsync** - 同步文件变更（包括元数据）
+- **ftell** - 返回文件指针读/写的位置
+- **ftok** - Convert a pathname and a project identifier to a System V IPC key
+- **ftp_alloc** - 为要上传的文件分配空间
+- **ftp_append** - 将文件内容追加到 FTP 服务器上的指定文件
+- **ftp_cdup** - 切换到当前目录的父目录
+- **ftp_chdir** - 在 FTP 服务器上改变当前目录
+- **ftp_chmod** - 设置 FTP 服务器上的文件权限
+- **ftp_close** - 关闭 FTP 连接
+- **ftp_connect** - 建立新 FTP 连接
+- **ftp_delete** - 删除 FTP 服务器上的文件
+- **ftp_exec** - 在 FTP 服务器运行指定的命令
+- **ftp_fget** - 从 FTP 服务器上下载文件并保存到本地已打开的文件中
+- **ftp_fput** - 上传已打开的文件到 FTP 服务器
+- **ftp_get** - 从 FTP 服务器上下载文件
+- **ftp_get_option** - 返回当前 FTP 连接的各种不同的选项设置
+- **ftp_login** - 登录 FTP 服务器
+- **ftp_mdtm** - 返回指定文件的最后修改时间
+- **ftp_mkdir** - 建立新目录
+- **ftp_mlsd** - 返回指定目录中的文件列表
+- **ftp_nb_continue** - 连续获取／发送文件（以不分块的方式 non-blocking）
+- **ftp_nb_fget** - 从 FTP 服务器获取文件并写入到一个打开的文件（非阻塞）
+- **ftp_nb_fput** - 将文件存储到 FTP 服务器 （非阻塞）
+- **ftp_nb_get** - 从 FTP 服务器上获取文件并写入本地文件（non-blocking）
+- **ftp_nb_put** - 存储一个文件至 FTP 服务器（non-blocking）
+- **ftp_nlist** - 返回给定目录的文件列表
+- **ftp_pasv** - 返回当前 FTP 被动模式是否打开
+- **ftp_put** - 上传文件到 FTP 服务器
+- **ftp_pwd** - 返回当前目录名
+- **ftp_quit** - ftp_close 的 别名
+- **ftp_raw** - 向 FTP 服务器发送命令
+- **ftp_rawlist** - 返回指定目录下文件的详细列表
+- **ftp_rename** - 更改 FTP 服务器上的文件或目录名
+- **ftp_rmdir** - 删除目录
+- **ftp_set_option** - 设置各种 FTP 运行时选项
+- **ftp_site** - 向服务器发送 SITE 命令
+- **ftp_size** - 返回指定文件的大小
+- **ftp_ssl_connect** - 打开安全 SSL-FTP 连接
+- **ftp_systype** - 返回远程 FTP 服务器的操作系统类型
+- **ftruncate** - 将文件截断到指定的长度
+- **function_exists** - 如果给定的函数已经被定义就返回 true
+- **func_get_arg** - 返回参数列表的某一项
+- **func_get_args** - 返回一个包含函数参数列表的数组
+- **func_num_args** - 返回传递给函数的参数数量
+- **fwrite** - 写入文件（可安全用于二进制文件）
+
+## G
+
+- **gc_collect_cycles** - 强制收集所有现存的垃圾循环周期
+- **gc_disable** - 停用循环引用收集器
+- **gc_enable** - 激活循环引用收集器
+- **gc_enabled** - 返回循环引用计数器的状态
+- **gc_mem_caches** - Reclaims memory used by the Zend Engine memory manager
+- **gc_status** - 获取有关垃圾回收的信息
+- **gd_info** - 取得当前安装的 GD 库的信息
+- **GearmanClient::addOptions** - Add client options
+- **GearmanClient::addServer** - Add a job server to the client
+- **GearmanClient::addServers** - Add a list of job servers to the client
+- **GearmanClient::addTask** - Add a task to be run in parallel
+- **GearmanClient::addTaskBackground** - Add a background task to be run in parallel
+- **GearmanClient::addTaskHigh** - Add a high priority task to run in parallel
+- **GearmanClient::addTaskHighBackground** - Add a high priority background task to be run in parallel
+- **GearmanClient::addTaskLow** - Add a low priority task to run in parallel
+- **GearmanClient::addTaskLowBackground** - Add a low priority background task to be run in parallel
+- **GearmanClient::addTaskStatus** - Add a task to get status
+- **GearmanClient::clearCallbacks** - Clear all task callback functions
+- **GearmanClient::clone** - Create a copy of a GearmanClient object
+- **GearmanClient::context** - Get the application context
+- **GearmanClient::data** - Get the application data (deprecated)
+- **GearmanClient::do** - Run a single task and return a result [deprecated]
+- **GearmanClient::doBackground** - Run a task in the background
+- **GearmanClient::doHigh** - Run a single high priority task
+- **GearmanClient::doHighBackground** - Run a high priority task in the background
+- **GearmanClient::doJobHandle** - Get the job handle for the running task
+- **GearmanClient::doLow** - Run a single low priority task
+- **GearmanClient::doLowBackground** - Run a low priority task in the background
+- **GearmanClient::doNormal** - Run a single task and return a result
+- **GearmanClient::doStatus** - Get the status for the running task
+- **GearmanClient::echo** - Send data to all job servers to see if they echo it back [deprecated]
+- **GearmanClient::error** - Returns an error string for the last error encountered
+- **GearmanClient::getErrno** - Get an errno value
+- **GearmanClient::jobStatus** - Get the status of a background job
+- **GearmanClient::ping** - Send data to all job servers to see if they echo it back
+- **GearmanClient::removeOptions** - Remove client options
+- **GearmanClient::returnCode** - Get the last Gearman return code
+- **GearmanClient::runTasks** - Run a list of tasks in parallel
+- **GearmanClient::setClientCallback** - Callback function when there is a data packet for a task (deprecated)
+- **GearmanClient::setCompleteCallback** - Set a function to be called on task completion
+- **GearmanClient::setContext** - Set application context
+- **GearmanClient::setCreatedCallback** - Set a callback for when a task is queued
+- **GearmanClient::setData** - Set application data (deprecated)
+- **GearmanClient::setDataCallback** - Callback function when there is a data packet for a task
+- **GearmanClient::setExceptionCallback** - Set a callback for worker exceptions
+- **GearmanClient::setFailCallback** - Set callback for job failure
+- **GearmanClient::setOptions** - Set client options
+- **GearmanClient::setStatusCallback** - Set a callback for collecting task status
+- **GearmanClient::setTimeout** - Set socket I/O activity timeout
+- **GearmanClient::setWarningCallback** - Set a callback for worker warnings
+- **GearmanClient::setWorkloadCallback** - Set a callback for accepting incremental data updates
+- **GearmanClient::timeout** - Get current socket I/O activity timeout value
+- **GearmanClient::wait** - Wait for I/O activity on all connections in a client
+- **GearmanClient::__construct** - Create a GearmanClient instance
+- **GearmanJob::complete** - Send the result and complete status (deprecated)
+- **GearmanJob::data** - Send data for a running job (deprecated)
+- **GearmanJob::exception** - Send exception for running job (deprecated)
+- **GearmanJob::fail** - Send fail status (deprecated)
+- **GearmanJob::functionName** - Get function name
+- **GearmanJob::handle** - Get the job handle
+- **GearmanJob::returnCode** - Get last return code
+- **GearmanJob::sendComplete** - Send the result and complete status
+- **GearmanJob::sendData** - Send data for a running job
+- **GearmanJob::sendException** - Send exception for running job (exception)
+- **GearmanJob::sendFail** - Send fail status
+- **GearmanJob::sendStatus** - Send status
+- **GearmanJob::sendWarning** - Send a warning
+- **GearmanJob::setReturn** - Set a return value
+- **GearmanJob::status** - Send status (deprecated)
+- **GearmanJob::unique** - Get the unique identifier
+- **GearmanJob::warning** - Send a warning (deprecated)
+- **GearmanJob::workload** - Get workload
+- **GearmanJob::workloadSize** - Get size of work load
+- **GearmanJob::__construct** - Create a GearmanJob instance
+- **GearmanTask::create** - Create a task (deprecated)
+- **GearmanTask::data** - Get data returned for a task
+- **GearmanTask::dataSize** - Get the size of returned data
+- **GearmanTask::function** - Get associated function name (deprecated)
+- **GearmanTask::functionName** - Get associated function name
+- **GearmanTask::isKnown** - Determine if task is known
+- **GearmanTask::isRunning** - Test whether the task is currently running
+- **GearmanTask::jobHandle** - Get the job handle
+- **GearmanTask::recvData** - Read work or result data into a buffer for a task
+- **GearmanTask::returnCode** - Get the last return code
+- **GearmanTask::sendData** - Send data for a task (deprecated)
+- **GearmanTask::sendWorkload** - Send data for a task
+- **GearmanTask::taskDenominator** - Get completion percentage denominator
+- **GearmanTask::taskNumerator** - Get completion percentage numerator
+- **GearmanTask::unique** - Get the unique identifier for a task
+- **GearmanTask::uuid** - Get the unique identifier for a task (deprecated)
+- **GearmanTask::__construct** - Create a GearmanTask instance
+- **GearmanWorker::addFunction** - Register and add callback function
+- **GearmanWorker::addOptions** - Add worker options
+- **GearmanWorker::addServer** - Add a job server
+- **GearmanWorker::addServers** - Add job servers
+- **GearmanWorker::clone** - Create a copy of the worker
+- **GearmanWorker::echo** - Test job server response
+- **GearmanWorker::error** - Get the last error encountered
+- **GearmanWorker::getErrno** - Get errno
+- **GearmanWorker::options** - Get worker options
+- **GearmanWorker::register** - Register a function with the job server
+- **GearmanWorker::removeOptions** - Remove worker options
+- **GearmanWorker::returnCode** - Get last Gearman return code
+- **GearmanWorker::setId** - Give the worker an identifier so it can be tracked when asking gearmand for the list of available workers
+- **GearmanWorker::setOptions** - Set worker options
+- **GearmanWorker::setTimeout** - Set socket I/O activity timeout
+- **GearmanWorker::timeout** - Get socket I/O activity timeout
+- **GearmanWorker::unregister** - Unregister a function name with the job servers
+- **GearmanWorker::unregisterAll** - Unregister all function names with the job servers
+- **GearmanWorker::wait** - Wait for activity from one of the job servers
+- **GearmanWorker::work** - Wait for and perform jobs
+- **GearmanWorker::__construct** - Create a GearmanWorker instance
+- **Gender\Gender::connect** - Connect to an external name dictionary
+- **Gender\Gender::country** - Get textual country representation
+- **Gender\Gender::get** - Get gender of a name
+- **Gender\Gender::isNick** - Check if the name0 is an alias of the name1
+- **Gender\Gender::similarNames** - Get similar names
+- **Gender\Gender::__construct** - Construct the Gender object
+- **Generator::current** - 返回当前产生的值
+- **Generator::getReturn** - 获取生成器的返回值
+- **Generator::key** - 返回当前产生的键
+- **Generator::next** - 生成器继续执行
+- **Generator::rewind** - 执行生成器，直至并包含第一个 yield 语句
+- **Generator::send** - 向生成器中传入一个值
+- **Generator::throw** - 向生成器中抛入一个异常
+- **Generator::valid** - 检查迭代器是否被关闭
+- **Generator::__wakeup** - 序列化回调
+- **geoip_asnum_by_name** - 获取自治系统号(ASN)
+- **geoip_continent_code_by_name** - 获取七大洲的大写字母简称
+- **geoip_country_code3_by_name** - 获取三个字母组成的国家简称
+- **geoip_country_code_by_name** - 获取国家代码
+- **geoip_country_name_by_name** - 获取国家的全称
+- **geoip_database_info** - 获取 GeoIP 数据库的信息
+- **geoip_db_avail** - GeoIP 数据库是否可用
+- **geoip_db_filename** - 返回 GeoIP 数据库相对应的文件名
+- **geoip_db_get_all_info** - 返回所有 GeoIP 数据库类型的详细信息
+- **geoip_domain_by_name** - 获取二级域名
+- **geoip_id_by_name** - 获取网络连接类型
+- **geoip_isp_by_name** - 获取 ISP (网络服务提供商)的名称
+- **geoip_netspeedcell_by_name** - 获取网络连接速度
+- **geoip_org_by_name** - 获取机构的名称
+- **geoip_record_by_name** - 返回 GeoIP 数据库中详细的城市信息
+- **geoip_region_by_name** - 获取国家和地区代码
+- **geoip_region_name_by_code** - 返回给定的国家和地区代码组合所对应的地区名称
+- **geoip_setup_custom_directory** - 自定义 GeoIP 数据库的目录
+- **geoip_time_zone_by_country_and_region** - 返回国家和地区的时区
+- **getallheaders** - 获取全部 HTTP 请求 header
+- **getcwd** - 取得当前工作目录
+- **getdate** - 获取日期/时间信息
+- **getenv** - 获取单个或者全部环境变量
+- **gethostbyaddr** - 获取指定 IP 地址对应的 Internet 主机名
+- **gethostbyname** - 返回主机名对应的 IPv4地址。
+- **gethostbynamel** - 获取互联网主机名对应的 IPv4 地址列表
+- **gethostname** - 获取主机名
+- **getimagesize** - 取得图像大小
+- **getimagesizefromstring** - 从字符串中获取图像尺寸信息
+- **getlastmod** - 获取页面最后修改的时间
+- **getmxrr** - 获取 Internet 主机名对应的 MX 记录
+- **getmygid** - 获取当前 PHP 脚本拥有者的 GID
+- **getmyinode** - 获取当前脚本的索引节点（inode）
+- **getmypid** - 获取 PHP 进程的 ID
+- **getmyuid** - 获取 PHP 脚本所有者的 UID
+- **getopt** - 从命令行参数列表中获取选项
+- **getprotobyname** - Get protocol number associated with protocol name
+- **getprotobynumber** - Get protocol name associated with protocol number
+- **getrandmax** - 显示随机数最大的可能值
+- **getrusage** - 获取当前资源使用状况
+- **getservbyname** - 获取互联网服务协议对应的端口
+- **getservbyport** - Get Internet service which corresponds to port and protocol
+- **getSession** - Connect to a MySQL server
+- **gettext** - Lookup a message in the current domain
+- **gettimeofday** - 取得当前时间
+- **gettype** - 获取变量的类型
+- **get_browser** - 获取浏览器具有的功能
+- **get_called_class** - 后期静态绑定（"Late Static Binding"）类的名称
+- **get_cfg_var** - 获取 PHP 配置选项的值
+- **get_class** - 返回对象的类名
+- **get_class_methods** - 返回由类的方法名组成的数组
+- **get_class_vars** - 获取类的默认属性
+- **get_current_user** - 获取当前 PHP 脚本所有者名称
+- **get_debug_type** - 以适合调试的方式获取变量的类型名称
+- **get_declared_classes** - 返回由已定义类的名字所组成的数组
+- **get_declared_interfaces** - 返回一个数组包含所有已声明的接口
+- **get_declared_traits** - 返回所有已定义的 traits 的数组
+- **get_defined_constants** - 返回所有常量的关联数组，键是常量名，值是常量值
+- **get_defined_functions** - 返回所有已定义函数的数组
+- **get_defined_vars** - 返回由所有已定义变量所组成的数组
+- **get_error_handler** - 获取用户定义的错误处理函数
+- **get_exception_handler** - 获取用户定义的异常处理函数
+- **get_extension_funcs** - 返回模块函数名称的数组
+- **get_headers** - 取得服务器响应 HTTP 请求所发送的所有标头
+- **get_html_translation_table** - 返回使用 htmlspecialchars 和 htmlentities 后的转换表
+- **get_included_files** - 返回被 include 和 require 文件名的 array
+- **get_include_path** - 获取当前的 include_path 配置选项
+- **get_loaded_extensions** - 返回所有编译并加载模块名的 array
+- **get_magic_quotes_gpc** - 获取当前 magic_quotes_gpc 的配置选项设置
+- **get_magic_quotes_runtime** - 获取当前 magic_quotes_runtime 配置选项的激活状态
+- **get_mangled_object_vars** - 返回将对象属性混在一起的数组
+- **get_meta_tags** - 从一个文件中提取所有的 meta 标签 content 属性，返回一个数组
+- **get_object_vars** - 获取指定对象的属性
+- **get_parent_class** - 检索对象或者类的父级类名
+- **get_required_files** - 别名 get_included_files
+- **get_resources** - Returns active resources
+- **get_resource_id** - 返回给定资源的整数标识符
+- **get_resource_type** - 返回资源类型
+- **glob** - 寻找与模式匹配的文件路径
+- **GlobIterator::count** - Get the number of directories and files
+- **GlobIterator::__construct** - Construct a directory using glob
+- **Gmagick::addimage** - Adds new image to Gmagick object image list
+- **Gmagick::addnoiseimage** - Adds random noise to the image
+- **Gmagick::annotateimage** - Annotates an image with text
+- **Gmagick::blurimage** - Adds blur filter to image
+- **Gmagick::borderimage** - Surrounds the image with a border
+- **Gmagick::charcoalimage** - Simulates a charcoal drawing
+- **Gmagick::chopimage** - Removes a region of an image and trims
+- **Gmagick::clear** - Clears all resources associated to Gmagick object
+- **Gmagick::commentimage** - Adds a comment to your image
+- **Gmagick::compositeimage** - Composite one image onto another
+- **Gmagick::cropimage** - Extracts a region of the image
+- **Gmagick::cropthumbnailimage** - Creates a crop thumbnail
+- **Gmagick::current** - The current purpose
+- **Gmagick::cyclecolormapimage** - Displaces an image's colormap
+- **Gmagick::deconstructimages** - Returns certain pixel differences between images
+- **Gmagick::despeckleimage** - The despeckleimage purpose
+- **Gmagick::destroy** - The destroy purpose
+- **Gmagick::drawimage** - Renders the GmagickDraw object on the current image
+- **Gmagick::edgeimage** - Enhance edges within the image
+- **Gmagick::embossimage** - Returns a grayscale image with a three-dimensional effect
+- **Gmagick::enhanceimage** - Improves the quality of a noisy image
+- **Gmagick::equalizeimage** - Equalizes the image histogram
+- **Gmagick::flipimage** - Creates a vertical mirror image
+- **Gmagick::flopimage** - Creates a horizontal mirror image
+- **Gmagick::frameimage** - Adds a simulated three-dimensional border
+- **Gmagick::gammaimage** - Gamma-corrects an image
+- **Gmagick::getcopyright** - Returns the GraphicsMagick API copyright as a string
+- **Gmagick::getfilename** - The filename associated with an image sequence
+- **Gmagick::getimagebackgroundcolor** - Returns the image background color
+- **Gmagick::getimageblueprimary** - Returns the chromaticy blue primary point
+- **Gmagick::getimagebordercolor** - Returns the image border color
+- **Gmagick::getimagechanneldepth** - Gets the depth for a particular image channel
+- **Gmagick::getimagecolors** - Returns the color of the specified colormap index
+- **Gmagick::getimagecolorspace** - Gets the image colorspace
+- **Gmagick::getimagecompose** - Returns the composite operator associated with the image
+- **Gmagick::getimagedelay** - Gets the image delay
+- **Gmagick::getimagedepth** - Gets the depth of the image
+- **Gmagick::getimagedispose** - Gets the image disposal method
+- **Gmagick::getimageextrema** - Gets the extrema for the image
+- **Gmagick::getimagefilename** - Returns the filename of a particular image in a sequence
+- **Gmagick::getimageformat** - Returns the format of a particular image in a sequence
+- **Gmagick::getimagegamma** - Gets the image gamma
+- **Gmagick::getimagegreenprimary** - Returns the chromaticy green primary point
+- **Gmagick::getimageheight** - Returns the image height
+- **Gmagick::getimagehistogram** - Gets the image histogram
+- **Gmagick::getimageindex** - Gets the index of the current active image
+- **Gmagick::getimageinterlacescheme** - Gets the image interlace scheme
+- **Gmagick::getimageiterations** - Gets the image iterations
+- **Gmagick::getimagematte** - Check if the image has a matte channel
+- **Gmagick::getimagemattecolor** - Returns the image matte color
+- **Gmagick::getimageprofile** - Returns the named image profile
+- **Gmagick::getimageredprimary** - Returns the chromaticity red primary point
+- **Gmagick::getimagerenderingintent** - Gets the image rendering intent
+- **Gmagick::getimageresolution** - Gets the image X and Y resolution
+- **Gmagick::getimagescene** - Gets the image scene
+- **Gmagick::getimagesignature** - Generates an SHA-256 message digest
+- **Gmagick::getimagetype** - Gets the potential image type
+- **Gmagick::getimageunits** - Gets the image units of resolution
+- **Gmagick::getimagewhitepoint** - Returns the chromaticity white point
+- **Gmagick::getimagewidth** - Returns the width of the image
+- **Gmagick::getpackagename** - Returns the GraphicsMagick package name
+- **Gmagick::getquantumdepth** - Returns the Gmagick quantum depth as a string
+- **Gmagick::getreleasedate** - Returns the GraphicsMagick release date as a string
+- **Gmagick::getsamplingfactors** - Gets the horizontal and vertical sampling factor
+- **Gmagick::getsize** - Returns the size associated with the Gmagick object
+- **Gmagick::getversion** - Returns the GraphicsMagick API version
+- **Gmagick::hasnextimage** - Checks if the object has more images
+- **Gmagick::haspreviousimage** - Checks if the object has a previous image
+- **Gmagick::implodeimage** - Creates a new image as a copy
+- **Gmagick::labelimage** - Adds a label to an image
+- **Gmagick::levelimage** - Adjusts the levels of an image
+- **Gmagick::magnifyimage** - Scales an image proportionally 2x
+- **Gmagick::mapimage** - Replaces the colors of an image with the closest color from a reference image
+- **Gmagick::medianfilterimage** - Applies a digital filter
+- **Gmagick::minifyimage** - Scales an image proportionally to half its size
+- **Gmagick::modulateimage** - Control the brightness, saturation, and hue
+- **Gmagick::motionblurimage** - Simulates motion blur
+- **Gmagick::newimage** - Creates a new image
+- **Gmagick::nextimage** - Moves to the next image
+- **Gmagick::normalizeimage** - Enhances the contrast of a color image
+- **Gmagick::oilpaintimage** - Simulates an oil painting
+- **Gmagick::previousimage** - Move to the previous image in the object
+- **Gmagick::profileimage** - Adds or removes a profile from an image
+- **Gmagick::quantizeimage** - Analyzes the colors within a reference image
+- **Gmagick::quantizeimages** - The quantizeimages purpose
+- **Gmagick::queryfontmetrics** - Returns an array representing the font metrics
+- **Gmagick::queryfonts** - Returns the configured fonts
+- **Gmagick::queryformats** - Returns formats supported by Gmagick
+- **Gmagick::radialblurimage** - Radial blurs an image
+- **Gmagick::raiseimage** - Creates a simulated 3d button-like effect
+- **Gmagick::read** - Reads image from filename
+- **Gmagick::readimage** - Reads image from filename
+- **Gmagick::readimageblob** - Reads image from a binary string
+- **Gmagick::readimagefile** - The readimagefile purpose
+- **Gmagick::reducenoiseimage** - Smooths the contours of an image
+- **Gmagick::removeimage** - Removes an image from the image list
+- **Gmagick::removeimageprofile** - Removes the named image profile and returns it
+- **Gmagick::resampleimage** - Resample image to desired resolution
+- **Gmagick::resizeimage** - Scales an image
+- **Gmagick::rollimage** - Offsets an image
+- **Gmagick::rotateimage** - Rotates an image
+- **Gmagick::scaleimage** - Scales the size of an image
+- **Gmagick::separateimagechannel** - Separates a channel from the image
+- **Gmagick::setCompressionQuality** - Sets the object's default compression quality
+- **Gmagick::setfilename** - Sets the filename before you read or write the image
+- **Gmagick::setimagebackgroundcolor** - Sets the image background color
+- **Gmagick::setimageblueprimary** - Sets the image chromaticity blue primary point
+- **Gmagick::setimagebordercolor** - Sets the image border color
+- **Gmagick::setimagechanneldepth** - Sets the depth of a particular image channel
+- **Gmagick::setimagecolorspace** - Sets the image colorspace
+- **Gmagick::setimagecompose** - Sets the image composite operator
+- **Gmagick::setimagedelay** - Sets the image delay
+- **Gmagick::setimagedepth** - Sets the image depth
+- **Gmagick::setimagedispose** - Sets the image disposal method
+- **Gmagick::setimagefilename** - Sets the filename of a particular image in a sequence
+- **Gmagick::setimageformat** - Sets the format of a particular image
+- **Gmagick::setimagegamma** - Sets the image gamma
+- **Gmagick::setimagegreenprimary** - Sets the image chromaticity green primary point
+- **Gmagick::setimageindex** - Set the iterator to the position in the image list specified with the index parameter
+- **Gmagick::setimageinterlacescheme** - Sets the interlace scheme of the image
+- **Gmagick::setimageiterations** - Sets the image iterations
+- **Gmagick::setimageprofile** - Adds a named profile to the Gmagick object
+- **Gmagick::setimageredprimary** - Sets the image chromaticity red primary point
+- **Gmagick::setimagerenderingintent** - Sets the image rendering intent
+- **Gmagick::setimageresolution** - Sets the image resolution
+- **Gmagick::setimagescene** - Sets the image scene
+- **Gmagick::setimagetype** - Sets the image type
+- **Gmagick::setimageunits** - Sets the image units of resolution
+- **Gmagick::setimagewhitepoint** - Sets the image chromaticity white point
+- **Gmagick::setsamplingfactors** - Sets the image sampling factors
+- **Gmagick::setsize** - Sets the size of the Gmagick object
+- **Gmagick::shearimage** - Creating a parallelogram
+- **Gmagick::solarizeimage** - Applies a solarizing effect to the image
+- **Gmagick::spreadimage** - Randomly displaces each pixel in a block
+- **Gmagick::stripimage** - Strips an image of all profiles and comments
+- **Gmagick::swirlimage** - Swirls the pixels about the center of the image
+- **Gmagick::thumbnailimage** - Changes the size of an image
+- **Gmagick::trimimage** - Remove edges from the image
+- **Gmagick::write** - 别名 Gmagick::writeimage
+- **Gmagick::writeimage** - Writes an image to the specified filename
+- **Gmagick::__construct** - The Gmagick constructor
+- **GmagickDraw::annotate** - Draws text on the image
+- **GmagickDraw::arc** - Draws an arc
+- **GmagickDraw::bezier** - Draws a bezier curve
+- **GmagickDraw::ellipse** - Draws an ellipse on the image
+- **GmagickDraw::getfillcolor** - Returns the fill color
+- **GmagickDraw::getfillopacity** - Returns the opacity used when drawing
+- **GmagickDraw::getfont** - Returns the font
+- **GmagickDraw::getfontsize** - Returns the font pointsize
+- **GmagickDraw::getfontstyle** - Returns the font style
+- **GmagickDraw::getfontweight** - Returns the font weight
+- **GmagickDraw::getstrokecolor** - Returns the color used for stroking object outlines
+- **GmagickDraw::getstrokeopacity** - Returns the opacity of stroked object outlines
+- **GmagickDraw::getstrokewidth** - Returns the width of the stroke used to draw object outlines
+- **GmagickDraw::gettextdecoration** - Returns the text decoration
+- **GmagickDraw::gettextencoding** - Returns the code set used for text annotations
+- **GmagickDraw::line** - Draws a line
+- **GmagickDraw::point** - Draws a point
+- **GmagickDraw::polygon** - Draws a polygon
+- **GmagickDraw::polyline** - Draws a polyline
+- **GmagickDraw::rectangle** - Draws a rectangle
+- **GmagickDraw::rotate** - Applies the specified rotation to the current coordinate space
+- **GmagickDraw::roundrectangle** - Draws a rounded rectangle
+- **GmagickDraw::scale** - Adjusts the scaling factor
+- **GmagickDraw::setfillcolor** - Sets the fill color to be used for drawing filled objects
+- **GmagickDraw::setfillopacity** - The setfillopacity purpose
+- **GmagickDraw::setfont** - Sets the fully-specified font to use when annotating with text
+- **GmagickDraw::setfontsize** - Sets the font pointsize to use when annotating with text
+- **GmagickDraw::setfontstyle** - Sets the font style to use when annotating with text
+- **GmagickDraw::setfontweight** - Sets the font weight
+- **GmagickDraw::setstrokecolor** - Sets the color used for stroking object outlines
+- **GmagickDraw::setstrokeopacity** - Specifies the opacity of stroked object outlines
+- **GmagickDraw::setstrokewidth** - Sets the width of the stroke used to draw object outlines
+- **GmagickDraw::settextdecoration** - Specifies a decoration
+- **GmagickDraw::settextencoding** - Specifies the text code set
+- **GmagickPixel::getcolor** - Returns the color
+- **GmagickPixel::getcolorcount** - Returns the color count associated with this color
+- **GmagickPixel::getcolorvalue** - Gets the normalized value of the provided color channel
+- **GmagickPixel::setcolor** - Sets the color
+- **GmagickPixel::setcolorvalue** - Sets the normalized value of one of the channels
+- **GmagickPixel::__construct** - The GmagickPixel constructor
+- **gmdate** - 格式化 GMT/UTC 日期／时间
+- **gmmktime** - 取得 GMT 日期的 UNIX 时间戳
+- **GMP::__construct** - Create GMP number
+- **GMP::__serialize** - Serializes the GMP object
+- **GMP::__unserialize** - Deserializes the data parameter into a GMP object
+- **gmp_abs** - Absolute value
+- **gmp_add** - Add numbers
+- **gmp_and** - Bitwise AND
+- **gmp_binomial** - Calculates binomial coefficient
+- **gmp_clrbit** - Clear bit
+- **gmp_cmp** - Compare numbers
+- **gmp_com** - Calculates one's complement
+- **gmp_div** - 别名 gmp_div_q
+- **gmp_divexact** - Exact division of numbers
+- **gmp_div_q** - Divide numbers
+- **gmp_div_qr** - Divide numbers and get quotient and remainder
+- **gmp_div_r** - Remainder of the division of numbers
+- **gmp_export** - Export to a binary string
+- **gmp_fact** - Factorial
+- **gmp_gcd** - Calculate GCD
+- **gmp_gcdext** - Calculate GCD and multipliers
+- **gmp_hamdist** - Hamming distance
+- **gmp_import** - Import from a binary string
+- **gmp_init** - Create GMP number
+- **gmp_intval** - Convert GMP number to integer
+- **gmp_invert** - Inverse by modulo
+- **gmp_jacobi** - Jacobi symbol
+- **gmp_kronecker** - Kronecker symbol
+- **gmp_lcm** - Calculate LCM
+- **gmp_legendre** - Legendre symbol
+- **gmp_mod** - Modulo operation
+- **gmp_mul** - Multiply numbers
+- **gmp_neg** - Negate number
+- **gmp_nextprime** - Find next prime number
+- **gmp_or** - Bitwise OR
+- **gmp_perfect_power** - Perfect power check
+- **gmp_perfect_square** - Perfect square check
+- **gmp_popcount** - Population count
+- **gmp_pow** - Raise number into power
+- **gmp_powm** - Raise number into power with modulo
+- **gmp_prob_prime** - Check if number is "probably prime"
+- **gmp_random** - Random number
+- **gmp_random_bits** - Random number
+- **gmp_random_range** - Get a uniformly selected integer
+- **gmp_random_seed** - Sets the RNG seed
+- **gmp_root** - Take the integer part of nth root
+- **gmp_rootrem** - Take the integer part and remainder of nth root
+- **gmp_scan0** - Scan for 0
+- **gmp_scan1** - Scan for 1
+- **gmp_setbit** - Set bit
+- **gmp_sign** - Sign of number
+- **gmp_sqrt** - Calculate square root
+- **gmp_sqrtrem** - Square root with remainder
+- **gmp_strval** - Convert GMP number to string
+- **gmp_sub** - Subtract numbers
+- **gmp_testbit** - Tests if a bit is set
+- **gmp_xor** - Bitwise XOR
+- **gmstrftime** - 根据区域设置格式化 GMT/UTC 时间/日期
+- **gnupg_adddecryptkey** - Add a key for decryption
+- **gnupg_addencryptkey** - Add a key for encryption
+- **gnupg_addsignkey** - Add a key for signing
+- **gnupg_cleardecryptkeys** - Removes all keys which were set for decryption before
+- **gnupg_clearencryptkeys** - Removes all keys which were set for encryption before
+- **gnupg_clearsignkeys** - Removes all keys which were set for signing before
+- **gnupg_decrypt** - Decrypts a given text
+- **gnupg_decryptverify** - Decrypts and verifies a given text
+- **gnupg_deletekey** - Delete a key from the keyring
+- **gnupg_encrypt** - Encrypts a given text
+- **gnupg_encryptsign** - Encrypts and signs a given text
+- **gnupg_export** - Exports a key
+- **gnupg_getengineinfo** - Returns the engine info
+- **gnupg_geterror** - Returns the errortext, if a function fails
+- **gnupg_geterrorinfo** - Returns the error info
+- **gnupg_getprotocol** - Returns the currently active protocol for all operations
+- **gnupg_gettrustlist** - Search the trust items
+- **gnupg_import** - Imports a key
+- **gnupg_init** - Initialize a connection
+- **gnupg_keyinfo** - Returns an array with information about all keys that matches the given pattern
+- **gnupg_listsignatures** - List key signatures
+- **gnupg_setarmor** - Toggle armored output
+- **gnupg_seterrormode** - Sets the mode for error_reporting
+- **gnupg_setsignmode** - Sets the mode for signing
+- **gnupg_sign** - Signs a given text
+- **gnupg_verify** - Verifies a signed text
+- **grapheme_extract** - Function to extract a sequence of default grapheme clusters from a text buffer, which must be encoded in UTF-8
+- **grapheme_stripos** - Find position (in grapheme units) of first occurrence of a case-insensitive string
+- **grapheme_stristr** - Returns part of haystack string from the first occurrence of case-insensitive needle to the end of haystack
+- **grapheme_strlen** - Get string length in grapheme units
+- **grapheme_strpos** - Find position (in grapheme units) of first occurrence of a string
+- **grapheme_strripos** - Find position (in grapheme units) of last occurrence of a case-insensitive string
+- **grapheme_strrpos** - Find position (in grapheme units) of last occurrence of a string
+- **grapheme_strstr** - Returns part of haystack string from the first occurrence of needle to the end of haystack
+- **grapheme_str_split** - Split a string into an array
+- **grapheme_substr** - Return part of a string
+- **gregoriantojd** - 将公历日期转为儒略日数
+- **gzclose** - Close an open gz-file pointer
+- **gzcompress** - Compress a string
+- **gzdecode** - Decodes a gzip compressed string
+- **gzdeflate** - Deflate a string
+- **gzencode** - Create a gzip compressed string
+- **gzeof** - Test for EOF on a gz-file pointer
+- **gzfile** - Read entire gz-file into an array
+- **gzgetc** - Get character from gz-file pointer
+- **gzgets** - Get line from file pointer
+- **gzgetss** - Get line from gz-file pointer and strip HTML tags
+- **gzinflate** - Inflate a deflated string
+- **gzopen** - Open gz-file
+- **gzpassthru** - Output all remaining data on a gz-file pointer
+- **gzputs** - 别名 gzwrite
+- **gzread** - Binary-safe gz-file read
+- **gzrewind** - Rewind the position of a gz-file pointer
+- **gzseek** - Seek on a gz-file pointer
+- **gztell** - Tell gz-file pointer read/write position
+- **gzuncompress** - Uncompress a compressed string
+- **gzwrite** - Binary-safe gz-file write
+
+## H
+
+- **hash** - 生成散列值（消息摘要）
+- **HashContext::__construct** - 私有构造方法以禁止直接实例化
+- **HashContext::__debugInfo** - Returns debugging information about the hashing context
+- **HashContext::__serialize** - 序列化 HashContext 对象
+- **HashContext::__unserialize** - 反序列化 data 参数为 HashContext 对象
+- **hash_algos** - 返回已注册的散列算法列表
+- **hash_copy** - 拷贝哈希运算上下文
+- **hash_equals** - 可防止时序攻击的字符串比较
+- **hash_file** - 给指定文件的内容生成散列值
+- **hash_final** - 结束增量散列且返回摘要结果
+- **hash_hkdf** - Generate a HKDF key derivation of a supplied key input
+- **hash_hmac** - 使用 HMAC 方法生成带有密钥的散列值
+- **hash_hmac_algos** - 返回适用于 hash_hmac 的已注册散列算法列表
+- **hash_hmac_file** - 使用 HMAC 方法和给定文件的内容生成带密钥的散列值
+- **hash_init** - 初始化增量散列运算上下文
+- **hash_pbkdf2** - 生成所提供密码的 PBKDF2 密钥导出
+- **hash_update** - 向活跃的哈希运算上下文中填充数据
+- **hash_update_file** - 从文件向活跃的散列运算上下文中填充数据
+- **hash_update_stream** - 从打开的流向活跃的散列运算上下文中填充数据
+- **header** - 发送原生 HTTP 头
+- **headers_list** - 返回已发送的 HTTP 响应头（或准备发送的）
+- **headers_sent** - 检测消息头是否已经发送
+- **header_register_callback** - 调用一个 header 函数
+- **header_remove** - 删除之前设置的 HTTP 头
+- **hebrev** - 将逻辑顺序希伯来文（logical-Hebrew）转换为视觉顺序希伯来文（visual-Hebrew）
+- **hebrevc** - 将逻辑顺序希伯来文（logical-Hebrew）转换为视觉顺序希伯来文（visual-Hebrew），并且转换换行符
+- **hex2bin** - 转换十六进制字符串为二进制字符串
+- **hexdec** - 十六进制转换为十进制
+- **highlight_file** - 语法高亮一个文件
+- **highlight_string** - 字符串的语法高亮
+- **hrtime** - 获取系统的高精度时间
+- **HRTime\PerformanceCounter::getFrequency** - Timer frequency in ticks per second
+- **HRTime\PerformanceCounter::getTicks** - Current ticks from the system
+- **HRTime\PerformanceCounter::getTicksSince** - Ticks elapsed since the given value
+- **HRTime\StopWatch::getElapsedTicks** - Get elapsed ticks for all intervals
+- **HRTime\StopWatch::getElapsedTime** - Get elapsed time for all intervals
+- **HRTime\StopWatch::getLastElapsedTicks** - Get elapsed ticks for the last interval
+- **HRTime\StopWatch::getLastElapsedTime** - Get elapsed time for the last interval
+- **HRTime\StopWatch::isRunning** - 确认测量是否在运行
+- **HRTime\StopWatch::start** - Start time measurement
+- **HRTime\StopWatch::stop** - Stop time measurement
+- **htmlentities** - 将字符转换为 HTML 转义字符
+- **htmlspecialchars** - 将特殊字符转换为 HTML 实体
+- **htmlspecialchars_decode** - 将特殊的 HTML 实体转换回普通字符
+- **html_entity_decode** - Convert HTML entities to their corresponding characters
+- **http_build_query** - 生成 URL-encode 之后的请求字符串
+- **http_clear_last_response_headers** - Clears the stored HTTP response headers
+- **http_get_last_response_headers** - Retrieve last HTTP response headers
+- **http_response_code** - 获取/设置响应的 HTTP 状态码
+- **hypot** - 计算直角三角形的斜边长度
+
+## I
+
+- **ibase_add_user** - Add a user to a security database
+- **ibase_affected_rows** - Return the number of rows that were affected by the previous query
+- **ibase_backup** - Initiates a backup task in the service manager and returns immediately
+- **ibase_blob_add** - Add data into a newly created blob
+- **ibase_blob_cancel** - Cancel creating blob
+- **ibase_blob_close** - Close blob
+- **ibase_blob_create** - Create a new blob for adding data
+- **ibase_blob_echo** - Output blob contents to browser
+- **ibase_blob_get** - Get len bytes data from open blob
+- **ibase_blob_import** - Create blob, copy file in it, and close it
+- **ibase_blob_info** - Return blob length and other useful info
+- **ibase_blob_open** - Open blob for retrieving data parts
+- **ibase_close** - Close a connection to an InterBase database
+- **ibase_commit** - Commit a transaction
+- **ibase_commit_ret** - Commit a transaction without closing it
+- **ibase_connect** - Open a connection to a database
+- **ibase_db_info** - Request statistics about a database
+- **ibase_delete_user** - Delete a user from a security database
+- **ibase_drop_db** - Drops a database
+- **ibase_errcode** - Return an error code
+- **ibase_errmsg** - Return error messages
+- **ibase_execute** - Execute a previously prepared query
+- **ibase_fetch_assoc** - Fetch a result row from a query as an associative array
+- **ibase_fetch_object** - Get an object from a InterBase database
+- **ibase_fetch_row** - Fetch a row from an InterBase database
+- **ibase_field_info** - Get information about a field
+- **ibase_free_event_handler** - Cancels a registered event handler
+- **ibase_free_query** - Free memory allocated by a prepared query
+- **ibase_free_result** - Free a result set
+- **ibase_gen_id** - Increments the named generator and returns its new value
+- **ibase_maintain_db** - Execute a maintenance command on the database server
+- **ibase_modify_user** - Modify a user to a security database
+- **ibase_name_result** - Assigns a name to a result set
+- **ibase_num_fields** - Get the number of fields in a result set
+- **ibase_num_params** - Return the number of parameters in a prepared query
+- **ibase_param_info** - Return information about a parameter in a prepared query
+- **ibase_pconnect** - Open a persistent connection to an InterBase database
+- **ibase_prepare** - Prepare a query for later binding of parameter placeholders and execution
+- **ibase_query** - Execute a query on an InterBase database
+- **ibase_restore** - Initiates a restore task in the service manager and returns immediately
+- **ibase_rollback** - Roll back a transaction
+- **ibase_rollback_ret** - Roll back a transaction without closing it
+- **ibase_server_info** - Request information about a database server
+- **ibase_service_attach** - Connect to the service manager
+- **ibase_service_detach** - Disconnect from the service manager
+- **ibase_set_event_handler** - Register a callback function to be called when events are posted
+- **ibase_trans** - Begin a transaction
+- **ibase_wait_event** - Wait for an event to be posted by the database
+- **iconv** - 将字符串从一个字符编码转换到另一个字符编码
+- **iconv_get_encoding** - 获取 iconv 扩展的内部配置变量
+- **iconv_mime_decode** - 解码一个MIME头字段
+- **iconv_mime_decode_headers** - 一次性解码多个 MIME 头字段
+- **iconv_mime_encode** - Composes a MIME header field
+- **iconv_set_encoding** - 为字符编码转换设定当前设置
+- **iconv_strlen** - 返回字符串的字符数统计
+- **iconv_strpos** - Finds position of first occurrence of a needle within a haystack
+- **iconv_strrpos** - Finds the last occurrence of a needle within a haystack
+- **iconv_substr** - 截取字符串的部分
+- **idate** - 将本地日期/时间格式化为整数
+- **idn_to_ascii** - 将域名转换为 IDNA ASCII 格式
+- **idn_to_utf8** - 将域名从 IDNA ASCII 转换为 Unicode
+- **igbinary_serialize** - Generates a compact, storable binary representation of a value
+- **igbinary_unserialize** - Creates a PHP value from a stored representation from igbinary_serialize
+- **ignore_user_abort** - 设置客户端断开连接时是否中断脚本的执行
+- **image2wbmp** - 输出图象到浏览器或文件。
+- **imageaffine** - 返回经过仿射变换后的图像，剪切区域可选
+- **imageaffinematrixconcat** - Concatenate two affine transformation matrices
+- **imageaffinematrixget** - Get an affine transformation matrix
+- **imagealphablending** - 设定图像的混色模式
+- **imageantialias** - 是否使用抗锯齿（antialias）功能
+- **imagearc** - 画弧线
+- **imageavif** - 输出图象到浏览器或文件。
+- **imagebmp** - Output a BMP image to browser or file
+- **imagechar** - 水平地绘制一个字符
+- **imagecharup** - 垂直地绘制一个字符
+- **imagecolorallocate** - 为图像分配颜色
+- **imagecolorallocatealpha** - 为图像分配颜色
+- **imagecolorat** - 取得某像素的颜色索引值
+- **imagecolorclosest** - 取得与指定的颜色最接近的颜色索引值
+- **imagecolorclosestalpha** - 获取最接近指定颜色 + alpha 的颜色索引
+- **imagecolorclosesthwb** - 取得与给定颜色最接近的色度的黑白色的索引
+- **imagecolordeallocate** - 取消图像颜色的分配
+- **imagecolorexact** - 取得指定颜色的索引值
+- **imagecolorexactalpha** - 取得指定的颜色加透明度的索引值
+- **imagecolormatch** - 使一个图像中调色板版本的颜色与真彩色版本更能匹配
+- **imagecolorresolve** - 取得指定颜色的索引值或有可能得到的最接近的替代值
+- **imagecolorresolvealpha** - 取得指定颜色 + alpha 或其最接近的替代值
+- **imagecolorset** - 给指定调色板索引设定颜色
+- **imagecolorsforindex** - 获取索引的颜色
+- **imagecolorstotal** - 取得图像调色板中的颜色数量
+- **imagecolortransparent** - 将颜色定义为透明
+- **imageconvolution** - 用系数 div 和 offset 申请一个 3x3 的卷积矩阵
+- **imagecopy** - 拷贝图像的一部分
+- **imagecopymerge** - 拷贝并合并图像的一部分
+- **imagecopymergegray** - 用灰度复制并合并图像的一部分
+- **imagecopyresampled** - 重采样拷贝部分图像并调整大小
+- **imagecopyresized** - 拷贝部分图像并调整大小
+- **imagecreate** - 创建新的基于调色板的图像
+- **imagecreatefromavif** - 由文件或 URL 创建一个新图象。
+- **imagecreatefrombmp** - 由文件或 URL 创建一个新图象。
+- **imagecreatefromgd** - 从 GD 文件或 URL 新建一图像
+- **imagecreatefromgd2** - 从 GD2 文件或 URL 新建一图像
+- **imagecreatefromgd2part** - 从指定的 GD2 文件或 URL 的部分创建新图像
+- **imagecreatefromgif** - 由文件或 URL 创建一个新图象。
+- **imagecreatefromjpeg** - 由文件或 URL 创建一个新图象。
+- **imagecreatefrompng** - 由文件或 URL 创建一个新图象。
+- **imagecreatefromstring** - 从字符串的图像流中新建图像
+- **imagecreatefromtga** - 由文件或 URL 创建一个新图象。
+- **imagecreatefromwbmp** - 由文件或 URL 创建一个新图象。
+- **imagecreatefromwebp** - 由文件或 URL 创建一个新图象。
+- **imagecreatefromxbm** - 由文件或 URL 创建一个新图象。
+- **imagecreatefromxpm** - 由文件或 URL 创建一个新图象。
+- **imagecreatetruecolor** - 新建真彩色图像
+- **imagecrop** - Crop an image to the given rectangle
+- **imagecropauto** - Crop an image automatically using one of the available modes
+- **imagedashedline** - 绘制虚线
+- **imagedestroy** - 销毁图像
+- **imageellipse** - 画椭圆
+- **imagefill** - 漫水填充
+- **imagefilledarc** - 绘制部分弧形并填充
+- **imagefilledellipse** - 绘制椭圆并填充
+- **imagefilledpolygon** - 绘制多边形并填充
+- **imagefilledrectangle** - 绘制矩形并填充
+- **imagefilltoborder** - 漫水填充特定颜色
+- **imagefilter** - 对图像使用过滤器
+- **imageflip** - Flips an image using a given mode
+- **imagefontheight** - 获取字体高度
+- **imagefontwidth** - 获取字体宽度
+- **imageftbbox** - 通过 freetype2 使用字体给出文本的边界框
+- **imagefttext** - 使用 FreeType 2 字体将文本写入图像
+- **imagegammacorrect** - 对 GD 图像应用伽玛校正
+- **imagegd** - 将 GD 图像输出到浏览器或文件
+- **imagegd2** - 将 GD2 图像输出到浏览器或文件
+- **imagegetclip** - Get the clipping rectangle
+- **imagegetinterpolation** - Get the interpolation method
+- **imagegif** - 输出图象到浏览器或文件。
+- **imagegrabscreen** - Captures the whole screen
+- **imagegrabwindow** - Captures a window
+- **imageinterlace** - 启用或禁用隔行扫描
+- **imageistruecolor** - 检查图像是否为真彩色图像
+- **imagejpeg** - 输出图象到浏览器或文件。
+- **imagelayereffect** - 设定 alpha 混合标志以使用分层效果
+- **imageline** - 绘制直线
+- **imageloadfont** - 载入新字体
+- **imageopenpolygon** - Draws an open polygon
+- **imagepalettecopy** - 将调色板从一个图像复制到另一个
+- **imagepalettetotruecolor** - Converts a palette based image to true color
+- **imagepng** - 将 PNG 图像输出到浏览器或文件
+- **imagepolygon** - 绘制多边形
+- **imagerectangle** - 绘制矩形
+- **imageresolution** - Get or set the resolution of the image
+- **imagerotate** - 用给定角度旋转图像
+- **imagesavealpha** - 保存图像时是否保留完整的 alpha 通道信息
+- **imagescale** - Scale an image using the given new width and height
+- **imagesetbrush** - 为线条设置笔刷图像
+- **imagesetclip** - Set the clipping rectangle
+- **imagesetinterpolation** - Set the interpolation method
+- **imagesetpixel** - 设置单个像素
+- **imagesetstyle** - 设定线条的样式
+- **imagesetthickness** - 设定画线的粗细
+- **imagesettile** - 设置要填充的平铺图像
+- **imagestring** - 水平绘制字符串
+- **imagestringup** - 垂直绘制字符串
+- **imagesx** - 取得图像宽度
+- **imagesy** - 取得图像高度
+- **imagetruecolortopalette** - 将真彩色图像转换为调色板图像
+- **imagettfbbox** - 取得使用 TrueType 字体的文本的边界框
+- **imagettftext** - 用 TrueType 字体向图像写入文本
+- **imagetypes** - 返回 PHP 内置支持的图像类型
+- **imagewbmp** - 输出图象到浏览器或文件。
+- **imagewebp** - 将 WebP 格式的图像输出到浏览器或文件
+- **imagexbm** - 输出 XBM 图像到浏览器或文件
+- **image_type_to_extension** - 取得图像类型的文件后缀
+- **image_type_to_mime_type** - 取得 getimagesize、exif_read_data、exif_thumbnail、exif_imagetype 所返回的图像类型的 MIME 类型
+- **Imagick::adaptiveBlurImage** - Adds adaptive blur filter to image
+- **Imagick::adaptiveResizeImage** - Adaptively resize image with data dependent triangulation
+- **Imagick::adaptiveSharpenImage** - Adaptively sharpen the image
+- **Imagick::adaptiveThresholdImage** - Selects a threshold for each pixel based on a range of intensity
+- **Imagick::addImage** - Adds new image to Imagick object image list
+- **Imagick::addNoiseImage** - Adds random noise to the image
+- **Imagick::affineTransformImage** - Transforms an image
+- **Imagick::animateImages** - Animates an image or images
+- **Imagick::annotateImage** - Annotates an image with text
+- **Imagick::appendImages** - Append a set of images
+- **Imagick::autoLevelImage** - Adjusts the levels of a particular image channel
+- **Imagick::averageImages** - Average a set of images
+- **Imagick::blackThresholdImage** - Forces all pixels below the threshold into black
+- **Imagick::blueShiftImage** - Mutes the colors of the image
+- **Imagick::blurImage** - Adds blur filter to image
+- **Imagick::borderImage** - Surrounds the image with a border
+- **Imagick::brightnessContrastImage** - Change the brightness and/or contrast of an image
+- **Imagick::charcoalImage** - Simulates a charcoal drawing
+- **Imagick::chopImage** - Removes a region of an image and trims
+- **Imagick::clampImage** - Restricts the color range from 0 to the quantum depth.
+- **Imagick::clear** - Clears all resources associated to Imagick object
+- **Imagick::clipImage** - Clips along the first path from the 8BIM profile
+- **Imagick::clipImagePath** - Clips along the named paths from the 8BIM profile, if present
+- **Imagick::clipPathImage** - Clips along the named paths from the 8BIM profile
+- **Imagick::clone** - Makes an exact copy of the Imagick object
+- **Imagick::clutImage** - Replaces colors in the image
+- **Imagick::coalesceImages** - Composites a set of images
+- **Imagick::colorFloodfillImage** - Changes the color value of any pixel that matches target
+- **Imagick::colorizeImage** - Blends the fill color with the image
+- **Imagick::colorMatrixImage** - Apply color transformation to an image
+- **Imagick::combineImages** - Combines one or more images into a single image
+- **Imagick::commentImage** - Adds a comment to your image
+- **Imagick::compareImageChannels** - Returns the difference in one or more images
+- **Imagick::compareImageLayers** - Returns the maximum bounding region between images
+- **Imagick::compareImages** - Compares an image to a reconstructed image
+- **Imagick::compositeImage** - 把一张图合并到一张图
+- **Imagick::contrastImage** - Change the contrast of the image
+- **Imagick::contrastStretchImage** - Enhances the contrast of a color image
+- **Imagick::convolveImage** - Applies a custom convolution kernel to the image
+- **Imagick::count** - Get the number of images
+- **Imagick::cropImage** - 截图图片的一块区域
+- **Imagick::cropThumbnailImage** - 创建缩略图
+- **Imagick::current** - Returns a reference to the current Imagick object
+- **Imagick::cycleColormapImage** - Displaces an image's colormap
+- **Imagick::decipherImage** - Deciphers an image
+- **Imagick::deconstructImages** - Returns certain pixel differences between images
+- **Imagick::deleteImageArtifact** - Delete image artifact
+- **Imagick::deleteImageProperty** - Deletes an image property
+- **Imagick::deskewImage** - Removes skew from the image
+- **Imagick::despeckleImage** - Reduces the speckle noise in an image
+- **Imagick::destroy** - Destroys the Imagick object
+- **Imagick::displayImage** - Displays an image
+- **Imagick::displayImages** - Displays an image or image sequence
+- **Imagick::distortImage** - Distorts an image using various distortion methods
+- **Imagick::drawImage** - 把 ImagickDraw 对象渲染到当前图片上
+- **Imagick::edgeImage** - Enhance edges within the image
+- **Imagick::embossImage** - Returns a grayscale image with a three-dimensional effect
+- **Imagick::encipherImage** - Enciphers an image
+- **Imagick::enhanceImage** - Improves the quality of a noisy image
+- **Imagick::equalizeImage** - Equalizes the image histogram
+- **Imagick::evaluateImage** - Applies an expression to an image
+- **Imagick::exportImagePixels** - Exports raw image pixels
+- **Imagick::extentImage** - Set image size
+- **Imagick::filter** - Applies a custom convolution kernel to the image
+- **Imagick::flattenImages** - Merges a sequence of images
+- **Imagick::flipImage** - Creates a vertical mirror image
+- **Imagick::floodFillPaintImage** - Changes the color value of any pixel that matches target
+- **Imagick::flopImage** - Creates a horizontal mirror image
+- **Imagick::forwardFourierTransformImage** - Implements the discrete Fourier transform (DFT)
+- **Imagick::frameImage** - Adds a simulated three-dimensional border
+- **Imagick::functionImage** - Applies a function on the image
+- **Imagick::fxImage** - Evaluate expression for each pixel in the image
+- **Imagick::gammaImage** - Gamma-corrects an image
+- **Imagick::gaussianBlurImage** - Blurs an image
+- **Imagick::getColorspace** - Gets the colorspace
+- **Imagick::getCompression** - Gets the object compression type
+- **Imagick::getCompressionQuality** - Gets the object compression quality
+- **Imagick::getCopyright** - Returns the ImageMagick API copyright as a string
+- **Imagick::getFilename** - The filename associated with an image sequence
+- **Imagick::getFont** - Gets font
+- **Imagick::getFormat** - Returns the format of the Imagick object
+- **Imagick::getGravity** - Gets the gravity
+- **Imagick::getHomeURL** - Returns the ImageMagick home URL
+- **Imagick::getImage** - Returns a new Imagick object
+- **Imagick::getImageAlphaChannel** - 检查图像是否有 alpha 通道
+- **Imagick::getImageArtifact** - Get image artifact
+- **Imagick::getImageAttribute** - Returns a named attribute
+- **Imagick::getImageBackgroundColor** - Returns the image background color
+- **Imagick::getImageBlob** - Returns the image sequence as a blob
+- **Imagick::getImageBluePrimary** - Returns the chromaticy blue primary point
+- **Imagick::getImageBorderColor** - Returns the image border color
+- **Imagick::getImageChannelDepth** - Gets the depth for a particular image channel
+- **Imagick::getImageChannelDistortion** - Compares image channels of an image to a reconstructed image
+- **Imagick::getImageChannelDistortions** - Gets channel distortions
+- **Imagick::getImageChannelExtrema** - Gets the extrema for one or more image channels
+- **Imagick::getImageChannelKurtosis** - The getImageChannelKurtosis purpose
+- **Imagick::getImageChannelMean** - Gets the mean and standard deviation
+- **Imagick::getImageChannelRange** - Gets channel range
+- **Imagick::getImageChannelStatistics** - Returns statistics for each channel in the image
+- **Imagick::getImageClipMask** - Gets image clip mask
+- **Imagick::getImageColormapColor** - Returns the color of the specified colormap index
+- **Imagick::getImageColors** - Gets the number of unique colors in the image
+- **Imagick::getImageColorspace** - Gets the image colorspace
+- **Imagick::getImageCompose** - Returns the composite operator associated with the image
+- **Imagick::getImageCompression** - Gets the current image's compression type
+- **Imagick::getImageCompressionQuality** - Gets the current image's compression quality
+- **Imagick::getImageDelay** - Gets the image delay
+- **Imagick::getImageDepth** - Gets the image depth
+- **Imagick::getImageDispose** - Gets the image disposal method
+- **Imagick::getImageDistortion** - Compares an image to a reconstructed image
+- **Imagick::getImageExtrema** - Gets the extrema for the image
+- **Imagick::getImageFilename** - Returns the filename of a particular image in a sequence
+- **Imagick::getImageFormat** - Returns the format of a particular image in a sequence
+- **Imagick::getImageGamma** - Gets the image gamma
+- **Imagick::getImageGeometry** - Gets the width and height as an associative array
+- **Imagick::getImageGravity** - Gets the image gravity
+- **Imagick::getImageGreenPrimary** - Returns the chromaticy green primary point
+- **Imagick::getImageHeight** - Returns the image height
+- **Imagick::getImageHistogram** - Gets the image histogram
+- **Imagick::getImageIndex** - Gets the index of the current active image
+- **Imagick::getImageInterlaceScheme** - Gets the image interlace scheme
+- **Imagick::getImageInterpolateMethod** - Returns the interpolation method
+- **Imagick::getImageIterations** - Gets the image iterations
+- **Imagick::getImageLength** - Returns the image length in bytes
+- **Imagick::getImageMatte** - Return if the image has a matte channel
+- **Imagick::getImageMatteColor** - Returns the image matte color
+- **Imagick::getImageMimeType** - Returns the image mime-type
+- **Imagick::getImageOrientation** - Gets the image orientation
+- **Imagick::getImagePage** - Returns the page geometry
+- **Imagick::getImagePixelColor** - Returns the color of the specified pixel
+- **Imagick::getImageProfile** - Returns the named image profile
+- **Imagick::getImageProfiles** - Returns the image profiles
+- **Imagick::getImageProperties** - Returns the image properties
+- **Imagick::getImageProperty** - Returns the named image property
+- **Imagick::getImageRedPrimary** - Returns the chromaticity red primary point
+- **Imagick::getImageRegion** - Extracts a region of the image
+- **Imagick::getImageRenderingIntent** - Gets the image rendering intent
+- **Imagick::getImageResolution** - 获取图像的x,y轴分辨率
+- **Imagick::getImagesBlob** - Returns all image sequences as a blob
+- **Imagick::getImageScene** - Gets the image scene
+- **Imagick::getImageSignature** - Generates an SHA-256 message digest
+- **Imagick::getImageSize** - Returns the image length in bytes
+- **Imagick::getImageTicksPerSecond** - Gets the image ticks-per-second
+- **Imagick::getImageTotalInkDensity** - Gets the image total ink density
+- **Imagick::getImageType** - Gets the potential image type
+- **Imagick::getImageUnits** - 获取图像的分辨率单位
+- **Imagick::getImageVirtualPixelMethod** - Returns the virtual pixel method
+- **Imagick::getImageWhitePoint** - Returns the chromaticity white point
+- **Imagick::getImageWidth** - Returns the image width
+- **Imagick::getInterlaceScheme** - Gets the object interlace scheme
+- **Imagick::getIteratorIndex** - Gets the index of the current active image
+- **Imagick::getNumberImages** - Returns the number of images in the object
+- **Imagick::getOption** - Returns a value associated with the specified key
+- **Imagick::getPackageName** - Returns the ImageMagick package name
+- **Imagick::getPage** - Returns the page geometry
+- **Imagick::getPixelIterator** - Returns a MagickPixelIterator
+- **Imagick::getPixelRegionIterator** - Get an ImagickPixelIterator for an image section
+- **Imagick::getPointSize** - Gets point size
+- **Imagick::getQuantum** - Returns the ImageMagick quantum range
+- **Imagick::getQuantumDepth** - Gets the quantum depth
+- **Imagick::getQuantumRange** - Returns the Imagick quantum range
+- **Imagick::getRegistry** - Get a StringRegistry entry
+- **Imagick::getReleaseDate** - Returns the ImageMagick release date
+- **Imagick::getResource** - Returns the specified resource's memory usage
+- **Imagick::getResourceLimit** - Returns the specified resource limit
+- **Imagick::getSamplingFactors** - Gets the horizontal and vertical sampling factor
+- **Imagick::getSize** - Returns the size associated with the Imagick object
+- **Imagick::getSizeOffset** - Returns the size offset
+- **Imagick::getVersion** - Returns the ImageMagick API version
+- **Imagick::haldClutImage** - Replaces colors in the image
+- **Imagick::hasNextImage** - Checks if the object has more images
+- **Imagick::hasPreviousImage** - Checks if the object has a previous image
+- **Imagick::identifyFormat** - Formats a string with image details
+- **Imagick::identifyImage** - Identifies an image and fetches attributes
+- **Imagick::implodeImage** - Creates a new image as a copy
+- **Imagick::importImagePixels** - Imports image pixels
+- **Imagick::inverseFourierTransformImage** - Implements the inverse discrete Fourier transform (DFT)
+- **Imagick::labelImage** - Adds a label to an image
+- **Imagick::levelImage** - Adjusts the levels of an image
+- **Imagick::linearStretchImage** - Stretches with saturation the image intensity
+- **Imagick::liquidRescaleImage** - Animates an image or images
+- **Imagick::listRegistry** - List all the registry settings
+- **Imagick::magnifyImage** - Scales an image proportionally 2x
+- **Imagick::mapImage** - Replaces the colors of an image with the closest color from a reference image
+- **Imagick::matteFloodfillImage** - Changes the transparency value of a color
+- **Imagick::medianFilterImage** - Applies a digital filter
+- **Imagick::mergeImageLayers** - Merges image layers
+- **Imagick::minifyImage** - Scales an image proportionally to half its size
+- **Imagick::modulateImage** - Control the brightness, saturation, and hue
+- **Imagick::montageImage** - Creates a composite image
+- **Imagick::morphImages** - Method morphs a set of images
+- **Imagick::morphology** - Applies a user supplied kernel to the image according to the given morphology method.
+- **Imagick::mosaicImages** - Forms a mosaic from images
+- **Imagick::motionBlurImage** - Simulates motion blur
+- **Imagick::negateImage** - Negates the colors in the reference image
+- **Imagick::newImage** - 创建一张图片
+- **Imagick::newPseudoImage** - Creates a new image
+- **Imagick::nextImage** - Moves to the next image
+- **Imagick::normalizeImage** - Enhances the contrast of a color image
+- **Imagick::oilPaintImage** - Simulates an oil painting
+- **Imagick::opaquePaintImage** - Changes the color value of any pixel that matches target
+- **Imagick::optimizeImageLayers** - Removes repeated portions of images to optimize
+- **Imagick::orderedPosterizeImage** - Performs an ordered dither
+- **Imagick::paintFloodfillImage** - Changes the color value of any pixel that matches target
+- **Imagick::paintOpaqueImage** - Change any pixel that matches color
+- **Imagick::paintTransparentImage** - Changes any pixel that matches color with the color defined by fill
+- **Imagick::pingImage** - Fetch basic attributes about the image
+- **Imagick::pingImageBlob** - Quickly fetch attributes
+- **Imagick::pingImageFile** - Get basic image attributes in a lightweight manner
+- **Imagick::polaroidImage** - Simulates a Polaroid picture
+- **Imagick::posterizeImage** - Reduces the image to a limited number of color level
+- **Imagick::previewImages** - Quickly pin-point appropriate parameters for image processing
+- **Imagick::previousImage** - Move to the previous image in the object
+- **Imagick::profileImage** - Adds or removes a profile from an image
+- **Imagick::quantizeImage** - Analyzes the colors within a reference image
+- **Imagick::quantizeImages** - Analyzes the colors within a sequence of images
+- **Imagick::queryFontMetrics** - Returns an array representing the font metrics
+- **Imagick::queryFonts** - Returns the configured fonts
+- **Imagick::queryFormats** - Returns formats supported by Imagick
+- **Imagick::radialBlurImage** - Radial blurs an image
+- **Imagick::raiseImage** - Creates a simulated 3d button-like effect
+- **Imagick::randomThresholdImage** - Creates a high-contrast, two-color image
+- **Imagick::readImage** - Reads image from filename
+- **Imagick::readImageBlob** - 从二进制字符串里读取图片
+- **Imagick::readImageFile** - Reads image from open filehandle
+- **Imagick::readimages** - Reads image from an array of filenames
+- **Imagick::recolorImage** - Recolors image
+- **Imagick::reduceNoiseImage** - Smooths the contours of an image
+- **Imagick::remapImage** - Remaps image colors
+- **Imagick::removeImage** - Removes an image from the image list
+- **Imagick::removeImageProfile** - Removes the named image profile and returns it
+- **Imagick::render** - Renders all preceding drawing commands
+- **Imagick::resampleImage** - Resample image to desired resolution
+- **Imagick::resetImagePage** - Reset image page
+- **Imagick::resizeImage** - Scales an image
+- **Imagick::rollImage** - Offsets an image
+- **Imagick::rotateImage** - Rotates an image
+- **Imagick::rotationalBlurImage** - Rotational blurs an image
+- **Imagick::roundCorners** - Rounds image corners
+- **Imagick::sampleImage** - Scales an image with pixel sampling
+- **Imagick::scaleImage** - Scales the size of an image
+- **Imagick::segmentImage** - Segments an image
+- **Imagick::selectiveBlurImage** - Selectively blur an image within a contrast threshold
+- **Imagick::separateImageChannel** - Separates a channel from the image
+- **Imagick::sepiaToneImage** - Sepia tones an image
+- **Imagick::setBackgroundColor** - Sets the object's default background color
+- **Imagick::setColorspace** - Set colorspace
+- **Imagick::setCompression** - Sets the object's default compression type
+- **Imagick::setCompressionQuality** - Sets the object's default compression quality
+- **Imagick::setFilename** - Sets the filename before you read or write the image
+- **Imagick::setFirstIterator** - Sets the Imagick iterator to the first image
+- **Imagick::setFont** - Sets font
+- **Imagick::setFormat** - Sets the format of the Imagick object
+- **Imagick::setGravity** - Sets the gravity
+- **Imagick::setImage** - Replaces image in the object
+- **Imagick::setImageAlphaChannel** - Sets image alpha channel
+- **Imagick::setImageArtifact** - Set image artifact
+- **Imagick::setImageAttribute** - Sets an image attribute
+- **Imagick::setImageBackgroundColor** - Sets the image background color
+- **Imagick::setImageBias** - Sets the image bias for any method that convolves an image
+- **Imagick::setImageBiasQuantum** - Sets the image bias
+- **Imagick::setImageBluePrimary** - Sets the image chromaticity blue primary point
+- **Imagick::setImageBorderColor** - Sets the image border color
+- **Imagick::setImageChannelDepth** - Sets the depth of a particular image channel
+- **Imagick::setImageClipMask** - Sets image clip mask
+- **Imagick::setImageColormapColor** - Sets the color of the specified colormap index
+- **Imagick::setImageColorspace** - Sets the image colorspace
+- **Imagick::setImageCompose** - Sets the image composite operator
+- **Imagick::setImageCompression** - 设置图片压缩的类型
+- **Imagick::setImageCompressionQuality** - 设置图片压缩的质量
+- **Imagick::setImageDelay** - Sets the image delay
+- **Imagick::setImageDepth** - Sets the image depth
+- **Imagick::setImageDispose** - Sets the image disposal method
+- **Imagick::setImageExtent** - Sets the image size
+- **Imagick::setImageFilename** - Sets the filename of a particular image
+- **Imagick::setImageFormat** - 为图片设置指定的格式
+- **Imagick::setImageGamma** - Sets the image gamma
+- **Imagick::setImageGravity** - Sets the image gravity
+- **Imagick::setImageGreenPrimary** - Sets the image chromaticity green primary point
+- **Imagick::setImageIndex** - Set the iterator position
+- **Imagick::setImageInterlaceScheme** - Sets the image compression
+- **Imagick::setImageInterpolateMethod** - Sets the image interpolate pixel method
+- **Imagick::setImageIterations** - Sets the image iterations
+- **Imagick::setImageMatte** - Sets the image matte channel
+- **Imagick::setImageMatteColor** - Sets the image matte color
+- **Imagick::setImageOpacity** - Sets the image opacity level
+- **Imagick::setImageOrientation** - Sets the image orientation
+- **Imagick::setImagePage** - Sets the page geometry of the image
+- **Imagick::setImageProfile** - Adds a named profile to the Imagick object
+- **Imagick::setImageProperty** - Sets an image property
+- **Imagick::setImageRedPrimary** - Sets the image chromaticity red primary point
+- **Imagick::setImageRenderingIntent** - Sets the image rendering intent
+- **Imagick::setImageResolution** - Sets the image resolution
+- **Imagick::setImageScene** - Sets the image scene
+- **Imagick::setImageTicksPerSecond** - Sets the image ticks-per-second
+- **Imagick::setImageType** - Sets the image type
+- **Imagick::setImageUnits** - Sets the image units of resolution
+- **Imagick::setImageVirtualPixelMethod** - Sets the image virtual pixel method
+- **Imagick::setImageWhitePoint** - Sets the image chromaticity white point
+- **Imagick::setInterlaceScheme** - Sets the image compression
+- **Imagick::setIteratorIndex** - Set the iterator position
+- **Imagick::setLastIterator** - Sets the Imagick iterator to the last image
+- **Imagick::setOption** - Set an option
+- **Imagick::setPage** - Sets the page geometry of the Imagick object
+- **Imagick::setPointSize** - Sets point size
+- **Imagick::setProgressMonitor** - Set a callback to be called during processing
+- **Imagick::setRegistry** - Sets the ImageMagick registry entry named key to value
+- **Imagick::setResolution** - Sets the image resolution
+- **Imagick::setResourceLimit** - Sets the limit for a particular resource
+- **Imagick::setSamplingFactors** - Sets the image sampling factors
+- **Imagick::setSize** - Sets the size of the Imagick object
+- **Imagick::setSizeOffset** - Sets the size and offset of the Imagick object
+- **Imagick::setType** - Sets the image type attribute
+- **Imagick::shadeImage** - Creates a 3D effect
+- **Imagick::shadowImage** - Simulates an image shadow
+- **Imagick::sharpenImage** - Sharpens an image
+- **Imagick::shaveImage** - Shaves pixels from the image edges
+- **Imagick::shearImage** - Creating a parallelogram
+- **Imagick::sigmoidalContrastImage** - Adjusts the contrast of an image
+- **Imagick::sketchImage** - Simulates a pencil sketch
+- **Imagick::smushImages** - Takes all images from the current image pointer to the end of the image list and smushs them
+- **Imagick::solarizeImage** - Applies a solarizing effect to the image
+- **Imagick::sparseColorImage** - Interpolates colors
+- **Imagick::spliceImage** - Splices a solid color into the image
+- **Imagick::spreadImage** - Randomly displaces each pixel in a block
+- **Imagick::statisticImage** - Modifies image using a statistics function
+- **Imagick::steganoImage** - Hides a digital watermark within the image
+- **Imagick::stereoImage** - Composites two images
+- **Imagick::stripImage** - 去掉图片的所有配置和设置
+- **Imagick::subImageMatch** - Searches for a subimage in the current image and returns a similarity image
+- **Imagick::swirlImage** - Swirls the pixels about the center of the image
+- **Imagick::textureImage** - Repeatedly tiles the texture image
+- **Imagick::thresholdImage** - Changes the value of individual pixels based on a threshold
+- **Imagick::thumbnailImage** - Changes the size of an image
+- **Imagick::tintImage** - Applies a color vector to each pixel in the image
+- **Imagick::transformImage** - Convenience method for setting crop size and the image geometry
+- **Imagick::transformImageColorspace** - Transforms an image to a new colorspace
+- **Imagick::transparentPaintImage** - Paints pixels transparent
+- **Imagick::transposeImage** - Creates a vertical mirror image
+- **Imagick::transverseImage** - Creates a horizontal mirror image
+- **Imagick::trimImage** - Remove edges from the image
+- **Imagick::uniqueImageColors** - Discards all but one of any pixel color
+- **Imagick::unsharpMaskImage** - Sharpens an image
+- **Imagick::valid** - Checks if the current item is valid
+- **Imagick::vignetteImage** - Adds vignette filter to the image
+- **Imagick::waveImage** - Applies wave filter to the image
+- **Imagick::whiteThresholdImage** - Force all pixels above the threshold into white
+- **Imagick::writeImage** - 把图片写入指定的文件
+- **Imagick::writeImageFile** - Writes an image to a filehandle
+- **Imagick::writeImages** - Writes an image or image sequence
+- **Imagick::writeImagesFile** - Writes frames to a filehandle
+- **Imagick::__construct** - The Imagick constructor
+- **Imagick::__toString** - Returns the image as a string
+- **ImagickDraw::affine** - Adjusts the current affine transformation matrix
+- **ImagickDraw::annotation** - Draws text on the image
+- **ImagickDraw::arc** - Draws an arc
+- **ImagickDraw::bezier** - Draws a bezier curve
+- **ImagickDraw::circle** - Draws a circle
+- **ImagickDraw::clear** - Clears the ImagickDraw
+- **ImagickDraw::clone** - Makes an exact copy of the specified ImagickDraw object
+- **ImagickDraw::color** - Draws color on image
+- **ImagickDraw::comment** - Adds a comment
+- **ImagickDraw::composite** - Composites an image onto the current image
+- **ImagickDraw::destroy** - Frees all associated resources
+- **ImagickDraw::ellipse** - Draws an ellipse on the image
+- **ImagickDraw::getClipPath** - Obtains the current clipping path ID
+- **ImagickDraw::getClipRule** - Returns the current polygon fill rule
+- **ImagickDraw::getClipUnits** - Returns the interpretation of clip path units
+- **ImagickDraw::getFillColor** - Returns the fill color
+- **ImagickDraw::getFillOpacity** - Returns the opacity used when drawing
+- **ImagickDraw::getFillRule** - Returns the fill rule
+- **ImagickDraw::getFont** - Returns the font
+- **ImagickDraw::getFontFamily** - Returns the font family
+- **ImagickDraw::getFontSize** - Returns the font pointsize
+- **ImagickDraw::getFontStretch** - Gets the font stretch to use when annotating with text
+- **ImagickDraw::getFontStyle** - Returns the font style
+- **ImagickDraw::getFontWeight** - Returns the font weight
+- **ImagickDraw::getGravity** - Returns the text placement gravity
+- **ImagickDraw::getStrokeAntialias** - Returns the current stroke antialias setting
+- **ImagickDraw::getStrokeColor** - Returns the color used for stroking object outlines
+- **ImagickDraw::getStrokeDashArray** - Returns an array representing the pattern of dashes and gaps used to stroke paths
+- **ImagickDraw::getStrokeDashOffset** - Returns the offset into the dash pattern to start the dash
+- **ImagickDraw::getStrokeLineCap** - Returns the shape to be used at the end of open subpaths when they are stroked
+- **ImagickDraw::getStrokeLineJoin** - Returns the shape to be used at the corners of paths when they are stroked
+- **ImagickDraw::getStrokeMiterLimit** - Returns the stroke miter limit
+- **ImagickDraw::getStrokeOpacity** - Returns the opacity of stroked object outlines
+- **ImagickDraw::getStrokeWidth** - Returns the width of the stroke used to draw object outlines
+- **ImagickDraw::getTextAlignment** - Returns the text alignment
+- **ImagickDraw::getTextAntialias** - Returns the current text antialias setting
+- **ImagickDraw::getTextDecoration** - Returns the text decoration
+- **ImagickDraw::getTextEncoding** - Returns the code set used for text annotations
+- **ImagickDraw::getTextInterlineSpacing** - Gets the text interline spacing
+- **ImagickDraw::getTextInterwordSpacing** - Gets the text interword spacing
+- **ImagickDraw::getTextKerning** - Gets the text kerning
+- **ImagickDraw::getTextUnderColor** - Returns the text under color
+- **ImagickDraw::getVectorGraphics** - Returns a string containing vector graphics
+- **ImagickDraw::line** - Draws a line
+- **ImagickDraw::matte** - Paints on the image's opacity channel
+- **ImagickDraw::pathClose** - Adds a path element to the current path
+- **ImagickDraw::pathCurveToAbsolute** - Draws a cubic Bezier curve
+- **ImagickDraw::pathCurveToQuadraticBezierAbsolute** - Draws a quadratic Bezier curve
+- **ImagickDraw::pathCurveToQuadraticBezierRelative** - Draws a quadratic Bezier curve
+- **ImagickDraw::pathCurveToQuadraticBezierSmoothAbsolute** - Draws a quadratic Bezier curve
+- **ImagickDraw::pathCurveToQuadraticBezierSmoothRelative** - Draws a quadratic Bezier curve
+- **ImagickDraw::pathCurveToRelative** - Draws a cubic Bezier curve
+- **ImagickDraw::pathCurveToSmoothAbsolute** - Draws a cubic Bezier curve
+- **ImagickDraw::pathCurveToSmoothRelative** - Draws a cubic Bezier curve
+- **ImagickDraw::pathEllipticArcAbsolute** - Draws an elliptical arc
+- **ImagickDraw::pathEllipticArcRelative** - Draws an elliptical arc
+- **ImagickDraw::pathFinish** - Terminates the current path
+- **ImagickDraw::pathLineToAbsolute** - Draws a line path
+- **ImagickDraw::pathLineToHorizontalAbsolute** - Draws a horizontal line path
+- **ImagickDraw::pathLineToHorizontalRelative** - Draws a horizontal line
+- **ImagickDraw::pathLineToRelative** - Draws a line path
+- **ImagickDraw::pathLineToVerticalAbsolute** - Draws a vertical line
+- **ImagickDraw::pathLineToVerticalRelative** - Draws a vertical line path
+- **ImagickDraw::pathMoveToAbsolute** - Starts a new sub-path
+- **ImagickDraw::pathMoveToRelative** - Starts a new sub-path
+- **ImagickDraw::pathStart** - Declares the start of a path drawing list
+- **ImagickDraw::point** - Draws a point
+- **ImagickDraw::polygon** - Draws a polygon
+- **ImagickDraw::polyline** - Draws a polyline
+- **ImagickDraw::pop** - Destroys the current ImagickDraw in the stack, and returns to the previously pushed ImagickDraw
+- **ImagickDraw::popClipPath** - Terminates a clip path definition
+- **ImagickDraw::popDefs** - Terminates a definition list
+- **ImagickDraw::popPattern** - Terminates a pattern definition
+- **ImagickDraw::push** - Clones the current ImagickDraw and pushes it to the stack
+- **ImagickDraw::pushClipPath** - Starts a clip path definition
+- **ImagickDraw::pushDefs** - Indicates that following commands create named elements for early processing
+- **ImagickDraw::pushPattern** - Indicates that subsequent commands up to a ImagickDraw::opPattern() command comprise the definition of a named pattern
+- **ImagickDraw::rectangle** - Draws a rectangle
+- **ImagickDraw::render** - Renders all preceding drawing commands onto the image
+- **ImagickDraw::resetVectorGraphics** - Resets the vector graphics
+- **ImagickDraw::rotate** - Applies the specified rotation to the current coordinate space
+- **ImagickDraw::roundRectangle** - Draws a rounded rectangle
+- **ImagickDraw::scale** - Adjusts the scaling factor
+- **ImagickDraw::setClipPath** - Associates a named clipping path with the image
+- **ImagickDraw::setClipRule** - Set the polygon fill rule to be used by the clipping path
+- **ImagickDraw::setClipUnits** - Sets the interpretation of clip path units
+- **ImagickDraw::setFillAlpha** - Sets the opacity to use when drawing using the fill color or fill texture
+- **ImagickDraw::setFillColor** - Sets the fill color to be used for drawing filled objects
+- **ImagickDraw::setFillOpacity** - Sets the opacity to use when drawing using the fill color or fill texture
+- **ImagickDraw::setFillPatternURL** - Sets the URL to use as a fill pattern for filling objects
+- **ImagickDraw::setFillRule** - Sets the fill rule to use while drawing polygons
+- **ImagickDraw::setFont** - Sets the fully-specified font to use when annotating with text
+- **ImagickDraw::setFontFamily** - Sets the font family to use when annotating with text
+- **ImagickDraw::setFontSize** - Sets the font pointsize to use when annotating with text
+- **ImagickDraw::setFontStretch** - Sets the font stretch to use when annotating with text
+- **ImagickDraw::setFontStyle** - Sets the font style to use when annotating with text
+- **ImagickDraw::setFontWeight** - Sets the font weight
+- **ImagickDraw::setGravity** - Sets the text placement gravity
+- **ImagickDraw::setResolution** - Sets the resolution
+- **ImagickDraw::setStrokeAlpha** - Specifies the opacity of stroked object outlines
+- **ImagickDraw::setStrokeAntialias** - Controls whether stroked outlines are antialiased
+- **ImagickDraw::setStrokeColor** - Sets the color used for stroking object outlines
+- **ImagickDraw::setStrokeDashArray** - Specifies the pattern of dashes and gaps used to stroke paths
+- **ImagickDraw::setStrokeDashOffset** - Specifies the offset into the dash pattern to start the dash
+- **ImagickDraw::setStrokeLineCap** - Specifies the shape to be used at the end of open subpaths when they are stroked
+- **ImagickDraw::setStrokeLineJoin** - Specifies the shape to be used at the corners of paths when they are stroked
+- **ImagickDraw::setStrokeMiterLimit** - Specifies the miter limit
+- **ImagickDraw::setStrokeOpacity** - Specifies the opacity of stroked object outlines
+- **ImagickDraw::setStrokePatternURL** - Sets the pattern used for stroking object outlines
+- **ImagickDraw::setStrokeWidth** - Sets the width of the stroke used to draw object outlines
+- **ImagickDraw::setTextAlignment** - Specifies a text alignment
+- **ImagickDraw::setTextAntialias** - Controls whether text is antialiased
+- **ImagickDraw::setTextDecoration** - Specifies a decoration
+- **ImagickDraw::setTextEncoding** - Specifies the text code set
+- **ImagickDraw::setTextInterlineSpacing** - Sets the text interline spacing
+- **ImagickDraw::setTextInterwordSpacing** - Sets the text interword spacing
+- **ImagickDraw::setTextKerning** - Sets the text kerning
+- **ImagickDraw::setTextUnderColor** - Specifies the color of a background rectangle
+- **ImagickDraw::setVectorGraphics** - Sets the vector graphics
+- **ImagickDraw::setViewbox** - Sets the overall canvas size
+- **ImagickDraw::skewX** - Skews the current coordinate system in the horizontal direction
+- **ImagickDraw::skewY** - Skews the current coordinate system in the vertical direction
+- **ImagickDraw::translate** - Applies a translation to the current coordinate system
+- **ImagickDraw::__construct** - The ImagickDraw constructor
+- **ImagickKernel::addKernel** - Attach another kernel to a kernel list
+- **ImagickKernel::addUnityKernel** - Adds a Unity Kernel to the kernel list
+- **ImagickKernel::fromBuiltIn** - Create a kernel from a builtin in kernel
+- **ImagickKernel::fromMatrix** - Create a kernel from a 2d matrix of values
+- **ImagickKernel::getMatrix** - Get the 2d matrix of values used in this kernel
+- **ImagickKernel::scale** - Scales a kernel list by the given amount
+- **ImagickKernel::separate** - Separates a linked set of kernels and returns an array of ImagickKernels
+- **ImagickPixel::clear** - Clears resources associated with this object
+- **ImagickPixel::destroy** - Deallocates resources associated with this object
+- **ImagickPixel::getColor** - Returns the color
+- **ImagickPixel::getColorAsString** - Returns the color as a string
+- **ImagickPixel::getColorCount** - Returns the color count associated with this color
+- **ImagickPixel::getColorQuantum** - Returns the color of the pixel in an array as Quantum values
+- **ImagickPixel::getColorValue** - Gets the normalized value of the provided color channel
+- **ImagickPixel::getColorValueQuantum** - Gets the quantum value of a color in the ImagickPixel
+- **ImagickPixel::getHSL** - Returns the normalized HSL color of the ImagickPixel object
+- **ImagickPixel::getIndex** - Gets the colormap index of the pixel wand
+- **ImagickPixel::isPixelSimilar** - Check the distance between this color and another
+- **ImagickPixel::isPixelSimilarQuantum** - Returns whether two colors differ by less than the specified distance
+- **ImagickPixel::isSimilar** - Check the distance between this color and another
+- **ImagickPixel::setColor** - Sets the color
+- **ImagickPixel::setColorCount** - Sets the color count associated with this color
+- **ImagickPixel::setColorValue** - Sets the normalized value of one of the channels
+- **ImagickPixel::setColorValueQuantum** - Sets the quantum value of a color element of the ImagickPixel
+- **ImagickPixel::setHSL** - Sets the normalized HSL color
+- **ImagickPixel::setIndex** - Sets the colormap index of the pixel wand
+- **ImagickPixel::__construct** - The ImagickPixel constructor
+- **ImagickPixelIterator::clear** - Clear resources associated with a PixelIterator
+- **ImagickPixelIterator::destroy** - Deallocates resources associated with a PixelIterator
+- **ImagickPixelIterator::getCurrentIteratorRow** - Returns the current row of ImagickPixel objects
+- **ImagickPixelIterator::getIteratorRow** - Returns the current pixel iterator row
+- **ImagickPixelIterator::getNextIteratorRow** - Returns the next row of the pixel iterator
+- **ImagickPixelIterator::getPreviousIteratorRow** - Returns the previous row
+- **ImagickPixelIterator::newPixelIterator** - Returns a new pixel iterator
+- **ImagickPixelIterator::newPixelRegionIterator** - Returns a new pixel iterator
+- **ImagickPixelIterator::resetIterator** - Resets the pixel iterator
+- **ImagickPixelIterator::setIteratorFirstRow** - Sets the pixel iterator to the first pixel row
+- **ImagickPixelIterator::setIteratorLastRow** - Sets the pixel iterator to the last pixel row
+- **ImagickPixelIterator::setIteratorRow** - Set the pixel iterator row
+- **ImagickPixelIterator::syncIterator** - Syncs the pixel iterator
+- **ImagickPixelIterator::__construct** - The ImagickPixelIterator constructor
+- **imap_8bit** - Convert an 8bit string to a quoted-printable string
+- **imap_alerts** - Returns all IMAP alert messages that have occurred
+- **imap_append** - Append a string message to a specified mailbox
+- **imap_base64** - Decode BASE64 encoded text
+- **imap_binary** - Convert an 8bit string to a base64 string
+- **imap_body** - Read the message body
+- **imap_bodystruct** - Read the structure of a specified body section of a specific message
+- **imap_check** - Check current mailbox
+- **imap_clearflag_full** - Clears flags on messages
+- **imap_close** - Close an IMAP stream
+- **imap_create** - 别名 imap_createmailbox
+- **imap_createmailbox** - Create a new mailbox
+- **imap_delete** - Mark a message for deletion from current mailbox
+- **imap_deletemailbox** - Delete a mailbox
+- **imap_errors** - Returns all of the IMAP errors that have occurred
+- **imap_expunge** - Delete all messages marked for deletion
+- **imap_fetchbody** - Fetch a particular section of the body of the message
+- **imap_fetchheader** - Returns header for a message
+- **imap_fetchmime** - Fetch MIME headers for a particular section of the message
+- **imap_fetchstructure** - Read the structure of a particular message
+- **imap_fetchtext** - 别名 imap_body
+- **imap_fetch_overview** - Read an overview of the information in the headers of the given message
+- **imap_gc** - Clears IMAP cache
+- **imap_getacl** - Gets the ACL for a given mailbox
+- **imap_getmailboxes** - Read the list of mailboxes, returning detailed information on each one
+- **imap_getsubscribed** - List all the subscribed mailboxes
+- **imap_get_quota** - Retrieve the quota level settings, and usage statics per mailbox
+- **imap_get_quotaroot** - Retrieve the quota settings per user
+- **imap_header** - 别名 imap_headerinfo
+- **imap_headerinfo** - Read the header of the message
+- **imap_headers** - Returns headers for all messages in a mailbox
+- **imap_is_open** - Check if the IMAP stream is still valid
+- **imap_last_error** - Gets the last IMAP error that occurred during this page request
+- **imap_list** - Read the list of mailboxes
+- **imap_listmailbox** - 别名 imap_list
+- **imap_listscan** - Returns the list of mailboxes that matches the given text
+- **imap_listsubscribed** - 别名 imap_lsub
+- **imap_lsub** - List all the subscribed mailboxes
+- **imap_mail** - Send an email message
+- **imap_mailboxmsginfo** - Get information about the current mailbox
+- **imap_mail_compose** - Create a MIME message based on given envelope and body sections
+- **imap_mail_copy** - Copy specified messages to a mailbox
+- **imap_mail_move** - Move specified messages to a mailbox
+- **imap_mime_header_decode** - Decode MIME header elements
+- **imap_msgno** - Gets the message sequence number for the given UID
+- **imap_mutf7_to_utf8** - Decode a modified UTF-7 string to UTF-8
+- **imap_num_msg** - Gets the number of messages in the current mailbox
+- **imap_num_recent** - Gets the number of recent messages in current mailbox
+- **imap_open** - Open an IMAP stream to a mailbox
+- **imap_ping** - Check if the IMAP stream is still active
+- **imap_qprint** - Convert a quoted-printable string to an 8 bit string
+- **imap_rename** - 别名 imap_renamemailbox
+- **imap_renamemailbox** - Rename an old mailbox to new mailbox
+- **imap_reopen** - Reopen IMAP stream to new mailbox
+- **imap_rfc822_parse_adrlist** - Parses an address string
+- **imap_rfc822_parse_headers** - Parse mail headers from a string
+- **imap_rfc822_write_address** - Returns a properly formatted email address given the mailbox, host, and personal info
+- **imap_savebody** - Save a specific body section to a file
+- **imap_scan** - 别名 imap_listscan
+- **imap_scanmailbox** - 别名 imap_listscan
+- **imap_search** - This function returns an array of messages matching the given search criteria
+- **imap_setacl** - Sets the ACL for a given mailbox
+- **imap_setflag_full** - Sets flags on messages
+- **imap_set_quota** - Sets a quota for a given mailbox
+- **imap_sort** - Gets and sort messages
+- **imap_status** - Returns status information on a mailbox
+- **imap_subscribe** - Subscribe to a mailbox
+- **imap_thread** - Returns a tree of threaded message
+- **imap_timeout** - Set or fetch imap timeout
+- **imap_uid** - This function returns the UID for the given message sequence number
+- **imap_undelete** - Unmark the message which is marked deleted
+- **imap_unsubscribe** - Unsubscribe from a mailbox
+- **imap_utf7_decode** - Decodes a modified UTF-7 encoded string
+- **imap_utf7_encode** - Converts ISO-8859-1 string to modified UTF-7 text
+- **imap_utf8** - Converts MIME-encoded text to UTF-8
+- **imap_utf8_to_mutf7** - Encode a UTF-8 string to modified UTF-7
+- **implode** - 用字符串连接数组元素
+- **inet_ntop** - Converts a packed internet address to a human readable representation
+- **inet_pton** - Converts a human readable IP address to its packed in_addr representation
+- **InfiniteIterator::next** - Moves the inner Iterator forward or rewinds it
+- **InfiniteIterator::__construct** - Constructs an InfiniteIterator
+- **inflate_add** - Incrementally inflate encoded data
+- **inflate_get_read_len** - Get number of bytes read so far
+- **inflate_get_status** - Get decompression status
+- **inflate_init** - Initialize an incremental inflate context
+- **ini_alter** - 别名 ini_set
+- **ini_get** - 获取一个配置选项的值
+- **ini_get_all** - 获取所有配置选项
+- **ini_parse_quantity** - Get interpreted size from ini shorthand syntax
+- **ini_restore** - 恢复配置选项的值
+- **ini_set** - 为一个配置选项设置值
+- **inotify_add_watch** - 添加监听到已初始化的 inotify 实例
+- **inotify_init** - 初始化 inotify 实例
+- **inotify_queue_len** - 如果有待处理事件，返回大于零的数字
+- **inotify_read** - 从 inotify 实例读取事件
+- **inotify_rm_watch** - 移除 inotify 实例的监听
+- **intdiv** - 对除法结果取整
+- **interface_exists** - 检查接口是否已被定义
+- **InternalIterator::current** - 返回当前元素
+- **InternalIterator::key** - 返回当前元素的键
+- **InternalIterator::next** - 向前移动到下一个元素
+- **InternalIterator::rewind** - 迭代器返回到第一个元素
+- **InternalIterator::valid** - 检测当前位置是否有效
+- **InternalIterator::__construct** - 禁止直接实例化私有构造方法
+- **IntlBreakIterator::createCharacterInstance** - Create break iterator for boundaries of combining character sequences
+- **IntlBreakIterator::createCodePointInstance** - Create break iterator for boundaries of code points
+- **IntlBreakIterator::createLineInstance** - Create break iterator for logically possible line breaks
+- **IntlBreakIterator::createSentenceInstance** - Create break iterator for sentence breaks
+- **IntlBreakIterator::createTitleInstance** - Create break iterator for title-casing breaks
+- **IntlBreakIterator::createWordInstance** - Create break iterator for word breaks
+- **IntlBreakIterator::current** - Get index of current position
+- **IntlBreakIterator::first** - Set position to the first character in the text
+- **IntlBreakIterator::following** - Advance the iterator to the first boundary following specified offset
+- **IntlBreakIterator::getErrorCode** - Get last error code on the object
+- **IntlBreakIterator::getErrorMessage** - Get last error message on the object
+- **IntlBreakIterator::getLocale** - Get the locale associated with the object
+- **IntlBreakIterator::getPartsIterator** - Create iterator for navigating fragments between boundaries
+- **IntlBreakIterator::getText** - Get the text being scanned
+- **IntlBreakIterator::isBoundary** - Tell whether an offset is a boundaryʼs offset
+- **IntlBreakIterator::last** - Set the iterator position to index beyond the last character
+- **IntlBreakIterator::next** - Advance the iterator the next boundary
+- **IntlBreakIterator::preceding** - Set the iterator position to the first boundary before an offset
+- **IntlBreakIterator::previous** - Set the iterator position to the boundary immediately before the current
+- **IntlBreakIterator::setText** - Set the text being scanned
+- **IntlBreakIterator::__construct** - Private constructor for disallowing instantiation
+- **IntlCalendar::add** - Add a (signed) amount of time to a field
+- **IntlCalendar::after** - Whether this objectʼs time is after that of the passed object
+- **IntlCalendar::before** - Whether this objectʼs time is before that of the passed object
+- **IntlCalendar::clear** - Clear a field or all fields
+- **IntlCalendar::createInstance** - Create a new IntlCalendar
+- **IntlCalendar::equals** - Compare time of two IntlCalendar objects for equality
+- **IntlCalendar::fieldDifference** - Calculate difference between given time and this objectʼs time
+- **IntlCalendar::fromDateTime** - Create an IntlCalendar from a DateTime object or string
+- **IntlCalendar::get** - Get the value for a field
+- **IntlCalendar::getActualMaximum** - The maximum value for a field, considering the objectʼs current time
+- **IntlCalendar::getActualMinimum** - The minimum value for a field, considering the objectʼs current time
+- **IntlCalendar::getAvailableLocales** - Get array of locales for which there is data
+- **IntlCalendar::getDayOfWeekType** - Tell whether a day is a weekday, weekend or a day that has a transition between the two
+- **IntlCalendar::getErrorCode** - Get last error code on the object
+- **IntlCalendar::getErrorMessage** - Get last error message on the object
+- **IntlCalendar::getFirstDayOfWeek** - Get the first day of the week for the calendarʼs locale
+- **IntlCalendar::getGreatestMinimum** - Get the largest local minimum value for a field
+- **IntlCalendar::getKeywordValuesForLocale** - Get set of locale keyword values
+- **IntlCalendar::getLeastMaximum** - Get the smallest local maximum for a field
+- **IntlCalendar::getLocale** - Get the locale associated with the object
+- **IntlCalendar::getMaximum** - Get the global maximum value for a field
+- **IntlCalendar::getMinimalDaysInFirstWeek** - Get minimal number of days the first week in a year or month can have
+- **IntlCalendar::getMinimum** - Get the global minimum value for a field
+- **IntlCalendar::getNow** - Get number representing the current time
+- **IntlCalendar::getRepeatedWallTimeOption** - Get behavior for handling repeating wall time
+- **IntlCalendar::getSkippedWallTimeOption** - Get behavior for handling skipped wall time
+- **IntlCalendar::getTime** - Get time currently represented by the object
+- **IntlCalendar::getTimeZone** - Get the objectʼs timezone
+- **IntlCalendar::getType** - Get the calendar type
+- **IntlCalendar::getWeekendTransition** - Get time of the day at which weekend begins or ends
+- **IntlCalendar::inDaylightTime** - Whether the objectʼs time is in Daylight Savings Time
+- **IntlCalendar::isEquivalentTo** - Whether another calendar is equal but for a different time
+- **IntlCalendar::isLenient** - Whether date/time interpretation is in lenient mode
+- **IntlCalendar::isSet** - Whether a field is set
+- **IntlCalendar::isWeekend** - Whether a certain date/time is in the weekend
+- **IntlCalendar::roll** - Add value to field without carrying into more significant fields
+- **IntlCalendar::set** - Set a time field or several common fields at once
+- **IntlCalendar::setDate** - Set a date fields
+- **IntlCalendar::setDateTime** - Set a date and time fields
+- **IntlCalendar::setFirstDayOfWeek** - Set the day on which the week is deemed to start
+- **IntlCalendar::setLenient** - Set whether date/time interpretation is to be lenient
+- **IntlCalendar::setMinimalDaysInFirstWeek** - Set minimal number of days the first week in a year or month can have
+- **IntlCalendar::setRepeatedWallTimeOption** - Set behavior for handling repeating wall times at negative timezone offset transitions
+- **IntlCalendar::setSkippedWallTimeOption** - Set behavior for handling skipped wall times at positive timezone offset transitions
+- **IntlCalendar::setTime** - Set the calendar time in milliseconds since the epoch
+- **IntlCalendar::setTimeZone** - Set the timezone used by this calendar
+- **IntlCalendar::toDateTime** - Convert an IntlCalendar into a DateTime object
+- **IntlCalendar::__construct** - Private constructor for disallowing instantiation
+- **IntlChar::charAge** - Get the "age" of the code point
+- **IntlChar::charDigitValue** - Get the decimal digit value of a decimal digit character
+- **IntlChar::charDirection** - Get bidirectional category value for a code point
+- **IntlChar::charFromName** - Find Unicode character by name and return its code point value
+- **IntlChar::charMirror** - Get the "mirror-image" character for a code point
+- **IntlChar::charName** - Retrieve the name of a Unicode character
+- **IntlChar::charType** - Get the general category value for a code point
+- **IntlChar::chr** - Return Unicode character by code point value
+- **IntlChar::digit** - Get the decimal digit value of a code point for a given radix
+- **IntlChar::enumCharNames** - Enumerate all assigned Unicode characters within a range
+- **IntlChar::enumCharTypes** - Enumerate all code points with their Unicode general categories
+- **IntlChar::foldCase** - Perform case folding on a code point
+- **IntlChar::forDigit** - Get character representation for a given digit and radix
+- **IntlChar::getBidiPairedBracket** - Get the paired bracket character for a code point
+- **IntlChar::getBlockCode** - Get the Unicode allocation block containing a code point
+- **IntlChar::getCombiningClass** - Get the combining class of a code point
+- **IntlChar::getFC_NFKC_Closure** - Get the FC_NFKC_Closure property for a code point
+- **IntlChar::getIntPropertyMaxValue** - Get the max value for a Unicode property
+- **IntlChar::getIntPropertyMinValue** - Get the min value for a Unicode property
+- **IntlChar::getIntPropertyValue** - Get the value for a Unicode property for a code point
+- **IntlChar::getNumericValue** - Get the numeric value for a Unicode code point
+- **IntlChar::getPropertyEnum** - Get the property constant value for a given property name
+- **IntlChar::getPropertyName** - Get the Unicode name for a property
+- **IntlChar::getPropertyValueEnum** - Get the property value for a given value name
+- **IntlChar::getPropertyValueName** - Get the Unicode name for a property value
+- **IntlChar::getUnicodeVersion** - Get the Unicode version
+- **IntlChar::hasBinaryProperty** - Check a binary Unicode property for a code point
+- **IntlChar::isalnum** - Check if code point is an alphanumeric character
+- **IntlChar::isalpha** - Check if code point is a letter character
+- **IntlChar::isbase** - Check if code point is a base character
+- **IntlChar::isblank** - Check if code point is a "blank" or "horizontal space" character
+- **IntlChar::iscntrl** - Check if code point is a control character
+- **IntlChar::isdefined** - Check whether the code point is defined
+- **IntlChar::isdigit** - Check if code point is a digit character
+- **IntlChar::isgraph** - Check if code point is a graphic character
+- **IntlChar::isIDIgnorable** - Check if code point is an ignorable character
+- **IntlChar::isIDPart** - Check if code point is permissible in an identifier
+- **IntlChar::isIDStart** - Check if code point is permissible as the first character in an identifier
+- **IntlChar::isISOControl** - Check if code point is an ISO control code
+- **IntlChar::isJavaIDPart** - Check if code point is permissible in a Java identifier
+- **IntlChar::isJavaIDStart** - Check if code point is permissible as the first character in a Java identifier
+- **IntlChar::isJavaSpaceChar** - Check if code point is a space character according to Java
+- **IntlChar::islower** - Check if code point is a lowercase letter
+- **IntlChar::isMirrored** - Check if code point has the Bidi_Mirrored property
+- **IntlChar::isprint** - Check if code point is a printable character
+- **IntlChar::ispunct** - Check if code point is punctuation character
+- **IntlChar::isspace** - Check if code point is a space character
+- **IntlChar::istitle** - Check if code point is a titlecase letter
+- **IntlChar::isUAlphabetic** - Check if code point has the Alphabetic Unicode property
+- **IntlChar::isULowercase** - Check if code point has the Lowercase Unicode property
+- **IntlChar::isupper** - Check if code point has the general category "Lu" (uppercase letter)
+- **IntlChar::isUUppercase** - Check if code point has the Uppercase Unicode property
+- **IntlChar::isUWhiteSpace** - Check if code point has the White_Space Unicode property
+- **IntlChar::isWhitespace** - Check if code point is a whitespace character according to ICU
+- **IntlChar::isxdigit** - Check if code point is a hexadecimal digit
+- **IntlChar::ord** - Return Unicode code point value of character
+- **IntlChar::tolower** - Make Unicode character lowercase
+- **IntlChar::totitle** - Make Unicode character titlecase
+- **IntlChar::toupper** - Make Unicode character uppercase
+- **IntlCodePointBreakIterator::getLastCodePoint** - Get last code point passed over after advancing or receding the iterator
+- **IntlDateFormatter::create** - Create a date formatter
+- **IntlDateFormatter::format** - Format the date/time value as a string
+- **IntlDateFormatter::formatObject** - Formats an object
+- **IntlDateFormatter::getCalendar** - Get the calendar type used for the IntlDateFormatter
+- **IntlDateFormatter::getCalendarObject** - Get copy of formatterʼs calendar object
+- **IntlDateFormatter::getDateType** - Get the datetype used for the IntlDateFormatter
+- **IntlDateFormatter::getErrorCode** - Get the error code from last operation
+- **IntlDateFormatter::getErrorMessage** - Get the error text from the last operation
+- **IntlDateFormatter::getLocale** - Get the locale used by formatter
+- **IntlDateFormatter::getPattern** - Get the pattern used for the IntlDateFormatter
+- **IntlDateFormatter::getTimeType** - Get the timetype used for the IntlDateFormatter
+- **IntlDateFormatter::getTimeZone** - Get formatterʼs timezone
+- **IntlDateFormatter::getTimeZoneId** - Get the timezone-id used for the IntlDateFormatter
+- **IntlDateFormatter::isLenient** - Get the lenient used for the IntlDateFormatter
+- **IntlDateFormatter::localtime** - Parse string to a field-based time value
+- **IntlDateFormatter::parse** - Parse string to a timestamp value
+- **IntlDateFormatter::parseToCalendar** - Parse a string into a timestamp, updating an open calendar
+- **IntlDateFormatter::setCalendar** - Sets the calendar type used by the formatter
+- **IntlDateFormatter::setLenient** - Set the leniency of the parser
+- **IntlDateFormatter::setPattern** - Set the pattern used for the IntlDateFormatter
+- **IntlDateFormatter::setTimeZone** - Sets formatterʼs timezone
+- **IntlDatePatternGenerator::create** - Creates a new IntlDatePatternGenerator instance
+- **IntlDatePatternGenerator::getBestPattern** - Determines the most suitable date/time format
+- **IntlGregorianCalendar::createFromDate** - Create a new IntlGregorianCalendar instance from date
+- **IntlGregorianCalendar::createFromDateTime** - Create a new IntlGregorianCalendar instance from date and time
+- **IntlGregorianCalendar::getGregorianChange** - Get the Gregorian Calendar change date
+- **IntlGregorianCalendar::isLeapYear** - Determine if the given year is a leap year
+- **IntlGregorianCalendar::setGregorianChange** - Set the Gregorian Calendar the change date
+- **IntlGregorianCalendar::__construct** - Create the Gregorian Calendar class
+- **IntlIterator::current** - Get the current element
+- **IntlIterator::key** - Get the current key
+- **IntlIterator::next** - Move forward to the next element
+- **IntlIterator::rewind** - Rewind the iterator to the first element
+- **IntlIterator::valid** - Check if current position is valid
+- **IntlListFormatter::format** - Format a list of items
+- **IntlListFormatter::__construct** - Creates a new IntlListFormatter instance
+- **IntlPartsIterator::getBreakIterator** - Get IntlBreakIterator backing this parts iterator
+- **IntlRuleBasedBreakIterator::getBinaryRules** - Get the binary form of compiled rules
+- **IntlRuleBasedBreakIterator::getRules** - Get the rule set used to create this object
+- **IntlRuleBasedBreakIterator::getRuleStatus** - Get the largest status value from the break rules that determined the current break position
+- **IntlRuleBasedBreakIterator::getRuleStatusVec** - Get the status values from the break rules that determined the current break position
+- **IntlRuleBasedBreakIterator::__construct** - Create iterator from ruleset
+- **IntlTimeZone::countEquivalentIDs** - Get the number of IDs in the equivalency group that includes the given ID
+- **IntlTimeZone::createDefault** - Create a new copy of the default timezone for this host
+- **IntlTimeZone::createEnumeration** - Get an enumeration over time zone IDs associated with the
+  given country or offset
+- **IntlTimeZone::createTimeZone** - Create a timezone object for the given ID
+- **IntlTimeZone::createTimeZoneIDEnumeration** - Get an enumeration over system time zone IDs with the given filter conditions
+- **IntlTimeZone::fromDateTimeZone** - Create a timezone object from DateTimeZone
+- **IntlTimeZone::getCanonicalID** - Get the canonical system timezone ID or the normalized custom time zone ID for the given time zone ID
+- **IntlTimeZone::getDisplayName** - Get a name of this time zone suitable for presentation to the user
+- **IntlTimeZone::getDSTSavings** - Get the amount of time to be added to local standard time to get local wall clock time
+- **IntlTimeZone::getEquivalentID** - Get an ID in the equivalency group that includes the given ID
+- **IntlTimeZone::getErrorCode** - Get last error code on the object
+- **IntlTimeZone::getErrorMessage** - Get last error message on the object
+- **IntlTimeZone::getGMT** - Create GMT (UTC) timezone
+- **IntlTimeZone::getIanaID** - Translate a timezone identifier to its IANA equivalent
+- **IntlTimeZone::getID** - Get timezone ID
+- **IntlTimeZone::getIDForWindowsID** - Translate a Windows timezone into a system timezone
+- **IntlTimeZone::getOffset** - Get the time zone raw and GMT offset for the given moment in time
+- **IntlTimeZone::getRawOffset** - Get the raw GMT offset (before taking daylight savings time into account
+- **IntlTimeZone::getRegion** - Get the region code associated with the given system time zone ID
+- **IntlTimeZone::getTZDataVersion** - Get the timezone data version currently used by ICU
+- **IntlTimeZone::getUnknown** - Get the "unknown" time zone
+- **IntlTimeZone::getWindowsID** - Translate a system timezone into a Windows timezone
+- **IntlTimeZone::hasSameRules** - Check if this zone has the same rules and offset as another zone
+- **IntlTimeZone::toDateTimeZone** - Convert to DateTimeZone object
+- **IntlTimeZone::useDaylightTime** - Check if this time zone uses daylight savings time
+- **IntlTimeZone::__construct** - Private constructor to disallow direct instantiation
+- **intl_error_name** - Get symbolic name for a given error code
+- **intl_get_error_code** - Get the last error code
+- **intl_get_error_message** - Get description of the last error
+- **intl_is_failure** - Check whether the given error code indicates failure
+- **intval** - 获取变量的整数值
+- **in_array** - 检查数组中是否存在某个值
+- **ip2long** - 将 IPV4 的字符串互联网协议转换成长整型数字
+- **iptcembed** - 嵌入二进制 IPTC 数据到 JPEG 图像中
+- **iptcparse** - 将二进制 IPTC 块解析为单个标签
+- **isset** - 检测变量是否已声明并且其值不为 null
+- **is_a** - 检查对象是否属于一个给定的类型或子类型。
+- **is_array** - 检测变量是否是数组
+- **is_bool** - 检测变量是否是布尔值
+- **is_callable** - 验证值是否可以在当前范围内作为函数调用
+- **is_countable** - 验证变量内容是否为可数值
+- **is_dir** - 判断给定文件名是否是一个目录
+- **is_double** - 别名 is_float
+- **is_executable** - 判断给定文件名是否可执行
+- **is_file** - 判断给定文件名是否为一个正常的文件
+- **is_finite** - 判断浮点数是否是有效的有限值
+- **is_float** - 检测变量是否是浮点型
+- **is_infinite** - 判断浮点数是否为无限值
+- **is_int** - 检测变量是否是整数
+- **is_integer** - 别名 is_int
+- **is_iterable** - 验证变量的内容是否为可迭代值
+- **is_link** - 判断给定文件名是否为一个符号连接
+- **is_long** - 别名 is_int
+- **is_nan** - 判断浮点数是否是否为 NAN
+- **is_null** - 检测变量是否是 null
+- **is_numeric** - 检测变量是否是数字或数字字符串
+- **is_object** - 检测变量是否是对象
+- **is_readable** - 判断给定文件名是否可读
+- **is_real** - 别名 is_float
+- **is_resource** - 查找变量是否为资源
+- **is_scalar** - 查找变量是否是标量
+- **is_soap_fault** - Checks if a SOAP call has failed
+- **is_string** - 检测变量的类型是否是字符串
+- **is_subclass_of** - 检查对象是否继承或者实现（implement）此类
+- **is_tainted** - Checks whether a string is tainted
+- **is_uploaded_file** - 判断文件是否是通过 HTTP POST 上传的
+- **is_writable** - 判断给定的文件名是否可写
+- **is_writeable** - is_writable 的别名
+- **Iterator::current** - 返回当前元素
+- **Iterator::key** - 返回当前元素的键
+- **Iterator::next** - 向前移动到下一个元素
+- **Iterator::rewind** - 返回到迭代器的第一个元素
+- **Iterator::valid** - 检查当前位置是否有效
+- **IteratorAggregate::getIterator** - 获取一个外部迭代器或可遍历对象
+- **IteratorIterator::current** - Get the current value
+- **IteratorIterator::getInnerIterator** - Get the inner iterator
+- **IteratorIterator::key** - Get the key of the current element
+- **IteratorIterator::next** - Forward to the next element
+- **IteratorIterator::rewind** - Rewind to the first element
+- **IteratorIterator::valid** - Checks if the current element is valid
+- **IteratorIterator::__construct** - Create an iterator from anything that is traversable
+- **iterator_apply** - 为迭代器中每个元素调用函数
+- **iterator_count** - 计算迭代器中元素的个数
+- **iterator_to_array** - 复制迭代器中的元素到数组
+
+## J
+
+- **jddayofweek** - 返回星期几
+- **jdmonthname** - 返回月份名称
+- **jdtofrench** - 从儒略日数转换为法国共和历
+- **jdtogregorian** - 将儒略日数转换为公历日期
+- **jdtojewish** - 将儒略日数转换为犹太历日期
+- **jdtojulian** - 将儒略日数转换为儒略历日期
+- **jdtounix** - 将儒略日数转换为 Unix 时间戳
+- **jewishtojd** - 将犹太历日期转换为儒略日数
+- **join** - 别名 implode
+- **jpeg2wbmp** - 将 JPEG 图像文件转换为 WBMP 图像文件
+- **JsonSerializable::jsonSerialize** - 指定需要被序列化成 JSON 的数据
+- **json_decode** - 对 JSON 格式的字符串进行解码
+- **json_encode** - 对变量进行 JSON 编码
+- **json_last_error** - 返回最后发生的错误
+- **json_last_error_msg** - 返回最后一次调用 json_validate()、json_encode() 或 json_decode() 时产生的错误信息
+- **json_validate** - 检查一个字符串是否包含有效的JSON
+- **juliantojd** - 儒略日期转为儒略日数
+
+## K
+
+- **key** - 从关联数组中取得键名
+- **key_exists** - 别名 array_key_exists
+- **krsort** - 对数组按照键名逆向排序
+- **ksort** - 对数组根据键名升序排序
+
+## L
+
+- **lcfirst** - 使字符串的第一个字符小写
+- **lcg_value** - 组合线性同余发生器
+- **lchgrp** - 修改符号链接的所有组
+- **lchown** - 修改符号链接的所有者
+- **ldap_8859_to_t61** - Translate 8859 characters to t61 characters
+- **ldap_add** - Add entries to LDAP directory
+- **ldap_add_ext** - Add entries to LDAP directory
+- **ldap_bind** - 绑定 LDAP 目录
+- **ldap_bind_ext** - Bind to LDAP directory
+- **ldap_close** - 别名 ldap_unbind
+- **ldap_compare** - Compare value of attribute found in entry specified with DN
+- **ldap_connect** - Connect to an LDAP server
+- **ldap_connect_wallet** - Connect to an LDAP server
+- **ldap_control_paged_result** - Send LDAP pagination control
+- **ldap_control_paged_result_response** - Retrieve the LDAP pagination cookie
+- **ldap_count_entries** - Count the number of entries in a search
+- **ldap_count_references** - Counts the number of references in a search result
+- **ldap_delete** - Delete an entry from a directory
+- **ldap_delete_ext** - Delete an entry from a directory
+- **ldap_dn2ufn** - Convert DN to User Friendly Naming format
+- **ldap_err2str** - Convert LDAP error number into string error message
+- **ldap_errno** - Return the LDAP error number of the last LDAP command
+- **ldap_error** - Return the LDAP error message of the last LDAP command
+- **ldap_escape** - Escape a string for use in an LDAP filter or DN
+- **ldap_exop** - Performs an extended operation
+- **ldap_exop_passwd** - PASSWD extended operation helper
+- **ldap_exop_refresh** - Refresh extended operation helper
+- **ldap_exop_sync** - Performs an extended operation
+- **ldap_exop_whoami** - WHOAMI extended operation helper
+- **ldap_explode_dn** - Splits DN into its component parts
+- **ldap_first_attribute** - Return first attribute
+- **ldap_first_entry** - Return first result id
+- **ldap_first_reference** - Return first reference
+- **ldap_free_result** - Free result memory
+- **ldap_get_attributes** - Get attributes from a search result entry
+- **ldap_get_dn** - Get the DN of a result entry
+- **ldap_get_entries** - Get all result entries
+- **ldap_get_option** - Get the current value for given option
+- **ldap_get_values** - Get all values from a result entry
+- **ldap_get_values_len** - Get all binary values from a result entry
+- **ldap_list** - Single-level search
+- **ldap_modify** - 别名 ldap_mod_replace
+- **ldap_modify_batch** - Batch and execute modifications on an LDAP entry
+- **ldap_mod_add** - Add attribute values to current attributes
+- **ldap_mod_add_ext** - Add attribute values to current attributes
+- **ldap_mod_del** - Delete attribute values from current attributes
+- **ldap_mod_del_ext** - Delete attribute values from current attributes
+- **ldap_mod_replace** - Replace attribute values with new ones
+- **ldap_mod_replace_ext** - Replace attribute values with new ones
+- **ldap_next_attribute** - Get the next attribute in result
+- **ldap_next_entry** - Get next result entry
+- **ldap_next_reference** - Get next reference
+- **ldap_parse_exop** - Parse result object from an LDAP extended operation
+- **ldap_parse_reference** - Extract information from reference entry
+- **ldap_parse_result** - Extract information from result
+- **ldap_read** - Read an entry
+- **ldap_rename** - Modify the name of an entry
+- **ldap_rename_ext** - Modify the name of an entry
+- **ldap_sasl_bind** - Bind to LDAP directory using SASL
+- **ldap_search** - Search LDAP tree
+- **ldap_set_option** - Set the value of the given option
+- **ldap_set_rebind_proc** - Set a callback function to do re-binds on referral chasing
+- **ldap_sort** - Sort LDAP result entries on the client side
+- **ldap_start_tls** - Start TLS
+- **ldap_t61_to_8859** - Translate t61 characters to 8859 characters
+- **ldap_unbind** - Unbind from LDAP directory
+- **levenshtein** - 计算两个字符串之间的 Levenshtein 距离
+- **libxml_clear_errors** - Clear libxml error buffer
+- **libxml_disable_entity_loader** - Disable the ability to load external entities
+- **libxml_get_errors** - Retrieve array of errors
+- **libxml_get_external_entity_loader** - Get the current external entity loader
+- **libxml_get_last_error** - Retrieve last error from libxml
+- **libxml_set_external_entity_loader** - Changes the default external entity loader
+- **libxml_set_streams_context** - Set the streams context for the next libxml document load or write
+- **libxml_use_internal_errors** - Disable libxml errors and allow user to fetch error information as needed
+- **LimitIterator::current** - Get current element
+- **LimitIterator::getPosition** - Return the current position
+- **LimitIterator::key** - Get current key
+- **LimitIterator::next** - Move the iterator forward
+- **LimitIterator::rewind** - Rewind the iterator to the specified starting offset
+- **LimitIterator::seek** - Seek to the given position
+- **LimitIterator::valid** - Check whether the current element is valid
+- **LimitIterator::__construct** - Construct a LimitIterator
+- **link** - 建立一个硬连接
+- **linkinfo** - 获取一个连接的信息
+- **list** - 把数组中的值赋给一组变量
+- **litespeed_finish_request** - Flushes all response data to the client
+- **litespeed_request_headers** - 别名
+   apache_request_headers
+- **litespeed_response_headers** - 别名
+   apache_response_headers
+- **Locale::acceptFromHttp** - Tries to find out best available locale based on HTTP "Accept-Language" header
+- **Locale::canonicalize** - Canonicalize the locale string
+- **Locale::composeLocale** - Returns a correctly ordered and delimited locale ID
+- **Locale::filterMatches** - Checks if a language tag filter matches with locale
+- **Locale::getAllVariants** - Gets the variants for the input locale
+- **Locale::getDefault** - Gets the default locale value from the INTL global 'default_locale'
+- **Locale::getDisplayLanguage** - Returns an appropriately localized display name for language of the inputlocale
+- **Locale::getDisplayName** - Returns an appropriately localized display name for the input locale
+- **Locale::getDisplayRegion** - Returns an appropriately localized display name for region of the input locale
+- **Locale::getDisplayScript** - Returns an appropriately localized display name for script of the input locale
+- **Locale::getDisplayVariant** - Returns an appropriately localized display name for variants of the input locale
+- **Locale::getKeywords** - Gets the keywords for the input locale
+- **Locale::getPrimaryLanguage** - Gets the primary language for the input locale
+- **Locale::getRegion** - Gets the region for the input locale
+- **Locale::getScript** - Gets the script for the input locale
+- **Locale::isRightToLeft** - Check whether a locale uses a right-to-left writing system
+- **Locale::lookup** - Searches the language tag list for the best match to the language
+- **Locale::parseLocale** - Returns a key-value array of locale ID subtag elements
+- **Locale::setDefault** - Sets the default runtime locale
+- **localeconv** - Get numeric formatting information
+- **localtime** - 取得本地时间
+- **log** - 自然对数
+- **log1p** - 返回 log(1 + number)，甚至当 number 的值接近零也能计算出准确结果
+- **log10** - 以 10 为底的对数
+- **long2ip** - 将长整型转化为字符串形式带点的互联网标准格式地址（IPV4）
+- **lstat** - 给出一个文件或符号连接的信息
+- **ltrim** - 删除字符串开头的空白字符（或其他字符）
+- **Lua::assign** - 将一个php变量赋值给Lua
+- **Lua::call** - 调用Lua函数
+- **Lua::eval** - 将字符串当做Lua代码执行
+- **Lua::getVersion** - 获取Lua版本
+- **Lua::include** - 解析Lua脚本文件
+- **Lua::registerCallback** - 向Lua中注册php函数
+- **Lua::__construct** - Lua 构造方法
+- **LuaClosure::__invoke** - 调用 luaclosure
+- **LuaSandbox::callFunction** - Call a function in a Lua global variable
+- **LuaSandbox::disableProfiler** - Disable the profiler
+- **LuaSandbox::enableProfiler** - Enable the profiler.
+- **LuaSandbox::getCPUUsage** - Fetch the current CPU time usage of the Lua environment
+- **LuaSandbox::getMemoryUsage** - Fetch the current memory usage of the Lua environment
+- **LuaSandbox::getPeakMemoryUsage** - Fetch the peak memory usage of the Lua environment
+- **LuaSandbox::getProfilerFunctionReport** - Fetch profiler data
+- **LuaSandbox::getVersionInfo** - Return the versions of LuaSandbox and Lua
+- **LuaSandbox::loadBinary** - Load a precompiled binary chunk into the Lua environment
+- **LuaSandbox::loadString** - Load Lua code into the Lua environment
+- **LuaSandbox::pauseUsageTimer** - Pause the CPU usage timer
+- **LuaSandbox::registerLibrary** - Register a set of PHP functions as a Lua library
+- **LuaSandbox::setCPULimit** - Set the CPU time limit for the Lua environment
+- **LuaSandbox::setMemoryLimit** - Set the memory limit for the Lua environment
+- **LuaSandbox::unpauseUsageTimer** - Unpause the timer paused by LuaSandbox::pauseUsageTimer
+- **LuaSandbox::wrapPhpFunction** - Wrap a PHP callable in a LuaSandboxFunction
+- **LuaSandboxFunction::call** - Call a Lua function
+- **LuaSandboxFunction::dump** - Dump the function as a binary blob
+- **LuaSandboxFunction::__construct** - Unused
+- **lzf_compress** - LZF compression
+- **lzf_decompress** - LZF decompression
+- **lzf_optimized_for** - Determines what LZF extension was optimized for
+
+## M
+
+- **mail** - 发送邮件
+- **mailparse_determine_best_xfer_encoding** - Gets the best way of encoding
+- **mailparse_msg_create** - Create a mime mail resource
+- **mailparse_msg_extract_part** - Extracts/decodes a message section
+- **mailparse_msg_extract_part_file** - Extracts/decodes a message section
+- **mailparse_msg_extract_whole_part_file** - Extracts a message section including headers without decoding the transfer encoding
+- **mailparse_msg_free** - Frees a MIME resource
+- **mailparse_msg_get_part** - Returns a handle on a given section in a mimemessage
+- **mailparse_msg_get_part_data** - Returns an associative array of info about the message
+- **mailparse_msg_get_structure** - Returns an array of mime section names in the supplied message
+- **mailparse_msg_parse** - Incrementally parse data into buffer
+- **mailparse_msg_parse_file** - Parses a file
+- **mailparse_rfc822_parse_addresses** - Parse RFC 822 compliant addresses
+- **mailparse_stream_encode** - Streams data from source file pointer, apply encoding and write to destfp
+- **mailparse_uudecode_all** - Scans the data from fp and extract each embedded uuencoded file
+- **max** - 找出最大值
+- **mb_check_encoding** - 检查字符串在指定的编码里是否有效
+- **mb_chr** - 按 Unicode 码位值返回字符
+- **mb_convert_case** - 对字符串进行大小写转换
+- **mb_convert_encoding** - 转换字符串，从一个字符编码到另一个字符编码
+- **mb_convert_kana** - Convert "kana" one from another ("zen-kaku", "han-kaku" and more)
+- **mb_convert_variables** - 转换一个或多个变量的字符编码
+- **mb_decode_mimeheader** - 解码 MIME 头字段中的字符串
+- **mb_decode_numericentity** - 根据 HTML 数字字符串解码成字符
+- **mb_detect_encoding** - 检测字符的编码
+- **mb_detect_order** - 设置/获取 字符编码的检测顺序
+- **mb_encode_mimeheader** - 为 MIME 头编码字符串
+- **mb_encode_numericentity** - Encode character to HTML numeric string reference
+- **mb_encoding_aliases** - Get aliases of a known encoding type
+- **mb_ereg** - Regular expression match with multibyte support
+- **mb_eregi** - Regular expression match ignoring case with multibyte support
+- **mb_eregi_replace** - Replace regular expression with multibyte support ignoring case
+- **mb_ereg_match** - Regular expression match for multibyte string
+- **mb_ereg_replace** - Replace regular expression with multibyte support
+- **mb_ereg_replace_callback** - Perform a regular expression search and replace with multibyte support using a callback
+- **mb_ereg_search** - Multibyte regular expression match for predefined multibyte string
+- **mb_ereg_search_getpos** - Returns start point for next regular expression match
+- **mb_ereg_search_getregs** - Retrieve the result from the last multibyte regular expression match
+- **mb_ereg_search_init** - Setup string and regular expression for a multibyte regular expression match
+- **mb_ereg_search_pos** - Returns position and length of a matched part of the multibyte regular expression for a predefined multibyte string
+- **mb_ereg_search_regs** - Returns the matched part of a multibyte regular expression
+- **mb_ereg_search_setpos** - Set start point of next regular expression match
+- **mb_get_info** - 获取 mbstring 的内部设置
+- **mb_http_input** - 检测 HTTP 输入字符编码
+- **mb_http_output** - 设置/获取 HTTP 输出字符编码
+- **mb_internal_encoding** - 设置/获取内部字符编码
+- **mb_language** - 设置/获取当前的语言
+- **mb_lcfirst** - Make a string's first character lowercase
+- **mb_list_encodings** - 返回所有支持编码的数组
+- **mb_ltrim** - Strip whitespace (or other characters) from the beginning of a string
+- **mb_ord** - 获取字符的 Unicode 码位值
+- **mb_output_handler** - 在输出缓冲中转换字符编码的回调函数
+- **mb_parse_str** - 解析 GET/POST/COOKIE 数据并设置全局变量
+- **mb_preferred_mime_name** - 获取 MIME 字符串
+- **mb_regex_encoding** - Set/Get character encoding for multibyte regex
+- **mb_regex_set_options** - Set/Get the default options for mbregex functions
+- **mb_rtrim** - Strip whitespace (or other characters) from the end of a string
+- **mb_scrub** - Replace ill-formed byte sequences with the substitute character
+- **mb_send_mail** - 发送编码过的邮件
+- **mb_split** - 使用正则表达式分割多字节字符串
+- **mb_strcut** - 获取字符的一部分
+- **mb_strimwidth** - 获取按指定宽度截断的字符串
+- **mb_stripos** - 大小写不敏感地查找字符串在另一个字符串中首次出现的位置
+- **mb_stristr** - 大小写不敏感地查找字符串在另一个字符串里的首次出现
+- **mb_strlen** - 获取字符串的长度
+- **mb_strpos** - 查找字符串在另一个字符串中首次出现的位置
+- **mb_strrchr** - 查找指定字符在另一个字符串中最后一次的出现
+- **mb_strrichr** - 大小写不敏感地查找指定字符在另一个字符串中最后一次的出现
+- **mb_strripos** - 大小写不敏感地在字符串中查找一个字符串最后出现的位置
+- **mb_strrpos** - 查找字符串在一个字符串中最后出现的位置
+- **mb_strstr** - 查找字符串在另一个字符串里的首次出现
+- **mb_strtolower** - 使字符串小写
+- **mb_strtoupper** - 使字符串大写
+- **mb_strwidth** - 返回字符串的宽度
+- **mb_str_pad** - Pad a multibyte string to a certain length with another multibyte string
+- **mb_str_split** - 指定多字节字符串，返回其字符数组
+- **mb_substitute_character** - 设置/获取替代字符
+- **mb_substr** - 获取部分字符串
+- **mb_substr_count** - 统计字符串出现的次数
+- **mb_trim** - Strip whitespace (or other characters) from the beginning and end of a string
+- **mb_ucfirst** - Make a string's first character uppercase
+- **mcrypt_create_iv** - 从随机源创建初始向量
+- **mcrypt_decrypt** - 使用给定参数解密密文
+- **mcrypt_encrypt** - 使用给定参数加密明文
+- **mcrypt_enc_get_algorithms_name** - 返回打开的算法名称
+- **mcrypt_enc_get_block_size** - 返回打开的算法的分组大小
+- **mcrypt_enc_get_iv_size** - 返回打开的算法的初始向量大小
+- **mcrypt_enc_get_key_size** - 返回打开的模式所能支持的最长密钥
+- **mcrypt_enc_get_modes_name** - 返回打开的模式的名称
+- **mcrypt_enc_get_supported_key_sizes** - 以数组方式返回打开的算法所支持的密钥长度
+- **mcrypt_enc_is_block_algorithm** - 检测打开模式的算法是否为分组算法
+- **mcrypt_enc_is_block_algorithm_mode** - 检测打开的模式是否支持分组加密
+- **mcrypt_enc_is_block_mode** - 检测打开的模式是否以分组方式输出
+- **mcrypt_enc_self_test** - 在打开的模块上进行自检
+- **mcrypt_generic** - 加密数据
+- **mcrypt_generic_deinit** - 对加密模块进行清理工作
+- **mcrypt_generic_init** - 初始化加密所需的缓冲区
+- **mcrypt_get_block_size** - 获得加密算法的分组大小
+- **mcrypt_get_cipher_name** - 获取加密算法名称
+- **mcrypt_get_iv_size** - 返回指定算法/模式组合的初始向量大小
+- **mcrypt_get_key_size** - 获取指定加密算法的密钥大小
+- **mcrypt_list_algorithms** - 获取支持的加密算法
+- **mcrypt_list_modes** - 获取所支持的模式
+- **mcrypt_module_close** - 关闭加密模块
+- **mcrypt_module_get_algo_block_size** - 返回指定算法的分组大小
+- **mcrypt_module_get_algo_key_size** - 获取打开模式所支持的最大密钥大小
+- **mcrypt_module_get_supported_key_sizes** - 以数组形式返回打开的算法所支持的密钥大小
+- **mcrypt_module_is_block_algorithm** - 检测指定算法是否为分组加密算法
+- **mcrypt_module_is_block_algorithm_mode** - 返回指定模块是否是分组加密模式
+- **mcrypt_module_is_block_mode** - 检测指定模式是否以分组方式输出
+- **mcrypt_module_open** - 打开算法和模式对应的模块
+- **mcrypt_module_self_test** - 在指定模块上执行自检
+- **md5** - 计算字符串的 MD5 散列值
+- **md5_file** - 计算指定文件的 MD5 散列值
+- **mdecrypt_generic** - 解密数据
+- **Memcache::add** - 增加条目到服务器
+- **Memcache::addServer** - 新增 memcached 服务器到连接池
+- **Memcache::close** - 关闭 memcached 连接
+- **Memcache::connect** - 打开与 memcached 服务器的连接
+- **Memcache::decrement** - 减小元素的值
+- **Memcache::delete** - 从服务器删除元素
+- **Memcache::flush** - 清洗（删除）已经存储的所有的元素
+- **Memcache::get** - 从服务器检索元素
+- **Memcache::getExtendedStats** - 缓存服务器池中所有服务器统计信息
+- **Memcache::getServerStatus** - 用于获取一个服务器的在线/离线状态
+- **Memcache::getStats** - 获取服务器统计信息
+- **Memcache::getVersion** - 返回服务器版本信息
+- **Memcache::increment** - 增加一个元素的值
+- **Memcache::pconnect** - 打开对 memcached 服务器的持久连接
+- **Memcache::replace** - 替换已经存在的元素的值
+- **Memcache::set** - 存储数据到服务器
+- **Memcache::setCompressThreshold** - 开启大值自动压缩
+- **Memcache::setServerParams** - 运行时修改服务器参数和状态
+- **Memcached::add** - 向新 key 添加元素
+- **Memcached::addByKey** - 在特定服务器上向新 key 添加元素
+- **Memcached::addServer** - 向服务器池增加服务器
+- **Memcached::addServers** - 向服务器池中增加多台服务器
+- **Memcached::append** - 向已存在元素追加数据
+- **Memcached::appendByKey** - 向指定服务器上已存在元素追加数据
+- **Memcached::cas** - 比较并交换值
+- **Memcached::casByKey** - 在指定服务器上比较并交换值
+- **Memcached::decrement** - 减小数值元素的值
+- **Memcached::decrementByKey** - Decrement numeric item's value, stored on a specific server
+- **Memcached::delete** - 删除元素
+- **Memcached::deleteByKey** - 从指定的服务器删除元素
+- **Memcached::deleteMulti** - Delete multiple items
+- **Memcached::deleteMultiByKey** - Delete multiple items from a specific server
+- **Memcached::fetch** - 读取下一个结果
+- **Memcached::fetchAll** - 读取所有剩余结果
+- **Memcached::flush** - 作废缓存中的所有元素
+- **Memcached::get** - 检索元素
+- **Memcached::getAllKeys** - Gets the keys stored on all the servers
+- **Memcached::getByKey** - 从特定的服务器检索元素
+- **Memcached::getDelayed** - 请求多个元素
+- **Memcached::getDelayedByKey** - 从指定的服务器上请求多个元素
+- **Memcached::getMulti** - 检索多个元素
+- **Memcached::getMultiByKey** - 从特定服务器检索多个元素
+- **Memcached::getOption** - 获取 Memcached 的选项值
+- **Memcached::getResultCode** - 返回最后一次操作的结果代码
+- **Memcached::getResultMessage** - 返回最后一次操作的结果描述消息
+- **Memcached::getServerByKey** - 获取一个 key 所映射的服务器信息
+- **Memcached::getServerList** - 获取服务器池中的服务器列表
+- **Memcached::getStats** - 获取服务器池的统计信息
+- **Memcached::getVersion** - 获取服务器池中所有服务器的版本信息
+- **Memcached::increment** - 增加数值元素的值
+- **Memcached::incrementByKey** - Increment numeric item's value, stored on a specific server
+- **Memcached::isPersistent** - Check if a persistent connection to memcache is being used
+- **Memcached::isPristine** - Check if the instance was recently created
+- **Memcached::prepend** - 向一个已存在的元素前面追加数据
+- **Memcached::prependByKey** - 在指定服务器上追加数据到已存在的元素
+- **Memcached::quit** - 关闭所有打开的链接
+- **Memcached::replace** - 替换已存在 key 下的元素
+- **Memcached::replaceByKey** - 在指定服务器上，替换已存在 key 下的元素
+- **Memcached::resetServerList** - Clears all servers from the server list
+- **Memcached::set** - 存储一个元素
+- **Memcached::setByKey** - 将元素存储到指定的服务器上
+- **Memcached::setEncodingKey** - Set AES encryption key for data in Memcached
+- **Memcached::setMulti** - 存储多个元素
+- **Memcached::setMultiByKey** - 在指定服务器存储多个元素
+- **Memcached::setOption** - 设置一个 memcached 选项
+- **Memcached::setOptions** - Set Memcached options
+- **Memcached::setSaslAuthData** - Set the credentials to use for authentication
+- **Memcached::touch** - Set a new expiration on an item
+- **Memcached::touchByKey** - Set a new expiration on an item on a specific server
+- **Memcached::__construct** - 创建 Memcached 实例
+- **memcache_debug** - 打开/关闭调试输出
+- **memory_get_peak_usage** - 返回分配给 PHP 内存的峰值
+- **memory_get_usage** - 返回分配给 PHP 的内存量
+- **memory_reset_peak_usage** - Reset the peak memory usage
+- **MessageFormatter::create** - Constructs a new Message Formatter
+- **MessageFormatter::format** - Format the message
+- **MessageFormatter::formatMessage** - Quick format message
+- **MessageFormatter::getErrorCode** - Get the error code from last operation
+- **MessageFormatter::getErrorMessage** - Get the error text from the last operation
+- **MessageFormatter::getLocale** - Get the locale for which the formatter was created
+- **MessageFormatter::getPattern** - Get the pattern used by the formatter
+- **MessageFormatter::parse** - Parse input string according to pattern
+- **MessageFormatter::parseMessage** - Quick parse input string
+- **MessageFormatter::setPattern** - Set the pattern used by the formatter
+- **metaphone** - Calculate the metaphone key of a string
+- **method_exists** - 检查类的方法是否存在
+- **mhash** - Computes hash
+- **mhash_count** - Gets the highest available hash ID
+- **mhash_get_block_size** - Gets the block size of the specified hash
+- **mhash_get_hash_name** - Gets the name of the specified hash
+- **mhash_keygen_s2k** - Generates a key
+- **microtime** - 返回当前 Unix 时间戳和微秒数
+- **mime_content_type** - 检测文件的 MIME 类型
+- **min** - 找出最小值
+- **mkdir** - 新建目录
+- **mktime** - 取得一个日期的 Unix 时间戳
+- **money_format** - 将数字格式化成货币字符串
+- **MongoDB\BSON\Binary::fromVector** - Creates a new binary with subtype MongoDB\BSON\Binary::SUBTYPE_VECTOR from the given array and vector type
+- **MongoDB\BSON\Binary::getData** - Returns the Binary's data
+- **MongoDB\BSON\Binary::getType** - Returns the Binary's type
+- **MongoDB\BSON\Binary::getVectorType** - Returns the data type for a Binary with the vector subtype
+- **MongoDB\BSON\Binary::jsonSerialize** - Returns a representation that can be converted to JSON
+- **MongoDB\BSON\Binary::toArray** - Returns the vector as an array for a Binary with subtype MongoDB\BSON\Binary::SUBTYPE_VECTOR
+- **MongoDB\BSON\Binary::__construct** - Construct a new Binary
+- **MongoDB\BSON\Binary::__toString** - Returns the Binary's data
+- **MongoDB\BSON\BinaryInterface::getData** - Returns the BinaryInterface's data
+- **MongoDB\BSON\BinaryInterface::getType** - Returns the BinaryInterface's type
+- **MongoDB\BSON\BinaryInterface::__toString** - Returns the BinaryInterface's data
+- **MongoDB\BSON\DBPointer::jsonSerialize** - Returns a representation that can be converted to JSON
+- **MongoDB\BSON\DBPointer::__construct** - Construct a new DBPointer (unused)
+- **MongoDB\BSON\DBPointer::__toString** - Returns an empty string
+- **MongoDB\BSON\Decimal128::jsonSerialize** - Returns a representation that can be converted to JSON
+- **MongoDB\BSON\Decimal128::__construct** - Construct a new Decimal128
+- **MongoDB\BSON\Decimal128::__toString** - Returns the string representation of this Decimal128
+- **MongoDB\BSON\Decimal128Interface::__toString** - Returns the string representation of this Decimal128Interface
+- **MongoDB\BSON\Document::fromBSON** - Construct a new document instance from a BSON string
+- **MongoDB\BSON\Document::fromJSON** - Construct a new document instance from a JSON string
+- **MongoDB\BSON\Document::fromPHP** - Construct a new document instance from PHP data
+- **MongoDB\BSON\Document::get** - Returns the value of a key in the document
+- **MongoDB\BSON\Document::getIterator** - Returns an iterator for the BSON document
+- **MongoDB\BSON\Document::has** - Returns whether a key is present in the document
+- **MongoDB\BSON\Document::offsetExists** - Returns whether a key is present in the document
+- **MongoDB\BSON\Document::offsetGet** - Returns the value of a key in the document
+- **MongoDB\BSON\Document::offsetSet** - Implementation of ArrayAccess
+- **MongoDB\BSON\Document::offsetUnset** - Implementation of ArrayAccess
+- **MongoDB\BSON\Document::toCanonicalExtendedJSON** - Returns the Canonical Extended JSON representation of the BSON document
+- **MongoDB\BSON\Document::toPHP** - Returns the PHP representation of the BSON document
+- **MongoDB\BSON\Document::toRelaxedExtendedJSON** - Returns the Relaxed Extended JSON representation of the BSON document
+- **MongoDB\BSON\Document::__construct** - Construct a new BSON document (unused)
+- **MongoDB\BSON\Document::__toString** - Returns the string representation of this BSON Document
+- **MongoDB\BSON\fromJSON** - Returns the BSON representation of a JSON value
+- **MongoDB\BSON\fromPHP** - Returns the BSON representation of a PHP value
+- **MongoDB\BSON\Int64::jsonSerialize** - Returns a representation that can be converted to JSON
+- **MongoDB\BSON\Int64::__construct** - Construct a new Int64
+- **MongoDB\BSON\Int64::__toString** - Returns the string representation of this Int64
+- **MongoDB\BSON\Iterator::current** - Returns the current element
+- **MongoDB\BSON\Iterator::key** - Returns the key of the current element
+- **MongoDB\BSON\Iterator::next** - Advances the iterator to next element
+- **MongoDB\BSON\Iterator::rewind** - Rewinds the Iterator to the first element
+- **MongoDB\BSON\Iterator::valid** - Checks if current position is valid
+- **MongoDB\BSON\Iterator::__construct** - Construct a new BSON iterator (unused)
+- **MongoDB\BSON\Javascript::getCode** - Returns the Javascript's code
+- **MongoDB\BSON\Javascript::getScope** - Returns the Javascript's scope document
+- **MongoDB\BSON\Javascript::jsonSerialize** - Returns a representation that can be converted to JSON
+- **MongoDB\BSON\Javascript::__construct** - Construct a new Javascript
+- **MongoDB\BSON\Javascript::__toString** - Returns the Javascript's code
+- **MongoDB\BSON\JavascriptInterface::getCode** - Returns the JavascriptInterface's code
+- **MongoDB\BSON\JavascriptInterface::getScope** - Returns the JavascriptInterface's scope document
+- **MongoDB\BSON\JavascriptInterface::__toString** - Returns the JavascriptInterface's code
+- **MongoDB\BSON\MaxKey::jsonSerialize** - Returns a representation that can be converted to JSON
+- **MongoDB\BSON\MaxKey::__construct** - Construct a new MaxKey
+- **MongoDB\BSON\MinKey::jsonSerialize** - Returns a representation that can be converted to JSON
+- **MongoDB\BSON\MinKey::__construct** - Construct a new MinKey
+- **MongoDB\BSON\ObjectId::getTimestamp** - Returns the timestamp component of this ObjectId
+- **MongoDB\BSON\ObjectId::jsonSerialize** - Returns a representation that can be converted to JSON
+- **MongoDB\BSON\ObjectId::__construct** - Construct a new ObjectId
+- **MongoDB\BSON\ObjectId::__toString** - Returns the hexadecimal representation of this ObjectId
+- **MongoDB\BSON\ObjectIdInterface::getTimestamp** - Returns the timestamp component of this ObjectIdInterface
+- **MongoDB\BSON\ObjectIdInterface::__toString** - Returns the hexadecimal representation of this ObjectIdInterface
+- **MongoDB\BSON\PackedArray::fromJSON** - Construct a new BSON array instance from a JSON string
+- **MongoDB\BSON\PackedArray::fromPHP** - Construct a new BSON array instance from PHP data
+- **MongoDB\BSON\PackedArray::get** - Returns the value of an index in the array
+- **MongoDB\BSON\PackedArray::getIterator** - Returns an iterator for the BSON array
+- **MongoDB\BSON\PackedArray::has** - Returns whether a index is present in the array
+- **MongoDB\BSON\PackedArray::offsetExists** - Returns whether a index is present in the array
+- **MongoDB\BSON\PackedArray::offsetGet** - Returns the value of an index in the array
+- **MongoDB\BSON\PackedArray::offsetSet** - Implementation of ArrayAccess
+- **MongoDB\BSON\PackedArray::offsetUnset** - Implementation of ArrayAccess
+- **MongoDB\BSON\PackedArray::toCanonicalExtendedJSON** - Returns the Canonical Extended JSON representation of the BSON array
+- **MongoDB\BSON\PackedArray::toPHP** - Returns the PHP representation of the BSON array
+- **MongoDB\BSON\PackedArray::toRelaxedExtendedJSON** - Returns the Relaxed Extended JSON representation of the BSON array
+- **MongoDB\BSON\PackedArray::__construct** - Construct a new BSON array (unused)
+- **MongoDB\BSON\PackedArray::__toString** - Returns the string representation of this BSON array
+- **MongoDB\BSON\Persistable::bsonSerialize** - Provides an array or document to serialize as BSON
+- **MongoDB\BSON\Regex::getFlags** - Returns the Regex's flags
+- **MongoDB\BSON\Regex::getPattern** - Returns the Regex's pattern
+- **MongoDB\BSON\Regex::jsonSerialize** - Returns a representation that can be converted to JSON
+- **MongoDB\BSON\Regex::__construct** - Construct a new Regex
+- **MongoDB\BSON\Regex::__toString** - Returns the string representation of this Regex
+- **MongoDB\BSON\RegexInterface::getFlags** - Returns the RegexInterface's flags
+- **MongoDB\BSON\RegexInterface::getPattern** - Returns the RegexInterface's pattern
+- **MongoDB\BSON\RegexInterface::__toString** - Returns the string representation of this RegexInterface
+- **MongoDB\BSON\Serializable::bsonSerialize** - Provides an array or document to serialize as BSON
+- **MongoDB\BSON\Symbol::jsonSerialize** - Returns a representation that can be converted to JSON
+- **MongoDB\BSON\Symbol::__construct** - Construct a new Symbol (unused)
+- **MongoDB\BSON\Symbol::__toString** - Returns the Symbol as a string
+- **MongoDB\BSON\Timestamp::getIncrement** - Returns the increment component of this Timestamp
+- **MongoDB\BSON\Timestamp::getTimestamp** - Returns the timestamp component of this Timestamp
+- **MongoDB\BSON\Timestamp::jsonSerialize** - Returns a representation that can be converted to JSON
+- **MongoDB\BSON\Timestamp::__construct** - Construct a new Timestamp
+- **MongoDB\BSON\Timestamp::__toString** - Returns the string representation of this Timestamp
+- **MongoDB\BSON\TimestampInterface::getIncrement** - Returns the increment component of this TimestampInterface
+- **MongoDB\BSON\TimestampInterface::getTimestamp** - Returns the timestamp component of this TimestampInterface
+- **MongoDB\BSON\TimestampInterface::__toString** - Returns the string representation of this TimestampInterface
+- **MongoDB\BSON\toCanonicalExtendedJSON** - Returns the Canonical Extended JSON representation of a BSON value
+- **MongoDB\BSON\toJSON** - Returns the Legacy Extended JSON representation of a BSON value
+- **MongoDB\BSON\toPHP** - Returns the PHP representation of a BSON value
+- **MongoDB\BSON\toRelaxedExtendedJSON** - Returns the Relaxed Extended JSON representation of a BSON value
+- **MongoDB\BSON\Undefined::jsonSerialize** - Returns a representation that can be converted to JSON
+- **MongoDB\BSON\Undefined::__construct** - Construct a new Undefined (unused)
+- **MongoDB\BSON\Undefined::__toString** - Returns an empty string
+- **MongoDB\BSON\Unserializable::bsonUnserialize** - Constructs the object from a BSON array or document
+- **MongoDB\BSON\UTCDateTime::jsonSerialize** - Returns a representation that can be converted to JSON
+- **MongoDB\BSON\UTCDateTime::toDateTime** - Returns the DateTime representation of this UTCDateTime
+- **MongoDB\BSON\UTCDateTime::toDateTimeImmutable** - Returns the DateTimeImmutable representation of this UTCDateTime
+- **MongoDB\BSON\UTCDateTime::__construct** - Construct a new UTCDateTime
+- **MongoDB\BSON\UTCDateTime::__toString** - Returns the string representation of this UTCDateTime
+- **MongoDB\BSON\UTCDateTimeInterface::toDateTime** - Returns the DateTime representation of this UTCDateTimeInterface
+- **MongoDB\BSON\UTCDateTimeInterface::toDateTimeImmutable** - Returns the DateTimeImmutable representation of this UTCDateTimeInterface
+- **MongoDB\BSON\UTCDateTimeInterface::__toString** - Returns the string representation of this UTCDateTimeInterface
+- **MongoDB\Driver\BulkWrite::count** - Count number of write operations in the bulk
+- **MongoDB\Driver\BulkWrite::delete** - Add a delete operation to the bulk
+- **MongoDB\Driver\BulkWrite::insert** - Add an insert operation to the bulk
+- **MongoDB\Driver\BulkWrite::update** - Add an update operation to the bulk
+- **MongoDB\Driver\BulkWrite::__construct** - Create a new BulkWrite
+- **MongoDB\Driver\BulkWriteCommand::count** - Count number of write operations in the BulkWriteCommand
+- **MongoDB\Driver\BulkWriteCommand::deleteMany** - Add a deleteMany operation
+- **MongoDB\Driver\BulkWriteCommand::deleteOne** - Add a deleteOne operation
+- **MongoDB\Driver\BulkWriteCommand::insertOne** - Add an insertOne operation
+- **MongoDB\Driver\BulkWriteCommand::replaceOne** - Add a replaceOne operation
+- **MongoDB\Driver\BulkWriteCommand::updateMany** - Add an updateMany operation
+- **MongoDB\Driver\BulkWriteCommand::updateOne** - Add an updateOne operation
+- **MongoDB\Driver\BulkWriteCommand::__construct** - Create a new BulkWriteCommand
+- **MongoDB\Driver\BulkWriteCommandResult::getDeletedCount** - Returns the number of documents deleted
+- **MongoDB\Driver\BulkWriteCommandResult::getDeleteResults** - Returns verbose results for successful deletes
+- **MongoDB\Driver\BulkWriteCommandResult::getInsertedCount** - Returns the number of documents inserted
+- **MongoDB\Driver\BulkWriteCommandResult::getInsertResults** - Returns verbose results for successful inserts
+- **MongoDB\Driver\BulkWriteCommandResult::getMatchedCount** - Returns the number of documents selected for update
+- **MongoDB\Driver\BulkWriteCommandResult::getModifiedCount** - Returns the number of existing documents updated
+- **MongoDB\Driver\BulkWriteCommandResult::getUpdateResults** - Returns verbose results for successful updates
+- **MongoDB\Driver\BulkWriteCommandResult::getUpsertedCount** - Returns the number of documents upserted
+- **MongoDB\Driver\BulkWriteCommandResult::isAcknowledged** - Returns whether the write was acknowledged
+- **MongoDB\Driver\ClientEncryption::addKeyAltName** - Adds an alternate name to a key document
+- **MongoDB\Driver\ClientEncryption::createDataKey** - Creates a key document
+- **MongoDB\Driver\ClientEncryption::decrypt** - Decrypt a value
+- **MongoDB\Driver\ClientEncryption::deleteKey** - Deletes a key document
+- **MongoDB\Driver\ClientEncryption::encrypt** - Encrypt a value
+- **MongoDB\Driver\ClientEncryption::encryptExpression** - Encrypts a match or aggregate expression
+- **MongoDB\Driver\ClientEncryption::getKey** - Gets a key document
+- **MongoDB\Driver\ClientEncryption::getKeyByAltName** - Gets a key document by an alternate name
+- **MongoDB\Driver\ClientEncryption::getKeys** - Gets all key documents
+- **MongoDB\Driver\ClientEncryption::removeKeyAltName** - Removes an alternate name from a key document
+- **MongoDB\Driver\ClientEncryption::rewrapManyDataKey** - Rewraps data keys
+- **MongoDB\Driver\ClientEncryption::__construct** - Create a new ClientEncryption object
+- **MongoDB\Driver\Command::__construct** - Create a new Command
+- **MongoDB\Driver\Cursor::current** - Returns the current element
+- **MongoDB\Driver\Cursor::getId** - Returns the ID for this cursor
+- **MongoDB\Driver\Cursor::getServer** - Returns the server associated with this cursor
+- **MongoDB\Driver\Cursor::isDead** - Checks if the cursor is exhausted or may have additional results
+- **MongoDB\Driver\Cursor::key** - Returns the current result's index within the cursor
+- **MongoDB\Driver\Cursor::next** - Advances the cursor to the next result
+- **MongoDB\Driver\Cursor::rewind** - Rewind the cursor to the first result
+- **MongoDB\Driver\Cursor::setTypeMap** - Sets a type map to use for BSON unserialization
+- **MongoDB\Driver\Cursor::toArray** - Returns an array containing all results for this cursor
+- **MongoDB\Driver\Cursor::valid** - Checks if the current position in the cursor is valid
+- **MongoDB\Driver\Cursor::__construct** - Create a new Cursor (not used)
+- **MongoDB\Driver\CursorId::__construct** - Create a new CursorId (not used)
+- **MongoDB\Driver\CursorId::__toString** - String representation of the cursor ID
+- **MongoDB\Driver\CursorInterface::getId** - Returns the ID for this cursor
+- **MongoDB\Driver\CursorInterface::getServer** - Returns the server associated with this cursor
+- **MongoDB\Driver\CursorInterface::isDead** - Checks if the cursor may have additional results
+- **MongoDB\Driver\CursorInterface::setTypeMap** - Sets a type map to use for BSON unserialization
+- **MongoDB\Driver\CursorInterface::toArray** - Returns an array containing all results for this cursor
+- **MongoDB\Driver\Exception\BulkWriteCommandException::getErrorReply** - Returns any top-level command error
+- **MongoDB\Driver\Exception\BulkWriteCommandException::getPartialResult** - Returns the result of any successful write operations
+- **MongoDB\Driver\Exception\BulkWriteCommandException::getWriteConcernErrors** - Returns any write concern errors
+- **MongoDB\Driver\Exception\BulkWriteCommandException::getWriteErrors** - Returns any write errors
+- **MongoDB\Driver\Exception\BulkWriteException::getWriteResult** - Returns the WriteResult for the failed write operation
+- **MongoDB\Driver\Exception\CommandException::getResultDocument** - Returns the result document for the failed command
+- **MongoDB\Driver\Exception\RuntimeException::hasErrorLabel** - Returns whether an error label is associated with an exception
+- **MongoDB\Driver\Exception\WriteException::getWriteResult** - Returns the WriteResult for the failed write operation
+- **MongoDB\Driver\Manager::addSubscriber** - Registers a monitoring event subscriber with this Manager
+- **MongoDB\Driver\Manager::createClientEncryption** - Create a new ClientEncryption object
+- **MongoDB\Driver\Manager::executeBulkWrite** - Execute one or more write operations
+- **MongoDB\Driver\Manager::executeBulkWriteCommand** - Execute write operations using the bulkWrite command
+- **MongoDB\Driver\Manager::executeCommand** - Execute a database command
+- **MongoDB\Driver\Manager::executeQuery** - Execute a database query
+- **MongoDB\Driver\Manager::executeReadCommand** - Execute a database command that reads
+- **MongoDB\Driver\Manager::executeReadWriteCommand** - Execute a database command that reads and writes
+- **MongoDB\Driver\Manager::executeWriteCommand** - Execute a database command that writes
+- **MongoDB\Driver\Manager::getEncryptedFieldsMap** - Return the encryptedFieldsMap auto encryption option for the Manager
+- **MongoDB\Driver\Manager::getReadConcern** - Return the ReadConcern for the Manager
+- **MongoDB\Driver\Manager::getReadPreference** - Return the ReadPreference for the Manager
+- **MongoDB\Driver\Manager::getServers** - Return the servers to which this manager is connected
+- **MongoDB\Driver\Manager::getWriteConcern** - Return the WriteConcern for the Manager
+- **MongoDB\Driver\Manager::removeSubscriber** - Unregisters a monitoring event subscriber with this Manager
+- **MongoDB\Driver\Manager::selectServer** - Select a server matching a read preference
+- **MongoDB\Driver\Manager::startSession** - Start a new client session for use with this client
+- **MongoDB\Driver\Manager::__construct** - Create new MongoDB Manager
+- **MongoDB\Driver\Monitoring\addSubscriber** - Registers a monitoring event subscriber globally
+- **MongoDB\Driver\Monitoring\CommandFailedEvent::getCommandName** - Returns the command name
+- **MongoDB\Driver\Monitoring\CommandFailedEvent::getDatabaseName** - Returns the database on which the command was executed
+- **MongoDB\Driver\Monitoring\CommandFailedEvent::getDurationMicros** - Returns the command's duration in microseconds
+- **MongoDB\Driver\Monitoring\CommandFailedEvent::getError** - Returns the Exception associated with the failed command
+- **MongoDB\Driver\Monitoring\CommandFailedEvent::getHost** - Returns the server hostname for the command
+- **MongoDB\Driver\Monitoring\CommandFailedEvent::getOperationId** - Returns the command's operation ID
+- **MongoDB\Driver\Monitoring\CommandFailedEvent::getPort** - Returns the server port for the command
+- **MongoDB\Driver\Monitoring\CommandFailedEvent::getReply** - Returns the command reply document
+- **MongoDB\Driver\Monitoring\CommandFailedEvent::getRequestId** - Returns the command's request ID
+- **MongoDB\Driver\Monitoring\CommandFailedEvent::getServer** - Returns the Server on which the command was executed
+- **MongoDB\Driver\Monitoring\CommandFailedEvent::getServerConnectionId** - Returns the server connection ID for the command
+- **MongoDB\Driver\Monitoring\CommandFailedEvent::getServiceId** - Returns the load balancer service ID for the command
+- **MongoDB\Driver\Monitoring\CommandStartedEvent::getCommand** - Returns the command document
+- **MongoDB\Driver\Monitoring\CommandStartedEvent::getCommandName** - Returns the command name
+- **MongoDB\Driver\Monitoring\CommandStartedEvent::getDatabaseName** - Returns the database on which the command was executed
+- **MongoDB\Driver\Monitoring\CommandStartedEvent::getHost** - Returns the server hostname for the command
+- **MongoDB\Driver\Monitoring\CommandStartedEvent::getOperationId** - Returns the command's operation ID
+- **MongoDB\Driver\Monitoring\CommandStartedEvent::getPort** - Returns the server port for the command
+- **MongoDB\Driver\Monitoring\CommandStartedEvent::getRequestId** - Returns the command's request ID
+- **MongoDB\Driver\Monitoring\CommandStartedEvent::getServer** - Returns the Server on which the command was executed
+- **MongoDB\Driver\Monitoring\CommandStartedEvent::getServerConnectionId** - Returns the server connection ID for the command
+- **MongoDB\Driver\Monitoring\CommandStartedEvent::getServiceId** - Returns the load balancer service ID for the command
+- **MongoDB\Driver\Monitoring\CommandSubscriber::commandFailed** - Notification method for a failed command
+- **MongoDB\Driver\Monitoring\CommandSubscriber::commandStarted** - Notification method for a started command
+- **MongoDB\Driver\Monitoring\CommandSubscriber::commandSucceeded** - Notification method for a successful command
+- **MongoDB\Driver\Monitoring\CommandSucceededEvent::getCommandName** - Returns the command name
+- **MongoDB\Driver\Monitoring\CommandSucceededEvent::getDatabaseName** - Returns the database on which the command was executed
+- **MongoDB\Driver\Monitoring\CommandSucceededEvent::getDurationMicros** - Returns the command's duration in microseconds
+- **MongoDB\Driver\Monitoring\CommandSucceededEvent::getHost** - Returns the server hostname for the command
+- **MongoDB\Driver\Monitoring\CommandSucceededEvent::getOperationId** - Returns the command's operation ID
+- **MongoDB\Driver\Monitoring\CommandSucceededEvent::getPort** - Returns the server port for the command
+- **MongoDB\Driver\Monitoring\CommandSucceededEvent::getReply** - Returns the command reply document
+- **MongoDB\Driver\Monitoring\CommandSucceededEvent::getRequestId** - Returns the command's request ID
+- **MongoDB\Driver\Monitoring\CommandSucceededEvent::getServer** - Returns the Server on which the command was executed
+- **MongoDB\Driver\Monitoring\CommandSucceededEvent::getServerConnectionId** - Returns the server connection ID for the command
+- **MongoDB\Driver\Monitoring\CommandSucceededEvent::getServiceId** - Returns the load balancer service ID for the command
+- **MongoDB\Driver\Monitoring\LogSubscriber::log** - Notification method for a log message
+- **MongoDB\Driver\Monitoring\removeSubscriber** - Unregisters a monitoring event subscriber globally
+- **MongoDB\Driver\Monitoring\SDAMSubscriber::serverChanged** - Notification method for a server description change
+- **MongoDB\Driver\Monitoring\SDAMSubscriber::serverClosed** - Notification method for closing a server
+- **MongoDB\Driver\Monitoring\SDAMSubscriber::serverHeartbeatFailed** - Notification method for a failed server heartbeat
+- **MongoDB\Driver\Monitoring\SDAMSubscriber::serverHeartbeatStarted** - Notification method for a started server heartbeat
+- **MongoDB\Driver\Monitoring\SDAMSubscriber::serverHeartbeatSucceeded** - Notification method for a successful server heartbeat
+- **MongoDB\Driver\Monitoring\SDAMSubscriber::serverOpening** - Notification method for opening a server
+- **MongoDB\Driver\Monitoring\SDAMSubscriber::topologyChanged** - Notification method for a topology description change
+- **MongoDB\Driver\Monitoring\SDAMSubscriber::topologyClosed** - Notification method for closing the topology
+- **MongoDB\Driver\Monitoring\SDAMSubscriber::topologyOpening** - Notification method for opening the topology
+- **MongoDB\Driver\Monitoring\ServerChangedEvent::getHost** - Returns the hostname of the server
+- **MongoDB\Driver\Monitoring\ServerChangedEvent::getNewDescription** - Returns the new description for the server
+- **MongoDB\Driver\Monitoring\ServerChangedEvent::getPort** - Returns the port on which this server is listening
+- **MongoDB\Driver\Monitoring\ServerChangedEvent::getPreviousDescription** - Returns the previous description for the server
+- **MongoDB\Driver\Monitoring\ServerChangedEvent::getTopologyId** - Returns the topology ID associated with this server
+- **MongoDB\Driver\Monitoring\ServerClosedEvent::getHost** - Returns the hostname of the server
+- **MongoDB\Driver\Monitoring\ServerClosedEvent::getPort** - Returns the port on which this server is listening
+- **MongoDB\Driver\Monitoring\ServerClosedEvent::getTopologyId** - Returns the topology ID associated with this server
+- **MongoDB\Driver\Monitoring\ServerHeartbeatFailedEvent::getDurationMicros** - Returns the heartbeat's duration in microseconds
+- **MongoDB\Driver\Monitoring\ServerHeartbeatFailedEvent::getError** - Returns the Exception associated with the failed heartbeat
+- **MongoDB\Driver\Monitoring\ServerHeartbeatFailedEvent::getHost** - Returns the hostname of the server
+- **MongoDB\Driver\Monitoring\ServerHeartbeatFailedEvent::getPort** - Returns the port on which this server is listening
+- **MongoDB\Driver\Monitoring\ServerHeartbeatFailedEvent::isAwaited** - Returns whether the heartbeat used a streaming protocol
+- **MongoDB\Driver\Monitoring\ServerHeartbeatStartedEvent::getHost** - Returns the hostname of the server
+- **MongoDB\Driver\Monitoring\ServerHeartbeatStartedEvent::getPort** - Returns the port on which this server is listening
+- **MongoDB\Driver\Monitoring\ServerHeartbeatStartedEvent::isAwaited** - Returns whether the heartbeat used a streaming protocol
+- **MongoDB\Driver\Monitoring\ServerHeartbeatSucceededEvent::getDurationMicros** - Returns the heartbeat's duration in microseconds
+- **MongoDB\Driver\Monitoring\ServerHeartbeatSucceededEvent::getHost** - Returns the hostname of the server
+- **MongoDB\Driver\Monitoring\ServerHeartbeatSucceededEvent::getPort** - Returns the port on which this server is listening
+- **MongoDB\Driver\Monitoring\ServerHeartbeatSucceededEvent::getReply** - Returns the heartbeat reply document
+- **MongoDB\Driver\Monitoring\ServerHeartbeatSucceededEvent::isAwaited** - Returns whether the heartbeat used a streaming protocol
+- **MongoDB\Driver\Monitoring\ServerOpeningEvent::getHost** - Returns the hostname of the server
+- **MongoDB\Driver\Monitoring\ServerOpeningEvent::getPort** - Returns the port on which this server is listening
+- **MongoDB\Driver\Monitoring\ServerOpeningEvent::getTopologyId** - Returns the topology ID associated with this server
+- **MongoDB\Driver\Monitoring\TopologyChangedEvent::getNewDescription** - Returns the new description for the topology
+- **MongoDB\Driver\Monitoring\TopologyChangedEvent::getPreviousDescription** - Returns the previous description for the topology
+- **MongoDB\Driver\Monitoring\TopologyChangedEvent::getTopologyId** - Returns the topology ID
+- **MongoDB\Driver\Monitoring\TopologyClosedEvent::getTopologyId** - Returns the topology ID
+- **MongoDB\Driver\Monitoring\TopologyOpeningEvent::getTopologyId** - Returns the topology ID
+- **MongoDB\Driver\Query::__construct** - Create a new Query
+- **MongoDB\Driver\ReadConcern::bsonSerialize** - Returns an object for BSON serialization
+- **MongoDB\Driver\ReadConcern::getLevel** - Returns the ReadConcern's "level" option
+- **MongoDB\Driver\ReadConcern::isDefault** - Checks if this is the default read concern
+- **MongoDB\Driver\ReadConcern::__construct** - Create a new ReadConcern
+- **MongoDB\Driver\ReadPreference::bsonSerialize** - Returns an object for BSON serialization
+- **MongoDB\Driver\ReadPreference::getHedge** - Returns the ReadPreference's "hedge" option
+- **MongoDB\Driver\ReadPreference::getMaxStalenessSeconds** - Returns the ReadPreference's "maxStalenessSeconds" option
+- **MongoDB\Driver\ReadPreference::getMode** - Returns the ReadPreference's "mode" option
+- **MongoDB\Driver\ReadPreference::getModeString** - Returns the ReadPreference's "mode" option
+- **MongoDB\Driver\ReadPreference::getTagSets** - Returns the ReadPreference's "tagSets" option
+- **MongoDB\Driver\ReadPreference::__construct** - Create a new ReadPreference
+- **MongoDB\Driver\Server::executeBulkWrite** - Execute one or more write operations on this server
+- **MongoDB\Driver\Server::executeBulkWriteCommand** - Execute write operations on this server using the bulkWrite command
+- **MongoDB\Driver\Server::executeCommand** - Execute a database command on this server
+- **MongoDB\Driver\Server::executeQuery** - Execute a database query on this server
+- **MongoDB\Driver\Server::executeReadCommand** - Execute a database command that reads on this server
+- **MongoDB\Driver\Server::executeReadWriteCommand** - Execute a database command that reads and writes on this server
+- **MongoDB\Driver\Server::executeWriteCommand** - Execute a database command that writes on this server
+- **MongoDB\Driver\Server::getHost** - Returns the hostname of this server
+- **MongoDB\Driver\Server::getInfo** - Returns an array of information describing this server
+- **MongoDB\Driver\Server::getLatency** - Returns the latency of this server in milliseconds
+- **MongoDB\Driver\Server::getPort** - Returns the port on which this server is listening
+- **MongoDB\Driver\Server::getServerDescription** - Returns a ServerDescription for this server
+- **MongoDB\Driver\Server::getTags** - Returns an array of tags describing this server in a replica set
+- **MongoDB\Driver\Server::getType** - Returns an integer denoting the type of this server
+- **MongoDB\Driver\Server::isArbiter** - Checks if this server is an arbiter member of a replica set
+- **MongoDB\Driver\Server::isHidden** - Checks if this server is a hidden member of a replica set
+- **MongoDB\Driver\Server::isPassive** - Checks if this server is a passive member of a replica set
+- **MongoDB\Driver\Server::isPrimary** - Checks if this server is a primary member of a replica set
+- **MongoDB\Driver\Server::isSecondary** - Checks if this server is a secondary member of a replica set
+- **MongoDB\Driver\Server::__construct** - Create a new Server (not used)
+- **MongoDB\Driver\ServerApi::bsonSerialize** - Returns an object for BSON serialization
+- **MongoDB\Driver\ServerApi::__construct** - Create a new ServerApi instance
+- **MongoDB\Driver\ServerDescription::getHelloResponse** - Returns the server's most recent "hello" response
+- **MongoDB\Driver\ServerDescription::getHost** - Returns the hostname of this server
+- **MongoDB\Driver\ServerDescription::getLastUpdateTime** - Returns the server's last update time in microseconds
+- **MongoDB\Driver\ServerDescription::getPort** - Returns the port on which this server is listening
+- **MongoDB\Driver\ServerDescription::getRoundTripTime** - Returns the server's round trip time in milliseconds
+- **MongoDB\Driver\ServerDescription::getType** - Returns a string denoting the type of this server
+- **MongoDB\Driver\Session::abortTransaction** - Aborts a transaction
+- **MongoDB\Driver\Session::advanceClusterTime** - Advances the cluster time for this session
+- **MongoDB\Driver\Session::advanceOperationTime** - Advances the operation time for this session
+- **MongoDB\Driver\Session::commitTransaction** - Commits a transaction
+- **MongoDB\Driver\Session::endSession** - Terminates a session
+- **MongoDB\Driver\Session::getClusterTime** - Returns the cluster time for this session
+- **MongoDB\Driver\Session::getLogicalSessionId** - Returns the logical session ID for this session
+- **MongoDB\Driver\Session::getOperationTime** - Returns the operation time for this session
+- **MongoDB\Driver\Session::getServer** - Returns the server to which this session is pinned
+- **MongoDB\Driver\Session::getTransactionOptions** - Returns options for the currently running transaction
+- **MongoDB\Driver\Session::getTransactionState** - Returns the current transaction state for this session
+- **MongoDB\Driver\Session::isDirty** - Returns whether the session has been marked as dirty
+- **MongoDB\Driver\Session::isInTransaction** - Returns whether a multi-document transaction is in progress
+- **MongoDB\Driver\Session::startTransaction** - Starts a transaction
+- **MongoDB\Driver\Session::__construct** - Create a new Session (not used)
+- **MongoDB\Driver\TopologyDescription::getServers** - Returns the servers in the topology
+- **MongoDB\Driver\TopologyDescription::getType** - Returns a string denoting the type of this topology
+- **MongoDB\Driver\TopologyDescription::hasReadableServer** - Returns whether the topology has a readable server
+- **MongoDB\Driver\TopologyDescription::hasWritableServer** - Returns whether the topology has a writable server
+- **MongoDB\Driver\WriteConcern::bsonSerialize** - Returns an object for BSON serialization
+- **MongoDB\Driver\WriteConcern::getJournal** - Returns the WriteConcern's "journal" option
+- **MongoDB\Driver\WriteConcern::getW** - Returns the WriteConcern's "w" option
+- **MongoDB\Driver\WriteConcern::getWtimeout** - Returns the WriteConcern's "wtimeout" option
+- **MongoDB\Driver\WriteConcern::isDefault** - Checks if this is the default write concern
+- **MongoDB\Driver\WriteConcern::__construct** - Create a new WriteConcern
+- **MongoDB\Driver\WriteConcernError::getCode** - Returns the WriteConcernError's error code
+- **MongoDB\Driver\WriteConcernError::getInfo** - Returns metadata document for the WriteConcernError
+- **MongoDB\Driver\WriteConcernError::getMessage** - Returns the WriteConcernError's error message
+- **MongoDB\Driver\WriteError::getCode** - Returns the WriteError's error code
+- **MongoDB\Driver\WriteError::getIndex** - Returns the index of the write operation corresponding to this WriteError
+- **MongoDB\Driver\WriteError::getInfo** - Returns metadata document for the WriteError
+- **MongoDB\Driver\WriteError::getMessage** - Returns the WriteError's error message
+- **MongoDB\Driver\WriteResult::getDeletedCount** - Returns the number of documents deleted
+- **MongoDB\Driver\WriteResult::getInsertedCount** - Returns the number of documents inserted (excluding upserts)
+- **MongoDB\Driver\WriteResult::getMatchedCount** - Returns the number of documents selected for update
+- **MongoDB\Driver\WriteResult::getModifiedCount** - Returns the number of existing documents updated
+- **MongoDB\Driver\WriteResult::getServer** - Returns the server associated with this write result
+- **MongoDB\Driver\WriteResult::getUpsertedCount** - Returns the number of documents inserted by an upsert
+- **MongoDB\Driver\WriteResult::getUpsertedIds** - Returns an array of identifiers for upserted documents
+- **MongoDB\Driver\WriteResult::getWriteConcernError** - Returns any write concern error that occurred
+- **MongoDB\Driver\WriteResult::getWriteErrors** - Returns any write errors that occurred
+- **MongoDB\Driver\WriteResult::isAcknowledged** - Returns whether the write was acknowledged
+- **move_uploaded_file** - 将上传的文件移动到新位置
+- **mqseries_back** - MQSeries MQBACK
+- **mqseries_begin** - MQseries MQBEGIN
+- **mqseries_close** - MQSeries MQCLOSE
+- **mqseries_cmit** - MQSeries MQCMIT
+- **mqseries_conn** - MQSeries MQCONN
+- **mqseries_connx** - MQSeries MQCONNX
+- **mqseries_disc** - MQSeries MQDISC
+- **mqseries_get** - MQSeries MQGET
+- **mqseries_inq** - MQSeries MQINQ
+- **mqseries_open** - MQSeries MQOPEN
+- **mqseries_put** - MQSeries MQPUT
+- **mqseries_put1** - MQSeries MQPUT1
+- **mqseries_set** - MQSeries MQSET
+- **mqseries_strerror** - Returns the error message corresponding to a result code (MQRC)
+- **msg_get_queue** - Create or attach to a message queue
+- **msg_queue_exists** - Check whether a message queue exists
+- **msg_receive** - Receive a message from a message queue
+- **msg_remove_queue** - Destroy a message queue
+- **msg_send** - Send a message to a message queue
+- **msg_set_queue** - Set information in the message queue data structure
+- **msg_stat_queue** - Returns information from the message queue data structure
+- **mt_getrandmax** - 显示随机数的最大可能值
+- **mt_rand** - 通过梅森旋转（Mersenne Twister）随机数生成器生成随机值
+- **mt_srand** - 播下一个更好的随机数发生器种子
+- **MultipleIterator::attachIterator** - Attaches iterator information
+- **MultipleIterator::containsIterator** - Checks if an iterator is attached
+- **MultipleIterator::countIterators** - Gets the number of attached iterator instances
+- **MultipleIterator::current** - Gets the registered iterator instances
+- **MultipleIterator::detachIterator** - Detaches an iterator
+- **MultipleIterator::getFlags** - Gets the flag information
+- **MultipleIterator::key** - Gets the registered iterator instances
+- **MultipleIterator::next** - Moves all attached iterator instances forward
+- **MultipleIterator::rewind** - Rewinds all attached iterator instances
+- **MultipleIterator::setFlags** - Sets flags
+- **MultipleIterator::valid** - Checks the validity of sub iterators
+- **MultipleIterator::__construct** - Constructs a new MultipleIterator
+- **mysqli::$affected_rows** - Gets the number of affected rows in a previous MySQL operation
+- **mysqli::$client_info** - 获取 MySQL 客户端信息
+- **mysqli::$client_version** - 作为整数返回 MySQL 客户端的版本
+- **mysqli::$connect_errno** - Returns the error code from last connect call
+- **mysqli::$connect_error** - Returns a description of the last connection error
+- **mysqli::$errno** - 返回最近函数调用的错误代码
+- **mysqli::$error** - Returns a string description of the last error
+- **mysqli::$error_list** - Returns a list of errors from the last command executed
+- **mysqli::$field_count** - Returns the number of columns for the most recent query
+- **mysqli::$host_info** - 返回表述使用的连接类型的字符串
+- **mysqli::$info** - 返回最近执行的 SQL 语句的信息
+- **mysqli::$insert_id** - 返回上次查询为 AUTO_INCREMENT 列生成的值
+- **mysqli::$protocol_version** - 返回 MySQL 协议使用的版本号
+- **mysqli::$server_info** - 返回 MySQL 服务器的版本号
+- **mysqli::$server_version** - 作为一个整数返回MySQL服务器的版本
+- **mysqli::$sqlstate** - 返回上一次 MySQL 操作的 SQLSTATE 错误
+- **mysqli::$thread_id** - 返回当前连接的线程 ID
+- **mysqli::$warning_count** - Returns the number of warnings generated by the most recently executed query
+- **mysqli::autocommit** - 打开或关闭本次数据库连接的自动命令提交事务模式
+- **mysqli::begin_transaction** - Starts a transaction
+- **mysqli::change_user** - Changes the user of the database connection
+- **mysqli::character_set_name** - 返回当前数据库连接的字符编码
+- **mysqli::close** - 关闭先前打开的数据库连接
+- **mysqli::commit** - 提交当前事务
+- **mysqli::debug** - Performs debugging operations
+- **mysqli::dump_debug_info** - 将调试信息输出到日志
+- **mysqli::escape_string** - 别名 mysqli_real_escape_string
+- **mysqli::execute_query** - Prepares, binds parameters, and executes SQL statement
+- **mysqli::get_charset** - Returns a character set object
+- **mysqli::get_connection_stats** - 返回客户端连接的统计数据
+- **mysqli::get_warnings** - Get result of SHOW WARNINGS
+- **mysqli::init** - 初始化 MySQLi 并返回用于 mysqli_real_connect() 的对象
+- **mysqli::kill** - 让服务器杀死一个 MySQL 线程
+- **mysqli::more_results** - 检查批量查询中是否还有查询结果
+- **mysqli::multi_query** - 在数据库上执行一个或多个查询
+- **mysqli::next_result** - 为读取 multi_query 执行之后的下一个结果集做准备
+- **mysqli::options** - 设置选项
+- **mysqli::ping** - ping 一个连接，或者如果连接处于断开状态，重新连接
+- **mysqli::poll** - 轮询连接
+- **mysqli::prepare** - 预处理执行 SQL
+- **mysqli::query** - 对数据库执行查询
+- **mysqli::real_connect** - 建立一个 MySQL 服务器连接
+- **mysqli::real_escape_string** - 根据当前连接的字符集，对于 SQL 语句中的特殊字符进行转义
+- **mysqli::real_query** - 执行一个mysql查询
+- **mysqli::reap_async_query** - 获取异步查询的结果
+- **mysqli::refresh** - 刷新
+- **mysqli::release_savepoint** - 从当前事务的保存点中移除一个命名保存点
+- **mysqli::rollback** - 回滚当前事务
+- **mysqli::savepoint** - 在当前事务中设置命名保存点
+- **mysqli::select_db** - 选择用于数据库查询的默认数据库
+- **mysqli::set_charset** - 设置客户端字符集
+- **mysqli::set_opt** - 别名 mysqli_options
+- **mysqli::ssl_set** - 用于使用 SSL 建立安全连接
+- **mysqli::stat** - 获取当前系统状态信息
+- **mysqli::stmt_init** - 初始化语句并返回用于 mysqli_stmt_prepare（调用）的对象
+- **mysqli::store_result** - 传输上次查询的结果集
+- **mysqli::thread_safe** - 返回是否线程安全
+- **mysqli::use_result** - Initiate a result set retrieval
+- **mysqli::__construct** - Open a new connection to the MySQL server
+- **mysqli_connect** - 别名 mysqli::__construct
+- **mysqli_driver::$report_mode** - Sets mysqli error reporting mode
+- **mysqli_driver::embedded_server_end** - Stop embedded server
+- **mysqli_driver::embedded_server_start** - Initialize and start embedded server
+- **mysqli_execute** - 别名 mysqli_stmt_execute
+- **mysqli_get_client_stats** - 返回客户端进程统计信息
+- **mysqli_get_links_stats** - 返回打开和缓存的链接相关信息
+- **mysqli_report** - 别名 mysqli_driver->report_mode
+- **mysqli_result::$current_field** - Get current field offset of a result pointer
+- **mysqli_result::$field_count** - Gets the number of fields in the result set
+- **mysqli_result::$lengths** - Returns the lengths of the columns of the current row in the result set
+- **mysqli_result::$num_rows** - Gets the number of rows in the result set
+- **mysqli_result::data_seek** - Adjusts the result pointer to an arbitrary row in the result
+- **mysqli_result::fetch_all** - Fetch all result rows as an associative array, a numeric array, or both
+- **mysqli_result::fetch_array** - Fetch the next row of a result set as an associative, a numeric array, or both
+- **mysqli_result::fetch_assoc** - Fetch the next row of a result set as an associative array
+- **mysqli_result::fetch_column** - Fetch a single column from the next row of a result set
+- **mysqli_result::fetch_field** - Returns the next field in the result set
+- **mysqli_result::fetch_fields** - Returns an array of objects representing the fields in a result set
+- **mysqli_result::fetch_field_direct** - Fetch meta-data for a single field
+- **mysqli_result::fetch_object** - Fetch the next row of a result set as an object
+- **mysqli_result::fetch_row** - Fetch the next row of a result set as an enumerated array
+- **mysqli_result::field_seek** - Set result pointer to a specified field offset
+- **mysqli_result::free** - Frees the memory associated with a result
+- **mysqli_result::getIterator** - Retrieve an external iterator
+- **mysqli_result::__construct** - Constructs a mysqli_result object
+- **mysqli_sql_exception::getSqlState** - Returns the SQLSTATE error code
+- **mysqli_stmt::$affected_rows** - Returns the total number of rows changed, deleted, inserted, or
+  matched by the last statement executed
+- **mysqli_stmt::$errno** - Returns the error code for the most recent statement call
+- **mysqli_stmt::$error** - Returns a string description for last statement error
+- **mysqli_stmt::$error_list** - Returns a list of errors from the last statement executed
+- **mysqli_stmt::$field_count** - Returns the number of columns in the given statement
+- **mysqli_stmt::$insert_id** - Get the ID generated from the previous INSERT operation
+- **mysqli_stmt::$num_rows** - Returns the number of rows fetched from the server
+- **mysqli_stmt::$param_count** - Returns the number of parameters for the given statement
+- **mysqli_stmt::$sqlstate** - Returns SQLSTATE error from previous statement operation
+- **mysqli_stmt::attr_get** - Used to get the current value of a statement attribute
+- **mysqli_stmt::attr_set** - Used to modify the behavior of a prepared statement
+- **mysqli_stmt::bind_param** - Binds variables to a prepared statement as parameters
+- **mysqli_stmt::bind_result** - Binds variables to a prepared statement for result storage
+- **mysqli_stmt::close** - Closes a prepared statement
+- **mysqli_stmt::data_seek** - Adjusts the result pointer to an arbitrary row in the buffered result
+- **mysqli_stmt::execute** - Executes a prepared statement
+- **mysqli_stmt::fetch** - Fetch results from a prepared statement into the bound variables
+- **mysqli_stmt::free_result** - Frees stored result memory for the given statement handle
+- **mysqli_stmt::get_result** - Gets a result set from a prepared statement as a mysqli_result object
+- **mysqli_stmt::get_warnings** - Get result of SHOW WARNINGS
+- **mysqli_stmt::more_results** - Check if there are more query results from a multiple query
+- **mysqli_stmt::next_result** - Reads the next result from a multiple query
+- **mysqli_stmt::prepare** - Prepares an SQL statement for execution
+- **mysqli_stmt::reset** - Resets a prepared statement
+- **mysqli_stmt::result_metadata** - Returns result set metadata from a prepared statement
+- **mysqli_stmt::send_long_data** - Send data in blocks
+- **mysqli_stmt::store_result** - Stores a result set in an internal buffer
+- **mysqli_stmt::__construct** - Constructs a new mysqli_stmt object
+- **mysqli_warning::next** - Fetch next warning
+- **mysqli_warning::__construct** - Private constructor to disallow direct instantiation
+- **mysql_affected_rows** - 取得前一次 MySQL 操作所影响的记录行数
+- **mysql_client_encoding** - 返回字符集的名称
+- **mysql_close** - 关闭 MySQL 连接
+- **mysql_connect** - 打开一个到 MySQL 服务器的连接
+- **mysql_create_db** - 新建一个 MySQL 数据库
+- **mysql_data_seek** - 移动内部结果的指针
+- **mysql_db_name** - 取得 mysql_list_dbs 返回的结果数据
+- **mysql_db_query** - 选择数据库并执行查询
+- **mysql_drop_db** - 丢弃（删除）一个 MySQL 数据库
+- **mysql_errno** - 返回上一个 MySQL 操作中的错误信息的数值
+- **mysql_error** - 返回上一个 MySQL 操作中的错误信息的文本
+- **mysql_escape_string** - 转义字符串用于 mysql_query
+- **mysql_fetch_array** - 从结果集中取得一行作为关联数组
+- **mysql_fetch_assoc** - 从结果集中取得一行作为关联数组
+- **mysql_fetch_field** - 从结果集中取得列信息并作为对象返回
+- **mysql_fetch_lengths** - 取得结果集中每个输出的长度
+- **mysql_fetch_object** - 从结果集中取得一行作为对象返回
+- **mysql_fetch_row** - 从结果集中取得一行作为枚举数组
+- **mysql_field_flags** - 从结果中取得和指定字段关联的 flags
+- **mysql_field_len** - 返回指定字段的长度
+- **mysql_field_name** - 取得结果中指定字段的字段名
+- **mysql_field_seek** - 将结果指针设置为指定的字段偏移量
+- **mysql_field_table** - 取得指定字段所在的表名
+- **mysql_field_type** - 取得结果集中指定字段的类型
+- **mysql_free_result** - 释放结果内存
+- **mysql_get_client_info** - 取得 MySQL 客户端信息
+- **mysql_get_host_info** - 取得 MySQL 主机信息
+- **mysql_get_proto_info** - 取得 MySQL 协议信息
+- **mysql_get_server_info** - 取得 MySQL 服务器信息
+- **mysql_info** - 获取最近查询的有关信息
+- **mysql_insert_id** - 取得上一条查询生成的 ID
+- **mysql_list_dbs** - 列出 MySQL 服务器中可用的数据库
+- **mysql_list_fields** - 列出 MySQL 表字段
+- **mysql_list_processes** - 列出 MySQL 进程
+- **mysql_list_tables** - 列出 MySQL 数据库中的表
+- **mysql_num_fields** - 取得结果中字段的数量
+- **mysql_num_rows** - 获取结果中行数
+- **mysql_pconnect** - 打开一个到 MySQL 服务器的持久连接
+- **mysql_ping** - Ping 服务器连接的状态，如果没有连接则重新连接
+- **mysql_query** - 发送一条 MySQL 查询
+- **mysql_real_escape_string** - 将字符串中的特殊字符进行转义，以在 SQL 语句中使用
+- **mysql_result** - 取得结果数据
+- **mysql_select_db** - 选择 MySQL 数据库
+- **mysql_set_charset** - 设置客户端的字符集
+- **mysql_stat** - 获取当前系统状态
+- **mysql_tablename** - 取得表名
+- **mysql_thread_id** - 返回当前线程的 ID
+- **mysql_unbuffered_query** - 向 MySQL 发送 SQL 查询，无需获取和缓冲结果行
+- **mysql_xdevapi\Client::close** - Close client
+
+## N
+
+- **natcasesort** - 用“自然排序”算法对数组进行不区分大小写字母的排序
+- **natsort** - 用“自然排序”算法对数组排序
+- **net_get_interfaces** - 获取网络接口
+- **next** - 将数组中的内部指针向前移动一位
+- **ngettext** - Plural version of gettext
+- **nl2br** - 在字符串所有新行之前插入 HTML 换行标记
+- **nl_langinfo** - Query language and locale information
+- **NoRewindIterator::current** - Get the current value
+- **NoRewindIterator::key** - Get the current key
+- **NoRewindIterator::next** - Forward to the next element
+- **NoRewindIterator::rewind** - Prevents the rewind operation on the inner iterator
+- **NoRewindIterator::valid** - Validates the iterator
+- **NoRewindIterator::__construct** - Construct a NoRewindIterator
+- **Normalizer::getRawDecomposition** - Gets the Decomposition_Mapping property for the given UTF-8 encoded code point
+- **Normalizer::isNormalized** - Checks if the provided string is already in the specified normalization
+   form
+- **Normalizer::normalize** - Normalizes the input provided and returns the normalized string
+- **NumberFormatter::create** - Create a number formatter
+- **NumberFormatter::format** - Format a number
+- **NumberFormatter::formatCurrency** - Format a currency value
+- **NumberFormatter::getAttribute** - Get an attribute
+- **NumberFormatter::getErrorCode** - Get formatter's last error code
+- **NumberFormatter::getErrorMessage** - Get formatter's last error message
+- **NumberFormatter::getLocale** - Get formatter locale
+- **NumberFormatter::getPattern** - Get formatter pattern
+- **NumberFormatter::getSymbol** - Get a symbol value
+- **NumberFormatter::getTextAttribute** - Get a text attribute
+- **NumberFormatter::parse** - Parse a number
+- **NumberFormatter::parseCurrency** - Parse a currency number
+- **NumberFormatter::setAttribute** - Set an attribute
+- **NumberFormatter::setPattern** - Set formatter pattern
+- **NumberFormatter::setSymbol** - Set a symbol value
+- **NumberFormatter::setTextAttribute** - Set a text attribute
+- **number_format** - 以千位分隔符方式格式化一个数字
+
+## O
+
+- **OAuth::disableDebug** - 关闭详细的调试
+- **OAuth::disableRedirects** - 关闭重定向
+- **OAuth::disableSSLChecks** - 关闭 SSL 检查
+- **OAuth::enableDebug** - 启用详细调试
+- **OAuth::enableRedirects** - 启用重定向
+- **OAuth::enableSSLChecks** - 启用 SSL 检查
+- **OAuth::fetch** - 获取一个 OAuth 受保护的资源
+- **OAuth::generateSignature** - 生成一个签名
+- **OAuth::getAccessToken** - 获取一个访问令牌
+- **OAuth::getCAPath** - 获取 CA 信息
+- **OAuth::getLastResponse** - 获取最后一次的响应
+- **OAuth::getLastResponseHeaders** - 获取最后一次响应的头信息
+- **OAuth::getLastResponseInfo** - 获取关于最后一次响应的 HTTP 信息
+- **OAuth::getRequestHeader** - 生成 OAuth 头信息字符串签名
+- **OAuth::getRequestToken** - 获取一个请求令牌
+- **OAuth::setAuthType** - 设置授权类型
+- **OAuth::setCAPath** - 设置 CA 路径和信息
+- **OAuth::setNonce** - 为后续请求设置现时标志
+- **OAuth::setRequestEngine** - 设置目标请求引擎
+- **OAuth::setRSACertificate** - 设置 RSA 证书
+- **OAuth::setSSLChecks** - 调整特定的SSL请求检查
+- **OAuth::setTimestamp** - 设置时间戳
+- **OAuth::setToken** - 设置令牌和 secret
+- **OAuth::setVersion** - 设置 OAuth 版本
+- **OAuth::__construct** - 新建一个 OAuth 对象
+- **OAuth::__destruct** - 析构函数
+- **OAuthProvider::addRequiredParameter** - 添加必需的参数
+- **OAuthProvider::callconsumerHandler** - 调用 consumerNonceHandler 回调函数
+- **OAuthProvider::callTimestampNonceHandler** - 调用 timestampNonceHandler 回调函数
+- **OAuthProvider::calltokenHandler** - 调用 tokenNonceHandler 回调函数
+- **OAuthProvider::checkOAuthRequest** - 检查一个 oauth 请求
+- **OAuthProvider::consumerHandler** - 设置 consumerHandler 句柄回调函数
+- **OAuthProvider::generateToken** - 生成一个随机令牌
+- **OAuthProvider::is2LeggedEndpoint** - is2LeggedEndpoint
+- **OAuthProvider::isRequestTokenEndpoint** - 设置 isRequestTokenEndpoint
+- **OAuthProvider::removeRequiredParameter** - 移除一个必需的参数
+- **OAuthProvider::reportProblem** - 报告问题
+- **OAuthProvider::setParam** - 设置一个参数
+- **OAuthProvider::setRequestTokenPath** - 设置请求令牌路径
+- **OAuthProvider::timestampNonceHandler** - 设置 timestampNonceHandler 句柄回调函数
+- **OAuthProvider::tokenHandler** - 设置 tokenHandler 句柄回调函数
+- **OAuthProvider::__construct** - 新建一个  OAuthProvider 对象
+- **oauth_get_sbs** - 生成一个签名字符基串
+- **oauth_urlencode** - 将 URI 编码为 RFC 3986 规范
+- **ob_clean** - 清空（擦掉）活动输出缓冲区的内容
+- **ob_end_clean** - 清空（擦除）活动缓冲区的内容并关闭它
+- **ob_end_flush** - 冲刷（发送）活动输出处理程序的返回值，并关闭活动输出缓冲区
+- **ob_flush** - 冲刷（发送）活动输出处理程序的返回值
+- **ob_get_clean** - 获取活动缓冲区的内容并将其关闭
+- **ob_get_contents** - 返回输出缓冲区的内容
+- **ob_get_flush** - 冲刷（发送）活动输出处理程序的返回值，返回活动输出缓冲区的内容并将其关闭
+- **ob_get_length** - 返回输出缓冲区内容的长度
+- **ob_get_level** - 返回输出缓冲机制的嵌套级别
+- **ob_get_status** - 得到所有输出缓冲区的状态
+- **ob_gzhandler** - ob_start 回调函数压缩输出缓冲区
+- **ob_iconv_handler** - 以输出缓冲处理程序转换字符编码
+- **ob_implicit_flush** - 打开/关闭绝对刷送
+- **ob_list_handlers** - 列出所有使用的输出处理程序
+- **ob_start** - 打开输出控制缓冲
+- **ob_tidyhandler** - ob_start callback function to repair the buffer
+- **ocibindbyname** - 别名 oci_bind_by_name
+- **ocicancel** - 别名 oci_cancel
+- **ocicloselob** - 别名 OCILob::close
+- **ocicollappend** - 别名 OCICollection::append
+- **ocicollassign** - 别名 OCICollection::assign
+- **ocicollassignelem** - 别名 OCICollection::assignElem
+- **OCICollection::append** - Appends element to the collection
+- **OCICollection::assign** - Assigns a value to the collection from another existing collection
+- **OCICollection::assignElem** - Assigns a value to the element of the collection
+- **OCICollection::free** - Frees the resources associated with the collection object
+- **OCICollection::getElem** - Returns value of the element
+- **OCICollection::max** - Returns the maximum number of elements in the collection
+- **OCICollection::size** - Returns size of the collection
+- **OCICollection::trim** - Trims elements from the end of the collection
+- **ocicollgetelem** - 别名 OCICollection::getElem
+- **ocicollmax** - 别名 OCICollection::max
+- **ocicollsize** - 别名 OCICollection::size
+- **ocicolltrim** - 别名 OCICollection::trim
+- **ocicolumnisnull** - 别名 oci_field_is_null
+- **ocicolumnname** - 别名 oci_field_name
+- **ocicolumnprecision** - 别名 oci_field_precision
+- **ocicolumnscale** - 别名 oci_field_scale
+- **ocicolumnsize** - 别名 oci_field_size
+- **ocicolumntype** - 别名 oci_field_type
+- **ocicolumntyperaw** - 别名 oci_field_type_raw
+- **ocicommit** - 别名 oci_commit
+- **ocidefinebyname** - 别名 oci_define_by_name
+- **ocierror** - 别名 oci_error
+- **ociexecute** - 别名 oci_execute
+- **ocifetch** - 别名 oci_fetch
+- **ocifetchinto** - Obsolete variant of oci_fetch_array, oci_fetch_object,
+   oci_fetch_assoc and
+   oci_fetch_row
+- **ocifetchstatement** - 别名 oci_fetch_all
+- **ocifreecollection** - 别名 OCICollection::free
+- **ocifreecursor** - 别名 oci_free_statement
+- **ocifreedesc** - 别名 OCILob::free
+- **ocifreestatement** - 别名 oci_free_statement
+- **ociinternaldebug** - 别名 oci_internal_debug
+- **ociloadlob** - 别名 OCILob::load
+- **OCILob::append** - Appends data from the large object to another large object
+- **OCILob::close** - Closes LOB descriptor
+- **OCILob::eof** - Tests for end-of-file on a large object's descriptor
+- **OCILob::erase** - Erases a specified portion of the internal LOB data
+- **OCILob::export** - Exports LOB's contents to a file
+- **OCILob::flush** - Flushes/writes buffer of the LOB to the server
+- **OCILob::free** - Frees resources associated with the LOB descriptor
+- **OCILob::getBuffering** - Returns current state of buffering for the large object
+- **OCILob::import** - Imports file data to the LOB
+- **OCILob::load** - Returns large object's contents
+- **OCILob::read** - Reads part of the large object
+- **OCILob::rewind** - Moves the internal pointer to the beginning of the large object
+- **OCILob::save** - Saves data to the large object
+- **OCILob::saveFile** - 别名 OCILob::import
+- **OCILob::seek** - Sets the internal pointer of the large object
+- **OCILob::setBuffering** - Changes current state of buffering for the large object
+- **OCILob::size** - Returns size of large object
+- **OCILob::tell** - Returns the current position of internal pointer of large object
+- **OCILob::truncate** - Truncates large object
+- **OCILob::write** - Writes data to the large object
+- **OCILob::writeTemporary** - Writes a temporary large object
+- **OCILob::writeToFile** - 别名 OCILob::export
+- **ocilogoff** - 别名 oci_close
+- **ocilogon** - 别名 oci_connect
+- **ocinewcollection** - 别名 oci_new_collection
+- **ocinewcursor** - 别名 oci_new_cursor
+- **ocinewdescriptor** - 别名 oci_new_descriptor
+- **ocinlogon** - 别名 oci_new_connect
+- **ocinumcols** - 别名 oci_num_fields
+- **ociparse** - 别名 oci_parse
+- **ociplogon** - 别名 oci_pconnect
+- **ociresult** - 别名 oci_result
+- **ocirollback** - 别名 oci_rollback
+- **ocirowcount** - 别名 oci_num_rows
+- **ocisavelob** - 别名 OCILob::save
+- **ocisavelobfile** - 别名 OCILob::import
+- **ociserverversion** - 别名 oci_server_version
+- **ocisetprefetch** - 别名 oci_set_prefetch
+- **ocistatementtype** - 别名 oci_statement_type
+- **ociwritelobtofile** - 别名 OCILob::export
+- **ociwritetemporarylob** - 别名 OCILob::writeTemporary
+- **oci_bind_array_by_name** - Binds a PHP array to an Oracle PL/SQL array parameter
+- **oci_bind_by_name** - 绑定 PHP 变量到 Oracle 位置标志符
+- **oci_cancel** - 中断游标读取数据
+- **oci_client_version** - Returns the Oracle client library version
+- **oci_close** - 关闭 Oracle 连接
+- **oci_commit** - 提交未完成的数据库事务
+- **oci_connect** - 建立一个到 Oracle 服务器的连接
+- **oci_define_by_name** - 将 PHP 变量与查询读取的列相关联
+- **oci_error** - 返回最后发现的错误
+- **oci_execute** - 执行语句
+- **oci_fetch** - 从查询中读取下一行到内部缓冲区
+- **oci_fetch_all** - 从查询中读取多行到二维数组中
+- **oci_fetch_array** - Returns the next row from a query as an associative or numeric array
+- **oci_fetch_assoc** - Returns the next row from a query as an associative array
+- **oci_fetch_object** - Returns the next row from a query as an object
+- **oci_fetch_row** - Returns the next row from a query as a numeric array
+- **oci_field_is_null** - 检测当前获取的行中，字段是否为 null
+- **oci_field_name** - 返回 statement 中的字段名
+- **oci_field_precision** - 返回字段精度
+- **oci_field_scale** - 返回字段范围
+- **oci_field_size** - 返回字段大小
+- **oci_field_type** - 返回字段的数据类型名称
+- **oci_field_type_raw** - 返回字段的原始 Oracle 数据类型
+- **oci_free_descriptor** - Frees a descriptor
+- **oci_free_statement** - 释放关联于语句或游标的所有资源
+- **oci_get_implicit_resultset** - Returns the next child statement resource from a parent statement resource that has Oracle Database Implicit Result Sets
+- **oci_internal_debug** - Enables or disables internal debug output
+- **oci_lob_copy** - Copies large object
+- **oci_lob_is_equal** - Compares two LOB/FILE locators for equality
+- **oci_new_collection** - 分配新的 collection 对象
+- **oci_new_connect** - 使用唯一连接，连接到 Oracle 服务器
+- **oci_new_cursor** - 分配并返回新的游标（语句句柄）
+- **oci_new_descriptor** - 初始化新的空 LOB 或 FILE 描述符
+- **oci_num_fields** - 返回语句中结果列的数量
+- **oci_num_rows** - 返回语句执行后受影响的行数
+- **oci_parse** - 预处理用于执行的 Oracle 语句
+- **oci_password_change** - 修改 Oracle 用户的密码
+- **oci_pconnect** - 使用持久连接连，连接到 Oracle 数据库
+- **oci_register_taf_callback** - Register a user-defined callback function for Oracle Database TAF
+- **oci_result** - 返回所取得行中字段的值
+- **oci_rollback** - 回滚未完成的事务
+- **oci_server_version** - 返回 Oracle 数据库版本
+- **oci_set_action** - Sets the action name
+- **oci_set_call_timeout** - Sets a millisecond timeout for database calls
+- **oci_set_client_identifier** - Sets the client identifier
+- **oci_set_client_info** - Sets the client information
+- **oci_set_db_operation** - Sets the database operation
+- **oci_set_edition** - Sets the database edition
+- **oci_set_module_name** - Sets the module name
+- **oci_set_prefetch** - 设置查询预读取的行数
+- **oci_set_prefetch_lob** - Sets the amount of data prefetched for each CLOB or BLOB.
+- **oci_statement_type** - 返回语句的类型
+- **oci_unregister_taf_callback** - Unregister a user-defined callback function for Oracle Database TAF
+- **octdec** - 八进制转换为十进制
+- **odbc_autocommit** - Toggle autocommit behaviour
+- **odbc_binmode** - Handling of binary column data
+- **odbc_close** - Close an ODBC connection
+- **odbc_close_all** - Close all ODBC connections
+- **odbc_columnprivileges** - Lists columns and associated privileges for the given table
+- **odbc_columns** - Lists the column names in specified tables
+- **odbc_commit** - Commit an ODBC transaction
+- **odbc_connect** - Connect to a datasource
+- **odbc_connection_string_is_quoted** - Determines if an ODBC connection string value is quoted
+- **odbc_connection_string_quote** - Quotes an ODBC connection string value
+- **odbc_connection_string_should_quote** - Determines if an ODBC connection string value should be quoted
+- **odbc_cursor** - Get cursorname
+- **odbc_data_source** - Returns information about available DSNs
+- **odbc_do** - 别名 odbc_exec
+- **odbc_error** - Get the last error code
+- **odbc_errormsg** - Get the last error message
+- **odbc_exec** - Directly execute an SQL statement
+- **odbc_execute** - Execute a prepared statement
+- **odbc_fetch_array** - Fetch a result row as an associative array
+- **odbc_fetch_into** - Fetch one result row into array
+- **odbc_fetch_object** - Fetch a result row as an object
+- **odbc_fetch_row** - Fetch a row
+- **odbc_field_len** - Get the length (precision) of a field
+- **odbc_field_name** - Get the columnname
+- **odbc_field_num** - Return column number
+- **odbc_field_precision** - 别名 odbc_field_len
+- **odbc_field_scale** - Get the scale of a field
+- **odbc_field_type** - Datatype of a field
+- **odbc_foreignkeys** - Retrieves a list of foreign keys
+- **odbc_free_result** - Free objects associated with a result
+- **odbc_gettypeinfo** - Retrieves information about data types supported by the data source
+- **odbc_longreadlen** - Handling of LONG columns
+- **odbc_next_result** - Checks if multiple results are available
+- **odbc_num_fields** - Number of columns in a result
+- **odbc_num_rows** - Number of rows in a result
+- **odbc_pconnect** - Open a persistent database connection
+- **odbc_prepare** - Prepares a statement for execution
+- **odbc_primarykeys** - Gets the primary keys for a table
+- **odbc_procedurecolumns** - Retrieve information about parameters to procedures
+- **odbc_procedures** - Get the list of procedures stored in a specific data source
+- **odbc_result** - Get result data
+- **odbc_result_all** - Print result as HTML table
+- **odbc_rollback** - Rollback a transaction
+- **odbc_setoption** - Adjust ODBC settings
+- **odbc_specialcolumns** - Retrieves special columns
+- **odbc_statistics** - Retrieve statistics about a table
+- **odbc_tableprivileges** - Lists tables and the privileges associated with each table
+- **odbc_tables** - Get the list of table names stored in a specific data source
+- **opcache_compile_file** - 无需运行，即可编译并缓存 PHP 脚本
+- **opcache_get_configuration** - 获取缓存的配置信息
+- **opcache_get_status** - 获取缓存的状态信息
+- **opcache_invalidate** - 废除脚本缓存
+- **opcache_is_script_cached** - 用于判断脚本是否已缓存在 OPCache 中
+- **opcache_is_script_cached_in_file_cache** - 用于判断脚本是否已缓存在 OPCache 文件缓存中
+- **opcache_jit_blacklist** - 将某个函数加入黑名单，使其不参与 JIT 编译
+- **opcache_reset** - 重置字节码缓存的内容
+- **openal_buffer_create** - Generate OpenAL buffer
+- **openal_buffer_data** - Load a buffer with data
+- **openal_buffer_destroy** - Destroys an OpenAL buffer
+- **openal_buffer_get** - Retrieve an OpenAL buffer property
+- **openal_buffer_loadwav** - Load a .wav file into a buffer
+- **openal_context_create** - Create an audio processing context
+- **openal_context_current** - Make the specified context current
+- **openal_context_destroy** - Destroys a context
+- **openal_context_process** - Process the specified context
+- **openal_context_suspend** - Suspend the specified context
+- **openal_device_close** - Close an OpenAL device
+- **openal_device_open** - Initialize the OpenAL audio layer
+- **openal_listener_get** - Retrieve a listener property
+- **openal_listener_set** - Set a listener property
+- **openal_source_create** - Generate a source resource
+- **openal_source_destroy** - Destroy a source resource
+- **openal_source_get** - Retrieve an OpenAL source property
+- **openal_source_pause** - Pause the source
+- **openal_source_play** - Start playing the source
+- **openal_source_rewind** - Rewind the source
+- **openal_source_set** - Set source property
+- **openal_source_stop** - Stop playing the source
+- **openal_stream** - Begin streaming on a source
+- **opendir** - 打开目录句柄
+- **openlog** - Open connection to system logger
+- **openssl_cipher_iv_length** - 获取密码iv长度
+- **openssl_cipher_key_length** - Gets the cipher key length
+- **openssl_cms_decrypt** - Decrypt a CMS message
+- **openssl_cms_encrypt** - Encrypt a CMS message
+- **openssl_cms_read** - Export the CMS file to an array of PEM certificates
+- **openssl_cms_sign** - Sign a file
+- **openssl_cms_verify** - Verify a CMS signature
+- **openssl_csr_export** - 将 CSR 作为字符串导出
+- **openssl_csr_export_to_file** - 将 CSR 导出到文件
+- **openssl_csr_get_public_key** - 返回 CSR 的公钥
+- **openssl_csr_get_subject** - 返回 CSR 的主题
+- **openssl_csr_new** - 生成一个 CSR
+- **openssl_csr_sign** - 用另一个证书签署 CSR（或者本身）并且生成一个证书
+- **openssl_decrypt** - 解密数据
+- **openssl_dh_compute_key** - 计算远程 DH 公钥和本地 DH 密钥的共享密钥
+- **openssl_digest** - 计算摘要
+- **openssl_encrypt** - 加密数据
+- **openssl_error_string** - 返回 openSSL 错误消息
+- **openssl_free_key** - 释放密钥资源
+- **openssl_get_cert_locations** - 检索可用的证书位置
+- **openssl_get_cipher_methods** - 获取可用的加密算法
+- **openssl_get_curve_names** - 获得ECC的可用曲线名称列表
+- **openssl_get_md_methods** - 获取可用的摘要算法
+- **openssl_get_privatekey** - 别名 openssl_pkey_get_private
+- **openssl_get_publickey** - 别名 openssl_pkey_get_public
+- **openssl_open** - 打开密封的数据
+- **openssl_password_hash** - Create a password hash using OpenSSL's Argon2 implementation
+- **openssl_password_verify** - Verify a password against a hash using OpenSSL's Argon2 implementation
+- **openssl_pbkdf2** - 生成 PKCS5 v2 PBKDF2 字符串
+- **openssl_pkcs7_decrypt** - 解密一个 S/MIME 加密的消息
+- **openssl_pkcs7_encrypt** - 加密一个 S/MIME 消息
+- **openssl_pkcs7_read** - 将 PKCS7 文件导出为 PEM 格式证书的数组
+- **openssl_pkcs7_sign** - 对一个 S/MIME 消息进行签名
+- **openssl_pkcs7_verify** - 校验一个已签名的 S/MIME 消息的签名
+- **openssl_pkcs12_export** - 将 PKCS#12 兼容证书存储文件导出到变量
+- **openssl_pkcs12_export_to_file** - 输出一个 PKCS#12 兼容的证书存储文件
+- **openssl_pkcs12_read** - 将 PKCS#12 证书存储区解析到数组中
+- **openssl_pkey_derive** - Computes shared secret for public value of remote and local DH or ECDH key
+- **openssl_pkey_export** - 将一个密钥的可输出表示转换为字符串
+- **openssl_pkey_export_to_file** - 将密钥导出到文件中
+- **openssl_pkey_free** - 释放一个私钥
+- **openssl_pkey_get_details** - 返回包含密钥详情的数组
+- **openssl_pkey_get_private** - 获取私钥
+- **openssl_pkey_get_public** - 从证书中解析公钥，以供使用
+- **openssl_pkey_new** - 生成新的私钥
+- **openssl_private_decrypt** - 使用私钥解密数据
+- **openssl_private_encrypt** - 使用私钥加密数据
+- **openssl_public_decrypt** - 使用公钥解密数据
+- **openssl_public_encrypt** - 使用公钥加密数据
+- **openssl_random_pseudo_bytes** - 生成一个伪随机字节串
+- **openssl_seal** - 密封 (加密) 数据
+- **openssl_sign** - 生成签名
+- **openssl_spki_export** - 通过签名公钥和 challenge 导出一个可用的 PEM 格式的公钥
+- **openssl_spki_export_challenge** - 导出与签名公钥和 challenge 相关的 challenge
+- **openssl_spki_new** - 生成新的签名公钥和 challenge
+- **openssl_spki_verify** - 验证签名公钥和 challenge
+- **openssl_verify** - 验证签名
+- **openssl_x509_checkpurpose** - 验证是否可以为特定目的使用证书
+- **openssl_x509_check_private_key** - 检查私钥是否对应于证书
+- **openssl_x509_export** - 以字符串格式导出证书
+- **openssl_x509_export_to_file** - 导出证书至文件
+- **openssl_x509_fingerprint** - 计算一个给定的 x.509 证书的指纹或摘要
+- **openssl_x509_free** - 释放证书资源
+- **openssl_x509_parse** - 解析 X509 证书并作为一个数组返回信息
+- **openssl_x509_read** - 解析 x.509 证书并返回对象
+- **openssl_x509_verify** - Verifies digital signature of x509 certificate against a public key
+- **ord** - 转换字符串第一个字节为 0-255 之间的值
+- **OuterIterator::getInnerIterator** - Returns the inner iterator for the current entry
+- **output_add_rewrite_var** - 添加 URL 重写器的值
+- **output_reset_rewrite_vars** - 重设 URL 重写器的值
+- **Override::__construct** - 构造新的 Override 属性实例
+
+## P
+
+- **pack** - 将数据打包成二进制字符串
+- **parallel\bootstrap** - Bootstrapping
+- **parallel\Channel::close** - Closing
+- **parallel\Channel::make** - Access
+- **parallel\Channel::open** - Access
+- **parallel\Channel::recv** - Sharing
+- **parallel\Channel::send** - Sharing
+- **parallel\Channel::__construct** - Channel Construction
+- **parallel\Events::addChannel** - Targets
+- **parallel\Events::addFuture** - Targets
+- **parallel\Events::poll** - Polling
+- **parallel\Events::remove** - Targets
+- **parallel\Events::setBlocking** - Behaviour
+- **parallel\Events::setInput** - Input
+- **parallel\Events::setTimeout** - Behaviour
+- **parallel\Events\Input::add** - Inputs
+- **parallel\Events\Input::clear** - Inputs
+- **parallel\Events\Input::remove** - Inputs
+- **parallel\Future::cancel** - Cancellation
+- **parallel\Future::cancelled** - State Detection
+- **parallel\Future::done** - State Detection
+- **parallel\Future::value** - Resolution
+- **parallel\run** - Execution
+- **parallel\Runtime::close** - Runtime Graceful Join
+- **parallel\Runtime::kill** - Runtime Join
+- **parallel\Runtime::run** - Execution
+- **parallel\Runtime::__construct** - Runtime Construction
+- **parallel\Sync::get** - Access
+- **parallel\Sync::notify** - Synchronization
+- **parallel\Sync::set** - Access
+- **parallel\Sync::wait** - Synchronization
+- **parallel\Sync::__construct** - Construction
+- **parallel\Sync::__invoke** - Synchronization
+- **ParentIterator::accept** - Determines acceptability
+- **ParentIterator::getChildren** - Return the inner iterator's children contained in a ParentIterator
+- **ParentIterator::hasChildren** - Check whether the inner iterator's current element has children
+- **ParentIterator::next** - Move the iterator forward
+- **ParentIterator::rewind** - Rewind the iterator
+- **ParentIterator::__construct** - Constructs a ParentIterator
+- **Parle\Lexer::advance** - Process next lexer rule
+- **Parle\Lexer::build** - Finalize the lexer rule set
+- **Parle\Lexer::callout** - Define token callback
+- **Parle\Lexer::consume** - Pass the data for processing
+- **Parle\Lexer::dump** - Dump the state machine
+- **Parle\Lexer::getToken** - Retrieve the current token
+- **Parle\Lexer::insertMacro** - Insert regex macro
+- **Parle\Lexer::push** - Add a lexer rule
+- **Parle\Lexer::reset** - Reset lexer
+- **Parle\Parser::advance** - Process next parser rule
+- **Parle\Parser::build** - Finalize the grammar rules
+- **Parle\Parser::consume** - Consume the data for processing
+- **Parle\Parser::dump** - Dump the grammar
+- **Parle\Parser::errorInfo** - Retrieve the error information
+- **Parle\Parser::left** - Declare a token with left-associativity
+- **Parle\Parser::nonassoc** - Declare a token with no associativity
+- **Parle\Parser::precedence** - Declare a precedence rule
+- **Parle\Parser::push** - Add a grammar rule
+- **Parle\Parser::reset** - Reset parser state
+- **Parle\Parser::right** - Declare a token with right-associativity
+- **Parle\Parser::sigil** - Retrieve a matching part of a rule
+- **Parle\Parser::sigilCount** - Number of elements in matched rule
+- **Parle\Parser::sigilName** - Retrieve a rule or token name
+- **Parle\Parser::token** - Declare a token
+- **Parle\Parser::tokenId** - Get token id
+- **Parle\Parser::trace** - Trace the parser operation
+- **Parle\Parser::validate** - Validate input
+- **Parle\RLexer::advance** - Process next lexer rule
+- **Parle\RLexer::build** - Finalize the lexer rule set
+- **Parle\RLexer::callout** - Define token callback
+- **Parle\RLexer::consume** - Pass the data for processing
+- **Parle\RLexer::dump** - Dump the state machine
+- **Parle\RLexer::getToken** - Retrieve the current token
+- **Parle\RLexer::insertMacro** - Insert regex macro
+- **Parle\RLexer::push** - Add a lexer rule
+- **Parle\RLexer::pushState** - Push a new start state
+- **Parle\RLexer::reset** - Reset lexer
+- **Parle\RParser::advance** - Process next parser rule
+- **Parle\RParser::build** - Finalize the grammar rules
+- **Parle\RParser::consume** - Consume the data for processing
+- **Parle\RParser::dump** - Dump the grammar
+- **Parle\RParser::errorInfo** - Retrieve the error information
+- **Parle\RParser::left** - Declare a token with left-associativity
+- **Parle\RParser::nonassoc** - Declare a token with no associativity
+- **Parle\RParser::precedence** - Declare a precedence rule
+- **Parle\RParser::push** - Add a grammar rule
+- **Parle\RParser::reset** - Reset parser state
+- **Parle\RParser::right** - Declare a token with right-associativity
+- **Parle\RParser::sigil** - Retrieve a matching part of a rule
+- **Parle\RParser::sigilCount** - Number of elements in matched rule
+- **Parle\RParser::sigilName** - Retrieve a rule or token name
+- **Parle\RParser::token** - Declare a token
+- **Parle\RParser::tokenId** - Get token id
+- **Parle\RParser::trace** - Trace the parser operation
+- **Parle\RParser::validate** - Validate input
+- **Parle\Stack::pop** - Pop an item from the stack
+- **Parle\Stack::push** - Push an item into the stack
+- **parse_ini_file** - 解析一个配置文件
+- **parse_ini_string** - 解析配置字符串
+- **parse_str** - 解析 URL 查询字符串
+- **parse_url** - 解析 URL，返回其组成部分
+- **passthru** - 执行外部程序并且显示原始输出
+- **password_algos** - Get available password hashing algorithm IDs
+- **password_get_info** - 返回指定散列（hash）的相关信息
+- **password_hash** - 创建密码的散列（hash）
+- **password_needs_rehash** - 检测散列值是否匹配指定的选项
+- **password_verify** - 验证密码是否和散列值匹配
+- **pathinfo** - 返回文件路径的信息
+- **pclose** - 关闭进程文件指针
+- **pcntl_alarm** - 为进程设置 alarm 闹钟信号
+- **pcntl_async_signals** - Enable/disable asynchronous signal handling or return the old setting
+- **pcntl_errno** - 别名 pcntl_get_last_error
+- **pcntl_exec** - 在当前进程空间执行指定程序
+- **pcntl_fork** - 在当前进程当前位置产生分叉（fork）
+- **pcntl_forkx** - Create a child process using forkx(2)
+- **pcntl_getcpu** - Get the CPU number on which the calling process last executed
+- **pcntl_getcpuaffinity** - Get the cpu affinity of a process
+- **pcntl_getpriority** - 获取任意进程的优先级
+- **pcntl_getqos_class** - Get the QoS class of the current thread
+- **pcntl_get_last_error** - Retrieve the error number set by the last pcntl function which failed
+- **pcntl_rfork** - Manipulates process resources
+- **pcntl_setcpuaffinity** - Set the cpu affinity of a process
+- **pcntl_setns** - Reassociate the calling process with a namespace of another process
+- **pcntl_setpriority** - 修改任意进程的优先级
+- **pcntl_setqos_class** - Set the QoS class of the current thread
+- **pcntl_signal** - 安装信号处理程序
+- **pcntl_signal_dispatch** - 调用等待信号的处理程序
+- **pcntl_signal_get_handler** - Get the current handler for specified signal
+- **pcntl_sigprocmask** - 设置或检索阻塞信号
+- **pcntl_sigtimedwait** - 带超时机制的信号等待
+- **pcntl_sigwaitinfo** - 等待信号
+- **pcntl_strerror** - Retrieve the system error message associated with the given errno
+- **pcntl_unshare** - Dissociates parts of the process execution context
+- **pcntl_wait** - 等待或返回 fork 的子进程状态
+- **pcntl_waitid** - 等待子进程改变状态
+- **pcntl_waitpid** - 等待或返回 fork 的子进程状态
+- **pcntl_wexitstatus** - 返回一个中断的子进程的返回代码
+- **pcntl_wifcontinued** - Checks whether the child process has continued from a job control stop
+- **pcntl_wifexited** - 检查状态代码是否代表一个正常的退出
+- **pcntl_wifsignaled** - 检查子进程状态码是否代表由于某个信号而中断
+- **pcntl_wifstopped** - 检查子进程当前是否已经停止
+- **pcntl_wstopsig** - 返回导致子进程停止的信号
+- **pcntl_wtermsig** - 返回导致子进程中断的信号
+- **PDO::beginTransaction** - 启动一个事务
+- **PDO::commit** - 提交一个事务
+- **PDO::connect** - 连接到数据库，如果驱动支持则返回 PDO 子类实例
+- **PDO::cubrid_schema** - Get the requested schema information
+- **PDO::errorCode** - 获取跟数据库句柄上一次操作相关的 SQLSTATE
+- **PDO::errorInfo** - 获取与数据库句柄上最后一次操作相关的扩展错误信息
+- **PDO::exec** - 执行 SQL 语句，并返回受影响的行数
+- **PDO::getAttribute** - 取回一个数据库连接的属性
+- **PDO::getAvailableDrivers** - 返回一个可用驱动的数组
+- **PDO::inTransaction** - 检查是否在事务内
+- **PDO::lastInsertId** - 返回最后插入行的ID或序列值
+- **PDO::pgsqlCopyFromArray** - 别名 Pdo\Pgsql::copyFromArray
+- **PDO::pgsqlCopyFromFile** - 别名 Pdo\Pgsql::copyFromFile
+- **PDO::pgsqlCopyToArray** - 别名 Pdo\Pgsql::copyToArray
+- **PDO::pgsqlCopyToFile** - 别名 Pdo\Pgsql::copyToFile
+- **PDO::pgsqlGetNotify** - 别名 Pdo\Pgsql::getNotify
+- **PDO::pgsqlGetPid** - 别名 Pdo\Pgsql::getPid
+- **PDO::pgsqlLOBCreate** - 别名 Pdo\Pgsql::lobCreate
+- **PDO::pgsqlLOBOpen** - 别名 Pdo\Pgsql::lobOpen
+- **PDO::pgsqlLOBUnlink** - 别名 Pdo\Pgsql::lobUnlink
+- **PDO::prepare** - 预处理要执行的语句，并返回语句对象
+- **PDO::query** - 预处理并执行没有占位符的 SQL 语句
+- **PDO::quote** - 为 SQL 查询里的字符串添加引号
+- **PDO::rollBack** - 回滚事务
+- **PDO::setAttribute** - 设置属性
+- **PDO::sqliteCreateAggregate** - 别名 Pdo\Sqlite::createAggregate
+- **PDO::sqliteCreateCollation** - 别名 Pdo\Sqlite::createCollation
+- **PDO::sqliteCreateFunction** - 别名 Pdo\Sqlite::createFunction
+- **PDO::__construct** - 创建一个表示数据库连接的 PDO 实例
+- **PDOStatement::bindColumn** - 绑定一列到一个 PHP 变量
+- **PDOStatement::bindParam** - 绑定一个参数到指定的变量名
+- **PDOStatement::bindValue** - 把一个值绑定到一个参数
+- **PDOStatement::closeCursor** - 关闭游标，使语句能再次被执行
+- **PDOStatement::columnCount** - 返回结果集中的列数
+- **PDOStatement::debugDumpParams** - 打印一条 SQL 预处理命令
+- **PDOStatement::errorCode** - 获取跟上一次语句句柄操作相关的 SQLSTATE
+- **PDOStatement::errorInfo** - 获取跟上一次语句句柄操作相关的扩展错误信息
+- **PDOStatement::execute** - 执行预处理语句
+- **PDOStatement::fetch** - 从结果集中获取下一行
+- **PDOStatement::fetchAll** - 从结果集中获取剩余的行
+- **PDOStatement::fetchColumn** - 从结果集中的下一行返回单独的一列
+- **PDOStatement::fetchObject** - 获取下一行并作为一个对象返回
+- **PDOStatement::getAttribute** - 检索语句属性
+- **PDOStatement::getColumnMeta** - 返回结果集中一列的元数据
+- **PDOStatement::getIterator** - 获取结果集迭代器
+- **PDOStatement::nextRowset** - 在一个多行集合语句句柄中推进到下一个行集合
+- **PDOStatement::rowCount** - 返回受上一个 SQL 语句影响的行数
+- **PDOStatement::setAttribute** - 设置一个语句属性
+- **PDOStatement::setFetchMode** - 为语句设置默认的获取模式
+- **Pdo\Firebird::getApiVersion** - Get the API version
+- **Pdo\Mysql::getWarningCount** - Returns the number of warnings from the last executed query
+- **Pdo\Pgsql::copyFromArray** - Copy data from a PHP array into a table
+- **Pdo\Pgsql::copyFromFile** - Copy data from file into table
+- **Pdo\Pgsql::copyToArray** - Copy data from database table into PHP array
+- **Pdo\Pgsql::copyToFile** - Copy data from table into file
+- **Pdo\Pgsql::escapeIdentifier** - Escapes a string for use as an SQL identifier
+- **Pdo\Pgsql::getNotify** - Get asynchronous notification
+- **Pdo\Pgsql::getPid** - Get the PID of the backend process handling this connection
+- **Pdo\Pgsql::lobCreate** - Creates a new large object
+- **Pdo\Pgsql::lobOpen** - Opens an existing large object stream
+- **Pdo\Pgsql::lobUnlink** - Deletes the large object
+- **Pdo\Pgsql::setNoticeCallback** - Set a callback to handle notice and warning messages generated by the backend
+- **Pdo\Sqlite::createAggregate** - Registers an aggregating user-defined function for use in SQL statements
+- **Pdo\Sqlite::createCollation** - Registers a user-defined function for use as a collating function in SQL statements
+- **Pdo\Sqlite::createFunction** - Registers a user-defined function for use in SQL statements
+- **Pdo\Sqlite::loadExtension** - Description
+- **Pdo\Sqlite::openBlob** - Description
+- **PDO_CUBRID DSN** - Connecting to CUBRID databases
+- **PDO_DBLIB DSN** - Connecting to Microsoft SQL Server and Sybase databases
+- **PDO_FIREBIRD DSN** - Connecting to Firebird databases
+- **PDO_IBM DSN** - Connecting to IBM databases
+- **PDO_INFORMIX DSN** - Connecting to Informix databases
+- **PDO_MYSQL DSN** - Connecting to MySQL databases
+- **PDO_OCI DSN** - Connecting to Oracle databases
+- **PDO_ODBC DSN** - Connecting to ODBC or DB2 databases
+- **PDO_PGSQL DSN** - Connecting to PostgreSQL databases
+- **PDO_SQLITE DSN** - Connecting to SQLite databases
+- **PDO_SQLSRV DSN** - Connecting to MS SQL Server and SQL Azure databases
+- **pfsockopen** - 打开持久的 Internet 或 Unix 套接字连接
+- **pg_affected_rows** - 返回受影响的记录数（元组）
+- **pg_cancel_query** - 取消异步查询
+- **pg_change_password** - Change a PostgreSQL user's password
+- **pg_client_encoding** - 获取客户端编码
+- **pg_close** - 关闭 PostgreSQL 连接
+- **pg_connect** - 打开 PostgreSQL 连接
+- **pg_connection_busy** - 获取连接是否繁忙
+- **pg_connection_reset** - 重置连接（再次连接）
+- **pg_connection_status** - 获取连接状态
+- **pg_connect_poll** - 对正在进行尝试进行异步的 PostgreSQL 连接轮询其状态。
+- **pg_consume_input** - Reads input on the connection
+- **pg_convert** - 将关联的数组值转换为适合 SQL 语句的格式
+- **pg_copy_from** - 将数组中的记录插入到表
+- **pg_copy_to** - 将表复制到数组
+- **pg_dbname** - 获取数据库名称
+- **pg_delete** - 删除记录
+- **pg_end_copy** - 与 PostgreSQL 后端同步
+- **pg_escape_bytea** - 转义字符串以插入到 bytea 字段
+- **pg_escape_identifier** - Escape an identifier for insertion into a text field
+- **pg_escape_literal** - Escape a literal for insertion into a text field
+- **pg_escape_string** - 转义字符串以供查询
+- **pg_execute** - Sends a request to execute a prepared statement with given parameters, and waits for the result
+- **pg_fetch_all** - 从结果中获取所有行作为数组
+- **pg_fetch_all_columns** - Fetches all rows in a particular result column as an array
+- **pg_fetch_array** - 获取一行作为数组
+- **pg_fetch_assoc** - 获取一行作为关联数组
+- **pg_fetch_object** - 获取一行作为对象
+- **pg_fetch_result** - 从结果实例返回值
+- **pg_fetch_row** - 提取一行作为枚举数组
+- **pg_field_is_null** - 测试字段是否为 SQL NULL
+- **pg_field_name** - 返回字段名
+- **pg_field_num** - 返回名为 field 的字段编号
+- **pg_field_prtlen** - 返回打印的长度
+- **pg_field_size** - 返回指定字段的内部存储大小
+- **pg_field_table** - Returns the name or oid of the tables field
+- **pg_field_type** - 返回相应字段编号的类型名称
+- **pg_field_type_oid** - Returns the type ID (OID) for the corresponding field number
+- **pg_flush** - 刷新链接中已处理的数据查询
+- **pg_free_result** - 释放查询结果占用的内存
+- **pg_get_notify** - 获取 SQL NOTIFY 消息
+- **pg_get_pid** - 获取后端的进程 ID
+- **pg_get_result** - 取得异步查询结果
+- **pg_host** - 返回和某连接关联的主机名
+- **pg_insert** - 将数组插入到表中
+- **pg_jit** - Returns the JIT information of the server
+- **pg_last_error** - 得到某连接的最后一条错误信息
+- **pg_last_notice** - 返回 PostgreSQL 服务器最新一条公告信息
+- **pg_last_oid** - 返回上一条记录的 oid
+- **pg_lo_close** - 关闭大对象
+- **pg_lo_create** - 新建大对象
+- **pg_lo_export** - 将大型对象导出到文件
+- **pg_lo_import** - 将文件导入为大型对象
+- **pg_lo_open** - 打开大对象
+- **pg_lo_read** - 读取大对象
+- **pg_lo_read_all** - 读取整个大对象并直接发送到浏览器
+- **pg_lo_seek** - 在大对象中寻找位置
+- **pg_lo_tell** - 返回当前大型对象的指针位置
+- **pg_lo_truncate** - Truncates a large object
+- **pg_lo_unlink** - 删除一个大型对象
+- **pg_lo_write** - 向大对象写入数据
+- **pg_meta_data** - 获得表的元数据
+- **pg_num_fields** - 返回结果中字段的数量
+- **pg_num_rows** - 返回结果中行的数量
+- **pg_options** - 获得和 connection 相关的选项
+- **pg_parameter_status** - Looks up a current parameter setting of the server
+- **pg_pconnect** - 打开一个持久的 PostgreSQL 连接
+- **pg_ping** - Ping 数据库连接
+- **pg_port** - 返回 connection 相关的端口号
+- **pg_prepare** - Submits a request to the server to create a prepared statement with the
+   given parameters, and waits for completion
+- **pg_put_copy_data** - Send data to the server during a COPY operation
+- **pg_put_copy_end** - Signal the completion of a COPY operation to the server
+- **pg_put_line** - 向 PostgreSQL 后端发送以 NULL 字符结尾的字符串
+- **pg_query** - 执行查询
+- **pg_query_params** - Submits a command to the server and waits for the result, with the ability to pass parameters separately from the SQL command text
+- **pg_result_error** - 获得跟 result 相关的错误信息
+- **pg_result_error_field** - Returns an individual field of an error report
+- **pg_result_memory_size** - Returns the amount of memory allocated for a query result
+- **pg_result_seek** - 在 result 实例中设定内部行偏移量
+- **pg_result_status** - 获得查询结果的状态
+- **pg_select** - 选择记录
+- **pg_send_execute** - Sends a request to execute a prepared statement with given parameters, without waiting for the result(s)
+- **pg_send_prepare** - Sends a request to create a prepared statement with the given parameters, without waiting for completion
+- **pg_send_query** - 发送异步查询
+- **pg_send_query_params** - Submits a command and separate parameters to the server without waiting for the result(s)
+- **pg_set_chunked_rows_size** - Set the query results to be retrieved in chunk mode
+- **pg_set_client_encoding** - 设定客户端编码
+- **pg_set_error_context_visibility** - Determines the visibility of the context's error messages returned by pg_last_error
+   and pg_result_error
+- **pg_set_error_verbosity** - Determines the verbosity of messages returned by pg_last_error 
+   and pg_result_error
+- **pg_socket** - Get a read only handle to the socket underlying a PostgreSQL connection
+- **pg_socket_poll** - Poll a PostgreSQL connection socket for read/write readiness
+- **pg_trace** - 启用 PostgreSQL 连接的追踪
+- **pg_transaction_status** - Returns the current in-transaction status of the server
+- **pg_tty** - 返回跟连接相关的 tty 名
+- **pg_unescape_bytea** - 反转义 bytea 类型的二进制数据
+- **pg_untrace** - 禁用 PostgreSQL 连接的追踪
+- **pg_update** - 更新表
+- **pg_version** - Returns an array with client, protocol and server version (when available)
+- **Phar::addEmptyDir** - 添加一个空目录到 phar 档案
+- **Phar::addFile** - 将一个文件从文件系统添加到 phar 档案中
+- **Phar::addFromString** - 以字符串的形式添加一个文件到 phar 档案
+- **Phar::apiVersion** - Returns the api version
+- **Phar::buildFromDirectory** - Construct a phar archive from the files within a directory
+- **Phar::buildFromIterator** - Construct a phar archive from an iterator
+- **Phar::canCompress** - Returns whether phar extension supports compression using either zlib or bzip2
+- **Phar::canWrite** - Returns whether phar extension supports writing and creating phars
+- **Phar::compress** - Compresses the entire Phar archive using Gzip or Bzip2 compression
+- **Phar::compressFiles** - Compresses all files in the current Phar archive
+- **Phar::convertToData** - Convert a phar archive to a non-executable tar or zip file
+- **Phar::convertToExecutable** - Convert a phar archive to another executable phar archive file format
+- **Phar::copy** - Copy a file internal to the phar archive to another new file within the phar
+- **Phar::count** - Returns the number of entries (files) in the Phar archive
+- **Phar::createDefaultStub** - Create a phar-file format specific stub
+- **Phar::decompress** - Decompresses the entire Phar archive
+- **Phar::decompressFiles** - Decompresses all files in the current Phar archive
+- **Phar::delete** - 删除 phar 档案中的一个文件
+- **Phar::delMetadata** - Deletes the global metadata of the phar
+- **Phar::extractTo** - Extract the contents of a phar archive to a directory
+- **Phar::getAlias** - Get the alias for Phar
+- **Phar::getMetadata** - Returns phar archive meta-data
+- **Phar::getModified** - Return whether phar was modified
+- **Phar::getPath** - Get the real path to the Phar archive on disk
+- **Phar::getSignature** - Return MD5/SHA1/SHA256/SHA512/OpenSSL signature of a Phar archive
+- **Phar::getStub** - Return the PHP loader or bootstrap stub of a Phar archive
+- **Phar::getSupportedCompression** - Return array of supported compression algorithms
+- **Phar::getSupportedSignatures** - Return array of supported signature types
+- **Phar::getVersion** - Return version info of Phar archive
+- **Phar::hasMetadata** - Returns whether phar has global meta-data
+- **Phar::interceptFileFuncs** - Instructs phar to intercept fopen, file_get_contents, opendir, and all of the stat-related functions
+- **Phar::isBuffering** - Used to determine whether Phar write operations are being buffered, or are flushing directly to disk
+- **Phar::isCompressed** - Returns Phar::GZ or PHAR::BZ2 if the entire phar archive is compressed (.tar.gz/tar.bz and so on)
+- **Phar::isFileFormat** - Returns true if the phar archive is based on the tar/phar/zip file format depending on the parameter
+- **Phar::isValidPharFilename** - Returns whether the given filename is a valid phar filename
+- **Phar::isWritable** - Returns true if the phar archive can be modified
+- **Phar::loadPhar** - Loads any phar archive with an alias
+- **Phar::mapPhar** - Reads the currently executed file (a phar) and registers its manifest
+- **Phar::mount** - Mount an external path or file to a virtual location within the phar archive
+- **Phar::mungServer** - Defines a list of up to 4 $_SERVER variables that should be modified for execution
+- **Phar::offsetExists** - Determines whether a file exists in the phar
+- **Phar::offsetGet** - Gets a PharFileInfo object for a specific file
+- **Phar::offsetSet** - Set the contents of an internal file to those of an external file
+- **Phar::offsetUnset** - Remove a file from a phar
+- **Phar::running** - Returns the full path on disk or full phar URL to the currently executing Phar archive
+- **Phar::setAlias** - Set the alias for the Phar archive
+- **Phar::setDefaultStub** - Used to set the PHP loader or bootstrap stub of a Phar archive to the default loader
+- **Phar::setMetadata** - Sets phar archive meta-data
+- **Phar::setSignatureAlgorithm** - Set the signature algorithm for a phar and apply it
+- **Phar::setStub** - Used to set the PHP loader or bootstrap stub of a Phar archive
+- **Phar::startBuffering** - Start buffering Phar write operations, do not modify the Phar object on disk
+- **Phar::stopBuffering** - Stop buffering write requests to the Phar archive, and save changes to disk
+- **Phar::unlinkArchive** - Completely remove a phar archive from disk and from memory
+- **Phar::webPhar** - Routes a request from a web browser to an internal file within the phar archive
+- **Phar::__construct** - Construct a Phar archive object
+- **Phar::__destruct** - Destructs a Phar archive object
+- **PharData::addEmptyDir** - Add an empty directory to the tar/zip archive
+- **PharData::addFile** - Add a file from the filesystem to the tar/zip archive
+- **PharData::addFromString** - Add a file from a string to the tar/zip archive
+- **PharData::buildFromDirectory** - Construct a tar/zip archive from the files within a directory
+- **PharData::buildFromIterator** - Construct a tar or zip archive from an iterator
+- **PharData::compress** - Compresses the entire tar/zip archive using Gzip or Bzip2 compression
+- **PharData::compressFiles** - Compresses all files in the current tar/zip archive
+- **PharData::convertToData** - Convert a phar archive to a non-executable tar or zip file
+- **PharData::convertToExecutable** - Convert a non-executable tar/zip archive to an executable phar archive
+- **PharData::copy** - Copy a file internal to the tar/zip archive to another new file within the same archive
+- **PharData::decompress** - Decompresses the entire Phar archive
+- **PharData::decompressFiles** - Decompresses all files in the current zip archive
+- **PharData::delete** - Delete a file within a tar/zip archive
+- **PharData::delMetadata** - Deletes the global metadata of a zip archive
+- **PharData::extractTo** - Extract the contents of a tar/zip archive to a directory
+- **PharData::isWritable** - Returns true if the tar/zip archive can be modified
+- **PharData::offsetSet** - Set the contents of a file within the tar/zip to those of an external file or string
+- **PharData::offsetUnset** - Remove a file from a tar/zip archive
+- **PharData::setAlias** - Dummy function (Phar::setAlias is not valid for PharData)
+- **PharData::setDefaultStub** - Dummy function (Phar::setDefaultStub is not valid for PharData)
+- **PharData::setMetadata** - Sets phar archive meta-data
+- **PharData::setSignatureAlgorithm** - Set the signature algorithm for a phar and apply it
+- **PharData::setStub** - Dummy function (Phar::setStub is not valid for PharData)
+- **PharData::__construct** - Construct a non-executable tar or zip archive object
+- **PharData::__destruct** - Destructs a non-executable tar or zip archive object
+- **PharFileInfo::chmod** - Sets file-specific permission bits
+- **PharFileInfo::compress** - Compresses the current Phar entry with either zlib or bzip2 compression
+- **PharFileInfo::decompress** - Decompresses the current Phar entry within the phar
+- **PharFileInfo::delMetadata** - Deletes the metadata of the entry
+- **PharFileInfo::getCompressedSize** - Returns the actual size of the file (with compression) inside the Phar archive
+- **PharFileInfo::getContent** - Get the complete file contents of the entry
+- **PharFileInfo::getCRC32** - Returns CRC32 code or throws an exception if CRC has not been verified
+- **PharFileInfo::getMetadata** - Returns file-specific meta-data saved with a file
+- **PharFileInfo::getPharFlags** - Returns the Phar file entry flags
+- **PharFileInfo::hasMetadata** - Returns the metadata of the entry
+- **PharFileInfo::isCompressed** - Returns whether the entry is compressed
+- **PharFileInfo::isCRCChecked** - Returns whether file entry has had its CRC verified
+- **PharFileInfo::setMetadata** - Sets file-specific meta-data saved with a file
+- **PharFileInfo::__construct** - Construct a Phar entry object
+- **PharFileInfo::__destruct** - Destructs a Phar entry object
+- **phpcredits** - 打印 PHP 贡献者名单
+- **phpdbg_break_file** - Inserts a breakpoint at a line in a file
+- **phpdbg_break_function** - Inserts a breakpoint at entry to a function
+- **phpdbg_break_method** - Inserts a breakpoint at entry to a method
+- **phpdbg_break_next** - Inserts a breakpoint at the next opcode
+- **phpdbg_clear** - Clears all breakpoints
+- **phpdbg_color** - Sets the color of certain elements
+- **phpdbg_end_oplog** - Ends an oplog
+- **phpdbg_exec** - Attempts to set the execution context
+- **phpdbg_get_executable** - Gets executable
+- **phpdbg_prompt** - Sets the command prompt
+- **phpdbg_start_oplog** - Starts an oplog
+- **phpinfo** - 输出关于 PHP 配置的信息
+- **PhpToken::getTokenName** - Returns the name of the token.
+- **PhpToken::is** - Tells whether the token is of given kind.
+- **PhpToken::isIgnorable** - Tells whether the token would be ignored by the PHP parser.
+- **PhpToken::tokenize** - Splits given source into PHP tokens, represented by PhpToken objects.
+- **PhpToken::__construct** - Returns a new PhpToken object
+- **PhpToken::__toString** - Returns the textual content of the token.
+- **phpversion** - 获取当前的PHP版本
+- **php_ini_loaded_file** - 取得已加载的 php.ini 文件的路径
+- **php_ini_scanned_files** - 返回从额外 ini 目录里解析的 .ini 文件列表
+- **php_sapi_name** - 返回 web 服务器和 PHP 之间的接口类型
+- **php_strip_whitespace** - 返回删除注释和空格后的PHP源码
+- **php_uname** - 返回运行 PHP 的系统的有关信息
+- **php_user_filter::filter** - Called when applying the filter
+- **php_user_filter::onClose** - Called when closing the filter
+- **php_user_filter::onCreate** - Called when creating the filter
+- **pi** - 得到圆周率值
+- **png2wbmp** - 将 PNG 图像文件转换为 WBMP 图像文件
+- **Pool::collect** - 回收已完成任务的引用
+- **Pool::resize** - 改变 Pool 对象的可容纳 Worker 对象的数量
+- **Pool::shutdown** - 停止所有的 Worker 对象
+- **Pool::submit** - 提交对象以执行
+- **Pool::submitTo** - 提交一个任务到特定的 Worker 以执行
+- **Pool::__construct** - 创建新的 Worker 对象池
+- **popen** - 打开进程文件指针
+- **pos** - current 的别名
+- **posix_access** - Determine accessibility of a file
+- **posix_ctermid** - Get path name of controlling terminal
+- **posix_eaccess** - Determine accessibility of a file
+- **posix_errno** - 别名 posix_get_last_error
+- **posix_fpathconf** - Returns the value of a configurable limit
+- **posix_getcwd** - Pathname of current directory
+- **posix_getegid** - Return the effective group ID of the current process
+- **posix_geteuid** - Return the effective user ID of the current process
+- **posix_getgid** - Return the real group ID of the current process
+- **posix_getgrgid** - Return info about a group by group id
+- **posix_getgrnam** - Return info about a group by name
+- **posix_getgroups** - Return the group set of the current process
+- **posix_getlogin** - Return login name
+- **posix_getpgid** - Get process group id for job control
+- **posix_getpgrp** - Return the current process group identifier
+- **posix_getpid** - 返回当前进程 id
+- **posix_getppid** - Return the parent process identifier
+- **posix_getpwnam** - Return info about a user by username
+- **posix_getpwuid** - Return info about a user by user id
+- **posix_getrlimit** - Return info about system resource limits
+- **posix_getsid** - Get the current sid of the process
+- **posix_getuid** - Return the real user ID of the current process
+- **posix_get_last_error** - Retrieve the error number set by the last posix function that failed
+- **posix_initgroups** - Calculate the group access list
+- **posix_isatty** - Determine if a file descriptor is an interactive terminal
+- **posix_kill** - Send a signal to a process
+- **posix_mkfifo** - Create a fifo special file (a named pipe)
+- **posix_mknod** - Create a special or ordinary file (POSIX.1)
+- **posix_pathconf** - Returns the value of a configurable limit
+- **posix_setegid** - Set the effective GID of the current process
+- **posix_seteuid** - Set the effective UID of the current process
+- **posix_setgid** - Set the GID of the current process
+- **posix_setpgid** - Set process group id for job control
+- **posix_setrlimit** - Set system resource limits
+- **posix_setsid** - Make the current process a session leader
+- **posix_setuid** - Set the UID of the current process
+- **posix_strerror** - Retrieve the system error message associated with the given errno
+- **posix_sysconf** - Returns system runtime information
+- **posix_times** - Get process times
+- **posix_ttyname** - Determine terminal device name
+- **posix_uname** - Get system name
+- **pow** - 指数表达式
+- **preg_filter** - 执行一个正则表达式搜索和替换
+- **preg_grep** - 返回匹配模式的数组条目
+- **preg_last_error** - 返回最后一个PCRE正则执行产生的错误代码
+- **preg_last_error_msg** - 返回最后一个 PCRE 正则表达式执行产生的错误信息
+- **preg_match** - 执行匹配正则表达式
+- **preg_match_all** - 执行一个全局正则表达式匹配
+- **preg_quote** - 转义正则表达式字符
+- **preg_replace** - 执行一个正则表达式的搜索和替换
+- **preg_replace_callback** - 执行一个正则表达式搜索并且使用一个回调进行替换
+- **preg_replace_callback_array** - 执行一个正则表达式搜索并使用回调进行替换
+- **preg_split** - 通过一个正则表达式分隔字符串
+- **prev** - 将数组的内部指针倒回一位
+- **print** - 输出字符串
+- **printf** - 输出格式化字符串
+- **print_r** - 打印人类可读的变量信息
+- **proc_close** - 关闭由 proc_open 打开的进程并且返回进程退出码
+- **proc_get_status** - 获取由 proc_open 函数打开的进程的信息
+- **proc_nice** - 修改当前进程的优先级
+- **proc_open** - 执行一个命令，并且打开用来输入/输出的文件指针。
+- **proc_terminate** - 杀死由 proc_open 打开的进程
+- **property_exists** - 检查对象或类是否具有该属性
+- **pspell_add_to_personal** - Add the word to a personal wordlist
+- **pspell_add_to_session** - Add the word to the wordlist in the current session
+- **pspell_check** - Check a word
+- **pspell_clear_session** - Clear the current session
+- **pspell_config_create** - Create a config used to open a dictionary
+- **pspell_config_data_dir** - Location of language data files
+- **pspell_config_dict_dir** - Location of the main word list
+- **pspell_config_ignore** - Ignore words less than N characters long
+- **pspell_config_mode** - Change the mode number of suggestions returned
+- **pspell_config_personal** - Set a file that contains personal wordlist
+- **pspell_config_repl** - Set a file that contains replacement pairs
+- **pspell_config_runtogether** - Consider run-together words as valid compounds
+- **pspell_config_save_repl** - Determine whether to save a replacement pairs list
+  along with the wordlist
+- **pspell_new** - Load a new dictionary
+- **pspell_new_config** - Load a new dictionary with settings based on a given config
+- **pspell_new_personal** - Load a new dictionary with personal wordlist
+- **pspell_save_wordlist** - Save the personal wordlist to a file
+- **pspell_store_replacement** - Store a replacement pair for a word
+- **pspell_suggest** - Suggest spellings of a word
+- **ps_add_bookmark** - Add bookmark to current page
+- **ps_add_launchlink** - Adds link which launches file
+- **ps_add_locallink** - Adds link to a page in the same document
+- **ps_add_note** - Adds note to current page
+- **ps_add_pdflink** - Adds link to a page in a second pdf document
+- **ps_add_weblink** - Adds link to a web location
+- **ps_arc** - Draws an arc counterclockwise
+- **ps_arcn** - Draws an arc clockwise
+- **ps_begin_page** - Start a new page
+- **ps_begin_pattern** - Start a new pattern
+- **ps_begin_template** - Start a new template
+- **ps_circle** - Draws a circle
+- **ps_clip** - Clips drawing to current path
+- **ps_close** - Closes a PostScript document
+- **ps_closepath** - Closes path
+- **ps_closepath_stroke** - Closes and strokes path
+- **ps_close_image** - Closes image and frees memory
+- **ps_continue_text** - Continue text in next line
+- **ps_curveto** - Draws a curve
+- **ps_delete** - Deletes all resources of a PostScript document
+- **ps_end_page** - End a page
+- **ps_end_pattern** - End a pattern
+- **ps_end_template** - End a template
+- **ps_fill** - Fills the current path
+- **ps_fill_stroke** - Fills and strokes the current path
+- **ps_findfont** - Loads a font
+- **ps_get_buffer** - Fetches the full buffer containig the generated PS data
+- **ps_get_parameter** - Gets certain parameters
+- **ps_get_value** - Gets certain values
+- **ps_hyphenate** - Hyphenates a word
+- **ps_include_file** - Reads an external file with raw PostScript code
+- **ps_lineto** - Draws a line
+- **ps_makespotcolor** - Create spot color
+- **ps_moveto** - Sets current point
+- **ps_new** - Creates a new PostScript document object
+- **ps_open_file** - Opens a file for output
+- **ps_open_image** - Reads an image for later placement
+- **ps_open_image_file** - Opens image from file
+- **ps_open_memory_image** - Takes an GD image and returns an image for placement in a PS document
+- **ps_place_image** - Places image on the page
+- **ps_rect** - Draws a rectangle
+- **ps_restore** - Restore previously save context
+- **ps_rotate** - Sets rotation factor
+- **ps_save** - Save current context
+- **ps_scale** - Sets scaling factor
+- **ps_setcolor** - Sets current color
+- **ps_setdash** - Sets appearance of a dashed line
+- **ps_setflat** - Sets flatness
+- **ps_setfont** - Sets font to use for following output
+- **ps_setgray** - Sets gray value
+- **ps_setlinecap** - Sets appearance of line ends
+- **ps_setlinejoin** - Sets how contected lines are joined
+- **ps_setlinewidth** - Sets width of a line
+- **ps_setmiterlimit** - Sets the miter limit
+- **ps_setoverprintmode** - Sets overprint mode
+- **ps_setpolydash** - Sets appearance of a dashed line
+- **ps_set_border_color** - Sets color of border for annotations
+- **ps_set_border_dash** - Sets length of dashes for border of annotations
+- **ps_set_border_style** - Sets border style of annotations
+- **ps_set_info** - Sets information fields of document
+- **ps_set_parameter** - Sets certain parameters
+- **ps_set_text_pos** - Sets position for text output
+- **ps_set_value** - Sets certain values
+- **ps_shading** - Creates a shading for later use
+- **ps_shading_pattern** - Creates a pattern based on a shading
+- **ps_shfill** - Fills an area with a shading
+- **ps_show** - Output text
+- **ps_show2** - Output a text at current position
+- **ps_show_boxed** - Output text in a box
+- **ps_show_xy** - Output text at given position
+- **ps_show_xy2** - Output text at position
+- **ps_stringwidth** - Gets width of a string
+- **ps_string_geometry** - Gets geometry of a string
+- **ps_stroke** - Draws the current path
+- **ps_symbol** - Output a glyph
+- **ps_symbol_name** - Gets name of a glyph
+- **ps_symbol_width** - Gets width of a glyph
+- **ps_translate** - Sets translation
+- **putenv** - 设置环境变量的值
+
+## Q
+
+- **QuickHashIntHash::add** - This method adds a new entry to the hash
+- **QuickHashIntHash::delete** - This method deletes an entry from the hash
+- **QuickHashIntHash::exists** - This method checks whether a key is part of the hash
+- **QuickHashIntHash::get** - This method retrieves a value from the hash by its key
+- **QuickHashIntHash::getSize** - Returns the number of elements in the hash
+- **QuickHashIntHash::loadFromFile** - This factory method creates a hash from a file
+- **QuickHashIntHash::loadFromString** - This factory method creates a hash from a string
+- **QuickHashIntHash::saveToFile** - This method stores an in-memory hash to disk
+- **QuickHashIntHash::saveToString** - This method returns a serialized version of the hash
+- **QuickHashIntHash::set** - This method updates an entry in the hash with a new value, or
+  adds a new one if the entry doesn't exist
+- **QuickHashIntHash::update** - This method updates an entry in the hash with a new value
+- **QuickHashIntHash::__construct** - Creates a new QuickHashIntHash object
+- **QuickHashIntSet::add** - This method adds a new entry to the set
+- **QuickHashIntSet::delete** - This method deletes an entry from the set
+- **QuickHashIntSet::exists** - This method checks whether a key is part of the set
+- **QuickHashIntSet::getSize** - Returns the number of elements in the set
+- **QuickHashIntSet::loadFromFile** - This factory method creates a set from a file
+- **QuickHashIntSet::loadFromString** - This factory method creates a set from a string
+- **QuickHashIntSet::saveToFile** - This method stores an in-memory set to disk
+- **QuickHashIntSet::saveToString** - This method returns a serialized version of the set
+- **QuickHashIntSet::__construct** - Creates a new QuickHashIntSet object
+- **QuickHashIntStringHash::add** - This method adds a new entry to the hash
+- **QuickHashIntStringHash::delete** - This method deletes an entry from the hash
+- **QuickHashIntStringHash::exists** - This method checks whether a key is part of the hash
+- **QuickHashIntStringHash::get** - This method retrieves a value from the hash by its key
+- **QuickHashIntStringHash::getSize** - Returns the number of elements in the hash
+- **QuickHashIntStringHash::loadFromFile** - This factory method creates a hash from a file
+- **QuickHashIntStringHash::loadFromString** - This factory method creates a hash from a string
+- **QuickHashIntStringHash::saveToFile** - This method stores an in-memory hash to disk
+- **QuickHashIntStringHash::saveToString** - This method returns a serialized version of the hash
+- **QuickHashIntStringHash::set** - This method updates an entry in the hash with a new value, or
+  adds a new one if the entry doesn't exist
+- **QuickHashIntStringHash::update** - This method updates an entry in the hash with a new value
+- **QuickHashIntStringHash::__construct** - Creates a new QuickHashIntStringHash object
+- **QuickHashStringIntHash::add** - This method adds a new entry to the hash
+- **QuickHashStringIntHash::delete** - This method deletes an entry from the hash
+- **QuickHashStringIntHash::exists** - This method checks whether a key is part of the hash
+- **QuickHashStringIntHash::get** - This method retrieves a value from the hash by its key
+- **QuickHashStringIntHash::getSize** - Returns the number of elements in the hash
+- **QuickHashStringIntHash::loadFromFile** - This factory method creates a hash from a file
+- **QuickHashStringIntHash::loadFromString** - This factory method creates a hash from a string
+- **QuickHashStringIntHash::saveToFile** - This method stores an in-memory hash to disk
+- **QuickHashStringIntHash::saveToString** - This method returns a serialized version of the hash
+- **QuickHashStringIntHash::set** - This method updates an entry in the hash with a new value, or
+  adds a new one if the entry doesn't exist
+- **QuickHashStringIntHash::update** - This method updates an entry in the hash with a new value
+- **QuickHashStringIntHash::__construct** - Creates a new QuickHashStringIntHash object
+- **quoted_printable_decode** - 将 quoted-printable 字符串转换为 8-bit 字符串
+- **quoted_printable_encode** - 将 8-bit 字符串转换成 quoted-printable 字符串
+- **quotemeta** - 转义元字符集
+
+## R
+
+- **rad2deg** - 将弧度数转换为相应的角度数
+- **radius_acct_open** - Creates a Radius handle for accounting
+- **radius_add_server** - Adds a server
+- **radius_auth_open** - Creates a Radius handle for authentication
+- **radius_close** - Frees all ressources
+- **radius_config** - Causes the library to read the given configuration file
+- **radius_create_request** - Create accounting or authentication request
+- **radius_cvt_addr** - Converts raw data to IP-Address
+- **radius_cvt_int** - Converts raw data to integer
+- **radius_cvt_string** - Converts raw data to string
+- **radius_demangle** - Demangles data
+- **radius_demangle_mppe_key** - Derives mppe-keys from mangled data
+- **radius_get_attr** - Extracts an attribute
+- **radius_get_tagged_attr_data** - Extracts the data from a tagged attribute
+- **radius_get_tagged_attr_tag** - Extracts the tag from a tagged attribute
+- **radius_get_vendor_attr** - Extracts a vendor specific attribute
+- **radius_put_addr** - Attaches an IP address attribute
+- **radius_put_attr** - Attaches a binary attribute
+- **radius_put_int** - Attaches an integer attribute
+- **radius_put_string** - Attaches a string attribute
+- **radius_put_vendor_addr** - Attaches a vendor specific IP address attribute
+- **radius_put_vendor_attr** - Attaches a vendor specific binary attribute
+- **radius_put_vendor_int** - Attaches a vendor specific integer attribute
+- **radius_put_vendor_string** - Attaches a vendor specific string attribute
+- **radius_request_authenticator** - Returns the request authenticator
+- **radius_salt_encrypt_attr** - Salt-encrypts a value
+- **radius_send_request** - Sends the request and waits for a reply
+- **radius_server_secret** - Returns the shared secret
+- **radius_strerror** - Returns an error message
+- **rand** - 产生一个随机整数
+- **Random\Engine::generate** - Generates randomness
+- **Random\Engine\Mt19937::generate** - Generate 32 bits of randomness
+- **Random\Engine\Mt19937::__construct** - Constructs a new Mt19937 engine
+- **Random\Engine\Mt19937::__debugInfo** - Returns the internal state of the engine
+- **Random\Engine\Mt19937::__serialize** - Serializes the Mt19937 object
+- **Random\Engine\Mt19937::__unserialize** - Deserializes the data parameter into a Mt19937 object
+- **Random\Engine\PcgOneseq128XslRr64::generate** - Generate 64 bits of randomness
+- **Random\Engine\PcgOneseq128XslRr64::jump** - Efficiently move the engine ahead multiple steps
+- **Random\Engine\PcgOneseq128XslRr64::__construct** - Constructs a new PCG Oneseq 128 XSL RR 64 engine
+- **Random\Engine\PcgOneseq128XslRr64::__debugInfo** - Returns the internal state of the engine
+- **Random\Engine\PcgOneseq128XslRr64::__serialize** - Serializes the PcgOneseq128XslRr64 object
+- **Random\Engine\PcgOneseq128XslRr64::__unserialize** - Deserializes the data parameter into a PcgOneseq128XslRr64 object
+- **Random\Engine\Secure::generate** - Generate cryptographically secure randomness
+- **Random\Engine\Xoshiro256StarStar::generate** - Generate 64 bits of randomness
+- **Random\Engine\Xoshiro256StarStar::jump** - Efficiently move the engine ahead by 2^128 steps
+- **Random\Engine\Xoshiro256StarStar::jumpLong** - Efficiently move the engine ahead by 2^192 steps
+- **Random\Engine\Xoshiro256StarStar::__construct** - Constructs a new xoshiro256** engine
+- **Random\Engine\Xoshiro256StarStar::__debugInfo** - Returns the internal state of the engine
+- **Random\Engine\Xoshiro256StarStar::__serialize** - Serializes the Xoshiro256StarStar object
+- **Random\Engine\Xoshiro256StarStar::__unserialize** - Deserializes the data parameter into a Xoshiro256StarStar object
+- **Random\Randomizer::getBytes** - Get random bytes
+- **Random\Randomizer::getBytesFromString** - Get random bytes from a source string
+- **Random\Randomizer::getFloat** - Get a uniformly selected float
+- **Random\Randomizer::getInt** - Get a uniformly selected integer
+- **Random\Randomizer::nextFloat** - Get a float from the right-open interval [0.0, 1.0)
+- **Random\Randomizer::nextInt** - Get a positive integer
+- **Random\Randomizer::pickArrayKeys** - Select random array keys
+- **Random\Randomizer::shuffleArray** - Get a permutation of an array
+- **Random\Randomizer::shuffleBytes** - Get a byte-wise permutation of a string
+- **Random\Randomizer::__construct** - Constructs a new Randomizer
+- **Random\Randomizer::__serialize** - Serializes the Randomizer object
+- **Random\Randomizer::__unserialize** - Deserializes the data parameter into a Randomizer object
+- **random_bytes** - Get cryptographically secure random bytes
+- **random_int** - 获取生成加密安全、均匀分布的整数
+- **range** - 根据范围创建数组，包含指定的元素
+- **RarArchive::close** - Close RAR archive and free all resources
+- **RarArchive::getComment** - Get comment text from the RAR archive
+- **RarArchive::getEntries** - Get full list of entries from the RAR archive
+- **RarArchive::getEntry** - Get entry object from the RAR archive
+- **RarArchive::isBroken** - Test whether an archive is broken (incomplete)
+- **RarArchive::isSolid** - Check whether the RAR archive is solid
+- **RarArchive::open** - Open RAR archive
+- **RarArchive::setAllowBroken** - Whether opening broken archives is allowed
+- **RarArchive::__toString** - Get text representation
+- **RarEntry::extract** - Extract entry from the archive
+- **RarEntry::getAttr** - Get attributes of the entry
+- **RarEntry::getCrc** - Get CRC of the entry
+- **RarEntry::getFileTime** - Get entry last modification time
+- **RarEntry::getHostOs** - Get entry host OS
+- **RarEntry::getMethod** - Get pack method of the entry
+- **RarEntry::getName** - Get name of the entry
+- **RarEntry::getPackedSize** - Get packed size of the entry
+- **RarEntry::getStream** - Get file handler for entry
+- **RarEntry::getUnpackedSize** - Get unpacked size of the entry
+- **RarEntry::getVersion** - Get minimum version of RAR program required to unpack the entry
+- **RarEntry::isDirectory** - Test whether an entry represents a directory
+- **RarEntry::isEncrypted** - Test whether an entry is encrypted
+- **RarEntry::__toString** - Get text representation of entry
+- **RarException::isUsingExceptions** - Check whether error handling with exceptions is in use
+- **RarException::setUsingExceptions** - Activate and deactivate error handling with exceptions
+- **rar_wrapper_cache_stats** - Cache hits and misses for the URL wrapper
+- **rawurldecode** - 对已编码的 URL 字符串进行解码
+- **rawurlencode** - 按照 RFC 3986 对 URL 进行编码
+- **readdir** - 从目录句柄中读取条目
+- **readfile** - 输出文件
+- **readgzfile** - Output a gz-file
+- **readline** - 读取一行
+- **readline_add_history** - 添加一行到历史
+- **readline_callback_handler_install** - 初始化 readline 回调接口和终端，然后打印提示并立即返回
+- **readline_callback_handler_remove** - 移除之前已安装的回调函数句柄并且恢复终端设置
+- **readline_callback_read_char** - 当一个行被接收时读取一个字符并且通知 readline 回调接口
+- **readline_clear_history** - 清除历史
+- **readline_completion_function** - 注册完成函数
+- **readline_info** - 获取/设置各种 readline 内部变量
+- **readline_list_history** - 获取历史
+- **readline_on_new_line** - 通知 readline 将光标移动到新行
+- **readline_read_history** - 读取历史
+- **readline_redisplay** - 重绘显示区
+- **readline_write_history** - 写入历史记录
+- **readlink** - 返回符号连接指向的目标
+- **read_exif_data** - 别名 exif_read_data
+- **realpath** - 返回规范化的绝对路径名
+- **realpath_cache_get** - 获取真实目录缓存的详情
+- **realpath_cache_size** - 获取真实路径缓冲区的大小
+- **recode** - 别名 recode_string
+- **recode_file** - Recode from file to file according to recode request
+- **recode_string** - Recode a string according to a recode request
+- **RecursiveArrayIterator::getChildren** - Returns an iterator for the current entry if it is an array or an object
+- **RecursiveArrayIterator::hasChildren** - Returns whether current entry is an array or an object
+- **RecursiveCachingIterator::getChildren** - Return the inner iterator's children as a RecursiveCachingIterator
+- **RecursiveCachingIterator::hasChildren** - Check whether the current element of the inner iterator has children
+- **RecursiveCachingIterator::__construct** - Construct
+- **RecursiveCallbackFilterIterator::getChildren** - Return the inner iterator's children contained in a RecursiveCallbackFilterIterator
+- **RecursiveCallbackFilterIterator::hasChildren** - Check whether the inner iterator's current element has children
+- **RecursiveCallbackFilterIterator::__construct** - Create a RecursiveCallbackFilterIterator from a RecursiveIterator
+- **RecursiveDirectoryIterator::getChildren** - Returns an iterator for the current entry if it is a directory
+- **RecursiveDirectoryIterator::getSubPath** - Get sub path
+- **RecursiveDirectoryIterator::getSubPathname** - Get sub path and name
+- **RecursiveDirectoryIterator::hasChildren** - Returns whether current entry is a directory and not '.' or '..'
+- **RecursiveDirectoryIterator::key** - Return path and filename of current dir entry
+- **RecursiveDirectoryIterator::next** - Move to next entry
+- **RecursiveDirectoryIterator::rewind** - Rewind dir back to the start
+- **RecursiveDirectoryIterator::__construct** - Constructs a RecursiveDirectoryIterator
+- **RecursiveFilterIterator::getChildren** - Return the inner iterator's children contained in a RecursiveFilterIterator
+- **RecursiveFilterIterator::hasChildren** - Check whether the inner iterator's current element has children
+- **RecursiveFilterIterator::__construct** - Create a RecursiveFilterIterator from a RecursiveIterator
+- **RecursiveIterator::getChildren** - Returns an iterator for the current entry
+- **RecursiveIterator::hasChildren** - Returns if an iterator can be created for the current entry
+- **RecursiveIteratorIterator::beginChildren** - Begin children
+- **RecursiveIteratorIterator::beginIteration** - Begin Iteration
+- **RecursiveIteratorIterator::callGetChildren** - Get children
+- **RecursiveIteratorIterator::callHasChildren** - Has children
+- **RecursiveIteratorIterator::current** - Access the current element value
+- **RecursiveIteratorIterator::endChildren** - End children
+- **RecursiveIteratorIterator::endIteration** - End Iteration
+- **RecursiveIteratorIterator::getDepth** - Get the current depth of the recursive iteration
+- **RecursiveIteratorIterator::getInnerIterator** - Get inner iterator
+- **RecursiveIteratorIterator::getMaxDepth** - Get max depth
+- **RecursiveIteratorIterator::getSubIterator** - The current active sub iterator
+- **RecursiveIteratorIterator::key** - Access the current key
+- **RecursiveIteratorIterator::next** - Move forward to the next element
+- **RecursiveIteratorIterator::nextElement** - Next element
+- **RecursiveIteratorIterator::rewind** - Rewind the iterator to the first element of the top level inner iterator
+- **RecursiveIteratorIterator::setMaxDepth** - Set max depth
+- **RecursiveIteratorIterator::valid** - Check whether the current position is valid
+- **RecursiveIteratorIterator::__construct** - Construct a RecursiveIteratorIterator
+- **RecursiveRegexIterator::getChildren** - Returns an iterator for the current entry
+- **RecursiveRegexIterator::hasChildren** - Returns whether an iterator can be obtained for the current entry
+- **RecursiveRegexIterator::__construct** - Creates a new RecursiveRegexIterator
+- **RecursiveTreeIterator::beginChildren** - Begin children
+- **RecursiveTreeIterator::beginIteration** - Begin iteration
+- **RecursiveTreeIterator::callGetChildren** - Get children
+- **RecursiveTreeIterator::callHasChildren** - Has children
+- **RecursiveTreeIterator::current** - Get current element
+- **RecursiveTreeIterator::endChildren** - End children
+- **RecursiveTreeIterator::endIteration** - End iteration
+- **RecursiveTreeIterator::getEntry** - Get current entry
+- **RecursiveTreeIterator::getPostfix** - Get the postfix
+- **RecursiveTreeIterator::getPrefix** - Get the prefix
+- **RecursiveTreeIterator::key** - Get the key of the current element
+- **RecursiveTreeIterator::next** - Move to next element
+- **RecursiveTreeIterator::nextElement** - Next element
+- **RecursiveTreeIterator::rewind** - Rewind iterator
+- **RecursiveTreeIterator::setPostfix** - Set postfix
+- **RecursiveTreeIterator::setPrefixPart** - Set a part of the prefix
+- **RecursiveTreeIterator::valid** - Check validity
+- **RecursiveTreeIterator::__construct** - Construct a RecursiveTreeIterator
+- **Reflection::export** - 导出
+- **Reflection::getModifierNames** - 获取修饰符的名称
+- **ReflectionAttribute::getArguments** - 获取传递给属性的参数
+- **ReflectionAttribute::getName** - 获取属性名称
+- **ReflectionAttribute::getTarget** - 返回属性的目标位掩码
+- **ReflectionAttribute::isRepeated** - 返回该名称的属性是否已重复出现在代码元素上
+- **ReflectionAttribute::newInstance** - 实例化由 ReflectionAttribute 类和参数表示的属性类
+- **ReflectionAttribute::__construct** - 禁止直接实例化的私有构造函数
+- **ReflectionClass::export** - 导出类
+- **ReflectionClass::getAttributes** - 获取所有属性
+- **ReflectionClass::getConstant** - 获取已定义的常量
+- **ReflectionClass::getConstants** - 获取常量
+- **ReflectionClass::getConstructor** - 获取类的构造函数
+- **ReflectionClass::getDefaultProperties** - 获取默认属性
+- **ReflectionClass::getDocComment** - 获取文档注释
+- **ReflectionClass::getEndLine** - 获取最后一行的行数
+- **ReflectionClass::getExtension** - 根据已定义的类获取所在扩展的 ReflectionExtension 对象
+- **ReflectionClass::getExtensionName** - 获取定义的类所在的扩展的名称
+- **ReflectionClass::getFileName** - 获取定义类的文件名
+- **ReflectionClass::getInterfaceNames** - 获取接口（interface）名称
+- **ReflectionClass::getInterfaces** - 获取接口
+- **ReflectionClass::getLazyInitializer** - Gets lazy initializer
+- **ReflectionClass::getMethod** - 获取类方法的 ReflectionMethod
+- **ReflectionClass::getMethods** - 获取方法的数组
+- **ReflectionClass::getModifiers** - 获取类的修饰符
+- **ReflectionClass::getName** - 获取类名
+- **ReflectionClass::getNamespaceName** - 获取命名空间的名称
+- **ReflectionClass::getParentClass** - 获取父类
+- **ReflectionClass::getProperties** - 获取属性
+- **ReflectionClass::getProperty** - 获取类的一个属性的 ReflectionProperty
+- **ReflectionClass::getReflectionConstant** - Gets a ReflectionClassConstant for a class's constant
+- **ReflectionClass::getReflectionConstants** - Gets class constants
+- **ReflectionClass::getShortName** - 获取短名
+- **ReflectionClass::getStartLine** - 获取起始行号
+- **ReflectionClass::getStaticProperties** - 获取静态（static）属性
+- **ReflectionClass::getStaticPropertyValue** - 获取静态（static）属性的值
+- **ReflectionClass::getTraitAliases** - 返回 trait 别名数组
+- **ReflectionClass::getTraitNames** - 返回这个类所使用 traits 的名称的数组
+- **ReflectionClass::getTraits** - 返回这个类所使用的 traits 数组
+- **ReflectionClass::hasConstant** - 检查常量是否已经定义
+- **ReflectionClass::hasMethod** - 检查方法是否已定义
+- **ReflectionClass::hasProperty** - 检查属性是否已定义
+- **ReflectionClass::implementsInterface** - 实现接口
+- **ReflectionClass::initializeLazyObject** - Forces initialization of a lazy object
+- **ReflectionClass::inNamespace** - 检查是否位于命名空间中
+- **ReflectionClass::isAbstract** - 检查类是否是抽象类（abstract）
+- **ReflectionClass::isAnonymous** - 检查类是否是匿名类
+- **ReflectionClass::isCloneable** - 返回了一个类是否可复制
+- **ReflectionClass::isEnum** - Returns whether this is an enum
+- **ReflectionClass::isFinal** - 检查类是否声明为 final
+- **ReflectionClass::isInstance** - 检查类的实例
+- **ReflectionClass::isInstantiable** - 检查类是否可实例化
+- **ReflectionClass::isInterface** - 检查类是否是接口（interface）
+- **ReflectionClass::isInternal** - 检查类是否由扩展或核心在内部定义
+- **ReflectionClass::isIterable** - Check whether this class is iterable
+- **ReflectionClass::isIterateable** - 别名 ReflectionClass::isIterable
+- **ReflectionClass::isReadOnly** - Checks if class is readonly
+- **ReflectionClass::isSubclassOf** - 检查是否为子类
+- **ReflectionClass::isTrait** - 返回了是否是 trait
+- **ReflectionClass::isUninitializedLazyObject** - Checks if an object is lazy and uninitialized
+- **ReflectionClass::isUserDefined** - 检查是否由用户定义的
+- **ReflectionClass::markLazyObjectAsInitialized** - Marks a lazy object as initialized without calling the initializer or factory
+- **ReflectionClass::newInstance** - 从指定的参数创建新类实例
+- **ReflectionClass::newInstanceArgs** - 从给出的参数创建一个新的类实例
+- **ReflectionClass::newInstanceWithoutConstructor** - 创建新的类实例而不调用它的构造函数
+- **ReflectionClass::newLazyGhost** - Creates a new lazy ghost instance
+- **ReflectionClass::newLazyProxy** - Creates a new lazy proxy instance
+- **ReflectionClass::resetAsLazyGhost** - Resets an object and marks it as lazy
+- **ReflectionClass::resetAsLazyProxy** - Resets an object and marks it as lazy
+- **ReflectionClass::setStaticPropertyValue** - 设置 public static 属性的值
+- **ReflectionClass::__construct** - 初始化 ReflectionClass 类
+- **ReflectionClass::__toString** - 返回 ReflectionClass 对象字符串的表示形式
+- **ReflectionClassConstant::export** - Export
+- **ReflectionClassConstant::getAttributes** - Gets Attributes
+- **ReflectionClassConstant::getDeclaringClass** - Gets declaring class
+- **ReflectionClassConstant::getDocComment** - Gets doc comments
+- **ReflectionClassConstant::getModifiers** - Gets the class constant modifiers
+- **ReflectionClassConstant::getName** - Get name of the constant
+- **ReflectionClassConstant::getType** - Gets a class constant's type
+- **ReflectionClassConstant::getValue** - Gets value
+- **ReflectionClassConstant::hasType** - Checks if class constant has a type
+- **ReflectionClassConstant::isDeprecated** - Checks if deprecated
+- **ReflectionClassConstant::isEnumCase** - Checks if class constant is an Enum case
+- **ReflectionClassConstant::isFinal** - Checks if class constant is final
+- **ReflectionClassConstant::isPrivate** - Checks if class constant is private
+- **ReflectionClassConstant::isProtected** - Checks if class constant is protected
+- **ReflectionClassConstant::isPublic** - Checks if class constant is public
+- **ReflectionClassConstant::__construct** - Constructs a ReflectionClassConstant
+- **ReflectionClassConstant::__toString** - Returns the string representation of the ReflectionClassConstant object
+- **ReflectionConstant::getAttributes** - Gets Attributes
+- **ReflectionConstant::getExtension** - Gets ReflectionExtension of the defining extension
+- **ReflectionConstant::getExtensionName** - Gets name of the defining extension
+- **ReflectionConstant::getFileName** - Gets name of the defining file
+- **ReflectionConstant::getName** - Gets name
+- **ReflectionConstant::getNamespaceName** - Gets namespace name
+- **ReflectionConstant::getShortName** - Gets short name
+- **ReflectionConstant::getValue** - Gets value
+- **ReflectionConstant::isDeprecated** - Checks if deprecated
+- **ReflectionConstant::__construct** - Constructs a ReflectionConstant
+- **ReflectionConstant::__toString** - Returns string representation
+- **ReflectionEnum::getBackingType** - 获取枚举回退的类型
+- **ReflectionEnum::getCase** - 返回指定的枚举条目
+- **ReflectionEnum::getCases** - 返回枚举中的所有条目的清单
+- **ReflectionEnum::hasCase** - 在枚举上检测条目
+- **ReflectionEnum::isBacked** - 检测 Enum 是否为回退（Backed）Enum
+- **ReflectionEnum::__construct** - 实例化 ReflectionEnum 对象
+- **ReflectionEnumBackedCase::getBackingValue** - 获取枚举条目回退的标量值
+- **ReflectionEnumBackedCase::__construct** - Instantiates a ReflectionEnumBackedCase object
+- **ReflectionEnumUnitCase::getEnum** - 获取该枚举条目的反射
+- **ReflectionEnumUnitCase::getValue** - 获取反射对象描述的枚举条目对象
+- **ReflectionEnumUnitCase::__construct** - Instantiates a ReflectionEnumUnitCase object
+- **ReflectionExtension::export** - Export
+- **ReflectionExtension::getClasses** - 获取类列表
+- **ReflectionExtension::getClassNames** - 获取类名列表
+- **ReflectionExtension::getConstants** - 获取常量
+- **ReflectionExtension::getDependencies** - 获取依赖
+- **ReflectionExtension::getFunctions** - 获取扩展中的函数
+- **ReflectionExtension::getINIEntries** - 获取 ini 配置
+- **ReflectionExtension::getName** - 获取扩展名称
+- **ReflectionExtension::getVersion** - 获取扩展版本
+- **ReflectionExtension::info** - 输出扩展信息
+- **ReflectionExtension::isPersistent** - 返回扩展是否持久化的
+- **ReflectionExtension::isTemporary** - 返回扩展是否是临时载入
+- **ReflectionExtension::__clone** - 克隆
+- **ReflectionExtension::__construct** - 构造 ReflectionExtension
+- **ReflectionExtension::__toString** - 生成字符串
+- **ReflectionFiber::getCallable** - Gets the callable used to create the Fiber
+- **ReflectionFiber::getExecutingFile** - Get the file name of the current execution point
+- **ReflectionFiber::getExecutingLine** - Get the line number of the current execution point
+- **ReflectionFiber::getFiber** - Get the reflected Fiber instance
+- **ReflectionFiber::getTrace** - Get the backtrace of the current execution point
+- **ReflectionFiber::__construct** - Constructs a ReflectionFiber object
+- **ReflectionFunction::export** - Exports function
+- **ReflectionFunction::getClosure** - Returns a dynamically created closure for the function
+- **ReflectionFunction::invoke** - Invokes function
+- **ReflectionFunction::invokeArgs** - Invokes function args
+- **ReflectionFunction::isAnonymous** - Checks if a function is anonymous
+- **ReflectionFunction::isDisabled** - Checks if function is disabled
+- **ReflectionFunction::__construct** - Constructs a ReflectionFunction object
+- **ReflectionFunction::__toString** - Returns the string representation of the ReflectionFunction object
+- **ReflectionFunctionAbstract::getAttributes** - Gets Attributes
+- **ReflectionFunctionAbstract::getClosureCalledClass** - Returns the class corresponding to static:: inside a closure
+- **ReflectionFunctionAbstract::getClosureScopeClass** - Returns the class corresponding to the scope inside a closure
+- **ReflectionFunctionAbstract::getClosureThis** - 返回闭包内与 $this 对应的对象
+- **ReflectionFunctionAbstract::getClosureUsedVariables** - Returns an array of the used variables in the Closure
+- **ReflectionFunctionAbstract::getDocComment** - 获取注释内容
+- **ReflectionFunctionAbstract::getEndLine** - 获取结束行号
+- **ReflectionFunctionAbstract::getExtension** - 获取扩展信息
+- **ReflectionFunctionAbstract::getExtensionName** - 获取扩展名称
+- **ReflectionFunctionAbstract::getFileName** - 获取文件名称
+- **ReflectionFunctionAbstract::getName** - 获取函数名称
+- **ReflectionFunctionAbstract::getNamespaceName** - 获取命名空间
+- **ReflectionFunctionAbstract::getNumberOfParameters** - 获取参数数目
+- **ReflectionFunctionAbstract::getNumberOfRequiredParameters** - 获取必须输入参数个数
+- **ReflectionFunctionAbstract::getParameters** - 获取参数
+- **ReflectionFunctionAbstract::getReturnType** - Gets the specified return type of a function
+- **ReflectionFunctionAbstract::getShortName** - 获取函数短名称
+- **ReflectionFunctionAbstract::getStartLine** - 获取开始行号
+- **ReflectionFunctionAbstract::getStaticVariables** - 获取静态变量
+- **ReflectionFunctionAbstract::getTentativeReturnType** - Returns the tentative return type associated with the function
+- **ReflectionFunctionAbstract::hasReturnType** - Checks if the function has a specified return type
+- **ReflectionFunctionAbstract::hasTentativeReturnType** - Returns whether the function has a tentative return type
+- **ReflectionFunctionAbstract::inNamespace** - 检查是否处于命名空间
+- **ReflectionFunctionAbstract::isClosure** - 检查是否是匿名函数
+- **ReflectionFunctionAbstract::isDeprecated** - 检查是否已经弃用
+- **ReflectionFunctionAbstract::isGenerator** - 判断函数是否是一个生成器函数
+- **ReflectionFunctionAbstract::isInternal** - 判断函数是否是内置函数
+- **ReflectionFunctionAbstract::isStatic** - 判断函数是否为 static
+- **ReflectionFunctionAbstract::isUserDefined** - 检查是否是用户定义
+- **ReflectionFunctionAbstract::isVariadic** - Checks if the function is variadic
+- **ReflectionFunctionAbstract::returnsReference** - 检查是否返回引用
+- **ReflectionFunctionAbstract::__clone** - 复制函数
+- **ReflectionFunctionAbstract::__toString** - 返回表示 ReflectionFunctionAbstract 对象的字符串
+- **ReflectionGenerator::getExecutingFile** - Gets the file name of the currently executing generator
+- **ReflectionGenerator::getExecutingGenerator** - Gets the executing Generator object
+- **ReflectionGenerator::getExecutingLine** - Gets the currently executing line of the generator
+- **ReflectionGenerator::getFunction** - Gets the function name of the generator
+- **ReflectionGenerator::getThis** - Gets the $this value of the generator
+- **ReflectionGenerator::getTrace** - Gets the trace of the executing generator
+- **ReflectionGenerator::isClosed** - Checks if execution finished
+- **ReflectionGenerator::__construct** - Constructs a ReflectionGenerator object
+- **ReflectionIntersectionType::getTypes** - 返回包含在交集类型中的类型
+- **ReflectionMethod::createFromMethodName** - Creates a new ReflectionMethod
+- **ReflectionMethod::export** - 导出 reflection 方法
+- **ReflectionMethod::getClosure** - 返回动态建立的方法调用接口（译者注：可以使用这个返回值直接调用非公开方法）
+- **ReflectionMethod::getDeclaringClass** - 获取被反射的方法所在类的反射实例
+- **ReflectionMethod::getModifiers** - 获取方法的修饰符
+- **ReflectionMethod::getPrototype** - 返回方法原型 (如果存在)
+- **ReflectionMethod::hasPrototype** - Returns whether a method has a prototype
+- **ReflectionMethod::invoke** - Invoke
+- **ReflectionMethod::invokeArgs** - 带参数执行
+- **ReflectionMethod::isAbstract** - 判断方法是否是抽象方法
+- **ReflectionMethod::isConstructor** - 判断方法是否是构造方法
+- **ReflectionMethod::isDestructor** - 判断方法是否是析构方法
+- **ReflectionMethod::isFinal** - 判断方法是否定义 final
+- **ReflectionMethod::isPrivate** - 判断方法是否是私有
+- **ReflectionMethod::isProtected** - 判断方法是否是 protected
+- **ReflectionMethod::isPublic** - 判断方法是否是 public
+- **ReflectionMethod::setAccessible** - 设置方法是否可访问
+- **ReflectionMethod::__construct** - 构造 ReflectionMethod
+- **ReflectionMethod::__toString** - 返回反射方法对象的字符串表达
+- **ReflectionNamedType::getName** - 以字符串形式获取类型的名称
+- **ReflectionNamedType::isBuiltin** - 检查它是否是内置类型
+- **ReflectionObject::export** - Export
+- **ReflectionObject::__construct** - Constructs a ReflectionObject
+- **ReflectionParameter::allowsNull** - Checks if null is allowed
+- **ReflectionParameter::canBePassedByValue** - Returns whether this parameter can be passed by value
+- **ReflectionParameter::export** - Exports
+- **ReflectionParameter::getAttributes** - Gets Attributes
+- **ReflectionParameter::getClass** - 获取参数的 ReflectionClass 对象或为 null
+- **ReflectionParameter::getDeclaringClass** - Gets declaring class
+- **ReflectionParameter::getDeclaringFunction** - Gets declaring function
+- **ReflectionParameter::getDefaultValue** - Gets default parameter value
+- **ReflectionParameter::getDefaultValueConstantName** - Returns the default value's constant name if default value is constant or null
+- **ReflectionParameter::getName** - Gets parameter name
+- **ReflectionParameter::getPosition** - Gets parameter position
+- **ReflectionParameter::getType** - Gets a parameter's type
+- **ReflectionParameter::hasType** - Checks if parameter has a type
+- **ReflectionParameter::isArray** - Checks if parameter expects an array
+- **ReflectionParameter::isCallable** - Returns whether parameter MUST be callable
+- **ReflectionParameter::isDefaultValueAvailable** - 检查默认是否可用
+- **ReflectionParameter::isDefaultValueConstant** - Returns whether the default value of this parameter is a constant
+- **ReflectionParameter::isOptional** - Checks if optional
+- **ReflectionParameter::isPassedByReference** - Checks if passed by reference
+- **ReflectionParameter::isPromoted** - Checks if a parameter is promoted to a property
+- **ReflectionParameter::isVariadic** - Checks if the parameter is variadic
+- **ReflectionParameter::__clone** - Clone
+- **ReflectionParameter::__construct** - Construct
+- **ReflectionParameter::__toString** - To string
+- **ReflectionProperty::export** - Export
+- **ReflectionProperty::getAttributes** - Gets Attributes
+- **ReflectionProperty::getDeclaringClass** - Gets declaring class
+- **ReflectionProperty::getDefaultValue** - Returns the default value declared for a property
+- **ReflectionProperty::getDocComment** - Gets the property doc comment
+- **ReflectionProperty::getHook** - Returns a reflection object for a specified hook
+- **ReflectionProperty::getHooks** - Returns an array of all hooks on this property
+- **ReflectionProperty::getMangledName** - Gets the mangled name of the property
+- **ReflectionProperty::getModifiers** - Gets the property modifiers
+- **ReflectionProperty::getName** - Gets property name
+- **ReflectionProperty::getRawValue** - Returns the value of a property, bypassing a get hook if defined
+- **ReflectionProperty::getSettableType** - Returns the parameter type of a setter hook
+- **ReflectionProperty::getType** - Gets a property's type
+- **ReflectionProperty::getValue** - Gets value
+- **ReflectionProperty::hasDefaultValue** - Checks if property has a default value declared
+- **ReflectionProperty::hasHook** - Returns whether the property has a given hook defined
+- **ReflectionProperty::hasHooks** - Returns whether the property has any hooks defined
+- **ReflectionProperty::hasType** - Checks if property has a type
+- **ReflectionProperty::isAbstract** - Determines if a property is abstract
+- **ReflectionProperty::isDefault** - Checks if property is a default property
+- **ReflectionProperty::isDynamic** - Checks if property is a dynamic property
+- **ReflectionProperty::isFinal** - Determines if this property is final or not
+- **ReflectionProperty::isInitialized** - Checks whether a property is initialized
+- **ReflectionProperty::isLazy** - Checks whether a property is lazy
+- **ReflectionProperty::isPrivate** - Checks if property is private
+- **ReflectionProperty::isPrivateSet** - Checks if property is private for writing
+- **ReflectionProperty::isPromoted** - Checks if property is promoted
+- **ReflectionProperty::isProtected** - Checks if property is protected
+- **ReflectionProperty::isProtectedSet** - Checks whether the property is protected for writing
+- **ReflectionProperty::isPublic** - Checks if property is public
+- **ReflectionProperty::isReadOnly** - 检查属性是否为只读
+- **ReflectionProperty::isStatic** - Checks if property is static
+- **ReflectionProperty::isVirtual** - Determines if a property is virtual
+- **ReflectionProperty::setAccessible** - Set property accessibility
+- **ReflectionProperty::setRawValue** - Sets the value of a property, bypassing a set hook if defined
+- **ReflectionProperty::setRawValueWithoutLazyInitialization** - Set raw property value without triggering lazy initialization
+- **ReflectionProperty::setValue** - Set property value
+- **ReflectionProperty::skipLazyInitialization** - Marks property as non-lazy
+- **ReflectionProperty::__clone** - Clone
+- **ReflectionProperty::__construct** - Construct a ReflectionProperty object
+- **ReflectionProperty::__toString** - To string
+- **ReflectionReference::fromArrayElement** - 从数组元素创建一个 ReflectionReference
+- **ReflectionReference::getId** - 获取引用的唯一 ID
+- **ReflectionReference::__construct** - 私有构造函数以禁用直接实例化
+- **ReflectionType::allowsNull** - Checks if null is allowed
+- **ReflectionType::__toString** - To string
+- **ReflectionUnionType::getTypes** - 返回联合类型中包含的类型
+- **ReflectionZendExtension::export** - Export
+- **ReflectionZendExtension::getAuthor** - Gets author
+- **ReflectionZendExtension::getCopyright** - Gets copyright
+- **ReflectionZendExtension::getName** - Gets name
+- **ReflectionZendExtension::getURL** - Gets URL
+- **ReflectionZendExtension::getVersion** - Gets version
+- **ReflectionZendExtension::__clone** - Clone handler
+- **ReflectionZendExtension::__construct** - Constructs a ReflectionZendExtension object
+- **ReflectionZendExtension::__toString** - To string handler
+- **Reflector::export** - Exports
+- **RegexIterator::accept** - Get accept status
+- **RegexIterator::getFlags** - Get flags
+- **RegexIterator::getMode** - Returns operation mode
+- **RegexIterator::getPregFlags** - Returns the regular expression flags
+- **RegexIterator::getRegex** - Returns current regular expression
+- **RegexIterator::setFlags** - Sets the flags
+- **RegexIterator::setMode** - Sets the operation mode
+- **RegexIterator::setPregFlags** - Sets the regular expression flags
+- **RegexIterator::__construct** - Create a new RegexIterator
+- **register_shutdown_function** - 注册在关闭时执行的函数
+- **register_tick_function** - 注册一个函数以便在每个 tick 上执行
+- **rename** - 重命名一个文件或目录
+- **request_parse_body** - Read and parse the request body and return the result
+- **reset** - 将数组的内部指针指向第一个单元
+- **ResourceBundle::count** - Get number of elements in the bundle
+- **ResourceBundle::create** - Create a resource bundle
+- **ResourceBundle::get** - Get data from the bundle
+- **ResourceBundle::getErrorCode** - Get bundle's last error code
+- **ResourceBundle::getErrorMessage** - Get bundle's last error message
+- **ResourceBundle::getLocales** - Get supported locales
+- **restore_error_handler** - 还原之前的错误处理函数
+- **restore_exception_handler** - 恢复之前定义过的异常处理函数。
+- **restore_include_path** - 还原 include_path 配置选项的值
+- **Result::getAffectedItemsCount** - Get affected row count
+- **Result::getAutoIncrementValue** - Get autoincremented value
+- **Result::getGeneratedIds** - Get generated ids
+- **Result::getWarnings** - Get warnings from last operation
+- **Result::getWarningsCount** - Get warning count from last operation
+- **Result::__construct** - Result constructor
+- **ReturnTypeWillChange::__construct** - 构造新的 ReturnTypeWillChange 注解实例
+- **rewind** - 倒回文件指针的位置
+- **rewinddir** - 倒回目录句柄
+- **rmdir** - 删除目录
+- **rnp_backend_string** - Return cryptographic backend library name
+- **rnp_backend_version** - Return cryptographic backend library version
+- **rnp_decrypt** - Decrypt PGP message
+- **rnp_dump_packets** - Dump OpenPGP packets stream information in humand-readable format
+- **rnp_dump_packets_to_json** - Dump OpenPGP packets stream information to the JSON string
+- **rnp_ffi_create** - Create the top-level object used for interacting with the library
+- **rnp_ffi_destroy** - Destroy the top-level object used for interacting with the library
+- **rnp_ffi_set_pass_provider** - Set password provider callback function
+- **rnp_import_keys** - Import keys from PHP string to the keyring and receive JSON describing new/updated keys
+- **rnp_import_signatures** - Import standalone signatures to the keyring and receive JSON describing updated keys
+- **rnp_key_export** - Export a key
+- **rnp_key_export_autocrypt** - Export minimal key for autocrypt feature (just 5 packets: key, uid, signature,
+   encryption subkey, signature)
+- **rnp_key_export_revocation** - Generate and export primary key revocation signature
+- **rnp_key_get_info** - Get information about the key
+- **rnp_key_remove** - Remove a key from keyring(s)
+- **rnp_key_revoke** - Revoke a key or subkey by generating and adding revocation signature
+- **rnp_list_keys** - Enumerate all keys present in a keyring by specified identifer type
+- **rnp_load_keys** - Load keys from PHP string
+- **rnp_load_keys_from_path** - Load keys from specified path
+- **rnp_locate_key** - Search for the key
+- **rnp_op_encrypt** - Encrypt message
+- **rnp_op_generate_key** - Generate key
+- **rnp_op_sign** - Perform signing operation on a binary data, return embedded signature(s)
+- **rnp_op_sign_cleartext** - Perform signing operation on a textual data, return cleartext signed message
+- **rnp_op_sign_detached** - Perform signing operation, return detached signature(s)
+- **rnp_op_verify** - Verify embedded or cleartext signatures
+- **rnp_op_verify_detached** - Verify detached signatures
+- **rnp_save_keys** - Save keys to PHP string
+- **rnp_save_keys_to_path** - Save keys to specified path
+- **rnp_supported_features** - Get supported features in JSON format
+- **rnp_version_string** - RNP library version
+- **rnp_version_string_full** - Full version string of RNP library
+- **round** - 对浮点数进行四舍五入
+- **RowResult::fetchAll** - Get all rows from result
+- **RowResult::fetchOne** - Get row from result
+- **RowResult::getColumnNames** - Get all column names
+- **RowResult::getColumns** - Get column metadata
+- **RowResult::getColumnsCount** - Get column count
+- **RowResult::getWarnings** - Get warnings from last operation
+- **RowResult::getWarningsCount** - Get warning count from last operation
+- **RowResult::__construct** - RowResult constructor
+- **rpmaddtag** - Add tag retrieved in query
+- **rpmdbinfo** - Get information from installed RPM
+- **rpmdbsearch** - Search RPM packages
+- **rpmdefine** - Define or change a RPM macro value
+- **rpmexpand** - Retrieve expanded value of a RPM macro
+- **rpmexpandnumeric** - Retrieve numerical value of a RPM macro
+- **rpmgetsymlink** - Get target of a symlink
+- **rpminfo** - Get information from a RPM file
+- **rpmvercmp** - RPM version comparison
+- **RRDCreator::addArchive** - Adds RRA - archive of data values for each data source
+- **RRDCreator::addDataSource** - Adds data source definition for RRD database
+- **RRDCreator::save** - Saves the RRD database to a file
+- **RRDCreator::__construct** - Creates new RRDCreator instance
+- **rrdc_disconnect** - 关闭所有未完成的 rrd 缓存守护进程连接
+- **RRDGraph::save** - Saves the result of query into image
+- **RRDGraph::saveVerbose** - Saves the RRD database query into image and returns the verbose
+   information about generated graph
+- **RRDGraph::setOptions** - Sets the options for rrd graph export
+- **RRDGraph::__construct** - Creates new RRDGraph instance
+- **RRDUpdater::update** - Update the RRD database file
+- **RRDUpdater::__construct** - Creates new RRDUpdater instance
+- **rrd_create** - 创建 rrd 数据库文件
+- **rrd_error** - 获取最新的错误信息
+- **rrd_fetch** - 获取图表数据数组
+- **rrd_first** - 从 rrd 文件中获取第一个样本的时间戳
+- **rrd_graph** - 从数据创建图像
+- **rrd_info** - 获取 rrd 文件有关信息
+- **rrd_last** - 获取最后一个样本的 Unix 时间戳
+- **rrd_lastupdate** - 获取有关上次更新数据的信息
+- **rrd_restore** - 从 XML 转储中恢复 RRD 文件
+- **rrd_tune** - 调整 RRD 数据库文件头选项
+- **rrd_update** - 更新 RRD 数据库
+- **rrd_version** - 获取底层 rrdtool 库的相关信息
+- **rrd_xport** - 导出 RRD 数据库的相关信息
+- **rsort** - 对数组降序排序
+- **rtrim** - 去除字符串末尾的空白字符（或者其他字符）
+- **runkit7_constant_add** - Similar to define(), but allows defining in class definitions as well
+- **runkit7_constant_redefine** - Redefine an already defined constant
+- **runkit7_constant_remove** - Remove/Delete an already defined constant
+- **runkit7_function_add** - Add a new function, similar to create_function
+- **runkit7_function_copy** - Copy a function to a new function name
+- **runkit7_function_redefine** - Replace a function definition with a new implementation
+- **runkit7_function_remove** - Remove a function definition
+- **runkit7_function_rename** - Change a function's name
+- **runkit7_import** - Process a PHP file importing function and class definitions, overwriting where appropriate
+- **runkit7_method_add** - Dynamically adds a new method to a given class
+- **runkit7_method_copy** - Copies a method from class to another
+- **runkit7_method_redefine** - Dynamically changes the code of the given method
+- **runkit7_method_remove** - Dynamically removes the given method
+- **runkit7_method_rename** - Dynamically changes the name of the given method
+- **runkit7_object_id** - Return the integer object handle for given object
+- **runkit7_superglobals** - Return numerically indexed array of registered superglobals
+- **runkit7_zval_inspect** - Returns information about the passed in value with data types, reference counts, etc
+
+## S
+
+- **sapi_windows_cp_conv** - Convert string from one codepage to another
+- **sapi_windows_cp_get** - Get current codepage
+- **sapi_windows_cp_is_utf8** - Indicates whether the codepage is UTF-8 compatible
+- **sapi_windows_cp_set** - Set process codepage
+- **sapi_windows_generate_ctrl_event** - Send a CTRL event to another process
+- **sapi_windows_set_ctrl_handler** - Set or remove a CTRL event handler
+- **sapi_windows_vt100_support** - Get or set VT100 support for the specified stream associated to an output buffer of a Windows console.
+- **scandir** - 列出指定路径中的文件和目录
+- **Schema::createCollection** - Add collection to schema
+- **Schema::dropCollection** - Drop collection from schema
+- **Schema::existsInDatabase** - Check if exists in database
+- **Schema::getCollection** - Get collection from schema
+- **Schema::getCollectionAsTable** - Get collection as a Table object
+- **Schema::getCollections** - Get all schema collections
+- **Schema::getName** - Get schema name
+- **Schema::getSession** - Get schema session
+- **Schema::getTable** - Get schema table
+- **Schema::getTables** - Get schema tables
+- **Schema::__construct** - Schema constructor
+- **SchemaObject::getSchema** - Get schema object
+- **scoutapm_get_calls** - Returns a list of instrumented calls that have occurred
+- **scoutapm_list_instrumented_functions** - List functions scoutapm will instrument.
+- **SeasLog::alert** - 记录 alert 日志
+- **SeasLog::analyzerCount** - Get log count by level, log_path and key_word
+- **SeasLog::analyzerDetail** - Get log detail by level, log_path, key_word, start, limit, order
+- **SeasLog::closeLoggerStream** - Manually release stream flow from logger
+- **SeasLog::critical** - 记录 critical 日志
+- **SeasLog::debug** - 记录 debug 日志
+- **SeasLog::emergency** - 记录 emergency 日志
+- **SeasLog::error** - 记录 error 日志
+- **SeasLog::flushBuffer** - 将日志缓存刷新到介质中，文件介质，或者发送到远端的 TCP/UDP 服务地址
+- **SeasLog::getBasePath** - 获得 SeasLog 根目录
+- **SeasLog::getBuffer** - 获取内存中的日志缓存数组
+- **SeasLog::getBufferEnabled** - Determin if buffer enabled
+- **SeasLog::getDatetimeFormat** - 获取 SeasLog 日期格式
+- **SeasLog::getLastLogger** - 获得 SeasLog 最近的一次 Logger 名称
+- **SeasLog::getRequestID** - 获得当前 SeasLog 中用于区分请求的 request_id
+- **SeasLog::getRequestVariable** - Get SeasLog request variable
+- **SeasLog::info** - Record info log information
+- **SeasLog::log** - 公共的日志记录函数
+- **SeasLog::notice** - 记录 notice 日志
+- **SeasLog::setBasePath** - 设置 SeasLog 根目录
+- **SeasLog::setDatetimeFormat** - 设置 SeasLog 日期格式
+- **SeasLog::setLogger** - 设置 SeasLog 的 Logger 名
+- **SeasLog::setRequestID** - 设置可以由 SeasLog 用于区分请求的 request_id
+- **SeasLog::setRequestVariable** - Manually set SeasLog request variable
+- **SeasLog::warning** - Record warning log information
+- **SeasLog::__construct** - Description
+- **SeasLog::__destruct** - Description
+- **seaslog_get_author** - 获取 SeasLog 作者
+- **seaslog_get_version** - 获取 SeasLog 的版本
+- **SeekableIterator::seek** - Seeks to a position
+- **sem_acquire** - Acquire a semaphore
+- **sem_get** - Get a semaphore id
+- **sem_release** - Release a semaphore
+- **sem_remove** - Remove a semaphore
+- **SensitiveParameter::__construct** - 构造新的 SensitiveParameter 属性实例
+- **SensitiveParameterValue::getValue** - 返回敏感值
+- **SensitiveParameterValue::__construct** - 构造新的 SensitiveParameterValue 对象
+- **SensitiveParameterValue::__debugInfo** - 保护敏感值免于意外暴露
+- **Serializable::serialize** - 对象的字符串表示
+- **Serializable::unserialize** - 构造对象
+- **serialize** - 生成值的可存储表示
+- **Session::close** - Close session
+- **Session::commit** - Commit transaction
+- **Session::createSchema** - Create new schema
+- **Session::dropSchema** - Drop a schema
+- **Session::generateUUID** - Get new UUID
+- **Session::getDefaultSchema** - Get default schema name
+- **Session::getSchema** - Get a new schema object
+- **Session::getSchemas** - Get the schemas
+- **Session::getServerVersion** - Get server version
+- **Session::listClients** - Get client list
+- **Session::quoteName** - Add quotes
+- **Session::releaseSavepoint** - Release set savepoint
+- **Session::rollback** - Rollback transaction
+- **Session::rollbackTo** - Rollback transaction to savepoint
+- **Session::setSavepoint** - Create savepoint
+- **Session::sql** - Create SQL query
+- **Session::startTransaction** - Start transaction
+- **Session::__construct** - Description constructor
+- **SessionHandler::close** - Close the session
+- **SessionHandler::create_sid** - Return a new session ID
+- **SessionHandler::destroy** - Destroy a session
+- **SessionHandler::gc** - Cleanup old sessions
+- **SessionHandler::open** - Initialize session
+- **SessionHandler::read** - Read session data
+- **SessionHandler::write** - Write session data
+- **SessionHandlerInterface::close** - Close the session
+- **SessionHandlerInterface::destroy** - Destroy a session
+- **SessionHandlerInterface::gc** - Cleanup old sessions
+- **SessionHandlerInterface::open** - Initialize session
+- **SessionHandlerInterface::read** - Read session data
+- **SessionHandlerInterface::write** - Write session data
+- **SessionIdInterface::create_sid** - Create session ID
+- **SessionUpdateTimestampHandlerInterface::updateTimestamp** - Update timestamp
+- **SessionUpdateTimestampHandlerInterface::validateId** - Validate ID
+- **session_abort** - 丢弃会话数组的更改并结束会话
+- **session_cache_expire** - 返回/设置当前缓存的到期时间
+- **session_cache_limiter** - 读取/设置缓存限制器
+- **session_commit** - session_write_close 的别名
+- **session_create_id** - 创建新的会话 ID
+- **session_decode** - 解码会话数据
+- **session_destroy** - 销毁一个会话中的全部数据
+- **session_encode** - 将当前会话数据编码为字符串
+- **session_gc** - 执行会话数据垃圾回收
+- **session_get_cookie_params** - 获取会话 cookie 参数
+- **session_id** - 获取/设置当前会话 ID
+- **session_module_name** - 获取/设置会话模块名称
+- **session_name** - 读取/设置会话名称
+- **session_regenerate_id** - 使用新生成的会话 ID 更新现有会话 ID
+- **session_register_shutdown** - 关闭会话
+- **session_reset** - 使用会话存储中的原始值重新初始化会话数组
+- **session_save_path** - 读取/设置当前会话的保存路径
+- **session_set_cookie_params** - 设置会话 cookie 参数
+- **session_set_save_handler** - 设置用户自定义会话存储函数
+- **session_start** - 启动新会话或者重用现有会话
+- **session_status** - 返回当前会话状态
+- **session_unset** - 释放所有的会话变量
+- **session_write_close** - Write session data and end session
+- **setcookie** - 发送 Cookie
+- **setlocale** - 设置区域信息
+- **setrawcookie** - 发送未经 URL 编码的 cookie
+- **settype** - 设置变量的类型
+- **set_error_handler** - 设置用户自定义的错误处理函数
+- **set_exception_handler** - 设置用户自定义的异常处理函数
+- **set_file_buffer** - stream_set_write_buffer 的别名
+- **set_include_path** - 设置 include_path 配置选项
+- **set_time_limit** - 设置脚本最大执行时间
+- **sha1** - 计算字符串的 sha1 散列值
+- **sha1_file** - 计算文件的 sha1 散列值
+- **shell_exec** - 通过 shell 执行命令并将完整的输出以字符串的方式返回
+- **shmop_close** - Close shared memory block
+- **shmop_delete** - Delete shared memory block
+- **shmop_open** - Create or open shared memory block
+- **shmop_read** - Read data from shared memory block
+- **shmop_size** - Get size of shared memory block
+- **shmop_write** - Write data into shared memory block
+- **shm_attach** - Creates or open a shared memory segment
+- **shm_detach** - Disconnects from shared memory segment
+- **shm_get_var** - Returns a variable from shared memory
+- **shm_has_var** - Check whether a specific entry exists
+- **shm_put_var** - Inserts or updates a variable in shared memory
+- **shm_remove** - Removes shared memory from Unix systems
+- **shm_remove_var** - Removes a variable from shared memory
+- **show_source** - 别名 highlight_file
+- **shuffle** - 打乱数组
+- **simdjson_decode** - Decodes a JSON string
+- **simdjson_is_valid** - Check if a JSON string is valid
+- **simdjson_key_count** - Returns the value at a JSON pointer.
+- **simdjson_key_exists** - Check if the JSON contains the value referred to by a JSON pointer.
+- **simdjson_key_value** - Decodes the value of a JSON string located at the requested JSON pointer.
+- **similar_text** - 计算两个字符串的相似度
+- **SimpleXMLElement::addAttribute** - Adds an attribute to the SimpleXML element
+- **SimpleXMLElement::addChild** - Adds a child element to the XML node
+- **SimpleXMLElement::asXML** - Return a well-formed XML string based on SimpleXML element
+- **SimpleXMLElement::attributes** - Identifies an element's attributes
+- **SimpleXMLElement::children** - Finds children of given node
+- **SimpleXMLElement::count** - Counts the children of an element
+- **SimpleXMLElement::current** - Returns the current element
+- **SimpleXMLElement::getChildren** - Returns the sub-elements of the current element
+- **SimpleXMLElement::getDocNamespaces** - Returns namespaces declared in document
+- **SimpleXMLElement::getName** - Gets the name of the XML element
+- **SimpleXMLElement::getNamespaces** - Returns namespaces used in document
+- **SimpleXMLElement::hasChildren** - Checks whether the current element has sub elements
+- **SimpleXMLElement::key** - Return current key
+- **SimpleXMLElement::next** - Move to next element
+- **SimpleXMLElement::registerXPathNamespace** - Creates a prefix/ns context for the next XPath query
+- **SimpleXMLElement::rewind** - Rewind to the first element
+- **SimpleXMLElement::saveXML** - 别名 SimpleXMLElement::asXML
+- **SimpleXMLElement::valid** - Check whether the current element is valid
+- **SimpleXMLElement::xpath** - Runs XPath query on XML data
+- **SimpleXMLElement::__construct** - Creates a new SimpleXMLElement object
+- **SimpleXMLElement::__toString** - Returns the string content
+- **simplexml_import_dom** - Get a SimpleXMLElement object from an XML or HTML node
+- **simplexml_load_file** - Interprets an XML file into an object
+- **simplexml_load_string** - Interprets a string of XML into an object
+- **sin** - 正弦
+- **sinh** - 双曲正弦
+- **sizeof** - count 的别名
+- **sleep** - 延缓执行
+- **snmp2_get** - Fetch an SNMP object
+- **snmp2_getnext** - Fetch the SNMP object which follows the given object id
+- **snmp2_real_walk** - Return all objects including their respective object ID within the specified one
+- **snmp2_set** - Set the value of an SNMP object
+- **snmp2_walk** - Fetch all the SNMP objects from an agent
+- **snmp3_get** - Fetch an SNMP object
+- **snmp3_getnext** - Fetch the SNMP object which follows the given object id
+- **snmp3_real_walk** - Return all objects including their respective object ID within the specified one
+- **snmp3_set** - Set the value of an SNMP object
+- **snmp3_walk** - Fetch all the SNMP objects from an agent
+- **SNMP::close** - Close SNMP session
+- **SNMP::get** - Fetch an SNMP object
+- **SNMP::getErrno** - Get last error code
+- **SNMP::getError** - Get last error message
+- **SNMP::getnext** - Fetch an SNMP object which
+  follows the given object id
+- **SNMP::set** - Set the value of an SNMP object
+- **SNMP::setSecurity** - Configures security-related SNMPv3 session parameters
+- **SNMP::walk** - Fetch SNMP object subtree
+- **SNMP::__construct** - Creates SNMP instance representing session to remote SNMP agent
+- **snmpget** - 获取 SNMP 对象
+- **snmpgetnext** - Fetch the SNMP object which follows the given object id
+- **snmprealwalk** - 返回指定的所有对象，包括它们各自的对象 ID
+- **snmpset** - 设置 SNMP 对象的值
+- **snmpwalk** - 从代理获取所有 SNMP 对象
+- **snmpwalkoid** - 查询有关网络实体的信息树
+- **snmp_get_quick_print** - 获取当前 NET-SNMP 库的 quick_print 设置的值
+- **snmp_get_valueretrieval** - Return the method how the SNMP values will be returned
+- **snmp_read_mib** - Reads and parses a MIB file into the active MIB tree
+- **snmp_set_enum_print** - Return all values that are enums with their enum value instead of the raw integer
+- **snmp_set_oid_numeric_print** - 别名 snmp_set_oid_output_format
+- **snmp_set_oid_output_format** - Set the OID output format
+- **snmp_set_quick_print** - 在 NET-SNMP 库中设置 enable 的值
+- **snmp_set_valueretrieval** - Specify the method how the SNMP values will be returned
+- **SoapClient::__call** - Calls a SOAP function (deprecated)
+- **SoapClient::__construct** - SoapClient constructor
+- **SoapClient::__doRequest** - Performs a SOAP request
+- **SoapClient::__getCookies** - Get list of cookies
+- **SoapClient::__getFunctions** - Returns list of available SOAP functions
+- **SoapClient::__getLastRequest** - Returns last SOAP request
+- **SoapClient::__getLastRequestHeaders** - Returns the SOAP headers from the last request
+- **SoapClient::__getLastResponse** - Returns last SOAP response
+- **SoapClient::__getLastResponseHeaders** - Returns the SOAP headers from the last response
+- **SoapClient::__getTypes** - Returns a list of SOAP types
+- **SoapClient::__setCookie** - Defines a cookie for SOAP requests
+- **SoapClient::__setLocation** - Sets the location of the Web service to use
+- **SoapClient::__setSoapHeaders** - Sets SOAP headers for subsequent calls
+- **SoapClient::__soapCall** - Calls a SOAP function
+- **SoapFault::__construct** - SoapFault constructor
+- **SoapFault::__toString** - Obtain a string representation of a SoapFault
+- **SoapHeader::__construct** - SoapHeader constructor
+- **SoapParam::__construct** - SoapParam constructor
+- **SoapServer::addFunction** - 添加一个或多个函数来处理 SOAP 请求
+- **SoapServer::addSoapHeader** - Add a SOAP header to the response
+- **SoapServer::fault** - Issue SoapServer fault indicating an error
+- **SoapServer::getFunctions** - Returns list of defined functions
+- **SoapServer::handle** - Handles a SOAP request
+- **SoapServer::setClass** - Sets the class which handles SOAP requests
+- **SoapServer::setObject** - Sets the object which will be used to handle SOAP requests
+- **SoapServer::setPersistence** - Sets SoapServer persistence mode
+- **SoapServer::__construct** - SoapServer constructor
+- **SoapServer::__getLastResponse** - Returns last SOAP response
+- **SoapVar::__construct** - SoapVar constructor
+- **socket_accept** - 接受套接字上的连接
+- **socket_addrinfo_bind** - 从给定的 addrinfo 创建并绑定一个套接字
+- **socket_addrinfo_connect** - 指定 addrinfo 创建并连接套接字
+- **socket_addrinfo_explain** - 获取有关 addrinfo 的信息
+- **socket_addrinfo_lookup** - 获取数组，包含有关给定主机名的 getaddrinfo 内容
+- **socket_atmark** - 确认 socket 是否处于带外数据标记
+- **socket_bind** - 给套接字绑定名字
+- **socket_clear_error** - 清除套接字或者最后的错误代码上的错误
+- **socket_close** - 关闭 Socket 实例
+- **socket_cmsg_space** - Calculate message buffer size
+- **socket_connect** - 开启一个套接字连接
+- **socket_create** - 创建一个套接字（通讯节点）
+- **socket_create_listen** - 在端口上打开一个套接字以接受连接
+- **socket_create_pair** - 创建一对彼此连接的套接字，并用数组存储
+- **socket_export_stream** - Export a socket into a stream that encapsulates a socket
+- **socket_getopt** - 别名 socket_get_option
+- **socket_getpeername** - 获取套接字远端名字
+- **socket_getsockname** - 获取套接字本地端的名字，返回主机名和端口号或是 Unix 文件系统路径，具体取决于套接字类型
+- **socket_get_option** - 获取套接字的套接字选项
+- **socket_get_status** - 别名 stream_get_meta_data
+- **socket_import_stream** - 导入 stream
+- **socket_last_error** - 返回套接字上的最后一个错误
+- **socket_listen** - 监听套接字的连接
+- **socket_read** - 从套接字中读取最大长度的数据
+- **socket_recv** - 从已连接的 socket 接收数据
+- **socket_recvfrom** - 从套接字接收数据，无论它是否是面向连接的
+- **socket_recvmsg** - Read a message
+- **socket_select** - 从给定套接字数组运行带指定超时时间的 select() 系统调用
+- **socket_send** - 向已连接的套接字发送数据
+- **socket_sendmsg** - Send a message
+- **socket_sendto** - 向套接字发送消息，无论它是否已建立连接
+- **socket_setopt** - 别名 socket_set_option
+- **socket_set_block** - 设置套接字为阻塞模式
+- **socket_set_blocking** - 别名 stream_set_blocking
+- **socket_set_nonblock** - 设置套接字为非阻塞模式
+- **socket_set_option** - 为套接字设置套接字选项
+- **socket_set_timeout** - 别名 stream_set_timeout
+- **socket_shutdown** - 关闭套接字接收或发送，或两者都关闭
+- **socket_strerror** - 返回描述套接字错误的字符串
+- **socket_write** - 向套接字写数据
+- **socket_wsaprotocol_info_export** - 导出 WSAPROTOCOL_INFO 结构体
+- **socket_wsaprotocol_info_import** - 从另一个进程导入套接字
+- **socket_wsaprotocol_info_release** - 释放已导出的 WSAPROTOCOL_INFO 结构体
+- **sodium_add** - Add large numbers
+- **sodium_base642bin** - Decodes a base64-encoded string into raw binary.
+- **sodium_bin2base64** - Encodes a raw binary string with base64.
+- **sodium_bin2hex** - Encode to hexadecimal
+- **sodium_compare** - Compare large numbers
+- **sodium_crypto_aead_aegis128l_decrypt** - Verify then decrypt a message with AEGIS-128L
+- **sodium_crypto_aead_aegis128l_encrypt** - Encrypt then authenticate a message with AEGIS-128L
+- **sodium_crypto_aead_aegis128l_keygen** - Generate a random AEGIS-128L key
+- **sodium_crypto_aead_aegis256_decrypt** - Verify then decrypt a message with AEGIS-256
+- **sodium_crypto_aead_aegis256_encrypt** - Encrypt then authenticate a message with AEGIS-256
+- **sodium_crypto_aead_aegis256_keygen** - Generate a random AEGIS-256 key
+- **sodium_crypto_aead_aes256gcm_decrypt** - Verify then decrypt a message with AES-256-GCM
+- **sodium_crypto_aead_aes256gcm_encrypt** - Encrypt then authenticate with AES-256-GCM
+- **sodium_crypto_aead_aes256gcm_is_available** - Check if hardware supports AES256-GCM
+- **sodium_crypto_aead_aes256gcm_keygen** - Generate a random AES-256-GCM key
+- **sodium_crypto_aead_chacha20poly1305_decrypt** - Verify then decrypt with ChaCha20-Poly1305
+- **sodium_crypto_aead_chacha20poly1305_encrypt** - Encrypt then authenticate with ChaCha20-Poly1305
+- **sodium_crypto_aead_chacha20poly1305_ietf_decrypt** - Verify that the ciphertext includes a valid tag
+- **sodium_crypto_aead_chacha20poly1305_ietf_encrypt** - Encrypt a message
+- **sodium_crypto_aead_chacha20poly1305_ietf_keygen** - Generate a random ChaCha20-Poly1305 (IETF) key.
+- **sodium_crypto_aead_chacha20poly1305_keygen** - Generate a random ChaCha20-Poly1305 key.
+- **sodium_crypto_aead_xchacha20poly1305_ietf_decrypt** - (Preferred) Verify then decrypt with XChaCha20-Poly1305
+- **sodium_crypto_aead_xchacha20poly1305_ietf_encrypt** - (Preferred) Encrypt then authenticate with XChaCha20-Poly1305
+- **sodium_crypto_aead_xchacha20poly1305_ietf_keygen** - Generate a random XChaCha20-Poly1305 key.
+- **sodium_crypto_auth** - Compute a tag for the message
+- **sodium_crypto_auth_keygen** - Generate a random key for sodium_crypto_auth
+- **sodium_crypto_auth_verify** - Verifies that the tag is valid for the message
+- **sodium_crypto_box** - Authenticated public-key encryption
+- **sodium_crypto_box_keypair** - Randomly generate a secret key and a corresponding public key
+- **sodium_crypto_box_keypair_from_secretkey_and_publickey** - Create a unified keypair string from a secret key and public key
+- **sodium_crypto_box_open** - Authenticated public-key decryption
+- **sodium_crypto_box_publickey** - Extract the public key from a crypto_box keypair
+- **sodium_crypto_box_publickey_from_secretkey** - Calculate the public key from a secret key
+- **sodium_crypto_box_seal** - Anonymous public-key encryption
+- **sodium_crypto_box_seal_open** - Anonymous public-key decryption
+- **sodium_crypto_box_secretkey** - Extracts the secret key from a crypto_box keypair
+- **sodium_crypto_box_seed_keypair** - Deterministically derive the key pair from a single key
+- **sodium_crypto_core_ristretto255_add** - Adds an element
+- **sodium_crypto_core_ristretto255_from_hash** - Maps a vector
+- **sodium_crypto_core_ristretto255_is_valid_point** - Determines if a point on the ristretto255 curve
+- **sodium_crypto_core_ristretto255_random** - Generates a random key
+- **sodium_crypto_core_ristretto255_scalar_add** - Adds a scalar value
+- **sodium_crypto_core_ristretto255_scalar_complement** - The sodium_crypto_core_ristretto255_scalar_complement purpose
+- **sodium_crypto_core_ristretto255_scalar_invert** - Inverts a scalar value
+- **sodium_crypto_core_ristretto255_scalar_mul** - Multiplies a scalar value
+- **sodium_crypto_core_ristretto255_scalar_negate** - Negates a scalar value
+- **sodium_crypto_core_ristretto255_scalar_random** - Generates a random key
+- **sodium_crypto_core_ristretto255_scalar_reduce** - Reduces a scalar value
+- **sodium_crypto_core_ristretto255_scalar_sub** - Subtracts a scalar value
+- **sodium_crypto_core_ristretto255_sub** - Subtracts an element
+- **sodium_crypto_generichash** - Get a hash of the message
+- **sodium_crypto_generichash_final** - Complete the hash
+- **sodium_crypto_generichash_init** - Initialize a hash for streaming
+- **sodium_crypto_generichash_keygen** - Generate a random generichash key
+- **sodium_crypto_generichash_update** - Add message to a hash
+- **sodium_crypto_kdf_derive_from_key** - Derive a subkey
+- **sodium_crypto_kdf_keygen** - Generate a random root key for the KDF interface
+- **sodium_crypto_kx_client_session_keys** - Calculate the client-side session keys.
+- **sodium_crypto_kx_keypair** - Creates a new sodium keypair
+- **sodium_crypto_kx_publickey** - Extract the public key from a crypto_kx keypair
+- **sodium_crypto_kx_secretkey** - Extract the secret key from a crypto_kx keypair.
+- **sodium_crypto_kx_seed_keypair** - Description
+- **sodium_crypto_kx_server_session_keys** - Calculate the server-side session keys.
+- **sodium_crypto_pwhash** - Derive a key from a password, using Argon2
+- **sodium_crypto_pwhash_scryptsalsa208sha256** - Derives a key from a password, using scrypt
+- **sodium_crypto_pwhash_scryptsalsa208sha256_str** - Get an ASCII encoded hash
+- **sodium_crypto_pwhash_scryptsalsa208sha256_str_verify** - Verify that the password is a valid password verification string
+- **sodium_crypto_pwhash_str** - Get an ASCII-encoded hash
+- **sodium_crypto_pwhash_str_needs_rehash** - Determine whether or not to rehash a password
+- **sodium_crypto_pwhash_str_verify** - Verifies that a password matches a hash
+- **sodium_crypto_scalarmult** - Compute a shared secret given a user's secret key and another user's public key
+- **sodium_crypto_scalarmult_base** - 别名 sodium_crypto_box_publickey_from_secretkey
+- **sodium_crypto_scalarmult_ristretto255** - Computes a shared secret
+- **sodium_crypto_scalarmult_ristretto255_base** - Calculates the public key from a secret key
+- **sodium_crypto_secretbox** - Authenticated shared-key encryption
+- **sodium_crypto_secretbox_keygen** - Generate random key for sodium_crypto_secretbox
+- **sodium_crypto_secretbox_open** - Authenticated shared-key decryption
+- **sodium_crypto_secretstream_xchacha20poly1305_init_pull** - Initialize a secretstream context for decryption
+- **sodium_crypto_secretstream_xchacha20poly1305_init_push** - Initialize a secretstream context for encryption
+- **sodium_crypto_secretstream_xchacha20poly1305_keygen** - Generate a random secretstream key.
+- **sodium_crypto_secretstream_xchacha20poly1305_pull** - Decrypt a chunk of data from an encrypted stream
+- **sodium_crypto_secretstream_xchacha20poly1305_push** - Encrypt a chunk of data so that it can safely be decrypted in a streaming API
+- **sodium_crypto_secretstream_xchacha20poly1305_rekey** - Explicitly rotate the key in the secretstream state
+- **sodium_crypto_shorthash** - Compute a short hash of a message and key
+- **sodium_crypto_shorthash_keygen** - Get random bytes for key
+- **sodium_crypto_sign** - Sign a message
+- **sodium_crypto_sign_detached** - Sign the message
+- **sodium_crypto_sign_ed25519_pk_to_curve25519** - Convert an Ed25519 public key to a Curve25519 public key
+- **sodium_crypto_sign_ed25519_sk_to_curve25519** - Convert an Ed25519 secret key to a Curve25519 secret key
+- **sodium_crypto_sign_keypair** - Randomly generate a secret key and a corresponding public key
+- **sodium_crypto_sign_keypair_from_secretkey_and_publickey** - Join a secret key and public key together
+- **sodium_crypto_sign_open** - Check that the signed message has a valid signature
+- **sodium_crypto_sign_publickey** - Extract the Ed25519 public key from a keypair
+- **sodium_crypto_sign_publickey_from_secretkey** - Extract the Ed25519 public key from the secret key
+- **sodium_crypto_sign_secretkey** - Extract the Ed25519 secret key from a keypair
+- **sodium_crypto_sign_seed_keypair** - Deterministically derive the key pair from a single key
+- **sodium_crypto_sign_verify_detached** - Verify signature for the message
+- **sodium_crypto_stream** - Generate a deterministic sequence of bytes from a seed
+- **sodium_crypto_stream_keygen** - Generate a random sodium_crypto_stream key.
+- **sodium_crypto_stream_xchacha20** - Expands the key and nonce into a keystream of pseudorandom bytes
+- **sodium_crypto_stream_xchacha20_keygen** - Returns a secure random key
+- **sodium_crypto_stream_xchacha20_xor** - Encrypts a message using a nonce and a secret key (no authentication)
+- **sodium_crypto_stream_xchacha20_xor_ic** - Encrypts a message using a nonce and a secret key (no authentication)
+- **sodium_crypto_stream_xor** - Encrypt a message without authentication
+- **sodium_hex2bin** - Decodes a hexadecimally encoded binary string
+- **sodium_increment** - Increment large number
+- **sodium_memcmp** - Test for equality in constant-time
+- **sodium_memzero** - Overwrite a string with NUL characters
+- **sodium_pad** - Add padding data
+- **sodium_unpad** - Remove padding data
+- **SolrClient::addDocument** - Adds a document to the index
+- **SolrClient::addDocuments** - Adds a collection of SolrInputDocument instances to the index
+- **SolrClient::commit** - Finalizes all add/deletes made to the index
+- **SolrClient::deleteById** - Delete by Id
+- **SolrClient::deleteByIds** - Deletes by Ids
+- **SolrClient::deleteByQueries** - Removes all documents matching any of the queries
+- **SolrClient::deleteByQuery** - Deletes all documents matching the given query
+- **SolrClient::getById** - Get Document By Id. Utilizes Solr Realtime Get (RTG)
+- **SolrClient::getByIds** - Get Documents by their Ids. Utilizes Solr Realtime Get (RTG)
+- **SolrClient::getDebug** - Returns the debug data for the last connection attempt
+- **SolrClient::getOptions** - Returns the client options set internally
+- **SolrClient::optimize** - Defragments the index
+- **SolrClient::ping** - Checks if Solr server is still up
+- **SolrClient::query** - Sends a query to the server
+- **SolrClient::request** - Sends a raw update request
+- **SolrClient::rollback** - Rollbacks all add/deletes made to the index since the last commit
+- **SolrClient::setResponseWriter** - Sets the response writer used to prepare the response from Solr
+- **SolrClient::setServlet** - Changes the specified servlet type to a new value
+- **SolrClient::system** - Retrieve Solr Server information
+- **SolrClient::threads** - Checks the threads status
+- **SolrClient::__construct** - Constructor for the SolrClient object
+- **SolrClient::__destruct** - Destructor for SolrClient
+- **SolrClientException::getInternalInfo** - Returns internal information where the Exception was thrown
+- **SolrCollapseFunction::getField** - Returns the field that is being collapsed on
+- **SolrCollapseFunction::getHint** - Returns collapse hint
+- **SolrCollapseFunction::getMax** - Returns max parameter
+- **SolrCollapseFunction::getMin** - Returns min parameter
+- **SolrCollapseFunction::getNullPolicy** - Returns null policy
+- **SolrCollapseFunction::getSize** - Returns size parameter
+- **SolrCollapseFunction::setField** - Sets the field to collapse on
+- **SolrCollapseFunction::setHint** - Sets collapse hint
+- **SolrCollapseFunction::setMax** - Selects the group heads by the max value of a numeric field or function query
+- **SolrCollapseFunction::setMin** - Sets the initial size of the collapse data structures when collapsing on a numeric field only
+- **SolrCollapseFunction::setNullPolicy** - Sets the NULL Policy
+- **SolrCollapseFunction::setSize** - Sets the initial size of the collapse data structures when collapsing on a numeric field only
+- **SolrCollapseFunction::__construct** - Constructor
+- **SolrCollapseFunction::__toString** - Returns a string representing the constructed collapse function
+- **SolrDisMaxQuery::addBigramPhraseField** - Adds a Phrase Bigram Field (pf2 parameter)
+- **SolrDisMaxQuery::addBoostQuery** - Adds a boost query field with value and optional boost (bq parameter)
+- **SolrDisMaxQuery::addPhraseField** - Adds a Phrase Field (pf parameter)
+- **SolrDisMaxQuery::addQueryField** - Add a query field with optional boost (qf parameter)
+- **SolrDisMaxQuery::addTrigramPhraseField** - Adds a Trigram Phrase Field (pf3 parameter)
+- **SolrDisMaxQuery::addUserField** - Adds a field to User Fields Parameter (uf)
+- **SolrDisMaxQuery::removeBigramPhraseField** - Removes phrase bigram field (pf2 parameter)
+- **SolrDisMaxQuery::removeBoostQuery** - Removes a boost query partial by field name (bq)
+- **SolrDisMaxQuery::removePhraseField** - Removes a Phrase Field (pf parameter)
+- **SolrDisMaxQuery::removeQueryField** - Removes a Query Field (qf parameter)
+- **SolrDisMaxQuery::removeTrigramPhraseField** - Removes a Trigram Phrase Field (pf3 parameter)
+- **SolrDisMaxQuery::removeUserField** - Removes a field from The User Fields Parameter (uf)
+- **SolrDisMaxQuery::setBigramPhraseFields** - Sets Bigram Phrase Fields and their boosts (and slops) using pf2 parameter
+- **SolrDisMaxQuery::setBigramPhraseSlop** - Sets Bigram Phrase Slop (ps2 parameter)
+- **SolrDisMaxQuery::setBoostFunction** - Sets a Boost Function (bf parameter)
+- **SolrDisMaxQuery::setBoostQuery** - Directly Sets Boost Query Parameter (bq)
+- **SolrDisMaxQuery::setMinimumMatch** - Set Minimum "Should" Match (mm)
+- **SolrDisMaxQuery::setPhraseFields** - Sets  Phrase Fields and their boosts (and slops) using pf2 parameter
+- **SolrDisMaxQuery::setPhraseSlop** - Sets the default slop on phrase queries (ps parameter)
+- **SolrDisMaxQuery::setQueryAlt** - Set Query Alternate (q.alt parameter)
+- **SolrDisMaxQuery::setQueryPhraseSlop** - Specifies the amount of slop permitted on phrase queries explicitly included in the user's query string (qf parameter)
+- **SolrDisMaxQuery::setTieBreaker** - Sets Tie Breaker parameter (tie parameter)
+- **SolrDisMaxQuery::setTrigramPhraseFields** - Directly Sets Trigram Phrase Fields (pf3 parameter)
+- **SolrDisMaxQuery::setTrigramPhraseSlop** - Sets Trigram Phrase Slop (ps3 parameter)
+- **SolrDisMaxQuery::setUserFields** - Sets User Fields parameter (uf)
+- **SolrDisMaxQuery::useDisMaxQueryParser** - Switch QueryParser to be DisMax Query Parser
+- **SolrDisMaxQuery::useEDisMaxQueryParser** - Switch QueryParser to be EDisMax
+- **SolrDisMaxQuery::__construct** - Class Constructor
+- **SolrDocument::addField** - Adds a field to the document
+- **SolrDocument::clear** - Drops all the fields in the document
+- **SolrDocument::current** - Retrieves the current field
+- **SolrDocument::deleteField** - Removes a field from the document
+- **SolrDocument::fieldExists** - Checks if a field exists in the document
+- **SolrDocument::getChildDocuments** - Returns an array of child documents (SolrDocument)
+- **SolrDocument::getChildDocumentsCount** - Returns the number of child documents
+- **SolrDocument::getField** - Retrieves a field by name
+- **SolrDocument::getFieldCount** - Returns the number of fields in this document
+- **SolrDocument::getFieldNames** - Returns an array of fields names in the document
+- **SolrDocument::getInputDocument** - Returns a SolrInputDocument equivalent of the object
+- **SolrDocument::hasChildDocuments** - Checks whether the document has any child documents
+- **SolrDocument::key** - Retrieves the current key
+- **SolrDocument::merge** - Merges source to the current SolrDocument
+- **SolrDocument::next** - Moves the internal pointer to the next field
+- **SolrDocument::offsetExists** - Checks if a particular field exists
+- **SolrDocument::offsetGet** - Retrieves a field
+- **SolrDocument::offsetSet** - Adds a field to the document
+- **SolrDocument::offsetUnset** - Removes a field
+- **SolrDocument::reset** - 别名 SolrDocument::clear
+- **SolrDocument::rewind** - Resets the internal pointer to the beginning
+- **SolrDocument::serialize** - Used for custom serialization
+- **SolrDocument::sort** - Sorts the fields in the document
+- **SolrDocument::toArray** - Returns an array representation of the document
+- **SolrDocument::unserialize** - Custom serialization of SolrDocument objects
+- **SolrDocument::valid** - Checks if the current position internally is still valid
+- **SolrDocument::__clone** - Creates a copy of a SolrDocument object
+- **SolrDocument::__construct** - Constructor
+- **SolrDocument::__destruct** - Destructor
+- **SolrDocument::__get** - Access the field as a property
+- **SolrDocument::__isset** - Checks if a field exists
+- **SolrDocument::__set** - Adds another field to the document
+- **SolrDocument::__unset** - Removes a field from the document
+- **SolrDocumentField::__construct** - Constructor
+- **SolrDocumentField::__destruct** - Destructor
+- **SolrException::getInternalInfo** - Returns internal information where the Exception was thrown
+- **SolrGenericResponse::__construct** - Constructor
+- **SolrGenericResponse::__destruct** - Destructor
+- **SolrIllegalArgumentException::getInternalInfo** - Returns internal information where the Exception was thrown
+- **SolrIllegalOperationException::getInternalInfo** - Returns internal information where the Exception was thrown
+- **SolrInputDocument::addChildDocument** - Adds a child document for block indexing
+- **SolrInputDocument::addChildDocuments** - Adds an array of child documents
+- **SolrInputDocument::addField** - Adds a field to the document
+- **SolrInputDocument::clear** - Resets the input document
+- **SolrInputDocument::deleteField** - Removes a field from the document
+- **SolrInputDocument::fieldExists** - Checks if a field exists
+- **SolrInputDocument::getBoost** - Retrieves the current boost value for the document
+- **SolrInputDocument::getChildDocuments** - Returns an array of child documents (SolrInputDocument)
+- **SolrInputDocument::getChildDocumentsCount** - Returns the number of child documents
+- **SolrInputDocument::getField** - Retrieves a field by name
+- **SolrInputDocument::getFieldBoost** - Retrieves the boost value for a particular field
+- **SolrInputDocument::getFieldCount** - Returns the number of fields in the document
+- **SolrInputDocument::getFieldNames** - Returns an array containing all the fields in the document
+- **SolrInputDocument::hasChildDocuments** - Returns true if the document has any child documents
+- **SolrInputDocument::merge** - Merges one input document into another
+- **SolrInputDocument::reset** - 别名 SolrInputDocument::clear
+- **SolrInputDocument::setBoost** - Sets the boost value for this document
+- **SolrInputDocument::setFieldBoost** - Sets the index-time boost value for a field
+- **SolrInputDocument::sort** - Sorts the fields within the document
+- **SolrInputDocument::toArray** - Returns an array representation of the input document
+- **SolrInputDocument::__clone** - Creates a copy of a SolrDocument
+- **SolrInputDocument::__construct** - Constructor
+- **SolrInputDocument::__destruct** - Destructor
+- **SolrModifiableParams::__construct** - Constructor
+- **SolrModifiableParams::__destruct** - Destructor
+- **SolrObject::getPropertyNames** - Returns an array of all the names of the properties
+- **SolrObject::offsetExists** - Checks if the property exists
+- **SolrObject::offsetGet** - Used to retrieve a property
+- **SolrObject::offsetSet** - Sets the value for a property
+- **SolrObject::offsetUnset** - Unsets the value for the property
+- **SolrObject::__construct** - Creates Solr object
+- **SolrObject::__destruct** - Destructor
+- **SolrParams::add** - 别名 SolrParams::addParam
+- **SolrParams::addParam** - Adds a parameter to the object
+- **SolrParams::get** - 别名 SolrParams::getParam
+- **SolrParams::getParam** - Returns a parameter value
+- **SolrParams::getParams** - Returns an array of non URL-encoded parameters
+- **SolrParams::getPreparedParams** - Returns an array of URL-encoded parameters
+- **SolrParams::serialize** - Used for custom serialization
+- **SolrParams::set** - 别名 SolrParams::setParam
+- **SolrParams::setParam** - Sets the parameter to the specified value
+- **SolrParams::toString** - Returns all the name-value pair parameters in the object
+- **SolrParams::unserialize** - Used for custom serialization
+- **SolrPingResponse::getResponse** - Returns the response from the server
+- **SolrPingResponse::__construct** - Constructor
+- **SolrPingResponse::__destruct** - Destructor
+- **SolrQuery::addExpandFilterQuery** - Overrides main filter query, determines which documents to include in the main group
+- **SolrQuery::addExpandSortField** - Orders the documents within the expanded groups (expand.sort parameter)
+- **SolrQuery::addFacetDateField** - Maps to facet.date
+- **SolrQuery::addFacetDateOther** - Adds another facet.date.other parameter
+- **SolrQuery::addFacetField** - Adds another field to the facet
+- **SolrQuery::addFacetQuery** - Adds a facet query
+- **SolrQuery::addField** - Specifies which fields to return in the result
+- **SolrQuery::addFilterQuery** - Specifies a filter query
+- **SolrQuery::addGroupField** - Add a field to be used to group results
+- **SolrQuery::addGroupFunction** - Allows grouping results based on the unique values of a function query (group.func parameter)
+- **SolrQuery::addGroupQuery** - Allows grouping of documents that match the given query
+- **SolrQuery::addGroupSortField** - Add a group sort field (group.sort parameter)
+- **SolrQuery::addHighlightField** - Maps to hl.fl
+- **SolrQuery::addMltField** - Sets a field to use for similarity
+- **SolrQuery::addMltQueryField** - Maps to mlt.qf
+- **SolrQuery::addSortField** - Used to control how the results should be sorted
+- **SolrQuery::addStatsFacet** - Requests a return of sub results for values within the given facet
+- **SolrQuery::addStatsField** - Maps to stats.field parameter
+- **SolrQuery::collapse** - Collapses the result set to a single document per group
+- **SolrQuery::getExpand** - Returns true if group expanding is enabled
+- **SolrQuery::getExpandFilterQueries** - Returns the expand filter queries
+- **SolrQuery::getExpandQuery** - Returns the expand query expand.q parameter
+- **SolrQuery::getExpandRows** - Returns The number of rows to display in each group (expand.rows)
+- **SolrQuery::getExpandSortFields** - Returns an array of fields
+- **SolrQuery::getFacet** - Returns the value of the facet parameter
+- **SolrQuery::getFacetDateEnd** - Returns the value for the facet.date.end parameter
+- **SolrQuery::getFacetDateFields** - Returns all the facet.date fields
+- **SolrQuery::getFacetDateGap** - Returns the value of the facet.date.gap parameter
+- **SolrQuery::getFacetDateHardEnd** - Returns the value of the facet.date.hardend parameter
+- **SolrQuery::getFacetDateOther** - Returns the value for the facet.date.other parameter
+- **SolrQuery::getFacetDateStart** - Returns the  lower bound for the first date range for all date faceting on this field
+- **SolrQuery::getFacetFields** - Returns all the facet fields
+- **SolrQuery::getFacetLimit** - Returns the maximum number of constraint counts that should be returned for the facet fields
+- **SolrQuery::getFacetMethod** - Returns the value of the facet.method parameter
+- **SolrQuery::getFacetMinCount** - Returns the minimum counts for facet fields should be included in the response
+- **SolrQuery::getFacetMissing** - Returns the current state of the facet.missing parameter
+- **SolrQuery::getFacetOffset** - Returns an offset into the list of constraints to be used for pagination
+- **SolrQuery::getFacetPrefix** - Returns the facet prefix
+- **SolrQuery::getFacetQueries** - Returns all the facet queries
+- **SolrQuery::getFacetSort** - Returns the facet sort type
+- **SolrQuery::getFields** - Returns the list of fields that will be returned in the response
+- **SolrQuery::getFilterQueries** - Returns an array of filter queries
+- **SolrQuery::getGroup** - Returns true if grouping is enabled
+- **SolrQuery::getGroupCachePercent** - Returns group cache percent value
+- **SolrQuery::getGroupFacet** - Returns the group.facet parameter value
+- **SolrQuery::getGroupFields** - Returns group fields (group.field parameter values)
+- **SolrQuery::getGroupFormat** - Returns the group.format value
+- **SolrQuery::getGroupFunctions** - Returns group functions (group.func parameter values)
+- **SolrQuery::getGroupLimit** - Returns the group.limit value
+- **SolrQuery::getGroupMain** - Returns the group.main value
+- **SolrQuery::getGroupNGroups** - Returns the group.ngroups value
+- **SolrQuery::getGroupOffset** - Returns the group.offset value
+- **SolrQuery::getGroupQueries** - Returns all the group.query parameter values
+- **SolrQuery::getGroupSortFields** - Returns the group.sort value
+- **SolrQuery::getGroupTruncate** - Returns the group.truncate value
+- **SolrQuery::getHighlight** - Returns the state of the hl parameter
+- **SolrQuery::getHighlightAlternateField** - Returns the highlight field to use as backup or default
+- **SolrQuery::getHighlightFields** - Returns all the fields that Solr should generate highlighted snippets for
+- **SolrQuery::getHighlightFormatter** - Returns the formatter for the highlighted output
+- **SolrQuery::getHighlightFragmenter** - Returns the text snippet generator for highlighted text
+- **SolrQuery::getHighlightFragsize** - Returns the number of characters of fragments to consider for highlighting
+- **SolrQuery::getHighlightHighlightMultiTerm** - Returns whether or not to enable highlighting for range/wildcard/fuzzy/prefix queries
+- **SolrQuery::getHighlightMaxAlternateFieldLength** - Returns the maximum number of characters of the field to return
+- **SolrQuery::getHighlightMaxAnalyzedChars** - Returns the maximum number of characters into a document to look for suitable snippets
+- **SolrQuery::getHighlightMergeContiguous** - Returns whether or not the collapse contiguous fragments into a single fragment
+- **SolrQuery::getHighlightQuery** - return the highlightquery (hl.q)
+- **SolrQuery::getHighlightRegexMaxAnalyzedChars** - Returns the maximum number of characters from a field when using the regex fragmenter
+- **SolrQuery::getHighlightRegexPattern** - Returns the regular expression for fragmenting
+- **SolrQuery::getHighlightRegexSlop** - Returns the deviation factor from the ideal fragment size
+- **SolrQuery::getHighlightRequireFieldMatch** - Returns if a field will only be highlighted if the query matched in this particular field
+- **SolrQuery::getHighlightSimplePost** - Returns the text which appears after a highlighted term
+- **SolrQuery::getHighlightSimplePre** - Returns the text which appears before a highlighted term
+- **SolrQuery::getHighlightSnippets** - Returns the maximum number of highlighted snippets to generate per field
+- **SolrQuery::getHighlightUsePhraseHighlighter** - Returns the state of the hl.usePhraseHighlighter parameter
+- **SolrQuery::getMlt** - Returns whether or not MoreLikeThis results should be enabled
+- **SolrQuery::getMltBoost** - Returns whether or not the query will be boosted by the interesting term relevance
+- **SolrQuery::getMltCount** - Returns the number of similar documents to return for each result
+- **SolrQuery::getMltFields** - Returns all the fields to use for similarity
+- **SolrQuery::getMltMaxNumQueryTerms** - Returns the maximum number of query terms that will be included in any generated query
+- **SolrQuery::getMltMaxNumTokens** - Returns the maximum number of tokens to parse in each document field that is not stored with TermVector support
+- **SolrQuery::getMltMaxWordLength** - Returns the maximum word length above which words will be ignored
+- **SolrQuery::getMltMinDocFrequency** - Returns the treshold frequency at which words will be ignored which do not occur in at least this many docs
+- **SolrQuery::getMltMinTermFrequency** - Returns the frequency below which terms will be ignored in the source document
+- **SolrQuery::getMltMinWordLength** - Returns the minimum word length below which words will be ignored
+- **SolrQuery::getMltQueryFields** - Returns the query fields and their boosts
+- **SolrQuery::getQuery** - Returns the main query
+- **SolrQuery::getRows** - Returns the maximum number of documents
+- **SolrQuery::getSortFields** - Returns all the sort fields
+- **SolrQuery::getStart** - Returns the offset in the complete result set
+- **SolrQuery::getStats** - Returns whether or not stats is enabled
+- **SolrQuery::getStatsFacets** - Returns all the stats facets that were set
+- **SolrQuery::getStatsFields** - Returns all the statistics fields
+- **SolrQuery::getTerms** - Returns whether or not the TermsComponent is enabled
+- **SolrQuery::getTermsField** - Returns the field from which the terms are retrieved
+- **SolrQuery::getTermsIncludeLowerBound** - Returns whether or not to include the lower bound in the result set
+- **SolrQuery::getTermsIncludeUpperBound** - Returns whether or not to include the upper bound term in the result set
+- **SolrQuery::getTermsLimit** - Returns the maximum number of terms Solr should return
+- **SolrQuery::getTermsLowerBound** - Returns the term to start at
+- **SolrQuery::getTermsMaxCount** - Returns the maximum document frequency
+- **SolrQuery::getTermsMinCount** - Returns the minimum document frequency to return in order to be included
+- **SolrQuery::getTermsPrefix** - Returns the term prefix
+- **SolrQuery::getTermsReturnRaw** - Whether or not to return raw characters
+- **SolrQuery::getTermsSort** - Returns an integer indicating how terms are sorted
+- **SolrQuery::getTermsUpperBound** - Returns the term to stop at
+- **SolrQuery::getTimeAllowed** - Returns the time in milliseconds allowed for the query to finish
+- **SolrQuery::removeExpandFilterQuery** - Removes an expand filter query
+- **SolrQuery::removeExpandSortField** - Removes an expand sort field from the expand.sort parameter
+- **SolrQuery::removeFacetDateField** - Removes one of the facet date fields
+- **SolrQuery::removeFacetDateOther** - Removes one of the facet.date.other parameters
+- **SolrQuery::removeFacetField** - Removes one of the facet.date parameters
+- **SolrQuery::removeFacetQuery** - Removes one of the facet.query parameters
+- **SolrQuery::removeField** - Removes a field from the list of fields
+- **SolrQuery::removeFilterQuery** - Removes a filter query
+- **SolrQuery::removeHighlightField** - Removes one of the fields used for highlighting
+- **SolrQuery::removeMltField** - Removes one of the moreLikeThis fields
+- **SolrQuery::removeMltQueryField** - Removes one of the moreLikeThis query fields
+- **SolrQuery::removeSortField** - Removes one of the sort fields
+- **SolrQuery::removeStatsFacet** - Removes one of the stats.facet parameters
+- **SolrQuery::removeStatsField** - Removes one of the stats.field parameters
+- **SolrQuery::setEchoHandler** - Toggles the echoHandler parameter
+- **SolrQuery::setEchoParams** - Determines what kind of parameters to include in the response
+- **SolrQuery::setExpand** - Enables/Disables the Expand Component
+- **SolrQuery::setExpandQuery** - Sets the expand.q parameter
+- **SolrQuery::setExpandRows** - Sets the number of rows to display in each group (expand.rows). Server Default 5
+- **SolrQuery::setExplainOther** - Sets the explainOther common query parameter
+- **SolrQuery::setFacet** - Maps to the facet parameter. Enables or disables facetting
+- **SolrQuery::setFacetDateEnd** - Maps to facet.date.end
+- **SolrQuery::setFacetDateGap** - Maps to facet.date.gap
+- **SolrQuery::setFacetDateHardEnd** - Maps to facet.date.hardend
+- **SolrQuery::setFacetDateStart** - Maps to facet.date.start
+- **SolrQuery::setFacetEnumCacheMinDefaultFrequency** - Sets the minimum document frequency used for determining term count
+- **SolrQuery::setFacetLimit** - Maps to facet.limit
+- **SolrQuery::setFacetMethod** - Specifies the type of algorithm to use when faceting a field
+- **SolrQuery::setFacetMinCount** - Maps to facet.mincount
+- **SolrQuery::setFacetMissing** - Maps to facet.missing
+- **SolrQuery::setFacetOffset** - Sets the offset into the list of constraints to allow for pagination
+- **SolrQuery::setFacetPrefix** - Specifies a string prefix with which to limits the terms on which to facet
+- **SolrQuery::setFacetSort** - Determines the ordering of the facet field constraints
+- **SolrQuery::setGroup** - Enable/Disable result grouping (group parameter)
+- **SolrQuery::setGroupCachePercent** - Enables caching for result grouping
+- **SolrQuery::setGroupFacet** - Sets group.facet parameter
+- **SolrQuery::setGroupFormat** - Sets the group format, result structure (group.format parameter)
+- **SolrQuery::setGroupLimit** - Specifies the number of results to return for each group. The server default value is 1
+- **SolrQuery::setGroupMain** - If true, the result of the first field grouping command is used as the main result list in the response, using group.format=simple
+- **SolrQuery::setGroupNGroups** - If true, Solr includes the number of groups that have matched the query in the results
+- **SolrQuery::setGroupOffset** - Sets the group.offset parameter
+- **SolrQuery::setGroupTruncate** - If true, facet counts are based on the most relevant document of each group matching the query
+- **SolrQuery::setHighlight** - Enables or disables highlighting
+- **SolrQuery::setHighlightAlternateField** - Specifies the backup field to use
+- **SolrQuery::setHighlightFormatter** - Specify a formatter for the highlight output
+- **SolrQuery::setHighlightFragmenter** - Sets a text snippet generator for highlighted text
+- **SolrQuery::setHighlightFragsize** - The size of fragments to consider for highlighting
+- **SolrQuery::setHighlightHighlightMultiTerm** - Use SpanScorer to highlight phrase terms
+- **SolrQuery::setHighlightMaxAlternateFieldLength** - Sets the maximum number of characters of the field to return
+- **SolrQuery::setHighlightMaxAnalyzedChars** - Specifies the number of characters into a document to look for suitable snippets
+- **SolrQuery::setHighlightMergeContiguous** - Whether or not to collapse contiguous fragments into a single fragment
+- **SolrQuery::setHighlightQuery** - A query designated for highlighting (hl.q)
+- **SolrQuery::setHighlightRegexMaxAnalyzedChars** - Specify the maximum number of characters to analyze
+- **SolrQuery::setHighlightRegexPattern** - Specify the regular expression for fragmenting
+- **SolrQuery::setHighlightRegexSlop** - Sets the factor by which the regex fragmenter can stray from the ideal fragment size
+- **SolrQuery::setHighlightRequireFieldMatch** - Require field matching during highlighting
+- **SolrQuery::setHighlightSimplePost** - Sets the text which appears after a highlighted term
+- **SolrQuery::setHighlightSimplePre** - Sets the text which appears before a highlighted term
+- **SolrQuery::setHighlightSnippets** - Sets the maximum number of highlighted snippets to generate per field
+- **SolrQuery::setHighlightUsePhraseHighlighter** - Whether to highlight phrase terms only when they appear within the query phrase
+- **SolrQuery::setMlt** - Enables or disables moreLikeThis
+- **SolrQuery::setMltBoost** - Set if the query will be boosted by the interesting term relevance
+- **SolrQuery::setMltCount** - Set the number of similar documents to return for each result
+- **SolrQuery::setMltMaxNumQueryTerms** - Sets the maximum number of query terms included
+- **SolrQuery::setMltMaxNumTokens** - Specifies the maximum number of tokens to parse
+- **SolrQuery::setMltMaxWordLength** - Sets the maximum word length
+- **SolrQuery::setMltMinDocFrequency** - Sets the mltMinDoc frequency
+- **SolrQuery::setMltMinTermFrequency** - Sets the frequency below which terms will be ignored in the source docs
+- **SolrQuery::setMltMinWordLength** - Sets the minimum word length
+- **SolrQuery::setOmitHeader** - Exclude the header from the returned results
+- **SolrQuery::setQuery** - Sets the search query
+- **SolrQuery::setRows** - Specifies the maximum number of rows to return in the result
+- **SolrQuery::setShowDebugInfo** - Flag to show debug information
+- **SolrQuery::setStart** - Specifies the number of rows to skip
+- **SolrQuery::setStats** - Enables or disables the Stats component
+- **SolrQuery::setTerms** - Enables or disables the TermsComponent
+- **SolrQuery::setTermsField** - Sets the name of the field to get the Terms from
+- **SolrQuery::setTermsIncludeLowerBound** - Include the lower bound term in the result set
+- **SolrQuery::setTermsIncludeUpperBound** - Include the upper bound term in the result set
+- **SolrQuery::setTermsLimit** - Sets the maximum number of terms to return
+- **SolrQuery::setTermsLowerBound** - Specifies the Term to start from
+- **SolrQuery::setTermsMaxCount** - Sets the maximum document frequency
+- **SolrQuery::setTermsMinCount** - Sets the minimum document frequency
+- **SolrQuery::setTermsPrefix** - Restrict matches to terms that start with the prefix
+- **SolrQuery::setTermsReturnRaw** - Return the raw characters of the indexed term
+- **SolrQuery::setTermsSort** - Specifies how to sort the returned terms
+- **SolrQuery::setTermsUpperBound** - Sets the term to stop at
+- **SolrQuery::setTimeAllowed** - The time allowed for search to finish
+- **SolrQuery::__construct** - Constructor
+- **SolrQuery::__destruct** - Destructor
+- **SolrQueryResponse::__construct** - Constructor
+- **SolrQueryResponse::__destruct** - Destructor
+- **SolrResponse::getDigestedResponse** - Returns the XML response as serialized PHP data
+- **SolrResponse::getHttpStatus** - Returns the HTTP status of the response
+- **SolrResponse::getHttpStatusMessage** - Returns more details on the HTTP status
+- **SolrResponse::getRawRequest** - Returns the raw request sent to the Solr server
+- **SolrResponse::getRawRequestHeaders** - Returns the raw request headers sent to the Solr server
+- **SolrResponse::getRawResponse** - Returns the raw response from the server
+- **SolrResponse::getRawResponseHeaders** - Returns the raw response headers from the server
+- **SolrResponse::getRequestUrl** - Returns the full URL the request was sent to
+- **SolrResponse::getResponse** - Returns a SolrObject representing the XML response from the server
+- **SolrResponse::setParseMode** - Sets the parse mode
+- **SolrResponse::success** - Was the request a success
+- **SolrServerException::getInternalInfo** - Returns internal information where the Exception was thrown
+- **SolrUpdateResponse::__construct** - Constructor
+- **SolrUpdateResponse::__destruct** - Destructor
+- **SolrUtils::digestXmlResponse** - Parses an response XML string into a SolrObject
+- **SolrUtils::escapeQueryChars** - Escapes a lucene query string
+- **SolrUtils::getSolrVersion** - Returns the current version of the Solr extension
+- **SolrUtils::queryPhrase** - Prepares a phrase from an unescaped lucene string
+- **solr_get_version** - 返回当前Solr扩展的版本
+- **sort** - 对数组升序排序
+- **soundex** - Calculate the soundex key of a string
+- **SplDoublyLinkedList::add** - Add/insert a new value at the specified index
+- **SplDoublyLinkedList::bottom** - Peeks at the node from the beginning of the doubly linked list
+- **SplDoublyLinkedList::count** - Counts the number of elements in the doubly linked list
+- **SplDoublyLinkedList::current** - Return current array entry
+- **SplDoublyLinkedList::getIteratorMode** - Returns the mode of iteration
+- **SplDoublyLinkedList::isEmpty** - Checks whether the doubly linked list is empty
+- **SplDoublyLinkedList::key** - Return current node index
+- **SplDoublyLinkedList::next** - Move to next entry
+- **SplDoublyLinkedList::offsetExists** - Returns whether the requested $index exists
+- **SplDoublyLinkedList::offsetGet** - Returns the value at the specified $index
+- **SplDoublyLinkedList::offsetSet** - Sets the value at the specified $index to $value
+- **SplDoublyLinkedList::offsetUnset** - Unsets the value at the specified $index
+- **SplDoublyLinkedList::pop** - Pops a node from the end of the doubly linked list
+- **SplDoublyLinkedList::prev** - Move to previous entry
+- **SplDoublyLinkedList::push** - Pushes an element at the end of the doubly linked list
+- **SplDoublyLinkedList::rewind** - Rewind iterator back to the start
+- **SplDoublyLinkedList::serialize** - Serializes the storage
+- **SplDoublyLinkedList::setIteratorMode** - Sets the mode of iteration
+- **SplDoublyLinkedList::shift** - Shifts a node from the beginning of the doubly linked list
+- **SplDoublyLinkedList::top** - Peeks at the node from the end of the doubly linked list
+- **SplDoublyLinkedList::unserialize** - Unserializes the storage
+- **SplDoublyLinkedList::unshift** - Prepends the doubly linked list with an element
+- **SplDoublyLinkedList::valid** - Check whether the doubly linked list contains more nodes
+- **SplFileInfo::getATime** - Gets last access time of the file
+- **SplFileInfo::getBasename** - Gets the base name of the file
+- **SplFileInfo::getCTime** - 获取文件 inode 修改时间
+- **SplFileInfo::getExtension** - Gets the file extension
+- **SplFileInfo::getFileInfo** - Gets an SplFileInfo object for the file
+- **SplFileInfo::getFilename** - Gets the filename
+- **SplFileInfo::getGroup** - Gets the file group
+- **SplFileInfo::getInode** - Gets the inode for the file
+- **SplFileInfo::getLinkTarget** - Gets the target of a link
+- **SplFileInfo::getMTime** - Gets the last modified time
+- **SplFileInfo::getOwner** - Gets the owner of the file
+- **SplFileInfo::getPath** - Gets the path without filename
+- **SplFileInfo::getPathInfo** - Gets an SplFileInfo object for the path
+- **SplFileInfo::getPathname** - Gets the path to the file
+- **SplFileInfo::getPerms** - Gets file permissions
+- **SplFileInfo::getRealPath** - Gets absolute path to file
+- **SplFileInfo::getSize** - Gets file size
+- **SplFileInfo::getType** - Gets file type
+- **SplFileInfo::isDir** - Tells if the file is a directory
+- **SplFileInfo::isExecutable** - Tells if the file is executable
+- **SplFileInfo::isFile** - Tells if the object references a regular file
+- **SplFileInfo::isLink** - Tells if the file is a link
+- **SplFileInfo::isReadable** - Tells if file is readable
+- **SplFileInfo::isWritable** - Tells if the entry is writable
+- **SplFileInfo::openFile** - Gets an SplFileObject object for the file
+- **SplFileInfo::setFileClass** - Sets the class used with SplFileInfo::openFile
+- **SplFileInfo::setInfoClass** - Sets the class used with SplFileInfo::getFileInfo and SplFileInfo::getPathInfo
+- **SplFileInfo::__construct** - 构造新的 SplFileInfo 对象
+- **SplFileInfo::__toString** - Returns the path to the file as a string
+- **SplFileObject::current** - Retrieve current line of file
+- **SplFileObject::eof** - Reached end of file
+- **SplFileObject::fflush** - Flushes the output to the file
+- **SplFileObject::fgetc** - Gets character from file
+- **SplFileObject::fgetcsv** - Gets line from file and parse as CSV fields
+- **SplFileObject::fgets** - Gets line from file
+- **SplFileObject::fgetss** - Gets line from file and strip HTML tags
+- **SplFileObject::flock** - Portable file locking
+- **SplFileObject::fpassthru** - Output all remaining data on a file pointer
+- **SplFileObject::fputcsv** - Write a field array as a CSV line
+- **SplFileObject::fread** - Read from file
+- **SplFileObject::fscanf** - Parses input from file according to a format
+- **SplFileObject::fseek** - Seek to a position
+- **SplFileObject::fstat** - Gets information about the file
+- **SplFileObject::ftell** - Return current file position
+- **SplFileObject::ftruncate** - Truncates the file to a given length
+- **SplFileObject::fwrite** - Write to file
+- **SplFileObject::getChildren** - No purpose
+- **SplFileObject::getCsvControl** - Get the delimiter, enclosure and escape character for CSV
+- **SplFileObject::getCurrentLine** - 别名 SplFileObject::fgets
+- **SplFileObject::getFlags** - Gets flags for the SplFileObject
+- **SplFileObject::getMaxLineLen** - Get maximum line length
+- **SplFileObject::hasChildren** - SplFileObject does not have children
+- **SplFileObject::key** - Get line number
+- **SplFileObject::next** - Read next line
+- **SplFileObject::rewind** - Rewind the file to the first line
+- **SplFileObject::seek** - Seek to specified line
+- **SplFileObject::setCsvControl** - Set the delimiter, enclosure and escape character for CSV
+- **SplFileObject::setFlags** - Sets flags for the SplFileObject
+- **SplFileObject::setMaxLineLen** - Set maximum line length
+- **SplFileObject::valid** - Not at EOF
+- **SplFileObject::__construct** - Construct a new file object
+- **SplFileObject::__toString** - Returns the current line as a string
+- **SplFixedArray::count** - Returns the size of the array
+- **SplFixedArray::current** - Return current array entry
+- **SplFixedArray::fromArray** - Import a PHP array in a SplFixedArray instance
+- **SplFixedArray::getIterator** - Retrieve the iterator to go through the array
+- **SplFixedArray::getSize** - Gets the size of the array
+- **SplFixedArray::jsonSerialize** - Returns a representation that can be converted to JSON
+- **SplFixedArray::key** - Return current array index
+- **SplFixedArray::next** - Move to next entry
+- **SplFixedArray::offsetExists** - Returns whether the requested index exists
+- **SplFixedArray::offsetGet** - Returns the value at the specified index
+- **SplFixedArray::offsetSet** - Sets a new value at a specified index
+- **SplFixedArray::offsetUnset** - Unsets the value at the specified $index
+- **SplFixedArray::rewind** - Rewind iterator back to the start
+- **SplFixedArray::setSize** - Change the size of an array
+- **SplFixedArray::toArray** - Returns a PHP array from the fixed array
+- **SplFixedArray::valid** - Check whether the array contains more elements
+- **SplFixedArray::__construct** - Constructs a new fixed array
+- **SplFixedArray::__serialize** - Serializes the SplFixedArray object
+- **SplFixedArray::__unserialize** - Deserializes the data parameter into an SplFixedArray object
+- **SplFixedArray::__wakeup** - Reinitialises the array after being unserialised
+- **SplHeap::compare** - Compare elements in order to place them correctly in the heap while sifting up
+- **SplHeap::count** - Counts the number of elements in the heap
+- **SplHeap::current** - Return current node pointed by the iterator
+- **SplHeap::extract** - Extracts a node from top of the heap and sift up
+- **SplHeap::insert** - Inserts an element in the heap by sifting it up
+- **SplHeap::isCorrupted** - Tells if the heap is in a corrupted state
+- **SplHeap::isEmpty** - Checks whether the heap is empty
+- **SplHeap::key** - Return current node index
+- **SplHeap::next** - Move to the next node
+- **SplHeap::recoverFromCorruption** - Recover from the corrupted state and allow further actions on the heap
+- **SplHeap::rewind** - Rewind iterator back to the start (no-op)
+- **SplHeap::top** - Peeks at the node from the top of the heap
+- **SplHeap::valid** - Check whether the heap contains more nodes
+- **SplMaxHeap::compare** - Compare elements in order to place them correctly in the heap while sifting up
+- **SplMinHeap::compare** - Compare elements in order to place them correctly in the heap while sifting up
+- **SplObjectStorage::addAll** - Adds all objects from another storage
+- **SplObjectStorage::attach** - Adds an object in the storage
+- **SplObjectStorage::contains** - Checks if the storage contains a specific object
+- **SplObjectStorage::count** - Returns the number of objects in the storage
+- **SplObjectStorage::current** - Returns the current storage entry
+- **SplObjectStorage::detach** - Removes an object from the storage
+- **SplObjectStorage::getHash** - Calculate a unique identifier for the contained objects
+- **SplObjectStorage::getInfo** - Returns the data associated with the current iterator entry
+- **SplObjectStorage::key** - Returns the index at which the iterator currently is
+- **SplObjectStorage::next** - Move to the next entry
+- **SplObjectStorage::offsetExists** - Checks whether an object exists in the storage
+- **SplObjectStorage::offsetGet** - Returns the data associated with an object
+- **SplObjectStorage::offsetSet** - Associates data to an object in the storage
+- **SplObjectStorage::offsetUnset** - Removes an object from the storage
+- **SplObjectStorage::removeAll** - Removes objects contained in another storage from the current storage
+- **SplObjectStorage::removeAllExcept** - Removes all objects except for those contained in another storage from the current storage
+- **SplObjectStorage::rewind** - Rewind the iterator to the first storage element
+- **SplObjectStorage::seek** - Seeks iterator to a position
+- **SplObjectStorage::serialize** - Serializes the storage
+- **SplObjectStorage::setInfo** - Sets the data associated with the current iterator entry
+- **SplObjectStorage::unserialize** - Unserializes a storage from its string representation
+- **SplObjectStorage::valid** - Returns if the current iterator entry is valid
+- **SplObserver::update** - Receive update from subject
+- **SplPriorityQueue::compare** - Compare priorities in order to place elements correctly in the heap while sifting up
+- **SplPriorityQueue::count** - Counts the number of elements in the queue
+- **SplPriorityQueue::current** - Return current node pointed by the iterator
+- **SplPriorityQueue::extract** - Extracts a node from top of the heap and sift up
+- **SplPriorityQueue::getExtractFlags** - Get the flags of extraction
+- **SplPriorityQueue::insert** - Inserts an element in the queue by sifting it up
+- **SplPriorityQueue::isCorrupted** - Tells if the priority queue is in a corrupted state
+- **SplPriorityQueue::isEmpty** - Checks whether the queue is empty
+- **SplPriorityQueue::key** - Return current node index
+- **SplPriorityQueue::next** - Move to the next node
+- **SplPriorityQueue::recoverFromCorruption** - Recover from the corrupted state and allow further actions on the queue
+- **SplPriorityQueue::rewind** - Rewind iterator back to the start (no-op)
+- **SplPriorityQueue::setExtractFlags** - Sets the mode of extraction
+- **SplPriorityQueue::top** - Peeks at the node from the top of the queue
+- **SplPriorityQueue::valid** - Check whether the queue contains more nodes
+- **SplQueue::dequeue** - Dequeues a node from the queue
+- **SplQueue::enqueue** - Adds an element to the queue
+- **SplSubject::attach** - Attach an SplObserver
+- **SplSubject::detach** - Detach an observer
+- **SplSubject::notify** - Notify an observer
+- **SplTempFileObject::__construct** - Construct a new temporary file object
+- **spl_autoload** - __autoload() 函数的默认实现
+- **spl_autoload_call** - 尝试所有已注册的 __autoload() 函数来装载请求类
+- **spl_autoload_extensions** - 注册并返回 spl_autoload 的默认文件扩展名
+- **spl_autoload_functions** - 返回所有已注册的 __autoload() 函数
+- **spl_autoload_register** - 注册指定的函数作为 __autoload 的实现
+- **spl_autoload_unregister** - 注销已实现的 __autoload() 函数
+- **spl_classes** - 返回所有可用的SPL类
+- **spl_object_hash** - 返回指定对象的 hash id
+- **spl_object_id** - Return the integer object handle for given object
+- **Spoofchecker::areConfusable** - Checks if given strings can be confused
+- **Spoofchecker::isSuspicious** - Checks if a given text contains any suspicious characters
+- **Spoofchecker::setAllowedChars** - Set the set of characters allowed when running checks
+- **Spoofchecker::setAllowedLocales** - Locales to use when running checks
+- **Spoofchecker::setChecks** - Set the checks to run
+- **Spoofchecker::setRestrictionLevel** - Set the restriction level
+- **Spoofchecker::__construct** - Constructor
+- **sprintf** - 返回格式化字符串
+- **SQLite3::backup** - Backup one database to another database
+- **SQLite3::busyTimeout** - Sets the busy connection handler
+- **SQLite3::changes** - Returns the number of database rows that were changed (or inserted or
+   deleted) by the most recent SQL statement
+- **SQLite3::close** - Closes the database connection
+- **SQLite3::createAggregate** - Registers a PHP function for use as an SQL aggregate function
+- **SQLite3::createCollation** - Registers a PHP function for use as an SQL collating function
+- **SQLite3::createFunction** - Registers a PHP function for use as an SQL scalar function
+- **SQLite3::enableExceptions** - Enable throwing exceptions
+- **SQLite3::escapeString** - Returns a string that has been properly escaped
+- **SQLite3::exec** - Executes a result-less query against a given database
+- **SQLite3::lastErrorCode** - Returns the numeric result code of the most recent failed SQLite request
+- **SQLite3::lastErrorMsg** - Returns English text describing the most recent failed SQLite request
+- **SQLite3::lastInsertRowID** - Returns the row ID of the most recent INSERT into the database
+- **SQLite3::loadExtension** - Attempts to load an SQLite extension library
+- **SQLite3::open** - Opens an SQLite database
+- **SQLite3::openBlob** - Opens a stream resource to read a BLOB
+- **SQLite3::prepare** - Prepares an SQL statement for execution
+- **SQLite3::query** - Executes an SQL query
+- **SQLite3::querySingle** - Executes a query and returns a single result
+- **SQLite3::setAuthorizer** - Configures a callback to be used as an authorizer to limit what a statement can do
+- **SQLite3::version** - Returns the SQLite3 library version as a string constant and as a number
+- **SQLite3::__construct** - 实例化 SQLite3 对象并打开 SQLite 3 数据库
+- **SQLite3Result::columnName** - Returns the name of the nth column
+- **SQLite3Result::columnType** - Returns the type of the nth column
+- **SQLite3Result::fetchArray** - Fetches a result row as an associative or numerically indexed array or both
+- **SQLite3Result::finalize** - Closes the result set
+- **SQLite3Result::numColumns** - Returns the number of columns in the result set
+- **SQLite3Result::reset** - Resets the result set back to the first row
+- **SQLite3Result::__construct** - Constructs an SQLite3Result
+- **SQLite3Stmt::bindParam** - Binds a parameter to a statement variable
+- **SQLite3Stmt::bindValue** - Binds the value of a parameter to a statement variable
+- **SQLite3Stmt::clear** - Clears all current bound parameters
+- **SQLite3Stmt::close** - Closes the prepared statement
+- **SQLite3Stmt::execute** - Executes a prepared statement and returns a result set object
+- **SQLite3Stmt::getSQL** - Get the SQL of the statement
+- **SQLite3Stmt::paramCount** - Returns the number of parameters within the prepared statement
+- **SQLite3Stmt::readOnly** - Returns whether a statement is definitely read only
+- **SQLite3Stmt::reset** - Resets the prepared statement
+- **SQLite3Stmt::__construct** - Constructs an SQLite3Stmt object
+- **sqlsrv_begin_transaction** - Begins a database transaction
+- **sqlsrv_cancel** - Cancels a statement
+- **sqlsrv_client_info** - Returns information about the client and specified connection
+- **sqlsrv_close** - Closes an open connection and releases resources associated with the connection
+- **sqlsrv_commit** - Commits a transaction that was begun with sqlsrv_begin_transaction
+- **sqlsrv_configure** - Changes the driver error handling and logging configurations
+- **sqlsrv_connect** - Opens a connection to a Microsoft SQL Server database
+- **sqlsrv_errors** - Returns error and warning information about the last SQLSRV operation performed
+- **sqlsrv_execute** - Executes a statement prepared with sqlsrv_prepare
+- **sqlsrv_fetch** - Makes the next row in a result set available for reading
+- **sqlsrv_fetch_array** - Returns a row as an array
+- **sqlsrv_fetch_object** - Retrieves the next row of data in a result set as an object
+- **sqlsrv_field_metadata** - Retrieves metadata for the fields of a statement prepared by
+  sqlsrv_prepare or sqlsrv_query
+- **sqlsrv_free_stmt** - Frees all resources for the specified statement
+- **sqlsrv_get_config** - Returns the value of the specified configuration setting
+- **sqlsrv_get_field** - Gets field data from the currently selected row
+- **sqlsrv_has_rows** - Indicates whether the specified statement has rows
+- **sqlsrv_next_result** - Makes the next result of the specified statement active
+- **sqlsrv_num_fields** - Retrieves the number of fields (columns) on a statement
+- **sqlsrv_num_rows** - Retrieves the number of rows in a result set
+- **sqlsrv_prepare** - Prepares a query for execution
+- **sqlsrv_query** - Prepares and executes a query
+- **sqlsrv_rollback** - Rolls back a transaction that was begun with
+  sqlsrv_begin_transaction
+- **sqlsrv_rows_affected** - Returns the number of rows modified by the last INSERT, UPDATE, or
+  DELETE query executed
+- **sqlsrv_send_stream_data** - Sends data from parameter streams to the server
+- **sqlsrv_server_info** - Returns information about the server
+- **SqlStatement::bind** - Bind statement parameters
+- **SqlStatement::execute** - Execute the operation
+- **SqlStatement::getNextResult** - Get next result
+- **SqlStatement::getResult** - Get result
+- **SqlStatement::hasMoreResults** - Check for more results
+- **SqlStatement::__construct** - Description constructor
+- **SqlStatementResult::fetchAll** - Get all rows from result
+- **SqlStatementResult::fetchOne** - Get single row
+- **SqlStatementResult::getAffectedItemsCount** - Get affected row count
+- **SqlStatementResult::getColumnNames** - Get column names
+- **SqlStatementResult::getColumns** - Get columns
+- **SqlStatementResult::getColumnsCount** - Get column count
+- **SqlStatementResult::getGeneratedIds** - Get generated ids
+- **SqlStatementResult::getLastInsertId** - Get last insert id
+- **SqlStatementResult::getWarnings** - Get warnings from last operation
+- **SqlStatementResult::getWarningsCount** - Get warning count from last operation
+- **SqlStatementResult::hasData** - Check if result has data
+- **SqlStatementResult::nextResult** - Get next result
+- **SqlStatementResult::__construct** - Description constructor
+- **sqrt** - 平方根
+- **srand** - 播下随机数发生器种子
+- **sscanf** - 根据指定格式解析输入的字符
+- **ssdeep_fuzzy_compare** - Calculates the match score between two fuzzy hash signatures
+- **ssdeep_fuzzy_hash** - Create a fuzzy hash from a string
+- **ssdeep_fuzzy_hash_filename** - Create a fuzzy hash from a file
+- **ssh2_auth_agent** - Authenticate over SSH using the ssh agent
+- **ssh2_auth_hostbased_file** - Authenticate using a public hostkey
+- **ssh2_auth_none** - Authenticate as "none"
+- **ssh2_auth_password** - Authenticate over SSH using a plain password
+- **ssh2_auth_pubkey** - Authenticate using a public key in a variable
+- **ssh2_auth_pubkey_file** - Authenticate using a public key read from a file
+- **ssh2_connect** - Connect to an SSH server
+- **ssh2_disconnect** - Close a connection to a remote SSH server
+- **ssh2_exec** - Execute a command on a remote server
+- **ssh2_fetch_stream** - Fetch an extended data stream
+- **ssh2_fingerprint** - Retrieve fingerprint of remote server
+- **ssh2_forward_accept** - Accept a connection created by a listener
+- **ssh2_forward_listen** - Bind a port on the remote server and listen for connections
+- **ssh2_methods_negotiated** - Return list of negotiated methods
+- **ssh2_poll** - Poll the channels/listeners/streams for events
+- **ssh2_publickey_add** - Add an authorized publickey
+- **ssh2_publickey_init** - Initialize Publickey subsystem
+- **ssh2_publickey_list** - List currently authorized publickeys
+- **ssh2_publickey_remove** - Remove an authorized publickey
+- **ssh2_scp_recv** - Request a file via SCP
+- **ssh2_scp_send** - Send a file via SCP
+- **ssh2_send_eof** - Send EOF to stream
+- **ssh2_sftp** - Initialize SFTP subsystem
+- **ssh2_sftp_chmod** - Changes file mode
+- **ssh2_sftp_lstat** - Stat a symbolic link
+- **ssh2_sftp_mkdir** - Create a directory
+- **ssh2_sftp_readlink** - Return the target of a symbolic link
+- **ssh2_sftp_realpath** - Resolve the realpath of a provided path string
+- **ssh2_sftp_rename** - Rename a remote file
+- **ssh2_sftp_rmdir** - Remove a directory
+- **ssh2_sftp_stat** - Stat a file on a remote filesystem
+- **ssh2_sftp_symlink** - Create a symlink
+- **ssh2_sftp_unlink** - Delete a file
+- **ssh2_shell** - Request an interactive shell
+- **ssh2_tunnel** - Open a tunnel through a remote server
+- **stat** - 给出文件的信息
+- **Statement::getNextResult** - Get next result
+- **Statement::getResult** - Get result
+- **Statement::hasMoreResults** - Check if more results
+- **Statement::__construct** - Description constructor
+- **stats_absolute_deviation** - Returns the absolute deviation of an array of values
+- **stats_cdf_beta** - Calculates any one parameter of the beta distribution given values for the others
+- **stats_cdf_binomial** - Calculates any one parameter of the binomial distribution given values for the others
+- **stats_cdf_cauchy** - Calculates any one parameter of the Cauchy distribution given values for the others
+- **stats_cdf_chisquare** - Calculates any one parameter of the chi-square distribution given values for the others
+- **stats_cdf_exponential** - Calculates any one parameter of the exponential distribution given values for the others
+- **stats_cdf_f** - Calculates any one parameter of the F distribution given values for the others
+- **stats_cdf_gamma** - Calculates any one parameter of the gamma distribution given values for the others
+- **stats_cdf_laplace** - Calculates any one parameter of the Laplace distribution given values for the others
+- **stats_cdf_logistic** - Calculates any one parameter of the logistic distribution given values for the others
+- **stats_cdf_negative_binomial** - Calculates any one parameter of the negative binomial distribution given values for the others
+- **stats_cdf_noncentral_chisquare** - Calculates any one parameter of the non-central chi-square distribution given values for the others
+- **stats_cdf_noncentral_f** - Calculates any one parameter of the non-central F distribution given values for the others
+- **stats_cdf_noncentral_t** - Calculates any one parameter of the non-central t-distribution give values for the others
+- **stats_cdf_normal** - Calculates any one parameter of the normal distribution given values for the others
+- **stats_cdf_poisson** - Calculates any one parameter of the Poisson distribution given values for the others
+- **stats_cdf_t** - Calculates any one parameter of the t-distribution given values for the others
+- **stats_cdf_uniform** - Calculates any one parameter of the uniform distribution given values for the others
+- **stats_cdf_weibull** - Calculates any one parameter of the Weibull distribution given values for the others
+- **stats_covariance** - Computes the covariance of two data sets
+- **stats_dens_beta** - Probability density function of the beta distribution
+- **stats_dens_cauchy** - Probability density function of the Cauchy distribution
+- **stats_dens_chisquare** - Probability density function of the chi-square distribution
+- **stats_dens_exponential** - Probability density function of the exponential distribution
+- **stats_dens_f** - Probability density function of the F distribution
+- **stats_dens_gamma** - Probability density function of the gamma distribution
+- **stats_dens_laplace** - Probability density function of the Laplace distribution
+- **stats_dens_logistic** - Probability density function of the logistic distribution
+- **stats_dens_normal** - Probability density function of the normal distribution
+- **stats_dens_pmf_binomial** - Probability mass function of the binomial distribution
+- **stats_dens_pmf_hypergeometric** - Probability mass function of the hypergeometric distribution
+- **stats_dens_pmf_negative_binomial** - Probability mass function of the negative binomial distribution
+- **stats_dens_pmf_poisson** - Probability mass function of the Poisson distribution
+- **stats_dens_t** - Probability density function of the t-distribution
+- **stats_dens_uniform** - Probability density function of the uniform distribution
+- **stats_dens_weibull** - Probability density function of the Weibull distribution
+- **stats_harmonic_mean** - Returns the harmonic mean of an array of values
+- **stats_kurtosis** - Computes the kurtosis of the data in the array
+- **stats_rand_gen_beta** - Generates a random deviate from the beta distribution
+- **stats_rand_gen_chisquare** - Generates a random deviate from the chi-square distribution
+- **stats_rand_gen_exponential** - Generates a random deviate from the exponential distribution
+- **stats_rand_gen_f** - Generates a random deviate from the F distribution
+- **stats_rand_gen_funiform** - Generates uniform float between low (exclusive) and high (exclusive)
+- **stats_rand_gen_gamma** - Generates a random deviate from the gamma distribution
+- **stats_rand_gen_ibinomial** - Generates a random deviate from the binomial distribution
+- **stats_rand_gen_ibinomial_negative** - Generates a random deviate from the negative binomial distribution
+- **stats_rand_gen_int** - Generates random integer between 1 and 2147483562
+- **stats_rand_gen_ipoisson** - Generates a single random deviate from a Poisson distribution
+- **stats_rand_gen_iuniform** - Generates integer uniformly distributed between LOW (inclusive) and HIGH (inclusive)
+- **stats_rand_gen_noncentral_chisquare** - Generates a random deviate from the non-central chi-square distribution
+- **stats_rand_gen_noncentral_f** - Generates a random deviate from the noncentral F distribution
+- **stats_rand_gen_noncentral_t** - Generates a single random deviate from a non-central t-distribution
+- **stats_rand_gen_normal** - Generates a single random deviate from a normal distribution
+- **stats_rand_gen_t** - Generates a single random deviate from a t-distribution
+- **stats_rand_get_seeds** - Get the seed values of the random number generator
+- **stats_rand_phrase_to_seeds** - Generate two seeds for the RGN random number generator
+- **stats_rand_ranf** - Generates a random floating point number between 0 and 1
+- **stats_rand_setall** - Set seed values to the random generator
+- **stats_skew** - Computes the skewness of the data in the array
+- **stats_standard_deviation** - Returns the standard deviation
+- **stats_stat_binomial_coef** - Returns a binomial coefficient
+- **stats_stat_correlation** - Returns the Pearson correlation coefficient of two data sets
+- **stats_stat_factorial** - Returns the factorial of an integer
+- **stats_stat_independent_t** - Returns the t-value from the independent two-sample t-test
+- **stats_stat_innerproduct** - Returns the inner product of two vectors
+- **stats_stat_paired_t** - Returns the t-value of the dependent t-test for paired samples
+- **stats_stat_percentile** - Returns the percentile value
+- **stats_stat_powersum** - Returns the power sum of a vector
+- **stats_variance** - Returns the variance
+- **Stomp::abort** - Rolls back a transaction in progress
+- **Stomp::ack** - Acknowledges consumption of a message
+- **Stomp::begin** - Starts a transaction
+- **Stomp::commit** - Commits a transaction in progress
+- **Stomp::error** - Gets the last stomp error
+- **Stomp::getReadTimeout** - Gets read timeout
+- **Stomp::getSessionId** - Gets the current stomp session ID
+- **Stomp::hasFrame** - Indicates whether or not there is a frame ready to read
+- **Stomp::readFrame** - Reads the next frame
+- **Stomp::send** - Sends a message
+- **Stomp::setReadTimeout** - Sets read timeout
+- **Stomp::subscribe** - Registers to listen to a given destination
+- **Stomp::unsubscribe** - Removes an existing subscription
+- **Stomp::__construct** - 打开连接
+- **Stomp::__destruct** - Closes stomp connection
+- **StompException::getDetails** - Get exception details
+- **StompFrame::__construct** - Constructor
+- **stomp_connect_error** - Returns a string description of the last connect error
+- **stomp_version** - Gets the current stomp extension version
+- **strcasecmp** - 二进制安全比较字符串（不区分大小写）
+- **strchr** - 别名 strstr
+- **strcmp** - 二进制安全字符串比较
+- **strcoll** - 基于区域设置的字符串比较
+- **strcspn** - 获取不匹配遮罩的起始子字符串的长度
+- **streamWrapper::dir_closedir** - Close directory handle
+- **streamWrapper::dir_opendir** - Open directory handle
+- **streamWrapper::dir_readdir** - Read entry from directory handle
+- **streamWrapper::dir_rewinddir** - Rewind directory handle
+- **streamWrapper::mkdir** - Create a directory
+- **streamWrapper::rename** - Renames a file or directory
+- **streamWrapper::rmdir** - Removes a directory
+- **streamWrapper::stream_cast** - Retrieve the underlying resource
+- **streamWrapper::stream_close** - Close a resource
+- **streamWrapper::stream_eof** - Tests for end-of-file on a file pointer
+- **streamWrapper::stream_flush** - Flushes the output
+- **streamWrapper::stream_lock** - Advisory file locking
+- **streamWrapper::stream_metadata** - Change stream metadata
+- **streamWrapper::stream_open** - Opens file or URL
+- **streamWrapper::stream_read** - Read from stream
+- **streamWrapper::stream_seek** - Seeks to specific location in a stream
+- **streamWrapper::stream_set_option** - Change stream options
+- **streamWrapper::stream_stat** - Retrieve information about a file resource
+- **streamWrapper::stream_tell** - Retrieve the current position of a stream
+- **streamWrapper::stream_truncate** - Truncate stream
+- **streamWrapper::stream_write** - Write to stream
+- **streamWrapper::unlink** - Delete a file
+- **streamWrapper::url_stat** - Retrieve information about a file
+- **streamWrapper::__construct** - Constructs a new stream wrapper
+- **streamWrapper::__destruct** - Destructs an existing stream wrapper
+- **stream_bucket_append** - Append bucket to brigade
+- **stream_bucket_make_writeable** - Returns a bucket object from the brigade to operate on
+- **stream_bucket_new** - Create a new bucket for use on the current stream
+- **stream_bucket_prepend** - Prepend bucket to brigade
+- **stream_context_create** - 创建资源流上下文
+- **stream_context_get_default** - Retrieve the default stream context
+- **stream_context_get_options** - 获取资源流/数据包/上下文的参数
+- **stream_context_get_params** - Retrieves parameters from a context
+- **stream_context_set_default** - Set the default stream context
+- **stream_context_set_option** - 对资源流、数据包或者上下文设置参数
+- **stream_context_set_options** - Sets options on the specified context
+- **stream_context_set_params** - Set parameters for a stream/wrapper/context
+- **stream_copy_to_stream** - Copies data from one stream to another
+- **stream_filter_append** - Attach a filter to a stream
+- **stream_filter_prepend** - Attach a filter to a stream
+- **stream_filter_register** - Register a user defined stream filter
+- **stream_filter_remove** - 从资源流里移除某个过滤器
+- **stream_get_contents** - 读取资源流到一个字符串
+- **stream_get_filters** - 获取已注册的数据流过滤器列表
+- **stream_get_line** - 从资源流里读取一行直到给定的定界符
+- **stream_get_meta_data** - 从流或文件指针中获取 header/meta 数据
+- **stream_get_transports** - 获取已注册的套接字传输协议列表
+- **stream_get_wrappers** - 获取已注册的流类型
+- **stream_isatty** - Check if a stream is a TTY
+- **stream_is_local** - Checks if a stream is a local stream
+- **stream_notification_callback** - A callback function for the notification context parameter
+- **stream_register_wrapper** - 别名 stream_wrapper_register
+- **stream_resolve_include_path** - Resolve filename against the include path
+- **stream_select** - Runs the equivalent of the select() system call on the given
+   arrays of streams with a timeout specified by seconds and microseconds
+- **stream_set_blocking** - 为资源流设置阻塞或者阻塞模式
+- **stream_set_chunk_size** - 设置资源流区块大小
+- **stream_set_read_buffer** - Set read file buffering on the given stream
+- **stream_set_timeout** - Set timeout period on a stream
+- **stream_set_write_buffer** - Sets write file buffering on the given stream
+- **stream_socket_accept** - 接受由 stream_socket_server 创建的套接字连接
+- **stream_socket_client** - Open Internet or Unix domain socket connection
+- **stream_socket_enable_crypto** - Turns encryption on/off on an already connected socket
+- **stream_socket_get_name** - 获取本地或者远程的套接字名称
+- **stream_socket_pair** - 创建一对完全一样的网络套接字连接流
+- **stream_socket_recvfrom** - Receives data from a socket, connected or not
+- **stream_socket_sendto** - Sends a message to a socket, whether it is connected or not
+- **stream_socket_server** - 创建 Internet 或 Unix 域服务器套接字
+- **stream_socket_shutdown** - Shutdown a full-duplex connection
+- **stream_supports_lock** - Tells whether the stream supports locking
+- **stream_wrapper_register** - 注册一个用 PHP 类实现的 URL 封装协议
+- **stream_wrapper_restore** - Restores a previously unregistered built-in wrapper
+- **stream_wrapper_unregister** - Unregister a URL wrapper
+- **strftime** - 根据区域设置格式化本地时间/日期
+- **Stringable::__toString** - 从对象中获取字符串表示
+- **stripcslashes** - 反引用一个使用 addcslashes 转义的字符串
+- **stripos** - 查找字符串首次出现的位置（不区分大小写）
+- **stripslashes** - 反引用一个引用字符串
+- **strip_tags** - 从字符串中去除 HTML 和 PHP 标签
+- **stristr** - strstr 函数的忽略大小写版本
+- **strlen** - 获取字符串长度
+- **strnatcasecmp** - 使用“自然顺序”算法比较字符串（不区分大小写）
+- **strnatcmp** - 使用自然排序算法比较字符串
+- **strncasecmp** - 二进制安全比较字符串开头的若干个字符（不区分大小写）
+- **strncmp** - 二进制安全比较字符串开头的若干个字符
+- **strpbrk** - 在字符串中查找一组字符的任何一个字符
+- **strpos** - 查找字符串首次出现的位置
+- **strptime** - 解析由 strftime 生成的日期／时间
+- **strrchr** - 查找指定字符在字符串中的最后一次出现
+- **strrev** - 反转字符串
+- **strripos** - 计算指定字符串在目标字符串中最后一次出现的位置（不区分大小写）
+- **strrpos** - 计算指定字符串在目标字符串中最后一次出现的位置
+- **strspn** - 计算字符串中全部字符都存在于指定字符集合中的第一段子串的长度
+- **strstr** - 查找字符串的首次出现
+- **strtok** - 标记分割字符串
+- **strtolower** - 将字符串转化为小写
+- **strtotime** - 将任何英文文本日期时间描述解析为 Unix 时间戳
+- **strtoupper** - 将字符串转化为大写
+- **strtr** - 转换字符或替换字串
+- **strval** - 获取变量的字符串值
+- **str_contains** - 确定字符串是否包含指定子串
+- **str_decrement** - Decrement an alphanumeric string
+- **str_ends_with** - 检查字符串是否以指定子串结尾
+- **str_getcsv** - 解析 CSV 字符串为一个数组
+- **str_increment** - Increment an alphanumeric string
+- **str_ireplace** - str_replace 的忽略大小写版本
+- **str_pad** - 使用另一个字符串填充字符串为指定长度
+- **str_repeat** - 重复一个字符串
+- **str_replace** - 子字符串替换
+- **str_rot13** - 对字符串执行 ROT13 转换
+- **str_shuffle** - 随机打乱一个字符串
+- **str_split** - 将字符串转换为数组
+- **str_starts_with** - 检查字符串是否以指定子串开头
+- **str_word_count** - 返回字符串中单词的使用情况
+- **substr** - 返回字符串的子串
+- **substr_compare** - 二进制安全比较字符串（从偏移位置比较指定长度）
+- **substr_count** - 计算字串出现的次数
+- **substr_replace** - 替换字符串的子串
+- **SVM::crossvalidate** - Test training params on subsets of the training data
+- **SVM::getOptions** - Return the current training parameters
+- **SVM::setOptions** - Set training parameters
+- **SVM::train** - Create a SVMModel based on training data
+- **SVM::__construct** - Construct a new SVM object
+- **SVMModel::checkProbabilityModel** - Returns true if the model has probability information
+- **SVMModel::getLabels** - Get the labels the model was trained on
+- **SVMModel::getNrClass** - Returns the number of classes the model was trained with
+- **SVMModel::getSvmType** - Get the SVM type the model was trained with
+- **SVMModel::getSvrProbability** - Get the sigma value for regression types
+- **SVMModel::load** - Load a saved SVM Model
+- **SVMModel::predict** - Predict a value for previously unseen data
+- **SVMModel::predict_probability** - Return class probabilities for previous unseen data
+- **SVMModel::save** - Save a model to a file
+- **SVMModel::__construct** - Construct a new SVMModel
+- **svn_add** - 在工作目录列入新增项
+- **svn_auth_get_parameter** - Retrieves authentication parameter
+- **svn_auth_set_parameter** - Sets an authentication parameter
+- **svn_blame** - Get the SVN blame for a file
+- **svn_cat** - Returns the contents of a file in a repository
+- **svn_checkout** - Checks out a working copy from the repository
+- **svn_cleanup** - Recursively cleanup a working copy directory, finishing incomplete operations and removing locks
+- **svn_client_version** - Returns the version of the SVN client libraries
+- **svn_commit** - 将修改的本地文件副本发送至版本库
+- **svn_delete** - Delete items from a working copy or repository
+- **svn_diff** - Recursively diffs two paths
+- **svn_export** - Export the contents of a SVN directory
+- **svn_fs_abort_txn** - Aborts a transaction
+- **svn_fs_apply_text** - Creates and returns a stream that will be used to replace the contents of a file
+- **svn_fs_begin_txn2** - Create a new transaction
+- **svn_fs_change_node_prop** - Return true if everything is ok, false otherwise
+- **svn_fs_check_path** - Determines what kind of item lives at path in a given repository fsroot
+- **svn_fs_contents_changed** - Return true if content is different, false otherwise
+- **svn_fs_copy** - Copies a file or a directory
+- **svn_fs_delete** - Deletes a file or a directory
+- **svn_fs_dir_entries** - Enumerates the directory entries under path; returns a hash of dir names to file type
+- **svn_fs_file_contents** - Returns a stream to access the contents of a file from a given version of the fs
+- **svn_fs_file_length** - Returns the length of a file from a given version of the fs
+- **svn_fs_is_dir** - Determines if a path points to a directory
+- **svn_fs_is_file** - Determines if a path points to a file
+- **svn_fs_make_dir** - Creates a new empty directory
+- **svn_fs_make_file** - Creates a new empty file
+- **svn_fs_node_created_rev** - Returns the revision in which path under fsroot was created
+- **svn_fs_node_prop** - Returns the value of a property for a node
+- **svn_fs_props_changed** - Return true if props are different, false otherwise
+- **svn_fs_revision_prop** - Fetches the value of a named property
+- **svn_fs_revision_root** - Get a handle on a specific version of the repository root
+- **svn_fs_txn_root** - Creates and returns a transaction root
+- **svn_fs_youngest_rev** - Returns the number of the youngest revision in the filesystem
+- **svn_import** - Imports an unversioned path into a repository
+- **svn_log** - Returns the commit log messages of a repository URL
+- **svn_ls** - Returns list of directory contents in repository URL, optionally at revision number
+- **svn_mkdir** - Creates a directory in a working copy or repository
+- **svn_repos_create** - Create a new subversion repository at path
+- **svn_repos_fs** - Gets a handle on the filesystem for a repository
+- **svn_repos_fs_begin_txn_for_commit** - Create a new transaction
+- **svn_repos_fs_commit_txn** - Commits a transaction and returns the new revision
+- **svn_repos_hotcopy** - Make a hot-copy of the repos at repospath; copy it to destpath
+- **svn_repos_open** - Open a shared lock on a repository
+- **svn_repos_recover** - Run recovery procedures on the repository located at path
+- **svn_revert** - Revert changes to the working copy
+- **svn_status** - Returns the status of working copy files and directories
+- **svn_update** - Update working copy
+- **Swoole\Async::dnsLookup** - Async and non-blocking hostname to IP lookup.
+- **Swoole\Async::read** - Read file stream asynchronously.
+- **Swoole\Async::readFile** - Read a file asynchronously.
+- **Swoole\Async::set** - Update the async I/O options.
+- **Swoole\Async::write** - Write data to a file stream asynchronously.
+- **Swoole\Async::writeFile** - Description
+- **Swoole\Atomic::add** - Add a number to the value to the atomic object.
+- **Swoole\Atomic::cmpset** - Compare and set the value of the atomic object.
+- **Swoole\Atomic::get** - Get the current value of the atomic object.
+- **Swoole\Atomic::set** - Set a new value to the atomic object.
+- **Swoole\Atomic::sub** - Subtract a number to the value of the atomic object.
+- **Swoole\Atomic::__construct** - Construct a swoole atomic object.
+- **Swoole\Buffer::append** - Append the string or binary data at the end of the memory buffer and return the new size of memory allocated.
+- **Swoole\Buffer::clear** - Reset the memory buffer.
+- **Swoole\Buffer::expand** - Expand the size of memory buffer.
+- **Swoole\Buffer::read** - Read data from the memory buffer based on offset and length.
+- **Swoole\Buffer::recycle** - Release the memory to OS which is not used by the memory buffer.
+- **Swoole\Buffer::substr** - Read data from the memory buffer based on offset and length. Or remove data from the memory buffer.
+- **Swoole\Buffer::write** - Write data to the memory buffer. The memory allocated for the buffer will not be changed.
+- **Swoole\Buffer::__construct** - Fixed size memory blocks allocation.
+- **Swoole\Buffer::__destruct** - Destruct the Swoole memory buffer.
+- **Swoole\Buffer::__toString** - Get the string value of the memory buffer.
+- **Swoole\Channel::pop** - Read and pop data from swoole channel.
+- **Swoole\Channel::push** - Write and push data into Swoole channel.
+- **Swoole\Channel::stats** - Get stats of swoole channel.
+- **Swoole\Channel::__construct** - Construct a Swoole Channel
+- **Swoole\Channel::__destruct** - Destruct a Swoole channel.
+- **Swoole\Client::close** - Close the connection established.
+- **Swoole\Client::connect** - Connect to the remote TCP or UDP port.
+- **Swoole\Client::getpeername** - Get the remote socket name of the connection.
+- **Swoole\Client::getsockname** - Get the local socket name of the connection.
+- **Swoole\Client::isConnected** - Check if the connection is established.
+- **Swoole\Client::on** - Add callback functions triggered by events.
+- **Swoole\Client::pause** - Pause receiving data.
+- **Swoole\Client::pipe** - Redirect the data to another file descriptor.
+- **Swoole\Client::recv** - Receive data from the remote socket.
+- **Swoole\Client::resume** - Resume receiving data.
+- **Swoole\Client::send** - Send data to the remote TCP socket.
+- **Swoole\Client::sendfile** - Send file to the remote TCP socket.
+- **Swoole\Client::sendto** - Send data to the remote UDP address.
+- **Swoole\Client::set** - Set the Swoole client parameters before the connection is established.
+- **Swoole\Client::sleep** - Remove the TCP client from system event loop.
+- **Swoole\Client::wakeup** - Add the TCP client back into the system event loop.
+- **Swoole\Client::__construct** - Create Swoole sync or async TCP/UDP client, with or without SSL.
+- **Swoole\Client::__destruct** - Destruct the Swoole client.
+- **Swoole\Connection\Iterator::count** - Count connections.
+- **Swoole\Connection\Iterator::current** - Return current connection entry.
+- **Swoole\Connection\Iterator::key** - Return key of the current connection.
+- **Swoole\Connection\Iterator::next** - Move to the next connection.
+- **Swoole\Connection\Iterator::offsetExists** - Check if offset exists.
+- **Swoole\Connection\Iterator::offsetGet** - Offset to retrieve.
+- **Swoole\Connection\Iterator::offsetSet** - Assign a Connection to the specified offset.
+- **Swoole\Connection\Iterator::offsetUnset** - Unset an offset.
+- **Swoole\Connection\Iterator::rewind** - Rewinds iterator
+- **Swoole\Connection\Iterator::valid** - Check if current position is valid.
+- **Swoole\Coroutine::call_user_func** - Call a callback given by the first parameter
+- **Swoole\Coroutine::call_user_func_array** - Call a callback with an array of parameters
+- **Swoole\Coroutine::cli_wait** - Description
+- **Swoole\Coroutine::create** - Description
+- **Swoole\Coroutine::getuid** - Description
+- **Swoole\Coroutine::resume** - Description
+- **Swoole\Coroutine::suspend** - Description
+- **Swoole\Coroutine\Lock::lock** - Acquire the lock, blocking if necessary
+- **Swoole\Coroutine\Lock::trylock** - Attempt to acquire the lock without blocking
+- **Swoole\Coroutine\Lock::unlock** - Release the lock
+- **Swoole\Coroutine\Lock::__construct** - Construct a new coroutine lock
+- **Swoole\Event::add** - Add a socket to the underlying reactor event listener
+- **Swoole\Event::cycle** - Define a function to execute at the end of each event loop iteration
+- **Swoole\Event::defer** - Execute a function at the start of the next event loop
+- **Swoole\Event::del** - Remove a socket from reactor event listener
+- **Swoole\Event::dispatch** - Perform a single event loop iteration
+- **Swoole\Event::isset** - Check if a socket is being monitored in the event loop
+- **Swoole\Event::set** - Modify event listener callbacks and mask
+- **Swoole\Event::wait** - Start event loop
+- **Swoole\Event::write** - Write data to socket asynchronously
+- **Swoole\Http\Client::addFile** - Add a file to the post form.
+- **Swoole\Http\Client::close** - Close the http connection.
+- **Swoole\Http\Client::download** - Download a file from the remote server.
+- **Swoole\Http\Client::execute** - Send the HTTP request after setting the parameters.
+- **Swoole\Http\Client::get** - Send GET http request to the remote server.
+- **Swoole\Http\Client::isConnected** - Check if the HTTP connection is connected.
+- **Swoole\Http\Client::on** - Register callback function by event name.
+- **Swoole\Http\Client::post** - Send POST http request to the remote server.
+- **Swoole\Http\Client::push** - Push data to websocket client.
+- **Swoole\Http\Client::set** - Update the HTTP client parameters.
+- **Swoole\Http\Client::setCookies** - Set the http request cookies.
+- **Swoole\Http\Client::setData** - Set the HTTP request body data.
+- **Swoole\Http\Client::setHeaders** - Set the HTTP request headers.
+- **Swoole\Http\Client::setMethod** - Set the HTTP request method.
+- **Swoole\Http\Client::upgrade** - Upgrade to websocket protocol.
+- **Swoole\Http\Client::__construct** - Construct the async HTTP client.
+- **Swoole\Http\Client::__destruct** - Destruct the HTTP client.
+- **Swoole\Http\Request::rawcontent** - Get the raw HTTP POST body.
+- **Swoole\Http\Request::__destruct** - Destruct the HTTP request.
+- **Swoole\Http\Response::cookie** - Set the cookies of the HTTP response.
+- **Swoole\Http\Response::end** - Send data for the HTTP request and finish the response.
+- **Swoole\Http\Response::gzip** - Enable the gzip of response content.
+- **Swoole\Http\Response::header** - Set the HTTP response headers.
+- **Swoole\Http\Response::initHeader** - Init the HTTP response header.
+- **Swoole\Http\Response::rawcookie** - Set the raw cookies to the HTTP response.
+- **Swoole\Http\Response::sendfile** - Send file through the HTTP response.
+- **Swoole\Http\Response::status** - Set the status code of the HTTP response.
+- **Swoole\Http\Response::write** - Append HTTP body content to the HTTP response.
+- **Swoole\Http\Response::__destruct** - Destruct the HTTP response.
+- **Swoole\Http\Server::on** - Bind callback function to HTTP server by event name.
+- **Swoole\Http\Server::start** - Start the swoole http server.
+- **Swoole\Lock::lock** - Try to acquire the lock. It will block if the lock is not available.
+- **Swoole\Lock::lock_read** - Lock a read-write lock for reading.
+- **Swoole\Lock::trylock** - Try to acquire the lock and return straight away even the lock is not available.
+- **Swoole\Lock::trylock_read** - Try to lock a read-write lock for reading and return straight away even the lock is not available.
+- **Swoole\Lock::unlock** - Release the lock.
+- **Swoole\Lock::__construct** - Construct a memory lock.
+- **Swoole\Lock::__destruct** - Destroy a Swoole memory lock.
+- **Swoole\Mmap::open** - Map a file into memory and return the stream resource which can be used by PHP stream operations.
+- **Swoole\MySQL::close** - Close the async MySQL connection.
+- **Swoole\MySQL::connect** - Connect to the remote MySQL server.
+- **Swoole\MySQL::getBuffer** - Description
+- **Swoole\MySQL::on** - Register callback function based on event name.
+- **Swoole\MySQL::query** - Run the SQL query.
+- **Swoole\MySQL::__construct** - Construct an async MySQL client.
+- **Swoole\MySQL::__destruct** - Destroy the async MySQL client.
+- **Swoole\Process::alarm** - High precision timer which triggers signal with fixed interval.
+- **Swoole\Process::close** - Close the pipe to the child process.
+- **Swoole\Process::daemon** - Change the process to be a daemon process.
+- **Swoole\Process::exec** - Execute system commands.
+- **Swoole\Process::exit** - Stop the child processes.
+- **Swoole\Process::freeQueue** - Destroy the message queue created by swoole_process::useQueue.
+- **Swoole\Process::kill** - Send signal to the child process.
+- **Swoole\Process::name** - Set name of the process.
+- **Swoole\Process::pop** - Read and pop data from the message queue.
+- **Swoole\Process::push** - Write and push data into the message queue.
+- **Swoole\Process::read** - Read data sending to the process.
+- **Swoole\Process::signal** - Send signal to the child processes.
+- **Swoole\Process::start** - Start the process.
+- **Swoole\Process::statQueue** - Get the stats of the message queue used as the communication method between processes.
+- **Swoole\Process::useQueue** - Create a message queue as the communication method between the parent process and child processes.
+- **Swoole\Process::wait** - Wait for the events of child processes.
+- **Swoole\Process::write** - Write data into the pipe and communicate with the parent process or child processes.
+- **Swoole\Process::__construct** - Construct a process.
+- **Swoole\Process::__destruct** - Destroy the process.
+- **Swoole\Redis\Server::format** - Description
+- **Swoole\Redis\Server::setHandler** - Description
+- **Swoole\Redis\Server::start** - Description
+- **Swoole\Runtime::enableCoroutine** - Enable coroutine for specified functions
+- **Swoole\Runtime::getHookFlags** - Get current hook flags
+- **Swoole\Runtime::setHookFlags** - Set hook flags for coroutine
+- **Swoole\Serialize::pack** - Serialize the data.
+- **Swoole\Serialize::unpack** - Unserialize the data.
+- **Swoole\Server::addlistener** - Add a new listener to the server.
+- **Swoole\Server::addProcess** - Add a user defined swoole_process to the server.
+- **Swoole\Server::after** - Trigger a callback function after a period of time.
+- **Swoole\Server::bind** - Bind the connection to a user defined user ID.
+- **Swoole\Server::clearTimer** - Stop and destroy a timer.
+- **Swoole\Server::close** - Close a connection to the client.
+- **Swoole\Server::confirm** - Check status of the connection.
+- **Swoole\Server::connection_info** - Get the connection info by file description.
+- **Swoole\Server::connection_list** - Get all of the established connections.
+- **Swoole\Server::defer** - Delay execution of the callback function at the end of current EventLoop.
+- **Swoole\Server::exist** - Check if the connection is existed.
+- **Swoole\Server::finish** - Used in task process for sending result to the worker process when the task is finished.
+- **Swoole\Server::getClientInfo** - Get the connection info by file description.
+- **Swoole\Server::getClientList** - Get all of the established connections.
+- **Swoole\Server::getLastError** - Get the error code of the most recent error.
+- **Swoole\Server::heartbeat** - Check all the connections on the server.
+- **Swoole\Server::listen** - Listen on the given IP and port, socket type.
+- **Swoole\Server::on** - Register a callback function by event name.
+- **Swoole\Server::pause** - Stop receiving data from the connection.
+- **Swoole\Server::protect** - Set the connection to be protected mode.
+- **Swoole\Server::reload** - Restart all the worker process.
+- **Swoole\Server::resume** - Start receiving data from the connection.
+- **Swoole\Server::send** - Send data to the client.
+- **Swoole\Server::sendfile** - Send file to the connection.
+- **Swoole\Server::sendMessage** - Send message to worker processes by ID.
+- **Swoole\Server::sendto** - Send data to the remote UDP address.
+- **Swoole\Server::sendwait** - Send data to the remote socket in the blocking way.
+- **Swoole\Server::set** - Set the runtime settings of the swoole server.
+- **Swoole\Server::shutdown** - Shutdown the master server process, this function can be called in worker processes.
+- **Swoole\Server::start** - Start the Swoole server.
+- **Swoole\Server::stats** - Get the stats of the Swoole server.
+- **Swoole\Server::stop** - Stop the Swoole server.
+- **Swoole\Server::task** - Send data to the task worker processes.
+- **Swoole\Server::taskwait** - Send data to the task worker processes in blocking way.
+- **Swoole\Server::taskWaitMulti** - Execute multiple tasks concurrently.
+- **Swoole\Server::tick** - Repeats a given function at every given time-interval.
+- **Swoole\Server::__construct** - Construct a Swoole server.
+- **Swoole\Table::column** - Set the data type and size of the columns.
+- **Swoole\Table::count** - Count the rows in the table, or count all the elements in the table if $mode = 1.
+- **Swoole\Table::create** - Create the swoole memory table.
+- **Swoole\Table::current** - Get the current row.
+- **Swoole\Table::decr** - Decrement the value in the Swoole table by $key and $column
+- **Swoole\Table::del** - Delete a row in the Swoole table by $key
+- **Swoole\Table::destroy** - Destroy the Swoole table.
+- **Swoole\Table::exist** - Check if a row is existed by $row_key.
+- **Swoole\Table::get** - Get the value in the Swoole table by $key and $field.
+- **Swoole\Table::incr** - Increment the value by $key and $column
+- **Swoole\Table::key** - Get the key of current row.
+- **Swoole\Table::next** - Advance the iterator to the next row
+- **Swoole\Table::rewind** - Rewind the iterator.
+- **Swoole\Table::set** - Update a row of the table by $key.
+- **Swoole\Table::valid** - Check if the current row is valid.
+- **Swoole\Table::__construct** - Construct a Swoole memory table with fixed size.
+- **Swoole\Timer::after** - Trigger a callback function after a period of time.
+- **Swoole\Timer::clear** - Delete a timer by timer ID.
+- **Swoole\Timer::exists** - Check if a timer is existed.
+- **Swoole\Timer::tick** - Repeats a given function at every given time-interval.
+- **Swoole\WebSocket\Server::exist** - Check if the file descriptor exists.
+- **Swoole\WebSocket\Server::on** - Register event callback function
+- **Swoole\WebSocket\Server::pack** - Get a pack of binary data to send in a single frame.
+- **Swoole\WebSocket\Server::push** - Push data to the remote client.
+- **Swoole\WebSocket\Server::unpack** - Unpack the binary data received from the client.
+- **swoole_async_dns_lookup** - Async and non-blocking hostname to IP lookup
+- **swoole_async_read** - Read file stream asynchronously
+- **swoole_async_readfile** - Read a file asynchronously
+- **swoole_async_set** - Update the async I/O options
+- **swoole_async_write** - Write data to a file stream asynchronously
+- **swoole_async_writefile** - Write data to a file asynchronously
+- **swoole_clear_error** - Clear errors in the socket or on the last error code
+- **swoole_client_select** - Get the file description which are ready to read/write or error
+- **swoole_cpu_num** - Get the number of CPU
+- **swoole_errno** - Get the error code of the latest system call
+- **swoole_error_log** - Output error messages to the log
+- **swoole_event_add** - Add new callback functions of a socket into the EventLoop
+- **swoole_event_defer** - Add callback function to the next event loop
+- **swoole_event_del** - Remove all event callback functions of a socket
+- **swoole_event_exit** - Exit the eventloop, only available at the client side
+- **swoole_event_set** - Update the event callback functions of a socket
+- **swoole_event_wait** - Start the event loop
+- **swoole_event_write** - Write data to a socket
+- **swoole_get_local_ip** - Get the IPv4 IP addresses of each NIC on the machine
+- **swoole_last_error** - Get the latest error message
+- **swoole_load_module** - Load a swoole extension
+- **swoole_select** - Select the file descriptions which are ready to read/write or error in the eventloop
+- **swoole_set_process_name** - Set the process name
+- **swoole_strerror** - Convert the Errno into error messages
+- **swoole_timer_after** - Trigger a one time callback function in the future
+- **swoole_timer_exists** - Check if a timer callback function is existed
+- **swoole_timer_tick** - Trigger a timer tick callback function by time interval
+- **swoole_version** - Get the version of Swoole
+- **symlink** - 建立符号连接
+- **SyncEvent::fire** - Fires/sets the event
+- **SyncEvent::reset** - Resets a manual event
+- **SyncEvent::wait** - Waits for the event to be fired/set
+- **SyncEvent::__construct** - Constructs a new SyncEvent object
+- **SyncMutex::lock** - Waits for an exclusive lock
+- **SyncMutex::unlock** - Unlocks the mutex
+- **SyncMutex::__construct** - Constructs a new SyncMutex object
+- **SyncReaderWriter::readlock** - Waits for a read lock
+- **SyncReaderWriter::readunlock** - Releases a read lock
+- **SyncReaderWriter::writelock** - Waits for an exclusive write lock
+- **SyncReaderWriter::writeunlock** - Releases a write lock
+- **SyncReaderWriter::__construct** - Constructs a new SyncReaderWriter object
+- **SyncSemaphore::lock** - Decreases the count of the semaphore or waits
+- **SyncSemaphore::unlock** - Increases the count of the semaphore
+- **SyncSemaphore::__construct** - Constructs a new SyncSemaphore object
+- **SyncSharedMemory::first** - Check to see if the object is the first instance system-wide of named shared memory
+- **SyncSharedMemory::read** - Copy data from named shared memory
+- **SyncSharedMemory::size** - Returns the size of the named shared memory
+- **SyncSharedMemory::write** - Copy data to named shared memory
+- **SyncSharedMemory::__construct** - Constructs a new SyncSharedMemory object
+- **syslog** - Generate a system log message
+- **system** - 执行外部程序，并且显示输出
+- **sys_getloadavg** - 获取系统的负载（load average）
+- **sys_get_temp_dir** - 返回用于临时文件的目录
+
+## T
+
+- **Table::count** - Get row count
+- **Table::delete** - Delete rows from table
+- **Table::existsInDatabase** - Check if table exists in database
+- **Table::getName** - Get table name
+- **Table::getSchema** - Get table schema
+- **Table::getSession** - Get table session
+- **Table::insert** - Insert table rows
+- **Table::isView** - Check if table is view
+- **Table::select** - Select rows from table
+- **Table::update** - Update rows in table
+- **Table::__construct** - Table constructor
+- **TableDelete::bind** - Bind delete query parameters
+- **TableDelete::execute** - Execute delete query
+- **TableDelete::limit** - Limit deleted rows
+- **TableDelete::orderby** - Set delete sort criteria
+- **TableDelete::where** - Set delete search condition
+- **TableDelete::__construct** - TableDelete constructor
+- **TableInsert::execute** - Execute insert query
+- **TableInsert::values** - Add insert row values
+- **TableInsert::__construct** - TableInsert constructor
+- **TableSelect::bind** - Bind select query parameters
+- **TableSelect::execute** - Execute select statement
+- **TableSelect::groupBy** - Set select grouping criteria
+- **TableSelect::having** - Set select having condition
+- **TableSelect::limit** - Limit selected rows
+- **TableSelect::lockExclusive** - Execute EXCLUSIVE LOCK
+- **TableSelect::lockShared** - Execute SHARED LOCK
+- **TableSelect::offset** - Set limit offset
+- **TableSelect::orderby** - Set select sort criteria
+- **TableSelect::where** - Set select search condition
+- **TableSelect::__construct** - TableSelect constructor
+- **TableUpdate::bind** - Bind update query parameters
+- **TableUpdate::execute** - Execute update query
+- **TableUpdate::limit** - Limit update row count
+- **TableUpdate::orderby** - Set sorting criteria
+- **TableUpdate::set** - Add field to be updated
+- **TableUpdate::where** - Set search filter
+- **TableUpdate::__construct** - TableUpdate constructor
+- **taint** - Taint a string
+- **tan** - 正切
+- **tanh** - 双曲正切
+- **tcpwrap_check** - Performs a tcpwrap check
+- **tempnam** - 建立一个具有唯一文件名的文件
+- **textdomain** - Sets the default domain
+- **Thread::getCreatorId** - 识别
+- **Thread::getCurrentThread** - 识别
+- **Thread::getCurrentThreadId** - 识别
+- **Thread::getThreadId** - 识别
+- **Thread::isJoined** - 状态监测
+- **Thread::isStarted** - 状态检测
+- **Thread::join** - 同步
+- **Thread::start** - 执行
+- **Threaded::chunk** - 操作
+- **Threaded::count** - 操作
+- **Threaded::extend** - Runtime Manipulation
+- **Threaded::isRunning** - 状态检测
+- **Threaded::isTerminated** - 状态检测
+- **Threaded::merge** - 操作
+- **Threaded::notify** - 同步控制
+- **Threaded::notifyOne** - Synchronization
+- **Threaded::pop** - 操作
+- **Threaded::run** - 执行
+- **Threaded::shift** - Manipulation
+- **Threaded::synchronized** - 同步控制
+- **Threaded::wait** - Synchronization
+- **Throwable::getCode** - 获取异常代码
+- **Throwable::getFile** - 获取创建对象的文件
+- **Throwable::getLine** - 获取初始化对象时候的行号
+- **Throwable::getMessage** - 获取信息
+- **Throwable::getPrevious** - 返回先前的 Throwable
+- **Throwable::getTrace** - 获取堆栈踪迹（Stack Trace）
+- **Throwable::getTraceAsString** - 以 string 形式获取堆栈踪迹
+- **Throwable::__toString** - 获取 Throwable 对象 string 形式的表达
+- **tidy::$errorBuffer** - Return warnings and errors which occurred parsing the specified document
+- **tidy::body** - Returns a tidyNode object starting from the <body> tag of the tidy parse tree
+- **tidy::cleanRepair** - Execute configured cleanup and repair operations on parsed markup
+- **tidy::diagnose** - Run configured diagnostics on parsed and repaired markup
+- **tidy::getConfig** - Get current Tidy configuration
+- **tidy::getHtmlVer** - Get the Detected HTML version for the specified document
+- **tidy::getOpt** - Returns the value of the specified configuration option for the tidy document
+- **tidy::getOptDoc** - Returns the documentation for the given option name
+- **tidy::getRelease** - Get release date (version) for Tidy library
+- **tidy::getStatus** - Get status of specified document
+- **tidy::head** - Returns a tidyNode object starting from the <head> tag of the tidy parse tree
+- **tidy::html** - Returns a tidyNode object starting from the <html> tag of the tidy parse tree
+- **tidy::isXhtml** - Indicates if the document is a XHTML document
+- **tidy::isXml** - Indicates if the document is a generic (non HTML/XHTML) XML document
+- **tidy::parseFile** - Parse markup in file or URI
+- **tidy::parseString** - Parse a document stored in a string
+- **tidy::repairFile** - Repair a file and return it as a string
+- **tidy::repairString** - Repair a string using an optionally provided configuration file
+- **tidy::root** - Returns a tidyNode object representing the root of the tidy parse tree
+- **tidy::__construct** - Constructs a new tidy object
+- **tidyNode::getNextSibling** - Returns the next sibling node of the current node
+- **tidyNode::getParent** - Returns the parent node of the current node
+- **tidyNode::getPreviousSibling** - Returns the previous sibling node of the current node
+- **tidyNode::hasChildren** - Checks if a node has children
+- **tidyNode::hasSiblings** - Checks if a node has siblings
+- **tidyNode::isAsp** - Checks if this node is ASP
+- **tidyNode::isComment** - Checks if a node represents a comment
+- **tidyNode::isHtml** - Checks if a node is an element node
+- **tidyNode::isJste** - Checks if this node is JSTE
+- **tidyNode::isPhp** - Checks if a node is PHP
+- **tidyNode::isText** - Checks if a node represents text (no markup)
+- **tidyNode::__construct** - Private constructor to disallow direct instantiation
+- **tidy_access_count** - Returns the Number of Tidy accessibility warnings encountered for specified document
+- **tidy_config_count** - Returns the Number of Tidy configuration errors encountered for specified document
+- **tidy_error_count** - Returns the Number of Tidy errors encountered for specified document
+- **tidy_get_output** - Return a string representing the parsed tidy markup
+- **tidy_warning_count** - Returns the Number of Tidy warnings encountered for specified document
+- **time** - 返回当前的 Unix 时间戳
+- **timezone_abbreviations_list** - 别名 DateTimeZone::listAbbreviations
+- **timezone_identifiers_list** - 别名 DateTimeZone::listIdentifiers
+- **timezone_location_get** - 别名 DateTimeZone::getLocation
+- **timezone_name_from_abbr** - Returns a timezone name by guessing from abbreviation and UTC offset
+- **timezone_name_get** - 别名 DateTimeZone::getName
+- **timezone_offset_get** - 别名 DateTimeZone::getOffset
+- **timezone_open** - 别名 DateTimeZone::__construct
+- **timezone_transitions_get** - 别名 DateTimeZone::getTransitions
+- **timezone_version_get** - 获取 timezonedb 版本
+- **time_nanosleep** - 延缓执行若干秒和纳秒
+- **time_sleep_until** - 使脚本睡眠到指定的时间为止
+- **tmpfile** - 建立一个临时文件
+- **token_get_all** - 将提供的源码按 PHP 标记进行分割
+- **token_name** - 获取提供的 PHP 解析器代号的符号名称
+- **touch** - 设定文件的访问和修改时间
+- **trader_acos** - Vector Trigonometric ACos
+- **trader_ad** - Chaikin A/D Line
+- **trader_add** - Vector Arithmetic Add
+- **trader_adosc** - Chaikin A/D Oscillator
+- **trader_adx** - Average Directional Movement Index
+- **trader_adxr** - Average Directional Movement Index Rating
+- **trader_apo** - Absolute Price Oscillator
+- **trader_aroon** - Aroon
+- **trader_aroonosc** - Aroon Oscillator
+- **trader_asin** - Vector Trigonometric ASin
+- **trader_atan** - Vector Trigonometric ATan
+- **trader_atr** - Average True Range
+- **trader_avgprice** - Average Price
+- **trader_bbands** - Bollinger Bands
+- **trader_beta** - Beta
+- **trader_bop** - Balance Of Power
+- **trader_cci** - Commodity Channel Index
+- **trader_cdl2crows** - Two Crows
+- **trader_cdl3blackcrows** - Three Black Crows
+- **trader_cdl3inside** - Three Inside Up/Down
+- **trader_cdl3linestrike** - Three-Line Strike
+- **trader_cdl3outside** - Three Outside Up/Down
+- **trader_cdl3starsinsouth** - Three Stars In The South
+- **trader_cdl3whitesoldiers** - Three Advancing White Soldiers
+- **trader_cdlabandonedbaby** - Abandoned Baby
+- **trader_cdladvanceblock** - Advance Block
+- **trader_cdlbelthold** - Belt-hold
+- **trader_cdlbreakaway** - Breakaway
+- **trader_cdlclosingmarubozu** - Closing Marubozu
+- **trader_cdlconcealbabyswall** - Concealing Baby Swallow
+- **trader_cdlcounterattack** - Counterattack
+- **trader_cdldarkcloudcover** - Dark Cloud Cover
+- **trader_cdldoji** - Doji
+- **trader_cdldojistar** - Doji Star
+- **trader_cdldragonflydoji** - Dragonfly Doji
+- **trader_cdlengulfing** - Engulfing Pattern
+- **trader_cdleveningdojistar** - Evening Doji Star
+- **trader_cdleveningstar** - Evening Star
+- **trader_cdlgapsidesidewhite** - Up/Down-gap side-by-side white lines
+- **trader_cdlgravestonedoji** - Gravestone Doji
+- **trader_cdlhammer** - Hammer
+- **trader_cdlhangingman** - Hanging Man
+- **trader_cdlharami** - Harami Pattern
+- **trader_cdlharamicross** - Harami Cross Pattern
+- **trader_cdlhighwave** - High-Wave Candle
+- **trader_cdlhikkake** - Hikkake Pattern
+- **trader_cdlhikkakemod** - Modified Hikkake Pattern
+- **trader_cdlhomingpigeon** - Homing Pigeon
+- **trader_cdlidentical3crows** - Identical Three Crows
+- **trader_cdlinneck** - In-Neck Pattern
+- **trader_cdlinvertedhammer** - Inverted Hammer
+- **trader_cdlkicking** - Kicking
+- **trader_cdlkickingbylength** - Kicking - bull/bear determined by the longer marubozu
+- **trader_cdlladderbottom** - Ladder Bottom
+- **trader_cdllongleggeddoji** - Long Legged Doji
+- **trader_cdllongline** - Long Line Candle
+- **trader_cdlmarubozu** - Marubozu
+- **trader_cdlmatchinglow** - Matching Low
+- **trader_cdlmathold** - Mat Hold
+- **trader_cdlmorningdojistar** - Morning Doji Star
+- **trader_cdlmorningstar** - Morning Star
+- **trader_cdlonneck** - On-Neck Pattern
+- **trader_cdlpiercing** - Piercing Pattern
+- **trader_cdlrickshawman** - Rickshaw Man
+- **trader_cdlrisefall3methods** - Rising/Falling Three Methods
+- **trader_cdlseparatinglines** - Separating Lines
+- **trader_cdlshootingstar** - Shooting Star
+- **trader_cdlshortline** - Short Line Candle
+- **trader_cdlspinningtop** - Spinning Top
+- **trader_cdlstalledpattern** - Stalled Pattern
+- **trader_cdlsticksandwich** - Stick Sandwich
+- **trader_cdltakuri** - Takuri (Dragonfly Doji with very long lower shadow)
+- **trader_cdltasukigap** - Tasuki Gap
+- **trader_cdlthrusting** - Thrusting Pattern
+- **trader_cdltristar** - Tristar Pattern
+- **trader_cdlunique3river** - Unique 3 River
+- **trader_cdlupsidegap2crows** - Upside Gap Two Crows
+- **trader_cdlxsidegap3methods** - Upside/Downside Gap Three Methods
+- **trader_ceil** - Vector Ceil
+- **trader_cmo** - Chande Momentum Oscillator
+- **trader_correl** - Pearson's Correlation Coefficient (r)
+- **trader_cos** - Vector Trigonometric Cos
+- **trader_cosh** - Vector Trigonometric Cosh
+- **trader_dema** - Double Exponential Moving Average
+- **trader_div** - Vector Arithmetic Div
+- **trader_dx** - Directional Movement Index
+- **trader_ema** - Exponential Moving Average
+- **trader_errno** - Get error code
+- **trader_exp** - Vector Arithmetic Exp
+- **trader_floor** - Vector Floor
+- **trader_get_compat** - Get compatibility mode
+- **trader_get_unstable_period** - Get unstable period
+- **trader_ht_dcperiod** - Hilbert Transform - Dominant Cycle Period
+- **trader_ht_dcphase** - Hilbert Transform - Dominant Cycle Phase
+- **trader_ht_phasor** - Hilbert Transform - Phasor Components
+- **trader_ht_sine** - Hilbert Transform - SineWave
+- **trader_ht_trendline** - Hilbert Transform - Instantaneous Trendline
+- **trader_ht_trendmode** - Hilbert Transform - Trend vs Cycle Mode
+- **trader_kama** - Kaufman Adaptive Moving Average
+- **trader_linearreg** - Linear Regression
+- **trader_linearreg_angle** - Linear Regression Angle
+- **trader_linearreg_intercept** - Linear Regression Intercept
+- **trader_linearreg_slope** - Linear Regression Slope
+- **trader_ln** - Vector Log Natural
+- **trader_log10** - Vector Log10
+- **trader_ma** - Moving average
+- **trader_macd** - Moving Average Convergence/Divergence
+- **trader_macdext** - MACD with controllable MA type
+- **trader_macdfix** - Moving Average Convergence/Divergence Fix 12/26
+- **trader_mama** - MESA Adaptive Moving Average
+- **trader_mavp** - Moving average with variable period
+- **trader_max** - Highest value over a specified period
+- **trader_maxindex** - Index of highest value over a specified period
+- **trader_medprice** - Median Price
+- **trader_mfi** - Money Flow Index
+- **trader_midpoint** - MidPoint over period
+- **trader_midprice** - Midpoint Price over period
+- **trader_min** - Lowest value over a specified period
+- **trader_minindex** - Index of lowest value over a specified period
+- **trader_minmax** - Lowest and highest values over a specified period
+- **trader_minmaxindex** - Indexes of lowest and highest values over a specified period
+- **trader_minus_di** - Minus Directional Indicator
+- **trader_minus_dm** - Minus Directional Movement
+- **trader_mom** - Momentum
+- **trader_mult** - Vector Arithmetic Mult
+- **trader_natr** - Normalized Average True Range
+- **trader_obv** - On Balance Volume
+- **trader_plus_di** - Plus Directional Indicator
+- **trader_plus_dm** - Plus Directional Movement
+- **trader_ppo** - Percentage Price Oscillator
+- **trader_roc** - Rate of change : ((price/prevPrice)-1)*100
+- **trader_rocp** - Rate of change Percentage: (price-prevPrice)/prevPrice
+- **trader_rocr** - Rate of change ratio: (price/prevPrice)
+- **trader_rocr100** - Rate of change ratio 100 scale: (price/prevPrice)*100
+- **trader_rsi** - Relative Strength Index
+- **trader_sar** - Parabolic SAR
+- **trader_sarext** - Parabolic SAR - Extended
+- **trader_set_compat** - Set compatibility mode
+- **trader_set_unstable_period** - Set unstable period
+- **trader_sin** - Vector Trigonometric Sin
+- **trader_sinh** - Vector Trigonometric Sinh
+- **trader_sma** - Simple Moving Average
+- **trader_sqrt** - Vector Square Root
+- **trader_stddev** - Standard Deviation
+- **trader_stoch** - Stochastic
+- **trader_stochf** - Stochastic Fast
+- **trader_stochrsi** - Stochastic Relative Strength Index
+- **trader_sub** - Vector Arithmetic Subtraction
+- **trader_sum** - Summation
+- **trader_t3** - Triple Exponential Moving Average (T3)
+- **trader_tan** - Vector Trigonometric Tan
+- **trader_tanh** - Vector Trigonometric Tanh
+- **trader_tema** - Triple Exponential Moving Average
+- **trader_trange** - True Range
+- **trader_trima** - Triangular Moving Average
+- **trader_trix** - 1-day Rate-Of-Change (ROC) of a Triple Smooth EMA
+- **trader_tsf** - Time Series Forecast
+- **trader_typprice** - Typical Price
+- **trader_ultosc** - Ultimate Oscillator
+- **trader_var** - Variance
+- **trader_wclprice** - Weighted Close Price
+- **trader_willr** - Williams' %R
+- **trader_wma** - Weighted Moving Average
+- **trait_exists** - 检查指定的 trait 是否存在
+- **Transliterator::create** - Create a transliterator
+- **Transliterator::createFromRules** - Create transliterator from rules
+- **Transliterator::createInverse** - Create an inverse transliterator
+- **Transliterator::getErrorCode** - Get last error code
+- **Transliterator::getErrorMessage** - Get last error message
+- **Transliterator::listIDs** - Get transliterator IDs
+- **Transliterator::transliterate** - Transliterate a string
+- **Transliterator::__construct** - Private constructor to deny instantiation
+- **trigger_error** - 产生一个用户级别的 error/warning/notice 信息
+- **trim** - 去除字符串首尾处的空白字符（或者其他字符）
+
+## U
+
+- **uasort** - 使用用户定义的比较函数对数组进行排序并保持索引关联
+- **ucfirst** - 将字符串的首字母转换为大写
+- **UConverter::convert** - Convert string from one charset to another
+- **UConverter::fromUCallback** - Default "from" callback function
+- **UConverter::getAliases** - Get the aliases of the given name
+- **UConverter::getAvailable** - Get the available canonical converter names
+- **UConverter::getDestinationEncoding** - Get the destination encoding
+- **UConverter::getDestinationType** - Get the destination converter type
+- **UConverter::getErrorCode** - Get last error code on the object
+- **UConverter::getErrorMessage** - Get last error message on the object
+- **UConverter::getSourceEncoding** - Get the source encoding
+- **UConverter::getSourceType** - Get the source converter type
+- **UConverter::getStandards** - Get standards associated to converter names
+- **UConverter::getSubstChars** - Get substitution chars
+- **UConverter::reasonText** - Get string representation of the callback reason
+- **UConverter::setDestinationEncoding** - Set the destination encoding
+- **UConverter::setSourceEncoding** - Set the source encoding
+- **UConverter::setSubstChars** - Set the substitution chars
+- **UConverter::toUCallback** - Default "to" callback function
+- **UConverter::transcode** - Convert a string from one character encoding to another
+- **UConverter::__construct** - Create UConverter object
+- **ucwords** - 将字符串中每个单词的首字母转换为大写
+- **UI\Area::onDraw** - Draw Callback
+- **UI\Area::onKey** - Key Callback
+- **UI\Area::onMouse** - Mouse Callback
+- **UI\Area::redraw** - Redraw Area
+- **UI\Area::scrollTo** - Area Scroll
+- **UI\Area::setSize** - Set Size
+- **UI\Control::destroy** - Destroy Control
+- **UI\Control::disable** - Disable Control
+- **UI\Control::enable** - Enable Control
+- **UI\Control::getParent** - Get Parent Control
+- **UI\Control::getTopLevel** - Get Top Level
+- **UI\Control::hide** - Hide Control
+- **UI\Control::isEnabled** - Determine if Control is enabled
+- **UI\Control::isVisible** - Determine if Control is visible
+- **UI\Control::setParent** - Set Parent Control
+- **UI\Control::show** - Control Show
+- **UI\Controls\Box::append** - Append Control
+- **UI\Controls\Box::delete** - Delete Control
+- **UI\Controls\Box::getOrientation** - Get Orientation
+- **UI\Controls\Box::isPadded** - Padding Detection
+- **UI\Controls\Box::setPadded** - Set Padding
+- **UI\Controls\Box::__construct** - Construct a new Box
+- **UI\Controls\Button::getText** - Get Text
+- **UI\Controls\Button::onClick** - Click Handler
+- **UI\Controls\Button::setText** - Set Text
+- **UI\Controls\Button::__construct** - Construct a new Button
+- **UI\Controls\Check::getText** - Get Text
+- **UI\Controls\Check::isChecked** - Checked Detection
+- **UI\Controls\Check::onToggle** - Toggle Callback
+- **UI\Controls\Check::setChecked** - Set Checked
+- **UI\Controls\Check::setText** - Set Text
+- **UI\Controls\Check::__construct** - Construct a new Check
+- **UI\Controls\ColorButton::getColor** - Get Color
+- **UI\Controls\ColorButton::onChange** - Change Handler
+- **UI\Controls\ColorButton::setColor** - Set Color
+- **UI\Controls\Combo::append** - Append Option
+- **UI\Controls\Combo::getSelected** - Get Selected Option
+- **UI\Controls\Combo::onSelected** - Selected Handler
+- **UI\Controls\Combo::setSelected** - Set Selected Option
+- **UI\Controls\EditableCombo::append** - Append Option
+- **UI\Controls\EditableCombo::getText** - Get Text
+- **UI\Controls\EditableCombo::onChange** - Change Handler
+- **UI\Controls\EditableCombo::setText** - Set Text
+- **UI\Controls\Entry::getText** - Get Text
+- **UI\Controls\Entry::isReadOnly** - Detect Read Only
+- **UI\Controls\Entry::onChange** - Change Handler
+- **UI\Controls\Entry::setReadOnly** - Set Read Only
+- **UI\Controls\Entry::setText** - Set Text
+- **UI\Controls\Entry::__construct** - Construct a new Entry
+- **UI\Controls\Form::append** - Append Control
+- **UI\Controls\Form::delete** - Delete Control
+- **UI\Controls\Form::isPadded** - Padding Detection
+- **UI\Controls\Form::setPadded** - Set Padding
+- **UI\Controls\Grid::append** - Append Control
+- **UI\Controls\Grid::isPadded** - Padding Detection
+- **UI\Controls\Grid::setPadded** - Set Padding
+- **UI\Controls\Group::append** - Append Control
+- **UI\Controls\Group::getTitle** - Get Title
+- **UI\Controls\Group::hasMargin** - Margin Detection
+- **UI\Controls\Group::setMargin** - Set Margin
+- **UI\Controls\Group::setTitle** - Set Title
+- **UI\Controls\Group::__construct** - Construct a new Group
+- **UI\Controls\Label::getText** - Get Text
+- **UI\Controls\Label::setText** - Set Text
+- **UI\Controls\Label::__construct** - Construct a new Label
+- **UI\Controls\MultilineEntry::append** - Append Text
+- **UI\Controls\MultilineEntry::getText** - Get Text
+- **UI\Controls\MultilineEntry::isReadOnly** - Read Only Detection
+- **UI\Controls\MultilineEntry::onChange** - Change Handler
+- **UI\Controls\MultilineEntry::setReadOnly** - Set Read Only
+- **UI\Controls\MultilineEntry::setText** - Set Text
+- **UI\Controls\MultilineEntry::__construct** - Construct a new Multiline Entry
+- **UI\Controls\Picker::__construct** - Construct a new Picker
+- **UI\Controls\Progress::getValue** - Get Value
+- **UI\Controls\Progress::setValue** - Set Value
+- **UI\Controls\Radio::append** - Append Option
+- **UI\Controls\Radio::getSelected** - Get Selected Option
+- **UI\Controls\Radio::onSelected** - Selected Handler
+- **UI\Controls\Radio::setSelected** - Set Selected Option
+- **UI\Controls\Separator::__construct** - Construct a new Separator
+- **UI\Controls\Slider::getValue** - Get Value
+- **UI\Controls\Slider::onChange** - Change Handler
+- **UI\Controls\Slider::setValue** - Set Value
+- **UI\Controls\Slider::__construct** - Construct a new Slider
+- **UI\Controls\Spin::getValue** - Get Value
+- **UI\Controls\Spin::onChange** - Change Handler
+- **UI\Controls\Spin::setValue** - Set Value
+- **UI\Controls\Spin::__construct** - Construct a new Spin
+- **UI\Controls\Tab::append** - Append Page
+- **UI\Controls\Tab::delete** - Delete Page
+- **UI\Controls\Tab::hasMargin** - Margin Detection
+- **UI\Controls\Tab::insertAt** - Insert Page
+- **UI\Controls\Tab::pages** - Page Count
+- **UI\Controls\Tab::setMargin** - Set Margin
+- **UI\Draw\Brush::getColor** - Get Color
+- **UI\Draw\Brush::setColor** - Set Color
+- **UI\Draw\Brush::__construct** - Construct a new Brush
+- **UI\Draw\Brush\Gradient::addStop** - Stop Manipulation
+- **UI\Draw\Brush\Gradient::delStop** - Stop Manipulation
+- **UI\Draw\Brush\Gradient::setStop** - Stop Manipulation
+- **UI\Draw\Brush\LinearGradient::__construct** - Construct a Linear Gradient
+- **UI\Draw\Brush\RadialGradient::__construct** - Construct a new Radial Gradient
+- **UI\Draw\Color::getChannel** - Color Manipulation
+- **UI\Draw\Color::setChannel** - Color Manipulation
+- **UI\Draw\Color::__construct** - Construct new Color
+- **UI\Draw\Matrix::invert** - Invert Matrix
+- **UI\Draw\Matrix::isInvertible** - Invertible Detection
+- **UI\Draw\Matrix::multiply** - Multiply Matrix
+- **UI\Draw\Matrix::rotate** - Rotate Matrix
+- **UI\Draw\Matrix::scale** - Scale Matrix
+- **UI\Draw\Matrix::skew** - Skew Matrix
+- **UI\Draw\Matrix::translate** - Translate Matrix
+- **UI\Draw\Path::addRectangle** - Draw a Rectangle
+- **UI\Draw\Path::arcTo** - Draw an Arc
+- **UI\Draw\Path::bezierTo** - Draw Bezier Curve
+- **UI\Draw\Path::closeFigure** - Close Figure
+- **UI\Draw\Path::end** - Finalize Path
+- **UI\Draw\Path::lineTo** - Draw a Line
+- **UI\Draw\Path::newFigure** - Draw Figure
+- **UI\Draw\Path::newFigureWithArc** - Draw Figure with Arc
+- **UI\Draw\Path::__construct** - Construct a new Path
+- **UI\Draw\Pen::clip** - Clip a Path
+- **UI\Draw\Pen::fill** - Fill a Path
+- **UI\Draw\Pen::restore** - Restore
+- **UI\Draw\Pen::save** - Save
+- **UI\Draw\Pen::stroke** - Stroke a Path
+- **UI\Draw\Pen::transform** - Matrix Transform
+- **UI\Draw\Pen::write** - Draw Text at Point
+- **UI\Draw\Stroke::getCap** - Get Line Cap
+- **UI\Draw\Stroke::getJoin** - Get Line Join
+- **UI\Draw\Stroke::getMiterLimit** - Get Miter Limit
+- **UI\Draw\Stroke::getThickness** - Get Thickness
+- **UI\Draw\Stroke::setCap** - Set Line Cap
+- **UI\Draw\Stroke::setJoin** - Set Line Join
+- **UI\Draw\Stroke::setMiterLimit** - Set Miter Limit
+- **UI\Draw\Stroke::setThickness** - Set Thickness
+- **UI\Draw\Stroke::__construct** - Construct a new Stroke
+- **UI\Draw\Text\Font::getAscent** - Font Metrics
+- **UI\Draw\Text\Font::getDescent** - Font Metrics
+- **UI\Draw\Text\Font::getLeading** - Font Metrics
+- **UI\Draw\Text\Font::getUnderlinePosition** - Font Metrics
+- **UI\Draw\Text\Font::getUnderlineThickness** - Font Metrics
+- **UI\Draw\Text\Font::__construct** - Construct a new Font
+- **UI\Draw\Text\Font\Descriptor::getFamily** - Get Font Family
+- **UI\Draw\Text\Font\Descriptor::getItalic** - Style Detection
+- **UI\Draw\Text\Font\Descriptor::getSize** - Size Detection
+- **UI\Draw\Text\Font\Descriptor::getStretch** - Style Detection
+- **UI\Draw\Text\Font\Descriptor::getWeight** - Weight Detection
+- **UI\Draw\Text\Font\Descriptor::__construct** - Construct a new Font Descriptor
+- **UI\Draw\Text\Font\fontFamilies** - Retrieve Font Families
+- **UI\Draw\Text\Layout::setColor** - Set Color
+- **UI\Draw\Text\Layout::setWidth** - Set Width
+- **UI\Draw\Text\Layout::__construct** - Construct a new Text Layout
+- **UI\Executor::kill** - Stop Executor
+- **UI\Executor::onExecute** - Execution Callback
+- **UI\Executor::setInterval** - Interval Manipulation
+- **UI\Executor::__construct** - Construct a new Executor
+- **UI\Menu::append** - Append Menu Item
+- **UI\Menu::appendAbout** - Append About Menu Item
+- **UI\Menu::appendCheck** - Append Checkable Menu Item
+- **UI\Menu::appendPreferences** - Append Preferences Menu Item
+- **UI\Menu::appendQuit** - Append Quit Menu Item
+- **UI\Menu::appendSeparator** - Append Menu Item Separator
+- **UI\Menu::__construct** - Construct a new Menu
+- **UI\MenuItem::disable** - Disable Menu Item
+- **UI\MenuItem::enable** - Enable Menu Item
+- **UI\MenuItem::isChecked** - Detect Checked
+- **UI\MenuItem::onClick** - On Click Callback
+- **UI\MenuItem::setChecked** - Set Checked
+- **UI\Point::at** - Size Coercion
+- **UI\Point::getX** - Retrieves X
+- **UI\Point::getY** - Retrieves Y
+- **UI\Point::setX** - Set X
+- **UI\Point::setY** - Set Y
+- **UI\Point::__construct** - Construct a new Point
+- **UI\quit** - Quit UI Loop
+- **UI\run** - Enter UI Loop
+- **UI\Size::getHeight** - Retrieves Height
+- **UI\Size::getWidth** - Retrieves Width
+- **UI\Size::of** - Point Coercion
+- **UI\Size::setHeight** - Set Height
+- **UI\Size::setWidth** - Set Width
+- **UI\Size::__construct** - Construct a new Size
+- **UI\Window::add** - Add a Control
+- **UI\Window::error** - Show Error Box
+- **UI\Window::getSize** - Get Window Size
+- **UI\Window::getTitle** - Get Title
+- **UI\Window::hasBorders** - Border Detection
+- **UI\Window::hasMargin** - Margin Detection
+- **UI\Window::isFullScreen** - Full Screen Detection
+- **UI\Window::msg** - Show Message Box
+- **UI\Window::onClosing** - Closing Callback
+- **UI\Window::open** - Open Dialog
+- **UI\Window::save** - Save Dialog
+- **UI\Window::setBorders** - Border Use
+- **UI\Window::setFullScreen** - Full Screen Use
+- **UI\Window::setMargin** - Margin Use
+- **UI\Window::setSize** - Set Size
+- **UI\Window::setTitle** - Window Title
+- **UI\Window::__construct** - Construct a new Window
+- **uksort** - 使用用户自定义的比较函数对数组中的键名进行排序
+- **umask** - 改变当前的 umask
+- **uniqid** - 生成基于时间的标识符
+- **UnitEnum::cases** - 生成枚举的条目清单
+- **unixtojd** - 将 Unix 时间戳转换为儒略日数
+- **unlink** - 删除文件
+- **unpack** - Unpack data from binary string
+- **unregister_tick_function** - 注销每个 tick 上需要执行的函数
+- **unserialize** - 从已存储的表示中创建 PHP 的值
+- **unset** - unset 指定变量
+- **untaint** - Untaint strings
+- **uopz_add_function** - Adds non-existent function or method
+- **uopz_allow_exit** - Allows control over disabled exit opcode
+- **uopz_backup** - Backup a function
+- **uopz_compose** - Compose a class
+- **uopz_copy** - Copy a function
+- **uopz_delete** - Delete a function
+- **uopz_del_function** - Deletes previously added function or method
+- **uopz_extend** - Extend a class at runtime
+- **uopz_flags** - Get or set flags on function or class
+- **uopz_function** - Creates a function at runtime
+- **uopz_get_exit_status** - Retrieve the last set exit status
+- **uopz_get_hook** - Gets previously set hook on function or method
+- **uopz_get_mock** - Get the current mock for a class
+- **uopz_get_property** - Gets value of class or instance property
+- **uopz_get_return** - Gets a previous set return value for a function
+- **uopz_get_static** - Gets the static variables from function or method scope
+- **uopz_implement** - Implements an interface at runtime
+- **uopz_overload** - Overload a VM opcode
+- **uopz_redefine** - Redefine a constant
+- **uopz_rename** - Rename a function at runtime
+- **uopz_restore** - Restore a previously backed up function
+- **uopz_set_hook** - Sets hook to execute when entering a function or method
+- **uopz_set_mock** - Use mock instead of class for new objects
+- **uopz_set_property** - Sets value of existing class or instance property
+- **uopz_set_return** - Provide a return value for an existing function
+- **uopz_set_static** - Sets the static variables in function or method scope
+- **uopz_undefine** - Undefine a constant
+- **uopz_unset_hook** - Removes previously set hook on function or method
+- **uopz_unset_mock** - Unset previously set mock
+- **uopz_unset_return** - Unsets a previously set return value for a function
+- **Uri\Rfc3986\Uri::equals** - Check if two URIs are equivalent
+- **Uri\Rfc3986\Uri::getFragment** - Retrieve the normalized fragment component
+- **Uri\Rfc3986\Uri::getHost** - Retrieve the normalized host component
+- **Uri\Rfc3986\Uri::getPassword** - Retrieve the normalized password
+- **Uri\Rfc3986\Uri::getPath** - Retrieve the normalized path component
+- **Uri\Rfc3986\Uri::getPort** - Retrieve the normalized port component
+- **Uri\Rfc3986\Uri::getQuery** - Retrieve the normalized query component
+- **Uri\Rfc3986\Uri::getRawFragment** - Retrieve the raw fragment component
+- **Uri\Rfc3986\Uri::getRawHost** - Retrieve the raw host component
+- **Uri\Rfc3986\Uri::getRawPassword** - Retrieve the raw password
+- **Uri\Rfc3986\Uri::getRawPath** - Retrieve the raw path component
+- **Uri\Rfc3986\Uri::getRawQuery** - Retrieve the raw query component
+- **Uri\Rfc3986\Uri::getRawScheme** - Retrieve the raw scheme component
+- **Uri\Rfc3986\Uri::getRawUserInfo** - Retrieve the raw userinfo component
+- **Uri\Rfc3986\Uri::getRawUsername** - Retrieve the raw username
+- **Uri\Rfc3986\Uri::getScheme** - Retrieve the normalized scheme component
+- **Uri\Rfc3986\Uri::getUserInfo** - Retrieve the normalized userinfo component
+- **Uri\Rfc3986\Uri::getUsername** - Retrieve the normalized username
+- **Uri\Rfc3986\Uri::parse** - Parse a URI
+- **Uri\Rfc3986\Uri::resolve** - Resolve a URI with the current object as the base URL
+- **Uri\Rfc3986\Uri::toRawString** - Recompose the raw URI
+- **Uri\Rfc3986\Uri::toString** - Recompose the normalized URI
+- **Uri\Rfc3986\Uri::withFragment** - Modify the fragment component
+- **Uri\Rfc3986\Uri::withHost** - Modify the host component
+- **Uri\Rfc3986\Uri::withPath** - Modify the path component
+- **Uri\Rfc3986\Uri::withPort** - Modify the port component
+- **Uri\Rfc3986\Uri::withQuery** - Modify the query component
+- **Uri\Rfc3986\Uri::withScheme** - Modify the scheme component
+- **Uri\Rfc3986\Uri::withUserInfo** - Modify the userinfo component
+- **Uri\Rfc3986\Uri::__construct** - Construct the Uri object
+- **Uri\Rfc3986\Uri::__debugInfo** - Return the internal state of the URI
+- **Uri\Rfc3986\Uri::__serialize** - Serialize the Uri object
+- **Uri\Rfc3986\Uri::__unserialize** - Deserialize the data parameter into a Uri object
+- **Uri\WhatWg\InvalidUrlException::__construct** - Construct an InvalidUrlException object
+- **Uri\WhatWg\Url::equals** - Check if two URLs are equivalent
+- **Uri\WhatWg\Url::getAsciiHost** - Retrieve the host component as an ASCII string
+- **Uri\WhatWg\Url::getFragment** - Retrieve the fragment component
+- **Uri\WhatWg\Url::getPassword** - Retrieve the password component
+- **Uri\WhatWg\Url::getPath** - Retrieve the path component
+- **Uri\WhatWg\Url::getPort** - Retrieve the port component
+- **Uri\WhatWg\Url::getQuery** - Retrieve the query component
+- **Uri\WhatWg\Url::getScheme** - Retrieve the scheme component
+- **Uri\WhatWg\Url::getUnicodeHost** - Retrieve the host component as an Unicode string
+- **Uri\WhatWg\Url::getUsername** - Retrieve the username component
+- **Uri\WhatWg\Url::parse** - Parse a URL
+- **Uri\WhatWg\Url::resolve** - Resolve a URL with the current object as the base URL
+- **Uri\WhatWg\Url::toAsciiString** - Recompose the URL as an ASCII string
+- **Uri\WhatWg\Url::toUnicodeString** - Recompose the URL as a Unicode string
+- **Uri\WhatWg\Url::withFragment** - Modify the fragment component
+- **Uri\WhatWg\Url::withHost** - Modify the host component
+- **Uri\WhatWg\Url::withPassword** - Modify the password component
+- **Uri\WhatWg\Url::withPath** - Modify the path component
+- **Uri\WhatWg\Url::withPort** - Modify the port component
+- **Uri\WhatWg\Url::withQuery** - Modify the query component
+- **Uri\WhatWg\Url::withScheme** - Modify the scheme component
+- **Uri\WhatWg\Url::withUsername** - Modify the username component
+- **Uri\WhatWg\Url::__construct** - Construct the Url object
+- **Uri\WhatWg\Url::__debugInfo** - Return the internal state of the URL
+- **Uri\WhatWg\Url::__serialize** - Serialize the Url object
+- **Uri\WhatWg\Url::__unserialize** - Deserialize the data parameter into a Url object
+- **Uri\WhatWg\UrlValidationError::__construct** - Construct a UrlValidationError object
+- **urldecode** - 解码已编码的 URL 字符串
+- **urlencode** - 编码 URL 字符串
+- **user_error** - 别名 trigger_error
+- **use_soap_error_handler** - Set whether to use the SOAP error handler
+- **usleep** - 以指定的微秒数延迟执行
+- **usort** - 使用用户自定义的比较函数对数组中的值进行排序
+- **utf8_decode** - 将字符串从 UTF-8 转换为 ISO-8859-1，替换无效或者无法表示的字符。
+- **utf8_encode** - 将字符串从 ISO-8859-1 转换为 UTF-8 编码
+
+## V
+
+- **V8Js::executeString** - Execute a string as Javascript code
+- **V8Js::getExtensions** - Return an array of registered extensions
+- **V8Js::getPendingException** - Return pending uncaught Javascript exception
+- **V8Js::registerExtension** - Register Javascript extensions for V8Js
+- **V8Js::__construct** - Construct a new V8Js object
+- **V8JsException::getJsFileName** - The getJsFileName purpose
+- **V8JsException::getJsLineNumber** - The getJsLineNumber purpose
+- **V8JsException::getJsSourceLine** - The getJsSourceLine purpose
+- **V8JsException::getJsTrace** - The getJsTrace purpose
+- **variant::__construct** - variant class constructor
+- **variant_abs** - Returns the absolute value of a variant
+- **variant_add** - "Adds" two variant values together and returns the result
+- **variant_and** - Performs a bitwise AND operation between two variants
+- **variant_cast** - Convert a variant into a new variant object of another type
+- **variant_cat** - Concatenates two variant values together and returns the result
+- **variant_cmp** - Compares two variants
+- **variant_date_from_timestamp** - Returns a variant date representation of a Unix timestamp
+- **variant_date_to_timestamp** - Converts a variant date/time value to Unix timestamp
+- **variant_div** - Returns the result from dividing two variants
+- **variant_eqv** - Performs a bitwise equivalence on two variants
+- **variant_fix** - Returns the integer portion of a variant
+- **variant_get_type** - Returns the type of a variant object
+- **variant_idiv** - Converts variants to integers and then returns the result from dividing them
+- **variant_imp** - Performs a bitwise implication on two variants
+- **variant_int** - Returns the integer portion of a variant
+- **variant_mod** - Divides two variants and returns only the remainder
+- **variant_mul** - Multiplies the values of the two variants
+- **variant_neg** - Performs logical negation on a variant
+- **variant_not** - Performs bitwise not negation on a variant
+- **variant_or** - Performs a logical disjunction on two variants
+- **variant_pow** - Returns the result of performing the power function with two variants
+- **variant_round** - Rounds a variant to the specified number of decimal places
+- **variant_set** - Assigns a new value for a variant object
+- **variant_set_type** - Convert a variant into another type "in-place"
+- **variant_sub** - Subtracts the value of the right variant from the left variant value
+- **variant_xor** - Performs a logical exclusion on two variants
+- **VarnishAdmin::auth** - Authenticate on a varnish instance
+- **VarnishAdmin::ban** - Ban URLs using a VCL expression
+- **VarnishAdmin::banUrl** - Ban an URL using a VCL expression
+- **VarnishAdmin::clearPanic** - Clear varnish instance panic messages
+- **VarnishAdmin::connect** - Connect to a varnish instance administration interface
+- **VarnishAdmin::disconnect** - Disconnect from a varnish instance administration interface
+- **VarnishAdmin::getPanic** - Get the last panic message on a varnish instance
+- **VarnishAdmin::getParams** - Fetch current varnish instance configuration parameters
+- **VarnishAdmin::isRunning** - Check if the varnish slave process is currently running
+- **VarnishAdmin::setCompat** - Set the class compat configuration param
+- **VarnishAdmin::setHost** - Set the class host configuration param
+- **VarnishAdmin::setIdent** - Set the class ident configuration param
+- **VarnishAdmin::setParam** - Set configuration param on the current varnish instance
+- **VarnishAdmin::setPort** - Set the class port configuration param
+- **VarnishAdmin::setSecret** - Set the class secret configuration param
+- **VarnishAdmin::setTimeout** - Set the class timeout configuration param
+- **VarnishAdmin::start** - Start varnish worker process
+- **VarnishAdmin::stop** - Stop varnish worker process
+- **VarnishAdmin::__construct** - VarnishAdmin constructor
+- **VarnishLog::getLine** - Get next log line
+- **VarnishLog::getTagName** - Get the log tag string representation by its index
+- **VarnishLog::__construct** - Varnishlog constructor
+- **VarnishStat::getSnapshot** - Get the current varnish instance statistics snapshot
+- **VarnishStat::__construct** - VarnishStat constructor
+- **var_dump** - 打印变量的相关信息
+- **var_export** - 输出或返回变量的可解析字符串表示
+- **var_representation** - Returns a short, readable, parsable string representation of a variable
+- **version_compare** - 对比两个「PHP 规范化」的版本数字字符串
+- **vfprintf** - 将格式化字符串写入流
+- **virtual** - 执行 Apache 子请求
+- **vprintf** - 输出格式化字符串
+- **vsprintf** - 返回格式化字符串
+- **Vtiful\Kernel\Excel::addSheet** - Vtiful\Kernel\Excel addSheet
+- **Vtiful\Kernel\Excel::autoFilter** - Vtiful\Kernel\Excel autoFilter
+- **Vtiful\Kernel\Excel::constMemory** - Vtiful\Kernel\Excel constMemory
+- **Vtiful\Kernel\Excel::data** - Vtiful\Kernel\Excel data
+- **Vtiful\Kernel\Excel::fileName** - Vtiful\Kernel\Excel fileName
+- **Vtiful\Kernel\Excel::getHandle** - Vtiful\Kernel\Excel getHandle
+- **Vtiful\Kernel\Excel::header** - Vtiful\Kernel\Excel header
+- **Vtiful\Kernel\Excel::insertFormula** - Vtiful\Kernel\Excel insertFormula
+- **Vtiful\Kernel\Excel::insertImage** - Vtiful\Kernel\Excel insertImage
+- **Vtiful\Kernel\Excel::insertText** - Vtiful\Kernel\Excel insertText
+- **Vtiful\Kernel\Excel::mergeCells** - Vtiful\Kernel\Excel mergeCells
+- **Vtiful\Kernel\Excel::output** - Vtiful\Kernel\Excel output
+- **Vtiful\Kernel\Excel::setColumn** - Vtiful\Kernel\Excel setColumn
+- **Vtiful\Kernel\Excel::setRow** - Vtiful\Kernel\Excel setRow
+- **Vtiful\Kernel\Excel::__construct** - Vtiful\Kernel\Excel constructor
+- **Vtiful\Kernel\Format::align** - Vtiful\Kernel\Format align
+- **Vtiful\Kernel\Format::bold** - Vtiful\Kernel\Format bold
+- **Vtiful\Kernel\Format::italic** - Vtiful\Kernel\Format italic
+- **Vtiful\Kernel\Format::underline** - Vtiful\Kernel\Format underline
+
+## W
+
+- **Warning::__construct** - Warning constructor
+- **wddx_add_vars** - Add variables to a WDDX packet with the specified ID
+- **wddx_deserialize** - Unserializes a WDDX packet
+- **wddx_packet_end** - Ends a WDDX packet with the specified ID
+- **wddx_packet_start** - Starts a new WDDX packet with structure inside it
+- **wddx_serialize_value** - Serialize a single value into a WDDX packet
+- **wddx_serialize_vars** - Serialize variables into a WDDX packet
+- **WeakMap::count** - 统计 map 中存活实体的数量
+- **WeakMap::getIterator** - 接收一个外部迭代器
+- **WeakMap::offsetExists** - 检测 map 中是否存在某个对象
+- **WeakMap::offsetGet** - 返回某个对象指向的值
+- **WeakMap::offsetSet** - 更新 map 新的键值对
+- **WeakMap::offsetUnset** - 从 map 中移除一条
+- **WeakReference::create** - 创建新的弱引用
+- **WeakReference::get** - 获取弱引用对象
+- **WeakReference::__construct** - 不允许实例化的构造函数
+- **Win32Service\RightInfo::getDomain** - Return the user's domain
+- **Win32Service\RightInfo::getFullUsername** - Return the domain and username
+- **Win32Service\RightInfo::getRights** - Return the rights list
+- **Win32Service\RightInfo::getUsername** - Return the username
+- **Win32Service\RightInfo::isDenyAccess** - Return true if the RightInfo concerns deny access to the resource
+- **Win32Service\RightInfo::isGrantAccess** - Return true if the RightInfo concern grants access to the resource
+- **Win32Service\RightInfo::__construct** - Create a new RightInfo (not used)
+- **win32_add_right_access_service** - Add rights access for an username to the service
+- **win32_add_service_env_var** - Add a custom environment variables on service
+- **win32_continue_service** - Resumes a paused service
+- **win32_create_service** - Creates a new service entry in the SCM database
+- **win32_delete_service** - Deletes a service entry from the SCM database
+- **win32_get_last_control_message** - Returns the last control message that was sent to this service
+- **win32_get_service_env_vars** - Read all custom environment variables on service
+- **win32_pause_service** - Pauses a service
+- **win32_query_service_status** - Queries the status of a service
+- **win32_read_all_rights_access_service** - Read all service rights access
+- **win32_read_right_access_service** - Read the service rights access for an username
+- **win32_remove_right_access_service** - Remove the service rights access for an username
+- **win32_remove_service_env_var** - Remove a custom environment variables on service
+- **win32_send_custom_control** - Send a custom control to the service
+- **win32_set_service_exit_code** - Define or return the exit code for the current running service
+- **win32_set_service_exit_mode** - Define or return the exit mode for the current running service
+- **win32_set_service_pause_resume_state** - Define or return the pause/resume capability for the current running service
+- **win32_set_service_status** - Update the service status
+- **win32_start_service** - Starts a service
+- **win32_start_service_ctrl_dispatcher** - Registers the script with the SCM, so that it can act as the service with the given name
+- **win32_stop_service** - Stops a service
+- **wincache_fcache_fileinfo** - Retrieves information about files cached in the file cache
+- **wincache_fcache_meminfo** - Retrieves information about file cache memory usage
+- **wincache_lock** - Acquires an exclusive lock on a given key
+- **wincache_ocache_fileinfo** - Retrieves information about files cached in the opcode cache
+- **wincache_ocache_meminfo** - Retrieves information about opcode cache memory usage
+- **wincache_refresh_if_changed** - Refreshes the cache entries for the cached files
+- **wincache_rplist_fileinfo** - Retrieves information about resolve file path cache
+- **wincache_rplist_meminfo** - Retrieves information about memory usage by the resolve file path cache
+- **wincache_scache_info** - Retrieves information about files cached in the session cache
+- **wincache_scache_meminfo** - Retrieves information about session cache memory usage
+- **wincache_ucache_add** - Adds a variable in user cache only if variable does not already exist in the cache
+- **wincache_ucache_cas** - Compares the variable with old value and assigns new value to it
+- **wincache_ucache_clear** - Deletes entire content of the user cache
+- **wincache_ucache_dec** - Decrements the value associated with the key
+- **wincache_ucache_delete** - Deletes variables from the user cache
+- **wincache_ucache_exists** - Checks if a variable exists in the user cache
+- **wincache_ucache_get** - Gets a variable stored in the user cache
+- **wincache_ucache_inc** - Increments the value associated with the key
+- **wincache_ucache_info** - Retrieves information about data stored in the user cache
+- **wincache_ucache_meminfo** - Retrieves information about user cache memory usage
+- **wincache_ucache_set** - Adds a variable in user cache and overwrites a variable if it already exists in the cache
+- **wincache_unlock** - Releases an exclusive lock on a given key
+- **wkhtmltox\Image\Converter::convert** - Perform Image conversion
+- **wkhtmltox\Image\Converter::getVersion** - Determine version of Converter
+- **wkhtmltox\Image\Converter::__construct** - Create a new Image converter
+- **wkhtmltox\PDF\Converter::add** - Add an object for conversion
+- **wkhtmltox\PDF\Converter::convert** - Perform PDF conversion
+- **wkhtmltox\PDF\Converter::getVersion** - Determine version of Converter
+- **wkhtmltox\PDF\Converter::__construct** - Create a new PDF converter
+- **wkhtmltox\PDF\Object::__construct** - Create a new PDF Object
+- **wordwrap** - 打断字符串为指定数量的字串
+- **Worker::collect** - Collect references to completed tasks
+- **Worker::getStacked** - 获取剩余的栈大小
+- **Worker::isShutdown** - 状态检测
+- **Worker::shutdown** - 关闭 Worker
+- **Worker::stack** - 将要执行的任务入栈
+- **Worker::unstack** - 将要执行的任务出栈
+
+## X
+
+- **xattr_get** - Get an extended attribute
+- **xattr_list** - Get a list of extended attributes
+- **xattr_remove** - Remove an extended attribute
+- **xattr_set** - Set an extended attribute
+- **xattr_supported** - Check if filesystem supports extended attributes
+- **xdiff_file_bdiff** - Make binary diff of two files
+- **xdiff_file_bdiff_size** - Read a size of file created by applying a binary diff
+- **xdiff_file_bpatch** - Patch a file with a binary diff
+- **xdiff_file_diff** - Make unified diff of two files
+- **xdiff_file_diff_binary** - 别名 xdiff_file_bdiff
+- **xdiff_file_merge3** - Merge 3 files into one
+- **xdiff_file_patch** - Patch a file with an unified diff
+- **xdiff_file_patch_binary** - 别名 xdiff_file_bpatch
+- **xdiff_file_rabdiff** - Make binary diff of two files using the Rabin's polynomial fingerprinting algorithm
+- **xdiff_string_bdiff** - Make binary diff of two strings
+- **xdiff_string_bdiff_size** - Read a size of file created by applying a binary diff
+- **xdiff_string_bpatch** - Patch a string with a binary diff
+- **xdiff_string_diff** - Make unified diff of two strings
+- **xdiff_string_diff_binary** - 别名 xdiff_string_bdiff
+- **xdiff_string_merge3** - Merge 3 strings into one
+- **xdiff_string_patch** - Patch a string with an unified diff
+- **xdiff_string_patch_binary** - 别名 xdiff_string_bpatch
+- **xdiff_string_rabdiff** - Make a binary diff of two strings using the Rabin's polynomial fingerprinting algorithm
+- **xhprof_disable** - 停止 xhprof 分析器
+- **xhprof_enable** - 启动 xhprof 性能分析器
+- **xhprof_sample_disable** - 停止 xhprof 性能采样分析器
+- **xhprof_sample_enable** - 以采样模式启动 XHProf 性能分析
+- **XMLDiff\Base::diff** - Produce diff of two XML documents
+- **XMLDiff\Base::merge** - Produce new XML document based on diff
+- **XMLDiff\Base::__construct** - Constructor
+- **XMLDiff\DOM::diff** - Diff two DOMDocument objects
+- **XMLDiff\DOM::merge** - Produce merged DOMDocument
+- **XMLDiff\File::diff** - Diff two XML files
+- **XMLDiff\File::merge** - Produce merged XML document
+- **XMLDiff\Memory::diff** - Diff two XML documents
+- **XMLDiff\Memory::merge** - Produce merged XML document
+- **XMLReader::close** - Close the XMLReader input
+- **XMLReader::expand** - Returns a copy of the current node as a DOM object
+- **XMLReader::fromStream** - Creates an XMLReader from a stream to read from
+- **XMLReader::fromString** - Creates an XMLReader from an XML string
+- **XMLReader::fromUri** - Creates an XMLReader from a URI to read from
+- **XMLReader::getAttribute** - Get the value of a named attribute
+- **XMLReader::getAttributeNo** - Get the value of an attribute by index
+- **XMLReader::getAttributeNs** - Get the value of an attribute by localname and URI
+- **XMLReader::getParserProperty** - Indicates if specified property has been set
+- **XMLReader::isValid** - Indicates if the parsed document is valid
+- **XMLReader::lookupNamespace** - Lookup namespace for a prefix
+- **XMLReader::moveToAttribute** - Move cursor to a named attribute
+- **XMLReader::moveToAttributeNo** - Move cursor to an attribute by index
+- **XMLReader::moveToAttributeNs** - Move cursor to a named attribute
+- **XMLReader::moveToElement** - Position cursor on the parent Element of current Attribute
+- **XMLReader::moveToFirstAttribute** - Position cursor on the first Attribute
+- **XMLReader::moveToNextAttribute** - Position cursor on the next Attribute
+- **XMLReader::next** - Move cursor to next node skipping all subtrees
+- **XMLReader::open** - Set the URI containing the XML to parse
+- **XMLReader::read** - Move to next node in document
+- **XMLReader::readInnerXml** - Retrieve XML from current node
+- **XMLReader::readOuterXml** - Retrieve XML from current node, including itself
+- **XMLReader::readString** - Reads the contents of the current node as a string
+- **XMLReader::setParserProperty** - Set parser options
+- **XMLReader::setRelaxNGSchema** - Set the filename or URI for a RelaxNG Schema
+- **XMLReader::setRelaxNGSchemaSource** - Set the data containing a RelaxNG Schema
+- **XMLReader::setSchema** - Validate document against XSD
+- **XMLReader::XML** - Set the data containing the XML to parse
+- **xmlrpc_decode** - 将 XML 解码为原生 PHP 类型
+- **xmlrpc_decode_request** - 将 XML 解码为原生 PHP 类型
+- **xmlrpc_encode** - 为 PHP 值生成 XML
+- **xmlrpc_encode_request** - 为方法请求生成 XML
+- **xmlrpc_get_type** - 获取 PHP 值的 xmlrpc 类型
+- **xmlrpc_is_fault** - Determines if an array value represents an XMLRPC fault
+- **xmlrpc_parse_method_descriptions** - 将 XML 解码为方法描述列表
+- **xmlrpc_server_add_introspection_data** - 添加自我描述文档
+- **xmlrpc_server_call_method** - 解析 XML 请求和调用方法
+- **xmlrpc_server_create** - 创建 xmlrpc 服务器
+- **xmlrpc_server_destroy** - 销毁服务端资源
+- **xmlrpc_server_register_introspection_callback** - 注册 PHP 函数来生成文档
+- **xmlrpc_server_register_method** - 注册 PHP 函数搭到资源用于匹配 method_name
+- **xmlrpc_set_type** - 为 PHP 字符串值设置 xmlrpc 类型，base64 或 datetime
+- **XMLWriter::endAttribute** - End attribute
+- **XMLWriter::endCdata** - End current CDATA
+- **XMLWriter::endComment** - Create end comment
+- **XMLWriter::endDocument** - End current document
+- **XMLWriter::endDtd** - End current DTD
+- **XMLWriter::endDtdAttlist** - End current DTD AttList
+- **XMLWriter::endDtdElement** - End current DTD element
+- **XMLWriter::endDtdEntity** - End current DTD Entity
+- **XMLWriter::endElement** - End current element
+- **XMLWriter::endPi** - End current PI
+- **XMLWriter::flush** - Flush current buffer
+- **XMLWriter::fullEndElement** - End current element
+- **XMLWriter::openMemory** - Create new xmlwriter using memory for string output
+- **XMLWriter::openUri** - Create new xmlwriter using source uri for output
+- **XMLWriter::outputMemory** - Returns current buffer
+- **XMLWriter::setIndent** - Toggle indentation on/off
+- **XMLWriter::setIndentString** - Set string used for indenting
+- **XMLWriter::startAttribute** - Create start attribute
+- **XMLWriter::startAttributeNs** - Create start namespaced attribute
+- **XMLWriter::startCdata** - Create start CDATA tag
+- **XMLWriter::startComment** - Create start comment
+- **XMLWriter::startDocument** - Create document tag
+- **XMLWriter::startDtd** - Create start DTD tag
+- **XMLWriter::startDtdAttlist** - Create start DTD AttList
+- **XMLWriter::startDtdElement** - Create start DTD element
+- **XMLWriter::startDtdEntity** - Create start DTD Entity
+- **XMLWriter::startElement** - Create start element tag
+- **XMLWriter::startElementNs** - Create start namespaced element tag
+- **XMLWriter::startPi** - Create start PI tag
+- **XMLWriter::text** - Write text
+- **XMLWriter::toMemory** - Create new XMLWriter using memory for string output
+- **XMLWriter::toStream** - Create new XMLWriter using a stream for output
+- **XMLWriter::toUri** - Create new XMLWriter using a URI for output
+- **XMLWriter::writeAttribute** - Write full attribute
+- **XMLWriter::writeAttributeNs** - Write full namespaced attribute
+- **XMLWriter::writeCdata** - Write full CDATA tag
+- **XMLWriter::writeComment** - Write full comment tag
+- **XMLWriter::writeDtd** - Write full DTD tag
+- **XMLWriter::writeDtdAttlist** - Write full DTD AttList tag
+- **XMLWriter::writeDtdElement** - Write full DTD element tag
+- **XMLWriter::writeDtdEntity** - Write full DTD Entity tag
+- **XMLWriter::writeElement** - Write full element tag
+- **XMLWriter::writeElementNs** - Write full namespaced element tag
+- **XMLWriter::writePi** - Writes a PI
+- **XMLWriter::writeRaw** - Write a raw XML text
+- **xml_error_string** - 获取 XML 解析器的错误字符串
+- **xml_get_current_byte_index** - 获取 XML 解析器的当前字节索引
+- **xml_get_current_column_number** - 获取 XML 解析器的当前列号
+- **xml_get_current_line_number** - 获取 XML 解析器的当前行号
+- **xml_get_error_code** - 获取 XML 解析器错误代码
+- **xml_parse** - 开始解析 XML 文档
+- **xml_parser_create** - 创建 XML 解析器
+- **xml_parser_create_ns** - 创建支持命名空间的 XML 解析器
+- **xml_parser_free** - 释放 XML 解析器
+- **xml_parser_get_option** - 从 XML 解析器获取选项
+- **xml_parser_set_option** - 在 XML 解析器中设置选项
+- **xml_parse_into_struct** - 解析 XML 数据到数组中
+- **xml_set_character_data_handler** - 建立字符数据处理器
+- **xml_set_default_handler** - 建立默认处理程序
+- **xml_set_element_handler** - 建立起始和终止元素处理程序
+- **xml_set_end_namespace_decl_handler** - 设置终止命名空间声明处理程序
+- **xml_set_external_entity_ref_handler** - 设置外部实体引用处理程序
+- **xml_set_notation_decl_handler** - 设置符号声明处理程序
+- **xml_set_object** - 在对象中使用 XML 解析器
+- **xml_set_processing_instruction_handler** - 建立处理指令（PI）处理程序
+- **xml_set_start_namespace_decl_handler** - 设置起始命名空间声明处理程序
+- **xml_set_unparsed_entity_decl_handler** - 建立未解析实体定义声明处理程序
+- **XSLTProcessor::getParameter** - Get value of a parameter
+- **XSLTProcessor::getSecurityPrefs** - Get security preferences
+- **XSLTProcessor::hasExsltSupport** - Determine if PHP has EXSLT support
+- **XSLTProcessor::importStylesheet** - Import stylesheet
+- **XSLTProcessor::registerPHPFunctionNS** - Register a PHP function as namespaced XSLT function
+- **XSLTProcessor::registerPHPFunctions** - Enables the ability to use PHP functions as XSLT functions
+- **XSLTProcessor::removeParameter** - Remove parameter
+- **XSLTProcessor::setParameter** - Set value for a parameter
+- **XSLTProcessor::setProfiling** - Sets profiling output file
+- **XSLTProcessor::setSecurityPrefs** - Set security preferences
+- **XSLTProcessor::transformToDoc** - Transform to a document
+- **XSLTProcessor::transformToUri** - Transform to URI
+- **XSLTProcessor::transformToXml** - Transform to XML
+- **XSLTProcessor::__construct** - Creates a new XSLTProcessor object
+
+## Y
+
+- **Yac::add** - Store into cache
+- **Yac::delete** - Remove items from cache
+- **Yac::dump** - Dump cache
+- **Yac::flush** - Flush the cache
+- **Yac::get** - Retrieve values from cache
+- **Yac::info** - Status of cache
+- **Yac::set** - Store into cache
+- **Yac::__construct** - Constructor
+- **Yac::__get** - Getter
+- **Yac::__set** - Setter
+- **Yaconf::get** - Retrieve a item
+- **Yaconf::has** - Determine if a item exists
+- **Yaf_Action_Abstract::execute** - 动作入口点
+- **Yaf_Action_Abstract::getController** - 检索控制器对象
+- **Yaf_Action_Abstract::getControllerName** - Get controller name
+- **Yaf_Application::app** - 检索 Application 实例
+- **Yaf_Application::bootstrap** - 调用 bootstrap
+- **Yaf_Application::clearLastError** - 清除最后的错误信息
+- **Yaf_Application::environ** - 检索环境名
+- **Yaf_Application::execute** - 运行回调
+- **Yaf_Application::getAppDirectory** - 获取应用的目录
+- **Yaf_Application::getConfig** - 获取 Yaf_Config_Abstract 的实例
+- **Yaf_Application::getDispatcher** - 获取 Yaf_Dispatcher 的实例
+- **Yaf_Application::getLastErrorMsg** - 获取最近产生的错误的错误信息
+- **Yaf_Application::getLastErrorNo** - 获取最后产生的错误的错误代码
+- **Yaf_Application::getModules** - 获取定义的模块名
+- **Yaf_Application::run** - 运行 Yaf_Application
+- **Yaf_Application::setAppDirectory** - 改变应用目录
+- **Yaf_Application::__construct** - Yaf_Application 的构造函数
+- **Yaf_Application::__destruct** - __destruct 函数
+- **Yaf_Config_Abstract::get** - Getter
+- **Yaf_Config_Abstract::readonly** - 寻找只读配置
+- **Yaf_Config_Abstract::set** - Setter
+- **Yaf_Config_Abstract::toArray** - 转换为数组
+- **Yaf_Config_Ini::count** - Yaf_Config.ini 中所有元素的数量
+- **Yaf_Config_Ini::current** - 检索当前值
+- **Yaf_Config_Ini::key** - 返回当前元素的键
+- **Yaf_Config_Ini::next** - 向前移动到下一个元素
+- **Yaf_Config_Ini::offsetExists** - 检查一个偏移位置是否存在
+- **Yaf_Config_Ini::offsetGet** - 获取一个偏移位置的值
+- **Yaf_Config_Ini::offsetSet** - 设置一个偏移位置的值
+- **Yaf_Config_Ini::offsetUnset** - 复位一个偏移位置的值
+- **Yaf_Config_Ini::readonly** - 检查配置是否只读
+- **Yaf_Config_Ini::rewind** - 检查当前位置是否有效
+- **Yaf_Config_Ini::toArray** - 配置作为数组返回
+- **Yaf_Config_Ini::valid** - 检查迭代器是否有效
+- **Yaf_Config_Ini::__construct** - Yaf_Config_Ini 构造方法
+- **Yaf_Config_Ini::__get** - 检索元素
+- **Yaf_Config_Ini::__isset** - 检查节点是否存在
+- **Yaf_Config_Ini::__set** - The __set purpose
+- **Yaf_Config_Simple::count** - 返回配置的节数量
+- **Yaf_Config_Simple::current** - 返回当前节点
+- **Yaf_Config_Simple::key** - 返回当前元素的键
+- **Yaf_Config_Simple::next** - 向前移动到下一个元素
+- **Yaf_Config_Simple::offsetExists** - 检查一个偏移位置是否存在
+- **Yaf_Config_Simple::offsetGet** - 获取一个偏移位置的值
+- **Yaf_Config_Simple::offsetSet** - 设置一个偏移位置的值
+- **Yaf_Config_Simple::offsetUnset** - 复位一个偏移位置的值
+- **Yaf_Config_Simple::readonly** - 检查配置是否只读
+- **Yaf_Config_Simple::rewind** - 检查当前位置是否有效
+- **Yaf_Config_Simple::toArray** - 返回 PHP 数组
+- **Yaf_Config_Simple::valid** - 检查迭代器是否有效
+- **Yaf_Config_Simple::__construct** - 构造函数
+- **Yaf_Config_Simple::__get** - 读取节点配置
+- **Yaf_Config_Simple::__isset** - 检查节点是否存在
+- **Yaf_Config_Simple::__set** - 设置节点配置
+- **Yaf_Controller_Abstract::display** - The display purpose
+- **Yaf_Controller_Abstract::forward** - 转发到另一个动作
+- **Yaf_Controller_Abstract::getInvokeArg** - The getInvokeArg purpose
+- **Yaf_Controller_Abstract::getInvokeArgs** - The getInvokeArgs purpose
+- **Yaf_Controller_Abstract::getModuleName** - 获取当前控制器所属的模块名
+- **Yaf_Controller_Abstract::getName** - Get self name
+- **Yaf_Controller_Abstract::getRequest** - 检索当前请求对象
+- **Yaf_Controller_Abstract::getResponse** - 检索当前响应对象
+- **Yaf_Controller_Abstract::getView** - 获取当前的视图引擎
+- **Yaf_Controller_Abstract::getViewpath** - The getViewpath purpose
+- **Yaf_Controller_Abstract::init** - 控制器初始化
+- **Yaf_Controller_Abstract::initView** - The initView purpose
+- **Yaf_Controller_Abstract::redirect** - 重定向到 URL
+- **Yaf_Controller_Abstract::render** - 渲染视图模板
+- **Yaf_Controller_Abstract::setViewpath** - The setViewpath purpose
+- **Yaf_Controller_Abstract::__construct** - Yaf_Controller_Abstract 构造方法
+- **Yaf_Dispatcher::autoRender** - 开启/关闭自动渲染
+- **Yaf_Dispatcher::catchException** - 开启/关闭自动异常捕获
+- **Yaf_Dispatcher::disableView** - 关闭视图渲染
+- **Yaf_Dispatcher::dispatch** - 分发请求
+- **Yaf_Dispatcher::enableView** - 开启视图渲染
+- **Yaf_Dispatcher::flushInstantly** - 打开/关闭即时刷新
+- **Yaf_Dispatcher::getApplication** - 检索应用程序
+- **Yaf_Dispatcher::getDefaultAction** - Retrive the default action name
+- **Yaf_Dispatcher::getDefaultController** - Retrive the default controller name
+- **Yaf_Dispatcher::getDefaultModule** - Retrive the default module name
+- **Yaf_Dispatcher::getInstance** - 获取当前的Yaf_Dispatcher实例
+- **Yaf_Dispatcher::getRequest** - 检索请求实例
+- **Yaf_Dispatcher::getRouter** - 检索路由实例
+- **Yaf_Dispatcher::initView** - 初始化视图并返回
+- **Yaf_Dispatcher::registerPlugin** - 注册插件
+- **Yaf_Dispatcher::returnResponse** - The returnResponse purpose
+- **Yaf_Dispatcher::setDefaultAction** - 设置默认动作名
+- **Yaf_Dispatcher::setDefaultController** - 设置默认控制器名
+- **Yaf_Dispatcher::setDefaultModule** - 设置默认模块名
+- **Yaf_Dispatcher::setErrorHandler** - 设置错误处理
+- **Yaf_Dispatcher::setRequest** - The setRequest purpose
+- **Yaf_Dispatcher::setView** - 设置自定义视图引擎
+- **Yaf_Dispatcher::throwException** - 开启/关闭异常抛出
+- **Yaf_Dispatcher::__construct** - Yaf_Dispatcher 构造方法
+- **Yaf_Exception::getPrevious** - The getPrevious purpose
+- **Yaf_Exception::__construct** - The __construct purpose
+- **Yaf_Loader::autoload** - The autoload purpose
+- **Yaf_Loader::clearLocalNamespace** - The clearLocalNamespace purpose
+- **Yaf_Loader::getInstance** - The getInstance purpose
+- **Yaf_Loader::getLibraryPath** - 获取库路径
+- **Yaf_Loader::getLocalNamespace** - Retrive all register namespaces info
+- **Yaf_Loader::getNamespacePath** - Retieve path of a registered namespace
+- **Yaf_Loader::import** - The import purpose
+- **Yaf_Loader::isLocalName** - The isLocalName purpose
+- **Yaf_Loader::registerLocalNamespace** - 注册本地类前缀
+- **Yaf_Loader::registerNamespace** - Register namespace with searching path
+- **Yaf_Loader::setLibraryPath** - 改变 library 路径
+- **Yaf_Loader::__construct** - The __construct purpose
+- **Yaf_Plugin_Abstract::dispatchLoopShutdown** - The dispatchLoopShutdown purpose
+- **Yaf_Plugin_Abstract::dispatchLoopStartup** - 在调度循环之前的 Hook
+- **Yaf_Plugin_Abstract::postDispatch** - The postDispatch purpose
+- **Yaf_Plugin_Abstract::preDispatch** - The preDispatch purpose
+- **Yaf_Plugin_Abstract::preResponse** - The preResponse purpose
+- **Yaf_Plugin_Abstract::routerShutdown** - The routerShutdown purpose
+- **Yaf_Plugin_Abstract::routerStartup** - RouterStartup hook
+- **Yaf_Registry::del** - 从注册表中移除条目
+- **Yaf_Registry::get** - 从注册表中检索条目
+- **Yaf_Registry::has** - 检测条目是否存在
+- **Yaf_Registry::set** - 向注册表添加条目
+- **Yaf_Registry::__construct** - Yaf_Registry 实现单例
+- **Yaf_Request_Abstract::clearParams** - Remove all params
+- **Yaf_Request_Abstract::getActionName** - The getActionName purpose
+- **Yaf_Request_Abstract::getBaseUri** - The getBaseUri purpose
+- **Yaf_Request_Abstract::getControllerName** - The getControllerName purpose
+- **Yaf_Request_Abstract::getEnv** - 检索 ENV 变量
+- **Yaf_Request_Abstract::getException** - The getException purpose
+- **Yaf_Request_Abstract::getLanguage** - 检索客户端的首选语言
+- **Yaf_Request_Abstract::getMethod** - 检索请求方法
+- **Yaf_Request_Abstract::getModuleName** - The getModuleName purpose
+- **Yaf_Request_Abstract::getParam** - 检索调用的参数
+- **Yaf_Request_Abstract::getParams** - 获取所有调用的参数
+- **Yaf_Request_Abstract::getRequestUri** - The getRequestUri purpose
+- **Yaf_Request_Abstract::getServer** - 检索 SERVER 变量
+- **Yaf_Request_Abstract::isCli** - 判断请求是否是 CLI 请求
+- **Yaf_Request_Abstract::isDispatched** - 判断请求是否已发送
+- **Yaf_Request_Abstract::isGet** - 判断请求是否是 GET 请求
+- **Yaf_Request_Abstract::isHead** - 判断请求是否是 HEAD 请求
+- **Yaf_Request_Abstract::isOptions** - 判断请求是否是 OPTIONS 请求
+- **Yaf_Request_Abstract::isPost** - 判断请求是否是 POST 请求
+- **Yaf_Request_Abstract::isPut** - 判断请求是否是 PUT 请求
+- **Yaf_Request_Abstract::isRouted** - 判断请求是否已路由
+- **Yaf_Request_Abstract::isXmlHttpRequest** - 判断请求是否是 AJAX 请求
+- **Yaf_Request_Abstract::setActionName** - 设置 action 名
+- **Yaf_Request_Abstract::setBaseUri** - 设置基础 URI
+- **Yaf_Request_Abstract::setControllerName** - 设置控制器名
+- **Yaf_Request_Abstract::setDispatched** - The setDispatched purpose
+- **Yaf_Request_Abstract::setModuleName** - 设置模块名
+- **Yaf_Request_Abstract::setParam** - 设置调用参数到请求
+- **Yaf_Request_Abstract::setRequestUri** - The setRequestUri purpose
+- **Yaf_Request_Abstract::setRouted** - The setRouted purpose
+- **Yaf_Request_Http::get** - 从客户端检索变量
+- **Yaf_Request_Http::getCookie** - 检索 Cookie 变量
+- **Yaf_Request_Http::getFiles** - The getFiles purpose
+- **Yaf_Request_Http::getPost** - 检索 POST 变量
+- **Yaf_Request_Http::getQuery** - 获取 query 参数
+- **Yaf_Request_Http::getRaw** - Retrieve Raw request body
+- **Yaf_Request_Http::getRequest** - The getRequest purpose
+- **Yaf_Request_Http::isXmlHttpRequest** - 是否为Ajax请求
+- **Yaf_Request_Http::__construct** - Yaf_Request_Http 构造方法
+- **Yaf_Request_Simple::get** - The get purpose
+- **Yaf_Request_Simple::getCookie** - The getCookie purpose
+- **Yaf_Request_Simple::getFiles** - The getFiles purpose
+- **Yaf_Request_Simple::getPost** - The getPost purpose
+- **Yaf_Request_Simple::getQuery** - The getQuery purpose
+- **Yaf_Request_Simple::getRequest** - The getRequest purpose
+- **Yaf_Request_Simple::isXmlHttpRequest** - 判断请求是否是 Ajax 请求
+- **Yaf_Request_Simple::__construct** - Yaf_Request_Simple 构造方法
+- **Yaf_Response_Abstract::appendBody** - 向响应 body 追加内容
+- **Yaf_Response_Abstract::clearBody** - 丢弃所有已存在的响应 body
+- **Yaf_Response_Abstract::clearHeaders** - 丢弃所有设置的 header
+- **Yaf_Response_Abstract::getBody** - 获取已存在的内容
+- **Yaf_Response_Abstract::getHeader** - The getHeader purpose
+- **Yaf_Response_Abstract::prependBody** - The prependBody purpose
+- **Yaf_Response_Abstract::response** - 发送响应
+- **Yaf_Response_Abstract::setAllHeaders** - The setAllHeaders purpose
+- **Yaf_Response_Abstract::setBody** - 设置内容到响应
+- **Yaf_Response_Abstract::setHeader** - 设置响应 header
+- **Yaf_Response_Abstract::setRedirect** - The setRedirect purpose
+- **Yaf_Response_Abstract::__construct** - The __construct purpose
+- **Yaf_Response_Abstract::__destruct** - The __destruct purpose
+- **Yaf_Response_Abstract::__toString** - 获取字符串形式的所有 body
+- **Yaf_Router::addConfig** - 向 Router 中添加配置文件中定义的路由
+- **Yaf_Router::addRoute** - 往 Router 中添加新的路由
+- **Yaf_Router::getCurrentRoute** - 取得当前有效的路由名
+- **Yaf_Router::getRoute** - 通过名称检索路由
+- **Yaf_Router::getRoutes** - 检索已注册的路由
+- **Yaf_Router::route** - The route purpose
+- **Yaf_Router::__construct** - Yaf_Router 构造方法
+- **Yaf_Route_Interface::assemble** - 将指定路由规则组合成一个 url
+- **Yaf_Route_Interface::route** - 路由请求
+- **Yaf_Route_Map::assemble** - 组合url
+- **Yaf_Route_Map::route** - The route purpose
+- **Yaf_Route_Map::__construct** - The __construct purpose
+- **Yaf_Route_Regex::assemble** - 组合 url
+- **Yaf_Route_Regex::route** - The route purpose
+- **Yaf_Route_Regex::__construct** - Yaf_Route_Regex 构造方法
+- **Yaf_Route_Rewrite::assemble** - 组合 url
+- **Yaf_Route_Rewrite::route** - The route purpose
+- **Yaf_Route_Rewrite::__construct** - Yaf_Route_Rewrite 构造方法
+- **Yaf_Route_Simple::assemble** - 组合url
+- **Yaf_Route_Simple::route** - 路由请求
+- **Yaf_Route_Simple::__construct** - Yaf_Route_Simple 构造方法
+- **Yaf_Route_Static::assemble** - 组合 url
+- **Yaf_Route_Static::match** - The match purpose
+- **Yaf_Route_Static::route** - 路由请求
+- **Yaf_Route_Supervar::assemble** - 组合 url
+- **Yaf_Route_Supervar::route** - The route purpose
+- **Yaf_Route_Supervar::__construct** - The __construct purpose
+- **Yaf_Session::count** - The count purpose
+- **Yaf_Session::current** - The current purpose
+- **Yaf_Session::del** - The del purpose
+- **Yaf_Session::getInstance** - The getInstance purpose
+- **Yaf_Session::has** - The has purpose
+- **Yaf_Session::key** - The key purpose
+- **Yaf_Session::next** - The next purpose
+- **Yaf_Session::offsetExists** - The offsetExists purpose
+- **Yaf_Session::offsetGet** - The offsetGet purpose
+- **Yaf_Session::offsetSet** - The offsetSet purpose
+- **Yaf_Session::offsetUnset** - The offsetUnset purpose
+- **Yaf_Session::rewind** - The rewind purpose
+- **Yaf_Session::start** - The start purpose
+- **Yaf_Session::valid** - The valid purpose
+- **Yaf_Session::__construct** - Yaf_Session 构造方法
+- **Yaf_Session::__get** - The __get purpose
+- **Yaf_Session::__isset** - The __isset purpose
+- **Yaf_Session::__set** - The __set purpose
+- **Yaf_Session::__unset** - The __unset purpose
+- **Yaf_View_Interface::assign** - 为视图引擎分配模板变量
+- **Yaf_View_Interface::display** - 渲染并输出模板
+- **Yaf_View_Interface::getScriptPath** - The getScriptPath purpose
+- **Yaf_View_Interface::render** - 渲染模板
+- **Yaf_View_Interface::setScriptPath** - The setScriptPath purpose
+- **Yaf_View_Simple::assign** - 为视图引擎分配一个模板变量
+- **Yaf_View_Simple::assignRef** - The assignRef purpose
+- **Yaf_View_Simple::clear** - 清除分配的值
+- **Yaf_View_Simple::display** - 渲染一个视图模板, 并直接输出给请求端
+- **Yaf_View_Simple::eval** - 渲染模板
+- **Yaf_View_Simple::getScriptPath** - 获取模板目录
+- **Yaf_View_Simple::render** - 渲染模板
+- **Yaf_View_Simple::setScriptPath** - 设置模板的目录
+- **Yaf_View_Simple::__construct** - Yaf_View_Simple 的构造方法
+- **Yaf_View_Simple::__get** - 获取视图引擎的一个模板变量值
+- **Yaf_View_Simple::__isset** - The __isset purpose
+- **Yaf_View_Simple::__set** - 为视图引擎分配一个模板变量
+- **yaml_emit** - Returns the YAML representation of a value
+- **yaml_emit_file** - Send the YAML representation of a value to a file
+- **yaml_parse** - Parse a YAML stream
+- **yaml_parse_file** - Parse a YAML stream from a file
+- **yaml_parse_url** - Parse a Yaml stream from a URL
+- **Yar_Client::setOpt** - 设置调用的配置
+- **Yar_Client::__call** - 调用远程服务
+- **Yar_Client::__construct** - 创建一个客户端实例
+- **Yar_Client_Exception::getType** - 检索异常的类型
+- **Yar_Concurrent_Client::call** - 注册一个并行的服务调用
+- **Yar_Concurrent_Client::loop** - 发送所有注册的并行调用
+- **Yar_Concurrent_Client::reset** - Clean all registered calls
+- **Yar_Server::handle** - 启动HTTP RPC Server
+- **Yar_Server::__construct** - 注册 HTTP RPC Server
+- **Yar_Server_Exception::getType** - 检索异常的原始类型
+- **yaz_addinfo** - Returns additional error information
+- **yaz_ccl_conf** - Configure CCL parser
+- **yaz_ccl_parse** - Invoke CCL Parser
+- **yaz_close** - Close YAZ connection
+- **yaz_connect** - Prepares for a connection to a Z39.50 server
+- **yaz_database** - Specifies the databases within a session
+- **yaz_element** - Specifies Element-Set Name for retrieval
+- **yaz_errno** - Returns error number
+- **yaz_error** - Returns error description
+- **yaz_es** - Prepares for an Extended Service Request
+- **yaz_es_result** - Inspects Extended Services Result
+- **yaz_get_option** - Returns value of option for connection
+- **yaz_hits** - Returns number of hits for last search
+- **yaz_itemorder** - Prepares for Z39.50 Item Order with an ILL-Request package
+- **yaz_present** - Prepares for retrieval (Z39.50 present)
+- **yaz_range** - Specifies a range of records to retrieve
+- **yaz_record** - Returns a record
+- **yaz_scan** - Prepares for a scan
+- **yaz_scan_result** - Returns Scan Response result
+- **yaz_schema** - Specifies schema for retrieval
+- **yaz_search** - Prepares for a search
+- **yaz_set_option** - Sets one or more options for connection
+- **yaz_sort** - Sets sorting criteria
+- **yaz_syntax** - Specifies the preferred record syntax for retrieval
+- **yaz_wait** - Wait for Z39.50 requests to complete
+
+## Z
+
+- **zend_thread_id** - 返回当前线程的唯一识别符
+- **zend_version** - 获取当前 Zend 引擎的版本
+- **ZipArchive::addEmptyDir** - Add a new directory
+- **ZipArchive::addFile** - Adds a file to a ZIP archive from the given path
+- **ZipArchive::addFromString** - Add a file to a ZIP archive using its contents
+- **ZipArchive::addGlob** - Add files from a directory by glob pattern
+- **ZipArchive::addPattern** - Add files from a directory by PCRE pattern
+- **ZipArchive::clearError** - 清除状态错误消息、系统和/或 zip 消息
+- **ZipArchive::close** - Close the active archive (opened or newly created)
+- **ZipArchive::count** - Counts the number of files in the archive
+- **ZipArchive::deleteIndex** - Delete an entry in the archive using its index
+- **ZipArchive::deleteName** - Delete an entry in the archive using its name
+- **ZipArchive::extractTo** - 解压缩文件
+- **ZipArchive::getArchiveComment** - Returns the Zip archive comment
+- **ZipArchive::getArchiveFlag** - 返回 Zip 归档全局 flag 的值
+- **ZipArchive::getCommentIndex** - Returns the comment of an entry using the entry index
+- **ZipArchive::getCommentName** - Returns the comment of an entry using the entry name
+- **ZipArchive::getExternalAttributesIndex** - Retrieve the external attributes of an entry defined by its index
+- **ZipArchive::getExternalAttributesName** - Retrieve the external attributes of an entry defined by its name
+- **ZipArchive::getFromIndex** - Returns the entry contents using its index
+- **ZipArchive::getFromName** - Returns the entry contents using its name
+- **ZipArchive::getNameIndex** - Returns the name of an entry using its index
+- **ZipArchive::getStatusString** - Returns the status error message, system and/or zip messages
+- **ZipArchive::getStream** - Get a file handler to the entry defined by its name (read only)
+- **ZipArchive::getStreamIndex** - Get a file handler to the entry defined by its index (read only)
+- **ZipArchive::getStreamName** - Get a file handler to the entry defined by its name (read only)
+- **ZipArchive::isCompressionMethodSupported** - Check if a compression method is supported by libzip
+- **ZipArchive::isEncryptionMethodSupported** - Check if a encryption method is supported by libzip
+- **ZipArchive::locateName** - Returns the index of the entry in the archive
+- **ZipArchive::open** - Open a ZIP file archive
+- **ZipArchive::registerCancelCallback** - Register a callback to allow cancellation during archive close.
+- **ZipArchive::registerProgressCallback** - Register a callback to provide updates during archive close.
+- **ZipArchive::renameIndex** - Renames an entry defined by its index
+- **ZipArchive::renameName** - Renames an entry defined by its name
+- **ZipArchive::replaceFile** - Replace file in ZIP archive with a given path
+- **ZipArchive::setArchiveComment** - Set the comment of a ZIP archive
+- **ZipArchive::setArchiveFlag** - 设置 ZIP 归档的全局 flag
+- **ZipArchive::setCommentIndex** - Set the comment of an entry defined by its index
+- **ZipArchive::setCommentName** - Set the comment of an entry defined by its name
+- **ZipArchive::setCompressionIndex** - Set the compression method of an entry defined by its index
+- **ZipArchive::setCompressionName** - Set the compression method of an entry defined by its name
+- **ZipArchive::setEncryptionIndex** - Set the encryption method of an entry defined by its index
+- **ZipArchive::setEncryptionName** - Set the encryption method of an entry defined by its name
+- **ZipArchive::setExternalAttributesIndex** - Set the external attributes of an entry defined by its index
+- **ZipArchive::setExternalAttributesName** - Set the external attributes of an entry defined by its name
+- **ZipArchive::setMtimeIndex** - Set the modification time of an entry defined by its index
+- **ZipArchive::setMtimeName** - Set the modification time of an entry defined by its name
+- **ZipArchive::setPassword** - Set the password for the active archive
+- **ZipArchive::statIndex** - Get the details of an entry defined by its index
+- **ZipArchive::statName** - Get the details of an entry defined by its name
+- **ZipArchive::unchangeAll** - Undo all changes done in the archive
+- **ZipArchive::unchangeArchive** - Revert all global changes done in the archive
+- **ZipArchive::unchangeIndex** - Revert all changes done to an entry at the given index
+- **ZipArchive::unchangeName** - Revert all changes done to an entry with the given name
+- **zip_close** - 关闭一个ZIP档案文件
+- **zip_entry_close** - 关闭目录项
+- **zip_entry_compressedsize** - 检索目录项压缩过后的大小
+- **zip_entry_compressionmethod** - 检索目录实体的压缩方法
+- **zip_entry_filesize** - 检索目录实体的实际大小
+- **zip_entry_name** - 检索目录项的名称
+- **zip_entry_open** - 打开用于读取的目录实体
+- **zip_entry_read** - 读取一个打开了的压缩目录实体
+- **zip_open** - 打开 ZIP 文件归档
+- **zip_read** - 读取 ZIP 文件归档中下一项
+- **zlib_decode** - Uncompress any raw/gzip/zlib encoded data
+- **zlib_encode** - Compress data with the specified encoding
+- **zlib_get_coding_type** - Returns the coding type used for output compression
+- **ZMQ::__construct** - ZMQ constructor
+- **ZMQContext::getOpt** - Get context option
+- **ZMQContext::getSocket** - Create a new socket
+- **ZMQContext::isPersistent** - Whether the context is persistent
+- **ZMQContext::setOpt** - Set a socket option
+- **ZMQContext::__construct** - Construct a new ZMQContext object
+- **ZMQDevice::getIdleTimeout** - Get the idle timeout
+- **ZMQDevice::getTimerTimeout** - Get the timer timeout
+- **ZMQDevice::run** - Run the new device
+- **ZMQDevice::setIdleCallback** - Set the idle callback function
+- **ZMQDevice::setIdleTimeout** - Set the idle timeout
+- **ZMQDevice::setTimerCallback** - Set the timer callback function
+- **ZMQDevice::setTimerTimeout** - Set the timer timeout
+- **ZMQDevice::__construct** - Construct a new device
+- **ZMQPoll::add** - Add item to the poll set
+- **ZMQPoll::clear** - Clear the poll set
+- **ZMQPoll::count** - Count items in the poll set
+- **ZMQPoll::getLastErrors** - Get poll errors
+- **ZMQPoll::poll** - Poll the items
+- **ZMQPoll::remove** - Remove item from poll set
+- **ZMQSocket::bind** - Bind the socket
+- **ZMQSocket::connect** - Connect the socket
+- **ZMQSocket::disconnect** - Disconnect a socket
+- **ZMQSocket::getEndpoints** - Get list of endpoints
+- **ZMQSocket::getPersistentId** - Get the persistent id
+- **ZMQSocket::getSocketType** - Get the socket type
+- **ZMQSocket::getSockOpt** - Get socket option
+- **ZMQSocket::isPersistent** - Whether the socket is persistent
+- **ZMQSocket::recv** - Receives a message
+- **ZMQSocket::recvMulti** - Receives a multipart message
+- **ZMQSocket::send** - Sends a message
+- **ZMQSocket::sendmulti** - Sends a multipart message
+- **ZMQSocket::setSockOpt** - Set a socket option
+- **ZMQSocket::unbind** - Unbind the socket
+- **ZMQSocket::__construct** - Construct a new ZMQSocket
+- **Zookeeper::addAuth** - Specify application credentials
+- **Zookeeper::close** - Close the zookeeper handle and free up any resources
+- **Zookeeper::connect** - Create a handle used to communicate with zookeeper
+- **Zookeeper::create** - Create a node synchronously
+- **Zookeeper::delete** - Delete a node in zookeeper synchronously
+- **Zookeeper::exists** - Checks the existence of a node in zookeeper synchronously
+- **Zookeeper::get** - Gets the data associated with a node synchronously
+- **Zookeeper::getAcl** - Gets the acl associated with a node synchronously
+- **Zookeeper::getChildren** - Lists the children of a node synchronously
+- **Zookeeper::getClientId** - Return the client session id, only valid if the connections is currently connected (ie. last watcher state is ZOO_CONNECTED_STATE)
+- **Zookeeper::getConfig** - Get instance of ZookeeperConfig
+- **Zookeeper::getRecvTimeout** - Return the timeout for this session, only valid if the connections is currently connected (ie. last watcher state is ZOO_CONNECTED_STATE). This value may change after a server re-connect
+- **Zookeeper::getState** - Get the state of the zookeeper connection
+- **Zookeeper::isRecoverable** - Checks if the current zookeeper connection state can be recovered
+- **Zookeeper::set** - Sets the data associated with a node
+- **Zookeeper::setAcl** - Sets the acl associated with a node synchronously
+- **Zookeeper::setDebugLevel** - Sets the debugging level for the library
+- **Zookeeper::setDeterministicConnOrder** - Enable/disable quorum endpoint order randomization
+- **Zookeeper::setLogStream** - Sets the stream to be used by the library for logging
+- **Zookeeper::setWatcher** - Set a watcher function
+- **Zookeeper::__construct** - Create a handle to used communicate with zookeeper
+- **ZookeeperConfig::add** - Add servers to the ensemble
+- **ZookeeperConfig::get** - Gets the last committed configuration of the ZooKeeper cluster as it is known to the server to which the client is connected, synchronously
+- **ZookeeperConfig::remove** - Remove servers from the ensemble
+- **ZookeeperConfig::set** - Change ZK cluster ensemble membership and roles of ensemble peers
+- **zookeeper_dispatch** - Calls callbacks for pending operations
+
+## _
+
+- **_** - 别名 gettext
+- **__autoload** - 尝试加载未定义的类
+- **__halt_compiler** - 中断编译器的执行

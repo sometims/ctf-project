@@ -1,0 +1,57 @@
+<svg viewBox="0 0 680 520" width="100%" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>一次 HTTP 请求中 GIT 对象何时被销毁</title>
+  <desc>展示 PHP 脚本生命周期：unserialize 造对象，脚本结束 PHP 自动销毁对象触发 __destruct，进而触发 __toString 与 eval</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#5F5E5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <text x="40" y="34" font-family="sans-serif" font-size="15" font-weight="500" fill="#2C2C2A">一次请求里，GIT 对象何时被销毁？</text>
+  <text x="40" y="54" font-family="sans-serif" font-size="13" font-weight="400" fill="#5F5E5A">魔法方法由 PHP 引擎在对象生命周期自动调用，我们从不手动触发</text>
+
+  <g class="node c-blue">
+    <rect x="60" y="80" width="560" height="48" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+    <text x="80" y="109" font-family="sans-serif" font-size="13" fill="#0C447C">① 请求到达 serialize.php — PHP 开始执行脚本</text>
+  </g>
+
+  <g class="node c-blue">
+    <rect x="60" y="138" width="560" height="48" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+    <text x="80" y="167" font-family="sans-serif" font-size="13" fill="#0C447C">② $data = new GIT(); 创建默认对象（username 默认，不等于 ZeroZone）</text>
+  </g>
+
+  <g class="node c-blue">
+    <rect x="60" y="196" width="560" height="48" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+    <text x="80" y="215" font-family="sans-serif" font-size="13" fill="#0C447C">③ unserialize($_POST['data']) → $data 指向我们伪造的 GIT 对象</text>
+    <text x="80" y="233" font-family="sans-serif" font-size="12" fill="#185FA5">   （username=ZeroZone，password=一个 ZeroZone 对象；原默认对象失引用被丢弃）</text>
+  </g>
+
+  <g class="node c-blue">
+    <rect x="60" y="254" width="560" height="48" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+    <text x="80" y="283" font-family="sans-serif" font-size="13" fill="#0C447C">④ 脚本执行到末尾 → PHP 进入「关机 / 资源清理」阶段</text>
+  </g>
+
+  <g class="node c-red">
+    <rect x="60" y="312" width="560" height="48" rx="8" fill="#FCEBEB" stroke="#A32D2D" stroke-width="0.5"/>
+    <text x="80" y="341" font-family="sans-serif" font-size="13" fill="#791F1F">⑤【自动】PHP 销毁剩余对象 → 调用 GIT::__destruct() → echo $password</text>
+  </g>
+
+  <g class="node c-red">
+    <rect x="60" y="370" width="560" height="48" rx="8" fill="#FCEBEB" stroke="#A32D2D" stroke-width="0.5"/>
+    <text x="80" y="399" font-family="sans-serif" font-size="13" fill="#791F1F">⑥【自动】$password 是 ZeroZone 对象 → 被 echo 当字符串 → __toString() → eval()</text>
+  </g>
+
+  <g class="node c-green">
+    <rect x="60" y="428" width="560" height="48" rx="8" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+    <text x="80" y="457" font-family="sans-serif" font-size="13" fill="#27500A">⑦ 命令执行 → 读出 /flag → flag 出现在 HTTP 响应中</text>
+  </g>
+
+  <line x1="340" y1="129" x2="340" y2="136" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="340" y1="187" x2="340" y2="194" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="340" y1="245" x2="340" y2="252" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="340" y1="303" x2="340" y2="310" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="340" y1="361" x2="340" y2="368" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="340" y1="419" x2="340" y2="426" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <text x="40" y="500" font-family="sans-serif" font-size="12" fill="#5F5E5A">红色 = PHP 引擎自动触发（我们未手动调用） · 蓝色 = 我们主动写的代码 · 绿色 = 最终结果</text>
+</svg>

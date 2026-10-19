@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>curl 构造器 · CTF Web 工具箱</title>
+<style>
+  :root{
+    --bg:#0a101c;
+    --panel:#111a2b;
+    --panel2:#0c1524;
+    --line:#22314a;
+    --text:#e8eef8;
+    --muted:#8fa1bb;
+    --green:#3ddc97;
+    --blue:#63b3ff;
+    --amber:#ffc266;
+    --red:#ff7b7b;
+    --mono:"Cascadia Code","JetBrains Mono",Consolas,"Courier New",monospace;
+    --sans:"Segoe UI","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1100px 520px at 18% -12%, rgba(44,88,150,.28), transparent 62%),
+      radial-gradient(900px 480px at 100% 0%, rgba(20,120,90,.12), transparent 55%),
+      var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    font-size:14px;
+    line-height:1.6;
+  }
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    background-image:linear-gradient(rgba(99,179,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(99,179,255,.035) 1px,transparent 1px);
+    background-size:44px 44px;
+    mask-image:radial-gradient(ellipse at 50% 0%,#000 0%,transparent 72%);
+    z-index:0;
+  }
+  main{position:relative;z-index:1;max-width:1480px;margin:0 auto;padding:26px 22px 60px}
+  .top{display:flex;align-items:flex-end;gap:22px;flex-wrap:wrap;margin-bottom:16px}
+  .brand{display:flex;align-items:center;gap:14px}
+  .logo{
+    font-family:var(--mono);font-weight:700;font-size:15px;color:#062015;
+    background:linear-gradient(135deg,#57f0ad,#25b97a);
+    padding:9px 13px;border-radius:10px;
+    box-shadow:0 0 28px rgba(61,220,151,.28);
+    white-space:nowrap;
+  }
+  h1{font-size:25px;margin:0;letter-spacing:-.02em}
+  .brand p{margin:3px 0 0;color:var(--muted);font-size:12.5px}
+  .shell-switch{margin-left:auto;display:flex;gap:4px;background:var(--panel2);border:1px solid var(--line);padding:4px;border-radius:11px;flex-wrap:wrap}
+  .shell-switch button{background:transparent;border:0;color:var(--muted);padding:7px 11px;border-radius:7px;cursor:pointer;font-size:12px;font-family:inherit}
+  .shell-switch button:hover{color:var(--text)}
+  .shell-switch button.active{background:#17263e;color:var(--text);box-shadow:inset 0 0 0 1px #2b405f}
+
+  .howto{display:flex;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:12px;margin:0 0 14px;padding:10px 14px;border:1px solid rgba(99,179,255,.14);background:rgba(99,179,255,.04);border-radius:9px}
+  .howto b{color:var(--text);font-weight:600}
+  .howto span{display:flex;align-items:center;gap:6px}
+  .howto i{font-style:normal;font-family:var(--mono);color:var(--blue);font-size:11px}
+
+  .scenario-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+  .scenario-bar>span{font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-right:2px}
+
+  .layout{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);gap:18px;align-items:start}
+  .right{display:flex;flex-direction:column;gap:16px;min-width:0}
+
+  .card{
+    background:linear-gradient(180deg,rgba(19,30,49,.94),rgba(13,21,36,.96));
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:18px;
+    box-shadow:0 18px 45px rgba(0,0,0,.22);
+    min-width:0;
+  }
+  .form-card section{padding-top:18px;margin-top:18px;border-top:1px dashed rgba(34,49,74,.8)}
+  .form-card section:first-of-type{padding-top:0;margin-top:0;border-top:0}
+
+  .sec-head{display:flex;align-items:center;gap:9px;margin:0 0 12px;flex-wrap:wrap}
+  .sec-head .num{
+    width:23px;height:23px;border-radius:7px;display:grid;place-items:center;
+    font-family:var(--mono);font-size:11px;color:var(--green);
+    background:rgba(61,220,151,.1);border:1px solid rgba(61,220,151,.28);
+  }
+  .sec-head h2{font-size:14px;margin:0;letter-spacing:.02em}
+  .sec-head .hint{margin-left:auto;font-size:11px;color:var(--muted);text-align:right}
+
+  .field{display:flex;flex-direction:column;gap:6px;font-size:11.5px;color:var(--muted);min-width:0}
+  .field>span{letter-spacing:.02em}
+  input,select,textarea{
+    width:100%;
+    background:#0b1422;
+    border:1px solid #263752;
+    border-radius:9px;
+    color:var(--text);
+    padding:9px 11px;
+    font-size:13px;
+    font-family:inherit;
+    outline:none;
+    transition:border-color .15s,box-shadow .15s;
+  }
+  input::placeholder,textarea::placeholder{color:#5e718c}
+  input:focus,select:focus,textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(61,220,151,.12)}
+  select{cursor:pointer}
+  textarea{resize:vertical;min-height:104px;font-family:var(--mono);font-size:12.5px;line-height:1.65}
+  input[type="checkbox"]{accent-color:var(--green);width:15px;height:15px;flex:none;cursor:pointer}
+
+  .url-row{display:grid;grid-template-columns:118px minmax(0,1fr);gap:8px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+  .stack{display:flex;flex-direction:column;gap:10px}
+
+  .subhead{display:flex;align-items:center;gap:8px;margin:15px 0 8px;font-size:12px;font-weight:600;color:var(--text)}
+  .subhead small{font-weight:400;color:var(--muted);font-size:11px}
+
+  .rows{display:flex;flex-direction:column}
+  .kv-row{display:grid;grid-template-columns:1fr 1.35fr 28px;gap:6px;align-items:center;margin-bottom:6px}
+  .kv-row input,.kv-row select{padding:8px 10px;font-size:12.5px}
+  .mp-row{grid-template-columns:86px .75fr 1.25fr .95fr 28px}
+  .del{
+    width:28px;height:28px;border-radius:7px;border:1px solid transparent;background:transparent;
+    color:#6f819b;cursor:pointer;font-size:17px;line-height:1;
+  }
+  .del:hover{color:var(--red);background:rgba(255,123,123,.1);border-color:rgba(255,123,123,.3)}
+
+  .chips{display:flex;gap:6px;flex-wrap:wrap}
+  .chip{
+    background:var(--panel2);border:1px solid var(--line);color:var(--muted);
+    padding:6px 10px;border-radius:999px;cursor:pointer;font-size:11.5px;font-family:inherit;
+    transition:.15s;
+  }
+  .chip:hover{border-color:#3a5074;color:var(--text)}
+  .chip.active{background:rgba(61,220,151,.12);border-color:rgba(61,220,151,.55);color:var(--green)}
+
+  .add{
+    width:100%;background:transparent;border:1px dashed #2b3d59;color:var(--muted);
+    padding:7px 10px;border-radius:8px;cursor:pointer;font-size:12px;font-family:inherit;
+    margin-top:2px;
+  }
+  .add:hover{color:var(--green);border-color:rgba(61,220,151,.6)}
+
+  .checkline{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);margin-top:9px;cursor:pointer}
+  .checkline:hover{color:var(--text)}
+
+  .checks{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .check{
+    display:flex;gap:9px;align-items:flex-start;padding:9px 10px;border:1px solid var(--line);
+    border-radius:9px;background:var(--panel2);cursor:pointer;transition:.15s;
+  }
+  .check:hover{border-color:#314866}
+  .check input{margin-top:2px}
+  .check b{display:block;font-size:12px;font-weight:600;color:var(--text)}
+  .check small{display:block;color:var(--muted);font-size:10.5px;line-height:1.45;margin-top:2px}
+
+  .advanced{margin-top:12px;border:1px solid var(--line);border-radius:10px;background:rgba(12,21,36,.6);padding:0 12px}
+  .advanced summary{cursor:pointer;padding:10px 0;font-size:12px;color:var(--muted);user-select:none}
+  .advanced summary:hover{color:var(--text)}
+  .advanced[open] summary{border-bottom:1px dashed var(--line);margin-bottom:12px}
+  .advanced .grid3{margin-bottom:12px}
+
+  .auth-fields{display:flex;gap:8px;min-width:0}
+  .auth-fields input{min-width:0}
+
+  .body-panel{margin-top:10px}
+  .field-head{display:flex;align-items:center;gap:8px;margin-bottom:6px;font-size:11.5px;color:var(--muted)}
+  .badge{font-size:10.5px;border-radius:999px;padding:1px 8px;background:#18253a;color:var(--muted);border:1px solid #2a3c58}
+  .badge.ok{color:var(--green);background:rgba(61,220,151,.09);border-color:rgba(61,220,151,.3)}
+  .badge.bad{color:var(--amber);background:rgba(255,194,102,.09);border-color:rgba(255,194,102,.3)}
+  .tag{display:inline-flex;align-items:center;font-size:10px;line-height:1.6;padding:0 6px;border-radius:999px;border:1px solid;white-space:nowrap;font-weight:500}
+  .tag.req{color:var(--green);background:rgba(61,220,151,.1);border-color:rgba(61,220,151,.35)}
+  .tag.opt{color:var(--muted);background:rgba(143,161,187,.07);border-color:rgba(143,161,187,.24)}
+  .tag.common{color:var(--amber);background:rgba(255,194,102,.08);border-color:rgba(255,194,102,.3)}
+  .tag.mini{font-size:9.5px;padding:0 5px}
+  .field-label{display:flex;align-items:center;gap:7px;font-size:11.5px;color:var(--muted);margin-bottom:6px;flex-wrap:wrap}
+  .hint-inline{color:#61748f;font-size:10.5px}
+  .panel-tip{font-size:11px;color:var(--muted);margin:0 0 8px;line-height:1.55}
+  .panel-tip code{font-family:var(--mono);color:var(--amber);font-size:10.5px}
+
+  .terminal-card{padding:0;overflow:hidden}
+  .term-head{display:flex;align-items:center;gap:10px;padding:10px 14px;background:#0a1220;border-bottom:1px solid var(--line)}
+  .dots{display:flex;gap:5px}
+  .dots i{width:9px;height:9px;border-radius:50%;background:#2a3a55}
+  .dots i:nth-child(1){background:#ff6b6b}
+  .dots i:nth-child(2){background:#ffc266}
+  .dots i:nth-child(3){background:#3ddc97}
+  .term-head .shell-label{font-family:var(--mono);font-size:11px;color:var(--muted)}
+  .copy-btn{
+    margin-left:auto;background:rgba(61,220,151,.12);border:1px solid rgba(61,220,151,.4);
+    color:var(--green);padding:6px 13px;border-radius:7px;cursor:pointer;font-size:12px;font-weight:600;font-family:inherit;
+  }
+  .copy-btn:hover{background:rgba(61,220,151,.2)}
+  .copy-btn.ok{background:var(--green);color:#062015;border-color:var(--green)}
+
+  #commandOut{
+    margin:0;padding:15px 16px;background:#070c15;color:#cfe0f5;
+    font-family:var(--mono);font-size:12.5px;line-height:1.85;
+    overflow:auto;max-height:400px;white-space:pre;
+  }
+  #commandOut .ln{display:block;margin:0 -8px;padding:0 8px;border-radius:5px}
+  #commandOut .ln.hover{background:rgba(99,179,255,.09)}
+  .t-cmd{color:var(--green);font-weight:700}
+  .t-flag{color:#6fc0ff}
+  .t-str{color:#ffd08a}
+  .t-url{color:#57f0ad}
+  .t-method{color:#c792ea}
+  .t-num{color:#f78c6c}
+  .t-cont{color:#4d6280}
+
+  #warnings{padding:0 14px 14px}
+  .warning{display:flex;gap:8px;align-items:flex-start;padding:8px 10px;border-radius:8px;font-size:12px;margin-top:7px;line-height:1.5}
+  .warning .mark{flex:none;width:16px;height:16px;border-radius:50%;display:grid;place-items:center;font-size:10px;font-weight:700;margin-top:1px}
+  .warning p{margin:0}
+  .warning.warn{background:rgba(255,194,102,.08);border:1px solid rgba(255,194,102,.25);color:#ffd79a}
+  .warning.warn .mark{background:var(--amber);color:#2a1a00}
+  .warning.info{background:rgba(99,179,255,.08);border:1px solid rgba(99,179,255,.22);color:#a9d3ff}
+  .warning.info .mark{background:var(--blue);color:#04182b}
+
+  .card-head{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+  .card-head h2{font-size:14px;margin:0}
+  .card-head .hint{margin-left:auto;font-size:11px;color:var(--muted)}
+
+  .explain-item{display:grid;grid-template-columns:27px minmax(0,1fr);gap:10px;padding:11px 10px;border-radius:10px;border-bottom:1px dashed rgba(34,49,74,.75)}
+  .explain-item:last-child{border-bottom:0}
+  .explain-item.hover{background:rgba(99,179,255,.08)}
+  .exp-idx{font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:3px}
+  .cmdline{
+    display:flex;align-items:flex-start;justify-content:space-between;gap:8px;
+    font-family:var(--mono);font-size:11.5px;color:#cfe0f5;background:#0a1320;
+    padding:5px 8px;border-radius:6px;border:1px solid #18253a;
+  }
+  .cmd-text{min-width:0;overflow-wrap:anywhere}
+  .note{display:flex;gap:8px;align-items:flex-start;margin-top:7px;font-size:12px;color:var(--muted);line-height:1.55}
+  .note code{
+    flex:none;color:var(--green);background:rgba(61,220,151,.08);padding:1px 6px;border-radius:4px;
+    font-family:var(--mono);font-size:10.5px;margin-top:1px;
+  }
+
+  .ref-tools{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .ref-note{font-size:11px;color:var(--muted);margin:2px 0 0;line-height:1.55}
+  .ref-note b{color:var(--text)}
+  #refSearch{width:300px;margin-left:auto}
+  #refCount{font-size:11px;color:var(--muted);white-space:nowrap}
+  .table-wrap{max-height:620px;overflow:auto;border:1px solid var(--line);border-radius:10px;margin-top:12px}
+  table{width:100%;border-collapse:collapse;font-size:12px}
+  thead th{position:sticky;top:0;background:#101a2b;text-align:left;padding:10px;color:var(--muted);font-weight:600;border-bottom:1px solid var(--line);z-index:1;white-space:nowrap}
+  tbody td{padding:9px 10px;border-bottom:1px solid rgba(34,49,74,.6);vertical-align:top;line-height:1.55}
+  tbody tr:hover td{background:rgba(99,179,255,.04)}
+  td code{font-family:var(--mono);color:var(--green);font-size:11.5px;white-space:nowrap}
+  td code.ex{color:var(--amber);white-space:pre-wrap;overflow-wrap:anywhere}
+  td.muted{color:var(--muted);white-space:nowrap}
+  td.pit{color:var(--muted)}
+  tr.group td{background:#0c1626;color:var(--blue);font-weight:700;font-size:11px;letter-spacing:.08em;padding:7px 10px}
+  td.empty{text-align:center;color:var(--muted);padding:26px}
+
+  .pitfalls{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px}
+  .pitfall{display:flex;gap:11px;background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:12px}
+  .pitfall .no{font-family:var(--mono);color:var(--red);font-size:11px;padding-top:1px}
+  .pitfall b{font-size:12.5px}
+  .pitfall p{margin:3px 0 0;color:var(--muted);font-size:11.5px;line-height:1.55}
+  .pitfall code{font-family:var(--mono);color:var(--amber);font-size:11px;background:rgba(255,194,102,.07);padding:1px 4px;border-radius:3px}
+
+  .footer{margin-top:22px;text-align:center;color:#61748f;font-size:11.5px}
+  .footer a{color:var(--blue);text-decoration:none}
+  .footer a:hover{text-decoration:underline}
+  .hidden{display:none!important}
+
+  @media (max-width:1180px){
+    .layout{grid-template-columns:1fr}
+  }
+  @media (max-width:760px){
+    main{padding:18px 13px 40px}
+    .brand{align-items:flex-start}
+    .shell-switch{margin-left:0;width:100%}
+    .grid2,.grid3,.checks,.pitfalls{grid-template-columns:1fr}
+    .kv-row,.mp-row{grid-template-columns:1fr 1fr 28px}
+    .mp-row [data-f="kind"]{grid-column:1/2}
+    .url-row{grid-template-columns:1fr}
+    #refSearch{width:100%;margin-left:0}
+    #commandOut{font-size:11.5px}
+    .explain-item{grid-template-columns:20px minmax(0,1fr)}
+  }
+</style>
+</head>
+<body>
+<main>
+  <header class="top">
+    <div class="brand">
+      <div class="logo">$ curl</div>
+      <div>
+        <h1>curl 构造器</h1>
+        <p>填空 → 自动生成命令 → 逐行看懂每个参数在干什么</p>
+      </div>
+    </div>
+    <div class="shell-switch" role="tablist" aria-label="目标 shell">
+      <button type="button" data-shell="bash" class="active">Bash / Git Bash</button>
+      <button type="button" data-shell="powershell">PowerShell</button>
+      <button type="button" data-shell="cmd">cmd.exe</button>
+    </div>
+  </header>
+
+  <div class="howto">
+    <span><i>!</i> 只有 URL 必填，其余都是可选；不填 / 不勾选就不会写进命令</span>
+    <span><i>02</i> 右侧命令实时更新，点「复制命令」直接用</span>
+    <span><i>03</i> 鼠标悬停任意行，命令与解释同步高亮</span>
+  </div>
+
+  <div class="scenario-bar">
+    <span>快速场景</span>
+    <button type="button" class="chip" data-scenario="alive">探活 / 看响应头</button>
+    <button type="button" class="chip" data-scenario="login">登录表单 + 存 Cookie</button>
+    <button type="button" class="chip" data-scenario="cookie">Cookie 越权</button>
+    <button type="button" class="chip" data-scenario="json">JSON 接口</button>
+    <button type="button" class="chip" data-scenario="upload">文件上传</button>
+    <button type="button" class="chip" data-scenario="ssrf">SSRF 探测</button>
+  </div>
+
+  <div class="layout">
+    <!-- ==================== 左侧：构造表单 ==================== -->
+    <form class="card form-card" id="builder" autocomplete="off" onsubmit="return false">
+      <section>
+        <div class="sec-head">
+          <span class="num">1</span>
+          <h2>目标</h2>
+          <span class="tag req">URL 必填</span>
+          <span class="hint">方法默认 GET</span>
+        </div>
+        <div class="field-label">目标 URL <span class="tag req mini">必填</span><span class="hint-inline">唯一必填项；不写协议会自动补 http://</span></div>
+        <div class="url-row">
+          <select id="method" aria-label="HTTP 方法">
+            <option value="GET">GET</option>
+            <option value="POST">POST</option>
+            <option value="PUT">PUT</option>
+            <option value="PATCH">PATCH</option>
+            <option value="DELETE">DELETE</option>
+            <option value="HEAD">HEAD</option>
+            <option value="OPTIONS">OPTIONS</option>
+            <option value="CUSTOM">自定义…</option>
+          </select>
+          <input id="url" placeholder="http://challenge.qsnctf.com:12345/index.php" spellcheck="false">
+        </div>
+        <input id="customMethod" class="hidden" placeholder="自定义方法，例如 TRACE" style="margin-top:8px" spellcheck="false">
+
+        <div class="subhead">查询参数 <span class="tag opt mini">可选</span><small id="queryHint">GET 用 -G 自动编码；POST 会直接拼进 URL</small></div>
+        <div id="queryRows" class="rows"></div>
+        <button type="button" class="add" data-add="query">+ 添加查询参数</button>
+
+        <div class="grid2" style="margin-top:10px">
+          <label class="field"><span>查询参数写法（仅 GET 生效）</span>
+            <select id="queryMode">
+              <option value="G">-G --data-urlencode（推荐，自动编码）</option>
+              <option value="url">直接拼进 URL（自动 encode）</option>
+            </select>
+          </label>
+        </div>
+        <p class="panel-tip" style="margin-top:8px">POST / PUT 等非 GET 方法：查询参数仍会拼进 URL，和 body 参数同时发送，不会使用 <code>-G</code>。</p>
+      </section>
+
+      <section>
+        <div class="sec-head">
+          <span class="num">2</span>
+          <h2>身份与请求头</h2>
+          <span class="tag opt">全部可选</span>
+          <span class="hint">Cookie 是最常改的一处</span>
+        </div>
+        <div class="grid2">
+          <label class="field"><span>Cookie 字符串</span>
+            <input id="cookie" placeholder="username=admin; role=admin" spellcheck="false">
+          </label>
+          <label class="field"><span>读取 Cookie 文件</span>
+            <input id="cookieFile" placeholder="cookies.txt" spellcheck="false">
+          </label>
+        </div>
+
+        <div class="grid2" style="margin-top:10px">
+          <label class="field"><span>认证方式</span>
+            <select id="authMode">
+              <option value="none">不使用</option>
+              <option value="basic">Basic（-u 用户名:密码）</option>
+              <option value="bearer">Bearer Token</option>
+            </select>
+          </label>
+          <div class="auth-fields">
+            <div data-auth="basic" class="hidden" style="display:flex;gap:6px;width:100%">
+              <input id="basicUser" placeholder="用户名" spellcheck="false">
+              <input id="basicPass" placeholder="密码" spellcheck="false">
+            </div>
+            <div data-auth="bearer" class="hidden" style="width:100%">
+              <input id="bearer" placeholder="eyJhbGciOi..." spellcheck="false">
+            </div>
+          </div>
+        </div>
+
+        <div class="subhead">额外请求头 <small>点下面的常用头快速添加</small></div>
+        <div class="chips" style="margin-bottom:8px">
+          <button type="button" class="chip" data-header="User-Agent">User-Agent</button>
+          <button type="button" class="chip" data-header="Referer">Referer</button>
+          <button type="button" class="chip" data-header="X-Forwarded-For">X-Forwarded-For</button>
+          <button type="button" class="chip" data-header="X-Real-IP">X-Real-IP</button>
+          <button type="button" class="chip" data-header="Origin">Origin</button>
+          <button type="button" class="chip" data-header="Host">Host</button>
+          <button type="button" class="chip" data-header="Content-Type">Content-Type</button>
+          <button type="button" class="chip" data-header="Authorization">Authorization</button>
+        </div>
+        <div id="headerRows" class="rows"></div>
+        <button type="button" class="add" data-add="header">+ 添加请求头</button>
+      </section>
+
+      <section>
+        <div class="sec-head">
+          <span class="num">3</span>
+          <h2>请求体</h2>
+          <span class="tag opt">按需填写</span>
+          <span class="hint">表单 / JSON / 上传</span>
+        </div>
+        <div class="chips" id="bodyTabs">
+          <button type="button" class="chip active" data-body="none">无</button>
+          <button type="button" class="chip" data-body="form">表单</button>
+          <button type="button" class="chip" data-body="json">JSON</button>
+          <button type="button" class="chip" data-body="raw">原始文本</button>
+          <button type="button" class="chip" data-body="multipart">multipart 上传</button>
+          <button type="button" class="chip" data-body="binary">二进制文件</button>
+          <button type="button" class="chip" data-body="putfile">PUT 文件</button>
+        </div>
+        <input type="hidden" id="bodyType" value="none">
+
+        <div class="body-panel hidden" data-panel="form">
+          <p class="panel-tip">默认用 <code>--data-urlencode</code>，中文、空格、<code>&amp;</code>、单引号都不会破坏参数。</p>
+          <div id="formRows" class="rows"></div>
+          <button type="button" class="add" data-add="form">+ 添加表单字段</button>
+          <label class="checkline"><input type="checkbox" id="formEncode" checked> 用 --data-urlencode 自动 URL 编码（推荐）</label>
+        </div>
+
+        <div class="body-panel hidden" data-panel="json">
+          <div class="field-head"><span>JSON 请求体</span><span id="jsonStatus" class="badge">空</span></div>
+          <textarea id="jsonBody" spellcheck="false" placeholder='{
+  "username": "admin",
+  "role": "admin"
+}'></textarea>
+          <label class="field" style="margin-top:8px"><span>发送方式</span>
+            <select id="jsonMode">
+              <option value="binary">--data-binary + Content-Type 头（兼容老版本）</option>
+              <option value="json">--json（curl ≥ 7.82）</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="body-panel hidden" data-panel="raw">
+          <p class="panel-tip">原样发送，保留换行；一般配一个 Content-Type。适合 XML、纯文本、手写畸形报文。</p>
+          <textarea id="rawBody" spellcheck="false" placeholder="在这里粘贴原始请求体"></textarea>
+          <label class="field" style="margin-top:8px"><span>Content-Type（可选）</span>
+            <input id="rawType" placeholder="text/plain" spellcheck="false">
+          </label>
+        </div>
+
+        <div class="body-panel hidden" data-panel="multipart">
+          <p class="panel-tip">curl 会自动生成 boundary，<b>不要</b>再手写 <code>Content-Type: multipart/form-data</code>。</p>
+          <div id="mpRows" class="rows"></div>
+          <button type="button" class="add" data-add="mp">+ 添加 multipart 字段</button>
+        </div>
+
+        <div class="body-panel hidden" data-panel="binary">
+          <p class="panel-tip">把整个文件作为请求体发送，等价于 <code>--data-binary @文件</code>。</p>
+          <div class="grid2">
+            <label class="field"><span>文件路径</span><input id="binaryPath" placeholder="payload.bin" spellcheck="false"></label>
+            <label class="field"><span>Content-Type（可选）</span><input id="binaryType" placeholder="application/octet-stream" spellcheck="false"></label>
+          </div>
+        </div>
+
+        <div class="body-panel hidden" data-panel="putfile">
+          <p class="panel-tip"><code>-T</code> 会自己使用 PUT 方法，方法选择器会被忽略；适合直接往目标路径放文件。</p>
+          <label class="field"><span>本地文件路径</span><input id="putPath" placeholder="shell.php" spellcheck="false"></label>
+        </div>
+      </section>
+
+      <section>
+        <div class="sec-head">
+          <span class="num">4</span>
+          <h2>行为与输出</h2>
+          <span class="tag opt">全部可选</span>
+          <span class="hint">默认已带上 CTF 常用组合</span>
+        </div>
+        <div class="checks">
+          <label class="check"><input type="checkbox" id="optSilent" checked><span><b>-sS 静默但报错</b><small>不刷进度条，失败时仍能看到原因</small></span></label>
+          <label class="check"><input type="checkbox" id="optInclude" checked><span><b>-i 打印响应头</b><small>看 Set-Cookie / Server / Location</small></span></label>
+          <label class="check"><input type="checkbox" id="optLocation" checked><span><b>-L 跟随跳转</b><small>302 后继续走，登录题必加</small></span></label>
+          <label class="check"><input type="checkbox" id="optInsecure"><span><b>-k 忽略证书</b><small>自签名 HTTPS 靶场用</small></span></label>
+          <label class="check"><input type="checkbox" id="optCompressed"><span><b>--compressed</b><small>自动请求并解压 gzip/br</small></span></label>
+          <label class="check"><input type="checkbox" id="optVerbose"><span><b>-v 调试报文</b><small>排查参数到底发出去没有</small></span></label>
+          <label class="check"><input type="checkbox" id="optHttp11"><span><b>--http1.1</b><small>靶场对 HTTP/2 异常时用</small></span></label>
+          <label class="check"><input type="checkbox" id="optPathAsIs"><span><b>--path-as-is</b><small>保留 ../，路径穿越题必加</small></span></label>
+          <label class="check"><input type="checkbox" id="optGloboff"><span><b>--globoff</b><small>URL 含 []{} 时关闭通配</small></span></label>
+          <label class="check"><input type="checkbox" id="optNoProxy"><span><b>--noproxy '*'</b><small>强制直连，排查 502 代理坑</small></span></label>
+        </div>
+
+        <details class="advanced">
+          <summary>高级（全部可选）：超时 / 代理 / 输出文件 / 绑定 IP</summary>
+          <div class="grid3">
+            <label class="field"><span>--max-time 秒</span><input id="maxTime" value="15" inputmode="decimal" spellcheck="false"></label>
+            <label class="field"><span>--connect-timeout 秒</span><input id="connectTimeout" placeholder="5" inputmode="decimal" spellcheck="false"></label>
+            <label class="field"><span>-x 代理</span><input id="proxy" placeholder="http://127.0.0.1:7890" spellcheck="false"></label>
+            <label class="field"><span>--max-redirs</span><input id="maxRedirs" placeholder="5" inputmode="numeric" spellcheck="false"></label>
+            <label class="field"><span>-o 响应存文件</span><input id="output" placeholder="resp.txt" spellcheck="false"></label>
+            <label class="field"><span>-D 响应头存文件</span><input id="dumpHeaders" placeholder="headers.txt" spellcheck="false"></label>
+            <label class="field"><span>-c 保存 Cookie</span><input id="saveCookie" placeholder="cookies.txt" spellcheck="false"></label>
+            <label class="field" style="grid-column:span 2"><span>--resolve host:port:ip</span><input id="resolve" placeholder="target.com:80:127.0.0.1" spellcheck="false"></label>
+          </div>
+          <label class="checkline" style="margin:0 0 12px"><input type="checkbox" id="optWriteOut" checked> -w 输出状态码 / 耗时 / 大小统计</label>
+        </details>
+      </section>
+    </form>
+
+    <!-- ==================== 右侧：命令预览 ==================== -->
+    <aside class="right">
+      <section class="card terminal-card">
+        <div class="term-head">
+          <div class="dots"><i></i><i></i><i></i></div>
+          <span class="shell-label" id="shellLabel">bash / Git Bash</span>
+          <button type="button" class="copy-btn" id="copyBtn">复制命令</button>
+        </div>
+        <pre id="commandOut"></pre>
+        <div id="warnings"></div>
+      </section>
+
+      <section class="card">
+        <div class="card-head">
+          <h2>逐行解释</h2>
+          <span class="hint">悬停高亮 · 只有 URL 标「必填」</span>
+        </div>
+        <div id="explainOut"></div>
+      </section>
+    </aside>
+  </div>
+
+  <!-- ==================== 选项速查表 ==================== -->
+  <section class="card" style="margin-top:18px">
+    <div class="card-head ref-tools">
+      <h2>curl 选项速查</h2>
+      <span id="refCount"></span>
+      <input id="refSearch" placeholder="搜索参数 / 作用 / 坑，例如 -L、cookie、代理、编码" spellcheck="false">
+    </div>
+    <p class="ref-note">只有 <b>URL</b> 是必填；下表所有选项都是可选的。标「常用」的优先记，标「按需」的遇到场景再查。</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>选项</th><th>全称</th><th>作用</th><th>示例</th><th>坑 / 备注</th></tr>
+        </thead>
+        <tbody id="refBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ==================== 常见坑 ==================== -->
+  <section class="card" style="margin-top:18px">
+    <div class="card-head">
+      <h2>十个必踩的坑</h2>
+      <span class="hint">生成命令后先对照一眼</span>
+    </div>
+    <div class="pitfalls">
+      <div class="pitfall"><span class="no">01</span><div><b>PowerShell 里 curl 不是 curl</b><p>它是 <code>Invoke-WebRequest</code> 的别名，不认 <code>-H</code>/<code>-d</code>。写 <code>curl.exe</code>，或者用 Git Bash。</p></div></div>
+      <div class="pitfall"><span class="no">02</span><div><b>-s 会把错误一起吞掉</b><p>请求失败时终端一片空白，容易误判成靶机没响应。永远写 <code>-sS</code>。</p></div></div>
+      <div class="pitfall"><span class="no">03</span><div><b>-d 偷偷把方法变成 POST</b><p>想发 GET 带参数，用 <code>-G --data-urlencode</code>，或者直接拼进 URL。</p></div></div>
+      <div class="pitfall"><span class="no">04</span><div><b>&amp; 是 shell 的特殊字符</b><p><code>-d "a=1&amp;b=2"</code> 必须加引号，否则 shell 把 <code>&amp;</code> 当后台执行符，命令被切成两半。</p></div></div>
+      <div class="pitfall"><span class="no">05</span><div><b>不加 -L 只能看到 302</b><p>登录成功后跳转的题，不加 <code>-L</code> 会以为登录失败。</p></div></div>
+      <div class="pitfall"><span class="no">06</span><div><b>-d 会吃掉换行</b><p>发 JSON 用 <code>--data-binary</code> 或 <code>--json</code>，否则多行 JSON 变一行还丢缩进。</p></div></div>
+      <div class="pitfall"><span class="no">07</span><div><b>代理环境变量会劫持请求</b><p>返回 502 先怀疑代理。用 <code>--noproxy '*'</code> 强制直连，再用 <code>-v</code> 对比。</p></div></div>
+      <div class="pitfall"><span class="no">08</span><div><b>curl 会归一化 ../</b><p>路径穿越题一定要加 <code>--path-as-is</code>，否则 <code>../</code> 在发出去之前就被吃掉了。</p></div></div>
+      <div class="pitfall"><span class="no">09</span><div><b>URL 里的 [] 会被当通配</b><p>curl 默认把 <code>{}</code>/<code>[]</code> 当范围展开。含这些字符时加 <code>--globoff</code>。</p></div></div>
+      <div class="pitfall"><span class="no">10</span><div><b>-G 会把 POST body 搬空</b><p>它不是「POST 转 GET」的开关：所有 <code>-d</code> 数据会移到 URL 并改用 GET。想同时带查询参数和 POST body，别加 <code>-G</code>。</p></div></div>
+    </div>
+  </section>
+
+  <div class="footer">
+    配套笔记：<a href="./curl命令详解与万能模板.md">curl 命令详解与万能模板</a> · 返回 <a href="../../README.md">总入口</a><br>
+    离线单文件工具，直接双击用浏览器打开；生成结果只是模板，发之前先用 <code>-v</code> 确认报文。
+  </div>
+</main>
+
+<script>
+(() => {
+  'use strict';
+
+  /* ---------- 基础工具 ---------- */
+  const $ = (sel, root = document) => root.querySelector(sel);
+  const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+  const CONT = { bash: '\\', powershell: '`', cmd: '^' };
+  const WRITE_OUT = '\\nHTTP %{http_code}  %{time_total}s  %{size_download}B  %{url_effective}\\n';
+  const ESC = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+  const esc = s => String(s).replace(/[&<>"']/g, c => ESC[c]);
+
+  function quoteBash(v) {
+    if (!v.includes("'")) return "'" + v + "'";
+    return '"' + v.replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/\$/g, '\\$').replace(/`/g, '\\`') + '"';
+  }
+  function quotePS(v) { return "'" + v.replace(/'/g, "''") + "'"; }
+  function quoteCmd(v) { return '"' + v.replace(/"/g, '\\"') + '"'; }
+  function quote(v, shell) {
+    if (shell === 'cmd') return quoteCmd(v);
+    if (shell === 'powershell') return quotePS(v);
+    return quoteBash(v);
+  }
+
+  function normalizeUrl(url) {
+    const u = String(url || '').trim();
+    if (!u) return 'http://target/';
+    if (/^[a-zA-Z][a-zA-Z0-9+.-]*:\/\//.test(u)) return u;
+    if (u.startsWith('//')) return 'http:' + u;
+    return 'http://' + u;
+  }
+
+  function appendQuery(url, params) {
+    if (!params.length) return url;
+    const hashIdx = url.indexOf('#');
+    const base = hashIdx >= 0 ? url.slice(0, hashIdx) : url;
+    const hash = hashIdx >= 0 ? url.slice(hashIdx) : '';
+    const qs = params.map(p => encodeURIComponent(p.k) + '=' + encodeURIComponent(p.v)).join('&');
+    const sep = base.includes('?') ? (/[?&]$/.test(base) ? '' : '&') : '?';
+    return base + sep + qs + hash;
+  }
+
+  function compactJson(text) {
+    try { return JSON.stringify(JSON.parse(text)); } catch { return text.trim(); }
+  }
+  function jsonValid(text) {
+    try { JSON.parse(text); return true; } catch { return false; }
+  }
+  function hasHeader(headers, name) {
+    return headers.some(h => h.k.trim().toLowerCase() === name);
+  }
+  function decideContentType(s) {
+    if (s.bodyType === 'form' && s.form.some(p => p.k.trim())) return 'application/x-www-form-urlencoded';
+    if (s.bodyType === 'json' && s.json.trim() && s.jsonMode !== 'json') return 'application/json';
+    if (s.bodyType === 'raw' && s.raw !== '' && s.rawType.trim()) return s.rawType.trim();
+    if (s.bodyType === 'binary' && s.binaryPath.trim() && s.binaryType.trim()) return s.binaryType.trim();
+    return '';
+  }
+
+  /* ---------- 页面元素 ---------- */
+  const els = {};
+  const elIds = [
+    'method', 'customMethod', 'url', 'queryMode', 'queryHint', 'cookie', 'cookieFile', 'authMode',
+    'basicUser', 'basicPass', 'bearer', 'bodyType', 'formEncode', 'jsonBody', 'jsonMode',
+    'jsonStatus', 'rawBody', 'rawType', 'binaryPath', 'binaryType', 'putPath',
+    'optSilent', 'optInclude', 'optLocation', 'optInsecure', 'optCompressed', 'optVerbose',
+    'optHttp11', 'optPathAsIs', 'optGloboff', 'optNoProxy', 'maxTime', 'connectTimeout',
+    'proxy', 'maxRedirs', 'output', 'dumpHeaders', 'saveCookie', 'resolve', 'optWriteOut',
+    'commandOut', 'warnings', 'explainOut', 'copyBtn', 'shellLabel', 'refSearch', 'refBody', 'refCount'
+  ];
+  elIds.forEach(id => { els[id] = document.getElementById(id); });
+  els.builder = document.getElementById('builder');
+
+  let shell = 'bash';
+  let lastCommand = '';
+
+  /* ---------- 读取表单 ---------- */
+  function rowsOf(sel) {
+    return $$(sel + ' .kv-row').map(row => {
+      const o = {};
+      row.querySelectorAll('[data-f]').forEach(el => { o[el.dataset.f] = el.value; });
+      return o;
+    });
+  }
+
+  function collect() {
+    const methodSel = els.method.value;
+    return {
+      method: methodSel === 'CUSTOM' ? (els.customMethod.value.trim().toUpperCase() || 'GET') : methodSel,
+      url: els.url.value.trim(),
+      queryMode: els.queryMode.value,
+      query: rowsOf('#queryRows'),
+      cookie: els.cookie.value.trim(),
+      cookieFile: els.cookieFile.value.trim(),
+      authMode: els.authMode.value,
+      basicUser: els.basicUser.value.trim(),
+      basicPass: els.basicPass.value,
+      bearer: els.bearer.value.trim(),
+      headers: rowsOf('#headerRows'),
+      bodyType: els.bodyType.value,
+      form: rowsOf('#formRows'),
+      formEncode: els.formEncode.checked,
+      json: els.jsonBody.value,
+      jsonMode: els.jsonMode.value,
+      raw: els.rawBody.value,
+      rawType: els.rawType.value.trim(),
+      multipart: rowsOf('#mpRows'),
+      binaryPath: els.binaryPath.value.trim(),
+      binaryType: els.binaryType.value.trim(),
+      putPath: els.putPath.value.trim(),
+      opts: {
+        silentErr: els.optSilent.checked,
+        include: els.optInclude.checked,
+        location: els.optLocation.checked,
+        insecure: els.optInsecure.checked,
+        compressed: els.optCompressed.checked,
+        verbose: els.optVerbose.checked,
+        http11: els.optHttp11.checked,
+        pathAsIs: els.optPathAsIs.checked,
+        globoff: els.optGloboff.checked,
+        noProxy: els.optNoProxy.checked,
+        maxTime: els.maxTime.value.trim(),
+        connectTimeout: els.connectTimeout.value.trim(),
+        proxy: els.proxy.value.trim(),
+        maxRedirs: els.maxRedirs.value.trim(),
+        output: els.output.value.trim(),
+        dumpHeaders: els.dumpHeaders.value.trim(),
+        saveCookie: els.saveCookie.value.trim(),
+        resolve: els.resolve.value.trim(),
+        writeOut: els.optWriteOut.checked
+      }
+    };
+  }
+
+  /* ---------- 构造命令 ---------- */
+  function build(s, shellName) {
+    const lines = [];
+    const warnings = [];
+    const q = v => quote(v, shellName);
+    const T = (text, cls) => ({ text, cls });
+    const F = name => T(name, 't-flag');
+    const V = v => T(q(v), 't-str');
+    const NUM = v => T(String(v), 't-num');
+    const M = v => T(v, 't-method');
+    const L = (tokens, notes) => lines.push({ tokens, notes: notes || [] });
+    const NOTE = (opt, text, level = 'opt') => ({ opt, text, level });
+
+    const method = s.method;
+    const bodyType = s.bodyType;
+    const userHeaders = s.headers.filter(h => h.k.trim());
+    const hasBodyData =
+      (bodyType === 'form' && s.form.some(p => p.k.trim())) ||
+      (bodyType === 'json' && s.json.trim() !== '') ||
+      (bodyType === 'raw' && s.raw !== '') ||
+      (bodyType === 'multipart' && s.multipart.some(r => r.k.trim() && (r.kind === 'file' ? r.v.trim() : true))) ||
+      (bodyType === 'binary' && s.binaryPath !== '') ||
+      (bodyType === 'putfile' && s.putPath !== '');
+    const bodyAllowed = method !== 'HEAD';
+    const query = s.query.filter(p => p.k.trim());
+    const useG = method === 'GET' && s.queryMode === 'G' && !hasBodyData;
+
+    if (!bodyAllowed && hasBodyData) {
+      warnings.push({ type: 'info', text: 'HEAD 请求不发送请求体，已忽略请求体配置。' });
+    }
+
+    /* 基础行为 */
+    const base = [T(shellName === 'powershell' ? 'curl.exe' : 'curl', 't-cmd')];
+    const bn = [NOTE(
+      shellName === 'powershell' ? 'curl.exe' : 'curl',
+      shellName === 'powershell'
+        ? 'PowerShell 里必须写 curl.exe；直接写 curl 会调用 Invoke-WebRequest 别名，不认这些参数。'
+        : '调用 curl 程序；后面每个选项都在决定这个 HTTP 请求长什么样。'
+    )];
+    if (s.opts.silentErr) {
+      base.push(F('-sS'));
+      bn.push(NOTE('-sS', '静默模式，但保留错误信息：不刷进度条，请求失败时仍能看到原因。'));
+    }
+    if (method === 'HEAD') {
+      base.push(F('-I'));
+      bn.push(NOTE('-I', '只发 HEAD 请求，只要响应头，不下载正文。'));
+    } else if (s.opts.include) {
+      base.push(F('-i'));
+      bn.push(NOTE('-i', '把响应头一起打印出来，方便看 Set-Cookie / Server / Location。'));
+    }
+    if (s.opts.location) {
+      base.push(F('-L'));
+      bn.push(NOTE('-L', '跟随 301/302 跳转；登录题不加只能看到一条 302 空壳。'));
+    }
+    if (s.opts.insecure) {
+      base.push(F('-k'));
+      bn.push(NOTE('-k', '忽略 HTTPS 证书错误，只用于自签名证书靶场。'));
+    }
+    if (s.opts.compressed) {
+      base.push(F('--compressed'));
+      bn.push(NOTE('--compressed', '自动请求并解压 gzip / deflate / br 响应。'));
+    }
+    if (s.opts.verbose) {
+      base.push(F('-v'));
+      bn.push(NOTE('-v', '打印完整请求 / 响应报文；排查「服务端为什么没收到参数」的第一选择。'));
+    }
+    L(base, bn);
+
+    /* 连接、代理、路径 */
+    const conn = [], cn = [];
+    if (s.opts.maxTime) {
+      conn.push(F('--max-time'), NUM(s.opts.maxTime));
+      cn.push(NOTE('--max-time', '整个请求最多 ' + s.opts.maxTime + ' 秒，超时直接放弃，防止卡死。'));
+      if (!/^\d+(\.\d+)?$/.test(s.opts.maxTime)) warnings.push({ type: 'warn', text: '--max-time 不是纯数字，curl 可能报错。' });
+    }
+    if (s.opts.connectTimeout) {
+      conn.push(F('--connect-timeout'), NUM(s.opts.connectTimeout));
+      cn.push(NOTE('--connect-timeout', '只限制建立连接的时间为 ' + s.opts.connectTimeout + ' 秒；和整个请求超时不同。'));
+      if (!/^\d+(\.\d+)?$/.test(s.opts.connectTimeout)) warnings.push({ type: 'warn', text: '--connect-timeout 不是纯数字，curl 可能报错。' });
+    }
+    if (s.opts.proxy) {
+      conn.push(F('-x'), V(s.opts.proxy));
+      cn.push(NOTE('-x', '走指定代理；代理挂了会返回 502，看起来像靶机挂了。'));
+    }
+    if (s.opts.noProxy) {
+      conn.push(F('--noproxy'), V('*'));
+      cn.push(NOTE('--noproxy', "本次强制直连，忽略 http_proxy 等环境变量；排查 502 时很有用。"));
+    }
+    if (s.opts.http11) {
+      conn.push(F('--http1.1'));
+      cn.push(NOTE('--http1.1', '强制使用 HTTP/1.1；有些靶场对 HTTP/2 处理异常。'));
+    }
+    if (s.opts.pathAsIs) {
+      conn.push(F('--path-as-is'));
+      cn.push(NOTE('--path-as-is', '禁止 curl 归一化 ../；路径穿越题必加，否则 curl 会先把 ../ 吃掉。'));
+    }
+    if (s.opts.globoff) {
+      conn.push(F('--globoff'));
+      cn.push(NOTE('--globoff', '关闭 URL 里的 {}[] 通配；URL 含中括号时必加。'));
+    }
+    if (s.opts.maxRedirs) {
+      conn.push(F('--max-redirs'), NUM(s.opts.maxRedirs));
+      cn.push(NOTE('--max-redirs', '最多跟随 ' + s.opts.maxRedirs + ' 次跳转，防止跳转环。'));
+    }
+    if (s.opts.resolve) {
+      conn.push(F('--resolve'), V(s.opts.resolve));
+      cn.push(NOTE('--resolve', '把域名强制解析到指定 IP（host:port:ip），不用改 hosts 文件。'));
+    }
+    if (conn.length) L(conn, cn);
+
+    /* 方法 */
+    if (bodyType !== 'putfile' && method !== 'GET' && method !== 'HEAD') {
+      L([F('-X'), M(method)], [NOTE('-X ' + method, '显式指定 HTTP 方法；其实有 -d/-F 时 curl 默认就是 POST，写出来让命令自解释。')]);
+    } else if (method === 'GET' && hasBodyData) {
+      L([F('-X'), M('GET')], [NOTE('-X GET', '带 body 的 GET 很少见；必须显式写 -X GET，否则 -d 会把方法变成 POST。')]);
+    }
+
+    /* 认证 */
+    if (s.authMode === 'basic') {
+      L([F('-u'), V(s.basicUser + ':' + s.basicPass)], [NOTE('-u', 'Basic 认证；curl 会自动把 user:pass 做 Base64 放进 Authorization 头。')]);
+      if (!s.basicUser) warnings.push({ type: 'warn', text: 'Basic 认证的用户名是空的。' });
+    }
+    if (s.authMode === 'bearer') {
+      if (hasHeader(userHeaders, 'authorization')) {
+        warnings.push({ type: 'info', text: '你手写了 Authorization 头，认证方式里的 Bearer Token 没有重复添加。' });
+      } else if (s.bearer) {
+        L([F('-H'), V('Authorization: Bearer ' + s.bearer)], [NOTE('Authorization', 'Bearer Token 认证；等价于直接写 -H "Authorization: Bearer ..."。')]);
+      } else {
+        warnings.push({ type: 'warn', text: '认证方式选了 Bearer，但 Token 是空的。' });
+      }
+    }
+
+    /* Cookie */
+    if (s.cookie) {
+      L([F('-b'), V(s.cookie)], [NOTE('-b', '发送 Cookie 字符串，等价于 -H "Cookie: ..."；改这里的值就能换身份。')]);
+    }
+    if (s.cookieFile) {
+      L([F('-b'), V(s.cookieFile)], [NOTE('-b', '从 Cookie 文件读取会话；文件名不需要加 @。')]);
+    }
+    if (s.cookie && hasHeader(userHeaders, 'cookie')) {
+      warnings.push({ type: 'warn', text: 'Cookie 字符串和手写的 Cookie 头同时存在，会发送两份身份信息，确认是否重复。' });
+    }
+
+    /* 请求头 */
+    const autoCT = decideContentType(s);
+    const effHeaders = userHeaders.map(h => ({ k: h.k.trim(), v: h.v, auto: false }));
+    if (autoCT && !hasHeader(userHeaders, 'content-type')) {
+      effHeaders.push({ k: 'Content-Type', v: autoCT, auto: true });
+    }
+    for (const h of effHeaders) {
+      const name = h.k.toLowerCase();
+      let text;
+      if (h.auto) text = '自动补的 Content-Type（' + autoCT + '）：告诉服务端 body 是什么格式。';
+      else if (name === 'cookie') text = '手写的 Cookie 头；和 -b 同时用会发两份，注意别重复。';
+      else if (name === 'authorization') text = '身份凭据；Basic / Bearer 都可以直接写在这个头里。';
+      else if (name === 'x-forwarded-for' || name === 'x-real-ip') text = '伪造来源 IP，绕过只允许内网访问的校验。';
+      else if (name === 'referer') text = '告诉服务端你从哪个页面跳过来，绕过 Referer 校验。';
+      else if (name === 'user-agent') text = '伪装客户端；UA 黑名单绕过常改这里。';
+      else if (name === 'origin') text = '跨域请求来源，CORS 相关题目会检查。';
+      else if (name === 'host') text = '指定 Host 头，虚拟主机 / 内网访问常改。';
+      else text = '添加一个请求头；-H 可以重复写多次。';
+      L([F('-H'), V(h.k + ':' + (h.v ? ' ' + h.v : ''))], [NOTE('-H', text)]);
+    }
+    if (bodyType === 'multipart' && hasHeader(userHeaders, 'content-type')) {
+      warnings.push({ type: 'warn', text: 'multipart 上传不要手写 Content-Type：curl 需要自己生成带 boundary 的头。' });
+    }
+
+    /* GET 查询参数（-G 模式） */
+    if (useG && query.length) {
+      L([F('-G')], [NOTE('-G', '把后面的 --data-urlencode 数据全部搬到 URL 查询串，并改用 GET。它不是「POST 转 GET」的开关——加了它就没有 body 了。')]);
+      for (const p of query) {
+        L([F('--data-urlencode'), V(p.k + '=' + p.v)], [NOTE('--data-urlencode', '参数 ' + p.k + '：自动 URL 编码后拼到查询串，中文、空格、&、单引号都不会破坏请求。')]);
+      }
+    }
+    if (method === 'GET' && hasBodyData && query.length && s.queryMode === 'G') {
+      warnings.push({ type: 'info', text: 'GET 带了 body，查询参数已直接拼进 URL；没有使用 -G（-G 会把 body 数据也变成查询参数）。' });
+    }
+    if (method !== 'GET' && s.queryMode === 'G' && query.length) {
+      warnings.push({ type: 'info', text: '当前是 ' + method + ' 请求：查询参数会直接拼进 URL，不会使用 -G；URL 参数和 body 参数可以同时发送。' });
+    }
+
+    /* 请求体 */
+    if (bodyAllowed && bodyType === 'form') {
+      const form = s.form.filter(p => p.k.trim());
+      if (!form.length) {
+        warnings.push({ type: 'warn', text: '表单模式没有填字段，命令里不会带请求体。' });
+      } else if (s.formEncode) {
+        for (const p of form) {
+          L([F('--data-urlencode'), V(p.k + '=' + p.v)], [NOTE('--data-urlencode', '提交字段 ' + p.k + '，自动 URL 编码；一次只能写一个参数，多个就写多行。')]);
+        }
+      } else {
+        L([F('-d'), V(form.map(p => p.k + '=' + p.v).join('&'))], [NOTE('-d', '直接提交拼接好的表单；-d 不做 URL 编码，特殊字符要自己保证安全。')]);
+      }
+    }
+
+    if (bodyAllowed && bodyType === 'json') {
+      if (!s.json.trim()) {
+        warnings.push({ type: 'warn', text: 'JSON 请求体是空的。' });
+      } else {
+        if (!jsonValid(s.json)) warnings.push({ type: 'warn', text: 'JSON 语法不合法，将按原始文本发送；服务端很可能解析失败。' });
+        const body = compactJson(s.json);
+        if (shellName === 'cmd' && body.includes('\n')) {
+          warnings.push({ type: 'warn', text: 'CMD 不能安全传递多行字符串，这段 JSON 又无法压缩；建议切到 Git Bash / PowerShell。' });
+        }
+        if (s.jsonMode === 'json') {
+          L([F('--json'), V(body)], [NOTE('--json', '等价于 JSON 的 Content-Type / Accept + 发送 body；需要 curl ≥ 7.82，老版本用 -H + --data-binary。')]);
+        } else {
+          L([F('--data-binary'), V(body)], [NOTE('--data-binary', '把 JSON 压成一行后发送（空白不影响语义）；-d 会吃掉换行，发 JSON 别用它。')]);
+        }
+      }
+    }
+
+    if (bodyAllowed && bodyType === 'raw' && s.raw !== '') {
+      let raw = s.raw;
+      if (shellName === 'cmd' && raw.includes('\n')) {
+        raw = raw.replace(/\r?\n/g, ' ');
+        warnings.push({ type: 'warn', text: 'CMD 不能安全传递多行 body，已把换行替换为空格；需要保留换行请切到 Git Bash / PowerShell。' });
+      }
+      L([F('--data-binary'), V(raw)], [NOTE('--data-binary', '原样发送请求体，保留换行；-d 会吃掉换行。')]);
+    }
+
+    if (bodyAllowed && bodyType === 'multipart') {
+      const mp = s.multipart.filter(r => r.k.trim() && (r.kind === 'file' ? r.v.trim() : true));
+      if (!mp.length) warnings.push({ type: 'warn', text: 'multipart 模式没有填字段，命令里不会带请求体。' });
+      for (const r of mp) {
+        if (r.kind === 'file') {
+          const spec = r.k + '=@' + r.v.trim() + (r.mime.trim() ? ';type=' + r.mime.trim() : '');
+          L([F('-F'), V(spec)], [NOTE('-F', '文件字段 ' + r.k + '；@ 表示读本地文件，type= 用来伪造 MIME 类型。')]);
+        } else {
+          L([F('-F'), V(r.k + '=' + r.v)], [NOTE('-F', 'multipart 文本字段 ' + r.k + '；boundary 由 curl 自动生成。')]);
+        }
+      }
+    }
+
+    if (bodyAllowed && bodyType === 'binary') {
+      if (s.binaryPath) L([F('--data-binary'), V('@' + s.binaryPath)], [NOTE('--data-binary', '把本地文件原样作为请求体发送；@ 表示读文件。')]);
+      else warnings.push({ type: 'warn', text: '二进制文件模式没有填文件路径。' });
+    }
+
+    if (bodyType === 'putfile') {
+      if (s.putPath) L([F('-T'), V(s.putPath)], [NOTE('-T', '-T 上传文件，并自动使用 PUT 方法；不用再写 -X PUT。')]);
+      else warnings.push({ type: 'warn', text: 'PUT 文件模式没有填文件路径。' });
+      if (method !== 'PUT') warnings.push({ type: 'info', text: 'PUT 文件模式由 -T 固定使用 PUT，方法选择器里的方法会被忽略。' });
+    }
+
+    /* 输出 */
+    if (s.opts.output) L([F('-o'), V(s.opts.output)], [NOTE('-o', '响应体写入文件，避免刷屏；配 -w 可只保留统计行。')]);
+    if (s.opts.dumpHeaders) L([F('-D'), V(s.opts.dumpHeaders)], [NOTE('-D', '把响应头单独写入文件，正文不会混进来。')]);
+    if (s.opts.saveCookie) L([F('-c'), V(s.opts.saveCookie)], [NOTE('-c', '把响应里的 Set-Cookie 存进文件，下次用 -b cookies.txt 带上。')]);
+    if (s.opts.writeOut) {
+      if (shellName === 'cmd') {
+        warnings.push({ type: 'warn', text: 'CMD 会把 -w 里的 %{...} 当环境变量展开，统计行已省略；需要统计请切到 Git Bash / PowerShell。' });
+      } else {
+        L([F('-w'), V(WRITE_OUT)], [NOTE('-w', '请求结束后追加一行：HTTP 状态码、耗时、大小、最终 URL；%{...} 是占位变量，\\n 会输出换行。')]);
+      }
+    }
+
+    /* URL */
+    let finalUrl = normalizeUrl(s.url);
+    if (query.length && !useG) finalUrl = appendQuery(finalUrl, query);
+    let urlNote = '目标地址；选项顺序其实无所谓，把 URL 放最后方便检查。';
+    if (query.length && !useG) {
+      urlNote = method === 'GET'
+        ? '目标地址；查询参数已做 URL 编码并拼进 URL。'
+        : '目标地址；查询参数已做 URL 编码并拼进 URL，' + method + ' body 会另外发送。';
+    }
+    L([T(q(finalUrl), 't-url')], [NOTE('URL', urlNote, 'req')]);
+
+    /* 提示与警告 */
+    if (!s.url) warnings.push({ type: 'warn', text: 'URL 空着，命令里先用 http://target/ 占位；复制前记得换成靶机地址。' });
+    else if (/^https?:\/\/target(?:[\/:?]|$)/i.test(finalUrl)) warnings.push({ type: 'info', text: 'URL 还是 target 占位，复制前替换成真实靶机地址。' });
+    if (/\s/.test(s.url)) warnings.push({ type: 'warn', text: 'URL 里有空格，curl 会报错；用 %20 或把参数交给 -G --data-urlencode。' });
+    if (s.opts.proxy && s.opts.noProxy) warnings.push({ type: 'warn', text: '同时设置了代理和 --noproxy "*"，代理会被绕开，确认这是你要的。' });
+    if (shellName === 'cmd') {
+      const allValues = [s.url, s.cookie, s.bearer, s.raw].concat(s.headers.map(h => h.k + h.v), s.query.map(p => p.k + p.v), s.form.map(p => p.k + p.v)).join(' ');
+      if (allValues.includes('%')) warnings.push({ type: 'warn', text: 'CMD 会把 %NAME% 当环境变量展开；payload 里的 % 建议改用 Git Bash / PowerShell。' });
+    }
+
+    return { lines, warnings };
+  }
+
+  /* ---------- 渲染 ---------- */
+  function commandText(lines, shellName) {
+    const cont = CONT[shellName];
+    return lines.map((ln, i) => {
+      const body = ln.tokens.map(t => t.text).join(' ');
+      return (i ? '  ' : '') + body + (i === lines.length - 1 ? '' : ' ' + cont);
+    }).join('\n');
+  }
+
+  function renderLines(lines, shellName) {
+    const cont = CONT[shellName];
+    return lines.map((ln, i) => {
+      const body = ln.tokens.map(t => '<span class="' + t.cls + '">' + esc(t.text) + '</span>').join(' ');
+      const tail = i === lines.length - 1 ? '' : ' <span class="t-cont">' + esc(cont) + '</span>';
+      return '<span class="ln" data-line="' + (i + 1) + '">' + (i ? '  ' : '') + body + tail + '</span>';
+    }).join('');
+  }
+
+  function renderExplain(lines) {
+    return lines.map((ln, i) => {
+      const cmd = ln.tokens.map(t => t.text).join(' ');
+      const isReq = ln.notes.some(n => n.level === 'req');
+      const badge = isReq
+        ? '<span class="tag req mini">必填</span>'
+        : '<span class="tag opt mini">可选</span>';
+      const notes = ln.notes.map(n => '<div class="note"><code>' + esc(n.opt) + '</code><span>' + esc(n.text) + '</span></div>').join('');
+      return '<div class="explain-item" data-line="' + (i + 1) + '">' +
+        '<div class="exp-idx">' + String(i + 1).padStart(2, '0') + '</div>' +
+        '<div><div class="cmdline"><span class="cmd-text">' + esc(cmd) + '</span>' + badge + '</div>' + notes + '</div></div>';
+    }).join('');
+  }
+
+  function setHover(n, on) {
+    $$('[data-line="' + n + '"]').forEach(el => el.classList.toggle('hover', on));
+  }
+  function bindHover() {
+    $$('[data-line]').forEach(el => {
+      el.onmouseenter = () => setHover(el.dataset.line, true);
+      el.onmouseleave = () => setHover(el.dataset.line, false);
+    });
+  }
+
+  function updateJsonStatus(text) {
+    if (!text.trim()) { els.jsonStatus.textContent = '空'; els.jsonStatus.className = 'badge'; return; }
+    if (jsonValid(text)) { els.jsonStatus.textContent = '格式有效'; els.jsonStatus.className = 'badge ok'; }
+    else { els.jsonStatus.textContent = '格式无效'; els.jsonStatus.className = 'badge bad'; }
+  }
+
+  function update() {
+    const s = collect();
+    updateJsonStatus(s.json);
+    if (s.method === 'GET') {
+      els.queryHint.textContent = s.bodyType === 'none'
+        ? '可选；GET 推荐用 -G 自动编码'
+        : '可选；GET 带 body 时参数直接拼进 URL';
+    } else {
+      els.queryHint.textContent = '可选；' + s.method + ' 会把参数自动拼进 URL，和 body 同时发送（不用 -G）';
+    }
+    const result = build(s, shell);
+    lastCommand = commandText(result.lines, shell);
+    els.commandOut.innerHTML = renderLines(result.lines, shell);
+    els.explainOut.innerHTML = renderExplain(result.lines);
+    if (result.warnings.length) {
+      els.warnings.innerHTML = result.warnings.map(w =>
+        '<div class="warning ' + w.type + '"><span class="mark">' + (w.type === 'warn' ? '!' : 'i') + '</span><p>' + esc(w.text) + '</p></div>'
+      ).join('');
+      els.warnings.classList.remove('hidden');
+    } else {
+      els.warnings.innerHTML = '';
+      els.warnings.classList.add('hidden');
+    }
+    bindHover();
+  }
+
+  /* ---------- 动态行 ---------- */
+  function appendKv(sel, k = '', v = '', ph = ['键', '值']) {
+    const box = $(sel);
+    const row = document.createElement('div');
+    row.className = 'kv-row';
+    row.innerHTML = '<input data-f="k" placeholder="' + esc(ph[0]) + '" value="' + esc(k) + '" spellcheck="false">' +
+      '<input data-f="v" placeholder="' + esc(ph[1]) + '" value="' + esc(v) + '" spellcheck="false">' +
+      '<button type="button" class="del" data-del title="删除">×</button>';
+    box.appendChild(row);
+    return row;
+  }
+
+  function fillKv(sel, rows, ph) {
+    const box = $(sel);
+    box.innerHTML = '';
+    if (!rows || !rows.length) { appendKv(sel, '', '', ph); return; }
+    rows.forEach(r => appendKv(sel, r.k || '', r.v || '', ph));
+  }
+
+  function syncMpRow(row) {
+    const kind = row.querySelector('[data-f="kind"]').value;
+    const v = row.querySelector('[data-f="v"]');
+    const mime = row.querySelector('[data-f="mime"]');
+    v.placeholder = kind === 'file' ? '文件路径，如 shell.php' : '字段值';
+    mime.disabled = kind !== 'file';
+    mime.style.opacity = kind === 'file' ? '1' : '.45';
+  }
+
+  function appendMp(data = {}) {
+    const box = $('#mpRows');
+    const row = document.createElement('div');
+    row.className = 'kv-row mp-row';
+    row.innerHTML = '<select data-f="kind"><option value="text">文本</option><option value="file">文件</option></select>' +
+      '<input data-f="k" placeholder="字段名" value="' + esc(data.k || '') + '" spellcheck="false">' +
+      '<input data-f="v" placeholder="值" value="' + esc(data.v || '') + '" spellcheck="false">' +
+      '<input data-f="mime" placeholder="MIME（文件可选）" value="' + esc(data.mime || '') + '" spellcheck="false">' +
+      '<button type="button" class="del" data-del title="删除">×</button>';
+    row.querySelector('[data-f="kind"]').value = data.kind || 'file';
+    box.appendChild(row);
+    syncMpRow(row);
+    return row;
+  }
+
+  function fillMp(rows) {
+    $('#mpRows').innerHTML = '';
+    if (!rows || !rows.length) { appendMp({ kind: 'file', k: 'file', v: '', mime: 'image/jpeg' }); return; }
+    rows.forEach(r => appendMp(r));
+  }
+
+  /* ---------- UI 状态 ---------- */
+  function updateMethodUI() {
+    els.customMethod.classList.toggle('hidden', els.method.value !== 'CUSTOM');
+  }
+  function updateAuthUI() {
+    $$('[data-auth]').forEach(el => el.classList.toggle('hidden', el.dataset.auth !== els.authMode.value));
+  }
+  function setBody(type) {
+    els.bodyType.value = type;
+    $$('#bodyTabs [data-body]').forEach(b => b.classList.toggle('active', b.dataset.body === type));
+    $$('.body-panel').forEach(p => p.classList.toggle('hidden', p.dataset.panel !== type));
+    if (type === 'putfile') { els.method.value = 'PUT'; updateMethodUI(); }
+    update();
+  }
+
+  /* ---------- 场景 ---------- */
+  const SCENARIOS = {
+    alive: {
+      method: 'GET', url: 'http://target/',
+      opts: { include: true, location: false, maxTime: '15', writeOut: true }
+    },
+    login: {
+      method: 'POST', url: 'http://target/login.php',
+      bodyType: 'form',
+      form: [{ k: 'username', v: 'admin' }, { k: 'password', v: 'admin' }],
+      formEncode: true,
+      opts: { include: true, location: true, maxTime: '15', saveCookie: 'cookies.txt', writeOut: true }
+    },
+    cookie: {
+      method: 'GET', url: 'http://target/index.php',
+      cookie: 'username=admin',
+      opts: { include: true, location: true, maxTime: '15', writeOut: true }
+    },
+    json: {
+      method: 'POST', url: 'http://target/api/login',
+      bodyType: 'json',
+      json: '{\n  "username": "admin",\n  "role": "admin"\n}',
+      jsonMode: 'binary',
+      opts: { include: true, location: false, maxTime: '15', writeOut: true }
+    },
+    upload: {
+      method: 'POST', url: 'http://target/upload.php',
+      bodyType: 'multipart',
+      multipart: [{ kind: 'file', k: 'file', v: 'shell.php', mime: 'image/jpeg' }],
+      opts: { include: true, location: false, maxTime: '15', writeOut: true }
+    },
+    ssrf: {
+      method: 'GET', url: 'http://target/fetch',
+      query: [{ k: 'url', v: 'http://127.0.0.1/flag' }],
+      queryMode: 'G',
+      opts: { include: true, location: false, maxTime: '15', writeOut: true }
+    }
+  };
+
+  function applyScenario(name) {
+    const sc = SCENARIOS[name];
+    if (!sc) return;
+    els.url.value = sc.url || '';
+    els.method.value = sc.method || 'GET';
+    updateMethodUI();
+    els.cookie.value = sc.cookie || '';
+    els.cookieFile.value = sc.cookieFile || '';
+    els.authMode.value = 'none';
+    updateAuthUI();
+    els.basicUser.value = '';
+    els.basicPass.value = '';
+    els.bearer.value = '';
+    fillKv('#queryRows', sc.query || [], ['参数名', '参数值']);
+    els.queryMode.value = sc.queryMode || 'G';
+    fillKv('#headerRows', sc.headers || [], ['Header 名', '值']);
+    fillKv('#formRows', sc.form || [], ['字段名', '字段值']);
+    els.formEncode.checked = sc.formEncode !== false;
+    els.jsonBody.value = sc.json || '';
+    els.jsonMode.value = sc.jsonMode || 'binary';
+    els.rawBody.value = sc.raw || '';
+    els.rawType.value = sc.rawType || '';
+    fillMp(sc.multipart || []);
+    els.binaryPath.value = '';
+    els.binaryType.value = '';
+    els.putPath.value = '';
+    const o = sc.opts || {};
+    els.optSilent.checked = o.silentErr !== false;
+    els.optInclude.checked = o.include !== false;
+    els.optLocation.checked = o.location === true;
+    els.optInsecure.checked = false;
+    els.optCompressed.checked = false;
+    els.optVerbose.checked = false;
+    els.optHttp11.checked = false;
+    els.optPathAsIs.checked = false;
+    els.optGloboff.checked = false;
+    els.optNoProxy.checked = false;
+    els.maxTime.value = o.maxTime !== undefined ? o.maxTime : '15';
+    els.connectTimeout.value = o.connectTimeout || '';
+    els.proxy.value = o.proxy || '';
+    els.maxRedirs.value = o.maxRedirs || '';
+    els.output.value = o.output || '';
+    els.dumpHeaders.value = o.dumpHeaders || '';
+    els.saveCookie.value = o.saveCookie || '';
+    els.resolve.value = o.resolve || '';
+    els.optWriteOut.checked = o.writeOut !== false;
+    els.bodyType.value = sc.bodyType || 'none';
+    $$('#bodyTabs [data-body]').forEach(b => b.classList.toggle('active', b.dataset.body === els.bodyType.value));
+    $$('.body-panel').forEach(p => p.classList.toggle('hidden', p.dataset.panel !== els.bodyType.value));
+    update();
+  }
+
+  /* ---------- 选项速查数据 ---------- */
+  const REF = [
+    { cat: '方法与请求体', opt: '-X', full: '--request', desc: '指定 HTTP 方法（可省略，有 -d/-F 时默认 POST）', ex: '-X POST http://target/', pit: '有 -d/-F 时默认就是 POST，-X 可省略；-X GET 配 -d 会发出带 body 的 GET' },
+    { cat: '方法与请求体', opt: '-d', full: '--data', desc: '提交请求体，默认把方法变成 POST；不自动 URL 编码', ex: '-d "user=admin&pass=123"', pit: '多个 -d 会自动用 & 拼接；换行会被吃掉；& 在 shell 里要加引号' },
+    { cat: '方法与请求体', opt: '--data-urlencode', full: '—', desc: '提交参数并自动 URL 编码', ex: `--data-urlencode "q=1' or '1'='1"`, pit: '一次只能写一个参数，多个就写多行' },
+    { cat: '方法与请求体', opt: '--data-raw', full: '—', desc: '和 -d 一样，但不把开头的 @ 当文件', ex: '--data-raw "@not-a-file"', pit: '发含 @ 的文本时用它' },
+    { cat: '方法与请求体', opt: '--data-binary', full: '—', desc: '原样提交，保留换行', ex: '--data-binary @payload.json', pit: '发 JSON / 二进制用它；-d 会吃掉换行' },
+    { cat: '方法与请求体', opt: '-F', full: '--form', desc: 'multipart/form-data，文件上传', ex: '-F "file=@shell.php;type=image/jpeg"', pit: '不要再手写 Content-Type，curl 要自己生成 boundary' },
+    { cat: '方法与请求体', opt: '-G', full: '--get', desc: '把 -d / --data-urlencode 的数据全部搬到 URL，并改用 GET；不是「POST 转 GET」的开关', ex: '-G --data-urlencode "id=1"', pit: '⚠️ 加了 -G 就没有 body；想同时带 POST body 别用它；单独用无效' },
+    { cat: '方法与请求体', opt: '--url-query', full: '—', desc: '把参数追加到 URL 查询串，不影响方法和 body（curl ≥ 7.87）', ex: '--url-query "id=1"', pit: '版本较新；POST 同时带查询参数时用它，body 不会被搬走' },
+    { cat: '方法与请求体', opt: '--json', full: '—', desc: '等价于 JSON 的 Content-Type + Accept + body', ex: `--json '{"a":1}'`, pit: '需要 curl ≥ 7.82；老版本用 -H + --data-binary' },
+    { cat: '方法与请求体', opt: '-T', full: '--upload-file', desc: '上传文件，通常走 PUT', ex: '-T shell.php http://target/shell.php', pit: '-T 会自己用 PUT，不用再 -X PUT' },
+
+    { cat: '请求头与身份', opt: '-H', full: '--header', desc: '添加 / 替换请求头，可写多次', ex: '-H "X-Forwarded-For: 127.0.0.1"', pit: '只给头名不给值（-H "X:"）可删掉 curl 默认头' },
+    { cat: '请求头与身份', opt: '-A', full: '--user-agent', desc: '设置 User-Agent', ex: '-A "Mozilla/5.0"', pit: '等价 -H "User-Agent: ..."；PowerShell 里记得用 curl.exe' },
+    { cat: '请求头与身份', opt: '-e', full: '--referer', desc: '设置 Referer', ex: '-e "http://127.0.0.1/admin.php"', pit: 'Referer 校验题用它；注意不是 Referrer' },
+    { cat: '请求头与身份', opt: '-b', full: '--cookie', desc: '发送 Cookie，可以是字符串或文件', ex: '-b "username=admin" / -b cookies.txt', pit: '文件名不加 @；字符串里有分号要加引号' },
+    { cat: '请求头与身份', opt: '-c', full: '--cookie-jar', desc: '把响应 Set-Cookie 写进文件', ex: '-c cookies.txt', pit: '登录后用 -b cookies.txt 继续会话' },
+    { cat: '请求头与身份', opt: '-u', full: '--user', desc: 'Basic 认证用户名:密码', ex: '-u admin:123456', pit: 'curl 自动做 Base64，不用手动编码' },
+    { cat: '请求头与身份', opt: '--oauth2-bearer', full: '—', desc: '发送 Bearer Token', ex: '--oauth2-bearer eyJhbGciOi...', pit: '等价的 -H "Authorization: Bearer ..." 更通用' },
+
+    { cat: '输出与调试', opt: '-i', full: '--include', desc: '输出响应头 + 响应体', ex: '-i', pit: '和 -o 一起用时，头也会写进文件' },
+    { cat: '输出与调试', opt: '-I', full: '--head', desc: '只发 HEAD，只要响应头', ex: '-I http://target/', pit: '有些服务端不支持 HEAD，会返回 405' },
+    { cat: '输出与调试', opt: '-s', full: '--silent', desc: '静默，不显示进度和错误', ex: '-s', pit: '错误也被吞掉；永远配 -S 写成 -sS' },
+    { cat: '输出与调试', opt: '-S', full: '--show-error', desc: '配合 -s，把错误显示出来', ex: '-sS', pit: '单独用没意义' },
+    { cat: '输出与调试', opt: '-v', full: '--verbose', desc: '打印完整请求 / 响应报文', ex: '-v', pit: '排查「服务端为什么没收到参数」的第一选择；输出到 stderr' },
+    { cat: '输出与调试', opt: '-o', full: '--output', desc: '响应体写入文件', ex: '-o resp.html', pit: '-o /dev/null 可只保留 -w 的状态码' },
+    { cat: '输出与调试', opt: '-O', full: '--remote-name', desc: '用远端文件名保存', ex: '-O http://target/a.zip', pit: 'URL 最后一段就是文件名' },
+    { cat: '输出与调试', opt: '-D', full: '--dump-header', desc: '把响应头单独写文件', ex: '-D headers.txt', pit: '和 -i 不同，正文不会混进来' },
+    { cat: '输出与调试', opt: '-w', full: '--write-out', desc: '请求结束后输出统计变量', ex: '-w "%{http_code} %{time_total}\\n"', pit: '格式串要用引号；% 在 CMD 里会被当变量展开' },
+    { cat: '输出与调试', opt: '--trace-ascii', full: '—', desc: '把完整流量以文本存文件', ex: '--trace-ascii trace.txt', pit: '二进制 / 编码问题排查用' },
+
+    { cat: '跳转、连接与代理', opt: '-L', full: '--location', desc: '跟随 3xx 跳转', ex: '-L', pit: '登录题必加；不加只看到 302 空壳' },
+    { cat: '跳转、连接与代理', opt: '--max-redirs', full: '—', desc: '限制最多跟几次跳转', ex: '--max-redirs 5', pit: '防跳转环' },
+    { cat: '跳转、连接与代理', opt: '-k', full: '--insecure', desc: '忽略 HTTPS 证书错误', ex: '-k', pit: '只用于自签名证书靶场，生产别用' },
+    { cat: '跳转、连接与代理', opt: '-m', full: '--max-time', desc: '整个请求的超时秒数', ex: '-m 15', pit: '扫描时一定要设，防止卡死' },
+    { cat: '跳转、连接与代理', opt: '--connect-timeout', full: '—', desc: '连接阶段的超时', ex: '--connect-timeout 5', pit: '和 -m 不同，只限制建连' },
+    { cat: '跳转、连接与代理', opt: '-x', full: '--proxy', desc: '走 HTTP / SOCKS 代理', ex: '-x http://127.0.0.1:7890', pit: '环境变量 http_proxy 也会劫持请求，返回 502 先怀疑代理' },
+    { cat: '跳转、连接与代理', opt: '--noproxy', full: '—', desc: '指定不走代理的主机', ex: `--noproxy '*'`, pit: "'*' 表示本次强制直连；配合 -v 可确认" },
+    { cat: '跳转、连接与代理', opt: '--resolve', full: '—', desc: '强制域名解析到指定 IP', ex: '--resolve target.com:80:127.0.0.1', pit: '测虚拟主机 / 绑 host 不用改 hosts 文件' },
+    { cat: '跳转、连接与代理', opt: '--http1.1', full: '—', desc: '强制使用 HTTP/1.1', ex: '--http1.1', pit: '某些靶场对 HTTP/2 处理异常' },
+
+    { cat: '上传与其他', opt: '--compressed', full: '—', desc: '请求并自动解压 gzip / deflate / br', ex: '--compressed', pit: '不加可能拿到乱码压缩包' },
+    { cat: '上传与其他', opt: '-r', full: '--range', desc: '只取指定字节范围', ex: '-r 0-99', pit: '读文件头 / 探测大文件' },
+    { cat: '上传与其他', opt: '--path-as-is', full: '—', desc: '禁止 curl 归一化 ../ 路径', ex: '--path-as-is "http://target/static/../flag"', pit: '路径穿越题必加，否则 curl 先把 ../ 吃掉' },
+    { cat: '上传与其他', opt: '--globoff', full: '-g', desc: '关闭 URL 里的 {}[] 通配', ex: '--globoff "http://target/a[1]"', pit: 'URL 含 []{} 时 curl 会当范围展开，报错或请求错地址' },
+    { cat: '上传与其他', opt: '-4 / -6', full: '—', desc: '强制 IPv4 / IPv6', ex: '-4', pit: 'DNS 解析到 IPv6 但目标只监听 IPv4 时用' },
+    { cat: '上传与其他', opt: '--retry', full: '—', desc: '失败自动重试次数', ex: '--retry 2', pit: '只对临时性错误有效，别在爆破脚本里乱加' }
+  ];
+
+  const FREQUENT = new Set(['-X', '-d', '--data-urlencode', '-F', '-H', '-b', '-c', '-i', '-s', '-S', '-v', '-o', '-w', '-L', '-m']);
+
+  function renderRef() {
+    const q = els.refSearch.value.trim().toLowerCase();
+    const rows = REF.filter(r => !q || [r.cat, r.opt, r.full, r.desc, r.ex, r.pit].join(' ').toLowerCase().includes(q));
+    let html = '', cat = '';
+    for (const r of rows) {
+      if (r.cat !== cat) {
+        html += '<tr class="group"><td colspan="5">' + esc(r.cat) + '</td></tr>';
+        cat = r.cat;
+      }
+      const badge = FREQUENT.has(r.opt)
+        ? '<span class="tag common mini">常用</span>'
+        : '<span class="tag opt mini">按需</span>';
+      html += '<tr><td><code>' + esc(r.opt) + '</code>' + badge + '</td><td class="muted">' + esc(r.full) + '</td><td>' + esc(r.desc) + '</td><td><code class="ex">' + esc(r.ex) + '</code></td><td class="pit">' + esc(r.pit) + '</td></tr>';
+    }
+    els.refBody.innerHTML = html || '<tr><td colspan="5" class="empty">没有匹配的选项</td></tr>';
+    els.refCount.textContent = '共 ' + rows.length + ' 条';
+  }
+
+  /* ---------- 事件绑定 ---------- */
+  function initDefaults() {
+    fillKv('#queryRows', [], ['参数名', '参数值']);
+    fillKv('#headerRows', [], ['Header 名', '值']);
+    fillKv('#formRows', [{ k: 'username', v: 'admin' }, { k: 'password', v: 'admin' }], ['字段名', '字段值']);
+    fillMp([{ kind: 'file', k: 'file', v: 'shell.php', mime: 'image/jpeg' }]);
+    els.maxTime.value = '15';
+    updateMethodUI();
+    updateAuthUI();
+    $$('.body-panel').forEach(p => p.classList.add('hidden'));
+  }
+
+  $$('[data-body]').forEach(btn => {
+    btn.addEventListener('click', () => setBody(btn.dataset.body));
+  });
+
+  $$('[data-add]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const type = btn.dataset.add;
+      let row;
+      if (type === 'query') row = appendKv('#queryRows', '', '', ['参数名', '参数值']);
+      else if (type === 'header') row = appendKv('#headerRows', '', '', ['Header 名', '值']);
+      else if (type === 'form') row = appendKv('#formRows', '', '', ['字段名', '字段值']);
+      else if (type === 'mp') row = appendMp({ kind: 'text' });
+      if (row) row.querySelector('[data-f="k"]').focus();
+      update();
+    });
+  });
+
+  $$('[data-header]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const name = btn.dataset.header;
+      const preset = HEADER_PRESETS[name] || '';
+      const rows = $$('#headerRows .kv-row');
+      const existing = rows.find(r => r.querySelector('[data-f="k"]').value.trim().toLowerCase() === name.toLowerCase());
+      if (existing) {
+        const v = existing.querySelector('[data-f="v"]');
+        v.focus();
+        v.select();
+        return;
+      }
+      const empty = rows.find(r => !r.querySelector('[data-f="k"]').value && !r.querySelector('[data-f="v"]').value);
+      if (empty) {
+        empty.querySelector('[data-f="k"]').value = name;
+        empty.querySelector('[data-f="v"]').value = preset;
+        empty.querySelector('[data-f="v"]').focus();
+      } else {
+        const row = appendKv('#headerRows', name, preset, ['Header 名', '值']);
+        row.querySelector('[data-f="v"]').focus();
+      }
+      update();
+    });
+  });
+
+  els.builder.addEventListener('click', e => {
+    const del = e.target.closest('[data-del]');
+    if (!del) return;
+    del.closest('.kv-row').remove();
+    update();
+  });
+
+  els.builder.addEventListener('input', update);
+  els.builder.addEventListener('change', e => {
+    if (e.target.matches('[data-f="kind"]')) syncMpRow(e.target.closest('.kv-row'));
+    update();
+  });
+
+  els.method.addEventListener('change', () => { updateMethodUI(); update(); });
+  els.authMode.addEventListener('change', () => { updateAuthUI(); update(); });
+  els.refSearch.addEventListener('input', renderRef);
+  els.refSearch.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { els.refSearch.value = ''; renderRef(); }
+  });
+
+  $$('.shell-switch [data-shell]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      shell = btn.dataset.shell;
+      $$('.shell-switch [data-shell]').forEach(b => b.classList.toggle('active', b === btn));
+      els.shellLabel.textContent = shell === 'bash' ? 'bash / Git Bash' : shell === 'powershell' ? 'PowerShell' : 'cmd.exe';
+      update();
+    });
+  });
+
+  $$('[data-scenario]').forEach(btn => {
+    btn.addEventListener('click', () => applyScenario(btn.dataset.scenario));
+  });
+
+  els.copyBtn.addEventListener('click', async () => {
+    if (!lastCommand) return;
+    try {
+      await navigator.clipboard.writeText(lastCommand);
+    } catch {
+      const ta = document.createElement('textarea');
+      ta.value = lastCommand;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); } catch {}
+      ta.remove();
+    }
+    els.copyBtn.textContent = '已复制 ✓';
+    els.copyBtn.classList.add('ok');
+    setTimeout(() => {
+      els.copyBtn.textContent = '复制命令';
+      els.copyBtn.classList.remove('ok');
+    }, 1400);
+  });
+
+  const HEADER_PRESETS = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36',
+    'Referer': 'http://127.0.0.1/',
+    'X-Forwarded-For': '127.0.0.1',
+    'X-Real-IP': '127.0.0.1',
+    'Origin': 'http://127.0.0.1',
+    'Host': '127.0.0.1'
+  };
+
+  /* ---------- 启动 ---------- */
+  initDefaults();
+  renderRef();
+  update();
+})();
+</script>
+</body>
+</html>

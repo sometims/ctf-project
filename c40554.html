@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网络安全知识库</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .header {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 0;
+            position: sticky; /* 可以考虑让头部和导航栏固定在顶部 */
+            top: 0;
+            z-index: 1000;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        /* 标签导航栏容器 */
+        .navigation-tabs {
+            width: 100%;
+            background-color: #34495e;
+            padding: 5px 0; /* 减少垂直padding，使导航栏更紧凑 */
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            display: flex; /* 使用flex布局来控制内部.tab-list的对齐 */
+            justify-content: center; /* 使.tab-list在导航栏中居中（如果.tab-list有max-width）*/
+            overflow-x: auto; /* 允许水平滚动 */
+            position: sticky; /* 可以考虑让头部和导航栏固定在顶部 */
+            top: 70px; /* 大致是头部的高度，需要根据实际情况调整 */
+            z-index: 999; /* 低于头部，高于内容 */
+
+            /* 隐藏滚动条样式 */
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        .navigation-tabs::-webkit-scrollbar { /* Chrome, Safari, Opera */
+            display: none;
+        }
+
+        /* 实际的标签列表 */
+        .tab-list {
+            display: flex; /* 使标签按钮在同一行排列 */
+            flex-wrap: nowrap; /* 强制不换行 */
+            justify-content: flex-start; /* 当标签总宽度小于容器时，从左边开始排列 */
+            align-items: center; /* 垂直居中对齐标签 */
+            padding: 0 10px; /* 在可滚动区域的左右留出一些内边距 */
+            margin: 0 auto; /* 如果希望.tab-list本身在.navigation-tabs内居中，可以设置一个max-width */
+            list-style: none;
+            /* white-space: nowrap; /* flex-wrap: nowrap 已经足够，这个可以用在 .tab-link 上确保内部文字不换行 */
+        }
+
+        .tab-link {
+            padding: 8px 16px; /* 调整标签内边距 */
+            cursor: pointer;
+            color: #ecf0f1;
+            background-color: transparent;
+            border: none;
+            margin: 5px 6px; /* 调整标签之间的间距 */
+            transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+            font-size: 0.85em; /* 稍微减小字体，容纳更多标签 */
+            font-weight: 500;
+            border-radius: 4px;
+            text-decoration: none;
+            white-space: nowrap; /* 确保单个标签内的文字不换行 */
+            flex-shrink: 0; /* 防止标签在空间不足时被压缩变形 */
+        }
+        .tab-link:hover {
+            background-color: #4a6278;
+            color: #ffffff;
+        }
+        .tab-link.active {
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        /* 主要内容容器 */
+        .content-container {
+            width: 90%;
+            max-width: 1100px; /* 进一步增加内容框的最大宽度 */
+            background-color: #ffffff;
+            margin-top: 40px; /* 增加与导航栏的间距，特别是在导航栏也sticky时 */
+            margin-bottom: 40px; /* 增加底部外边距 */
+            padding: 40px; /* 增加内容框的内边距 */
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            border-radius: 10px; /* 稍微增大圆角 */
+        }
+
+        .content-area {
+            min-height: 300px; /* 增加内容区域的最小高度 */
+            line-height: 1.75;
+        }
+        .content-area h2 {
+            color: #2c3e50;
+            margin-top: 0;
+            border-bottom: 1px solid #e8e8e8;
+            padding-bottom: 18px;
+            font-size: 1.9em;
+            margin-bottom: 25px;
+        }
+        .content-area p, .content-area div {
+            margin-bottom: 1.4em;
+            font-size: 1.08em; /* 增大正文字体 */
+        }
+        .footer {
+            text-align: center;
+            margin-top: auto; /* 如果内容不足，页脚推到底部 */
+            padding: 25px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            width: 100%;
+            background-color: #e9ecef; /* 页脚背景色 */
+        }
+        .loading-message, .error-message, .initial-message {
+            color: #6c757d;
+            font-style: italic;
+            padding: 25px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>网络安全知识小站</h1>
+    </header>
+
+    <nav class="navigation-tabs">
+        <div class="tab-list">
+                                                <button class="tab-link active"
+                            data-id="1">
+                        零域安全实验室（ZeroZone Lab）                    </button>
+                                    <button class="tab-link "
+                            data-id="2">
+                        SQL注入 (SQLi)                    </button>
+                                    <button class="tab-link "
+                            data-id="3">
+                        跨站脚本攻击 (XSS)                    </button>
+                                    <button class="tab-link "
+                            data-id="4">
+                        网络钓鱼 (Phishing)                    </button>
+                                    <button class="tab-link "
+                            data-id="5">
+                        拒绝服务攻击 (DoS/DDoS)                    </button>
+                                    <button class="tab-link "
+                            data-id="6">
+                        中间人攻击 (MitM)                    </button>
+                                    </div>
+    </nav>
+
+    <main class="content-container">
+        <article id="content-display" class="content-area">
+            <p class="initial-message">请从上方选择一个标签以查看相关内容。</p>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <p>CTF Challenge &copy; 2026 - 找到隐藏的Flag！</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.tab-link');
+            const contentDisplay = document.getElementById('content-display');
+
+            function fetchContent(id, targetElement) {
+                contentDisplay.innerHTML = '<p class="loading-message">正在加载内容...</p>';
+
+                tabs.forEach(t => t.classList.remove('active'));
+                if (targetElement) {
+                    targetElement.classList.add('active');
+                }
+
+                const xhr = new XMLHttpRequest();
+                xhr.open('GET', `view.php?id=${encodeURIComponent(id)}`, true);
+
+                xhr.onload = function() {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        contentDisplay.innerHTML = xhr.responseText;
+                    } else {
+                        contentDisplay.innerHTML = `<p class="error-message">加载内容失败。服务器状态: ${xhr.status}</p>`;
+                    }
+                };
+
+                xhr.onerror = function() {
+                    contentDisplay.innerHTML = '<p class="error-message">网络请求失败，请检查您的连接。</p>';
+                };
+
+                xhr.send();
+            }
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const knowledgeId = this.dataset.id;
+                    fetchContent(knowledgeId, this);
+                });
+            });
+
+            const firstTab = document.querySelector('.tab-link');
+            if (firstTab) {
+                firstTab.click();
+            } else if (contentDisplay) {
+                 contentDisplay.innerHTML = '<p class="initial-message" style="color: #6c757d;">知识库中暂无条目可供选择。</p>';
+            }
+        });
+    </script>
+</body>
+</html>
