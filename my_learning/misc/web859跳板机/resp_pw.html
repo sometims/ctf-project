@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>	
+<head>
+<title>欢迎登陆CTFshow文件管理系统</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="https://ctf.show/files/3927d3294176f912a38d835fab6196a7/logo32.png" type="image/x-icon">
+<meta charset="utf-8">
+<meta name="keywords" content="CTF ctfshow 网络安全 靶场"/>
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<!--webfonts-->
+<link href="http://maxcdn.bootstrapcdn.com/css?family=Montserrat:400,600,700,800,900" rel="stylesheet">
+<!--//webfonts-->
+
+</head>
+<body onload="msg();">
+<!-- section -->
+<section class="register">
+	
+		<h1>CTFshow文件管理系统</h1>
+		<div class="register-left">
+			<div class="register-in">
+			<h3>管理员登陆</h3>
+				<form action="api/index.php?a=login" method="post">
+						<div class="fields-grid">
+							<div class="styled-input agile-styled-input-top">
+								<input type="text" name="username" required=""> 
+								<label>User Name</label>
+								<span></span>
+							</div>
+							<div class="styled-input">
+								<input type="password" name="password" required="">
+								<label>Password</label>
+								<span></span>
+							</div>
+							
+							<div class="clear"> </div>
+							 
+						</div>
+						<div class="w3_lgn">
+						<input type="submit" value="登陆">
+						</div>
+					</form>
+			</div>
+		</div>
+		<div class="register-right">
+			<div class="register-in">
+				<h2>忘记密码</h2>
+				<p>请输入你的注册邮箱，会发送重置密码邮件</p>
+				<div class="register-form">
+					<form action="api/index.php?a=reset" method="post">
+						<div class="fields-grid">
+							<div class="styled-input agile-styled-input-top">
+								<input type="text" name="username" required=""> 
+								<label>User Name</label>
+								<span></span>
+							</div>
+							
+							<div class="styled-input">
+								<input type="email" name="email" required="">
+								<label>Email</label>
+								<span></span>
+							</div>
+							
+							
+							<div class="clear"> </div>
+							
+						</div>
+						<div class="w3_lgn1">
+						<input type="submit" value="重置密码">
+						</div>
+					</form>
+			
+				</div>
+			</div>
+			<div class="clear"> </div>
+		</div>
+	<div class="clear"> </div>
+	
+		
+	<!-- copyright -->
+	<p class="agile-copyright">Copyright &copy; 2023.CTFshow All rights reserved.
+		<a target="_blank" href="https://gitee.com/ctfshow/ctfshow-file-management-system.git">CTFshow 文件管理系统</a></p>
+	<!-- //copyright -->
+</section>
+<!-- //section -->
+
+</body>
+<script type="text/javascript">
+	function msg(){
+		var msg = '你好！ 已经将重置密码链接发送至邮箱ctfshase????';
+		if(msg.length>3){
+			alert(msg);
+		}
+	}
+</script>
+</html>
+
+

@@ -1,0 +1,350 @@
+/* reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+ol,ul{list-style:none;margin:0px;padding:0px;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+/* start editing from here */
+a{text-decoration:none;}
+.txt-rt{text-align:right;}/* text align right */
+.txt-lt{text-align:left;}/* text align left */
+.txt-center{text-align:center;}/* text align center */
+.float-rt{float:right;}/* float right */
+.float-lt{float:left;}/* float left */
+.clear{clear:both;}/* clear float */
+.pos-relative{position:relative;}/* Position Relative */
+.pos-absolute{position:absolute;}/* Position Absolute */
+.vertical-base{	vertical-align:baseline;}/* vertical align baseline */
+.vertical-top{	vertical-align:top;}/* vertical align top */
+nav.vertical ul li{	display:block;}/* vertical menu */
+nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
+img{max-width:100%;}
+/*end reset*/
+/****-----start-body----****/
+body{
+	background: url(https://ctfshow-1257200238.cos.ap-shanghai.myqcloud.com/static/img/bg.png) 0px 0px no-repeat;
+	font-family: 'Montserrat', sans-serif;
+	background-size:cover;
+}
+
+.register-left {
+	background: url(https://ctfshow-1257200238.cos.ap-shanghai.myqcloud.com/static/img/bg.png) 0px 0px no-repeat;
+	font-family: 'Montserrat', sans-serif;
+	background-size:cover;
+}
+.register-right {
+    background: #002663;
+}
+.register-in {
+    padding: 16em 12em;
+}
+section.register {
+    position: relative;
+}
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color: #fff;
+    position: absolute;
+    top: 5%;
+    left: 30%;
+}
+h3 {
+    text-align: center;
+    font-size: 28px;
+    color: #fff;
+    margin-bottom:49px;
+}
+.register-left, .register-right {
+    width: 50%;
+    float: left;
+}
+.register-in p {
+    font-size: 15px;
+    color: #fff;
+    letter-spacing: 2px;
+    margin-bottom:61px;
+	text-align:center;
+}
+.w3_lgn {
+    text-align: center;
+}
+.w3_lgn1 {
+    text-align: right;
+}
+.register-right h2 {
+    font-size:25px;
+    text-align: center;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+	margin-bottom:30px;
+	color:#fff;
+}
+.register input[type="text"],.register input[type="email"],.register input[type="password"]{
+    font-size: 1em;
+    color: #fff;
+    padding: 0.5em 1em;
+    border: 0;
+    width: 100%;
+    border-bottom: 1px solid #dcdcdc;
+	border-left: 1px solid #dcdcdc;
+	border-right: 1px solid #dcdcdc;
+    background: none;
+    -webkit-appearance: none;
+	outline: none;
+	margin-bottom: 15px;
+	box-sizing: border-box;
+}
+
+/*-- input-effect --*/
+.styled-input.agile-styled-input-top {
+    margin-top: 0;
+} 
+.styled-input input:focus ~ label, .styled-input input:valid ~ label,.styled-input textarea:focus ~ label ,.styled-input textarea:valid ~ label{
+    font-size: .9em;
+    color: #fff;
+    top: -1.3em;
+    -webkit-transition: all 0.125s;
+	-moz-transition: all 0.125s; 
+	-o-transition: all 0.125s;
+	-ms-transition: all 0.125s;
+    transition: all 0.125s;
+}
+.styled-input {
+	width: 100%;
+    position: relative;
+    margin: 0 0 1.6em;
+}
+.styled-input:nth-child(1),.styled-input:nth-child(3){
+	margin-left:0;
+}
+
+.styled-input label {
+	color: #fff;
+    padding: 0.5em .9em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    pointer-events: none;
+    font-weight: 400;
+    font-size: .9em;
+    display: block;
+    line-height: 1em;
+}
+
+
+
+/*-- //input-effect --*/
+
+.register-in input[type="submit"] {
+    outline: none;
+    color: #000;
+    padding: .3em 1em;
+    font-size: 1em;
+    margin: 1em 0 0 0;
+    -webkit-appearance: none;
+    background: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    transition: 0.5s all;
+	letter-spacing:2px;
+}
+.register-form input[type="submit"]:hover {
+    background: #FFFFFF;
+	color:#009688;
+	border: 1px solid #009688;
+}
+.register-in input[type="submit"]:hover {
+    background: #FFFFFF;
+	color:#009688;
+	border: 1px solid #009688;
+}
+input[type="text"] {
+    width: 100%;
+}
+/*-- //contact --*/
+/*-- copyright --*/
+.agile-copyright {
+    color: #fff;
+    text-align: center;
+    font-size: 0.875em;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 93%;
+    left: 30%;
+	line-height:1.8em;
+}
+
+.agile-copyright a {
+    color: #fff;
+	font-weight:600;
+}
+/*-- //copyright --*/
+
+/** Responsive**/
+@media screen and (max-width: 1366px){
+.register input[type="text"],.register input[type="email"],.register input[type="password"]{
+    width: 100%;
+}
+.register-in p {
+    letter-spacing: 1px;
+}	
+}
+@media screen and (max-width: 1280px){
+.register-in {
+    padding: 16em 10em;
+}	
+}
+@media screen and (max-width: 1080px){
+.register-in {
+    padding: 16em 8em;
+}
+h1 {
+    left: 20%;
+}
+.agile-copyright {
+    left: 20%;
+}	
+} 
+@media screen and (max-width: 1024px){
+.register-in {
+    padding: 12.35em 6em;
+}	
+}
+@media screen and (max-width: 900px){
+.register-in {
+    padding: 16em 4em;
+}
+h1 {
+    left: 14%;
+}
+.agile-copyright {
+    left: 14%;
+	top: 85%;
+}	
+}
+@media screen and (max-width: 800px){
+.register-in {
+    padding: 16em 3em;
+}
+h1 {
+    left: 9%;
+}
+.agile-copyright {
+    left: 10%;
+}	
+}
+@media screen and (max-width: 768px){
+.register-in {
+    padding: 20.25em 3em;
+}	
+} 
+@media screen and (max-width: 736px){
+.register-in {
+    padding: 13em 2em;
+}
+h1 {
+    left: 6%;
+}
+.agile-copyright {
+    left: 6%;
+	top: 90%;
+}	
+}
+@media screen and (max-width: 667px){
+.register-in {
+    padding: 11em 1em;
+}	
+}
+@media screen and (max-width: 640px){
+h1 {
+    left: 3%;
+    font-size: 48px;
+	  top: 3%;
+}
+.register-in {
+    padding: 8em 1em;
+}
+.register-left, .register-right {
+    width: 100%;
+}
+.agile-copyright {
+    top: 94%;
+}	
+}
+@media screen and (max-width: 600px){
+h1 {
+    top: 2%;
+	font-size: 46px;
+}
+}
+@media screen and (max-width: 568px){
+.agile-copyright {
+    left: 0%;
+}
+.register-in {
+    padding: 6em 1em;
+}
+h1 {
+	font-size: 43px;
+}	
+}
+@media screen and (max-width: 480px){
+h1 {
+    top: 3%;
+	font-size: 36px;
+}
+}
+@media screen and (max-width: 414px){
+h1 {
+    left: 1%;
+    font-size: 32px;
+}
+.register-in {
+    padding: 5em 1em;
+}	
+}
+@media screen and (max-width: 384px){
+h3 {
+    font-size: 26px;
+    margin-bottom: 30px;
+    margin-top: 80px;
+}
+.agile-copyright {
+    top: 94%;
+}
+.register-in input[type="submit"] {
+
+    margin: 0em 0 0 0;
+}
+.register-in {
+    padding: 5em 1em;
+}
+h1 {
+    font-size: 37px;
+}	
+}
+@media screen and (max-width: 320px){
+.agile-copyright {
+    top: 94%;
+    letter-spacing: 0.5px;
+}
+.register-in p {
+    margin-bottom: 40px;
+}
+.register-in {
+    padding: 4em 1em;
+}
+h1 {
+    font-size: 33px;
+}	
+}       
+/** /Responsive**/
