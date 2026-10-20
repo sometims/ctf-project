@@ -1,5 +1,7 @@
 __pycache__/
 *.pyc
+# 例外：题目附件里的 pyc 要入库（aixin 题：magic 被改，是考点素材）
+!misc/aixin.pyc
 
 # 解题工作目录（中间产物，不入库；复现脚本见各题 WP）
 misc/work/
